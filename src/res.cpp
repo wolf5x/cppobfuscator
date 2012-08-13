@@ -6,18 +6,15 @@ class ThisShit {
 public:
 	ThisShit(){
 		cout << "damn\n";
-		do {
-			nop();
-		} while(false);
+		//removed do-while begin
+		//{ removed do-while body }
+//removed do-while end
+		;
 
-		do
-		{
-			nop();nop();
-		}
-
-		while(
-				true && true
-				&& false );
+		//removed do-while begin
+		//{ removed do-while body }
+//removed do-while end
+				;
 		cout << "xx " << __FILE__ << "," << __LINE__ << endl;
 		while(true);
 		
@@ -39,9 +36,10 @@ int main()
 	output("124");
 	{
 		ThisShit shit, *ps = &shit;
-		do {
-			ps->nop();
-		} while(false);
+		//removed do-while begin
+		//{ removed do-while body }
+//removed do-while end
+		;
 		ps->nop();
 	}
 	return 0;

@@ -10,37 +10,33 @@ PCH = stdafx
 
 PCHFLAGS = \
 	-I/usr/include/c++/4.6 \
-	-I/usr/include/c++/4.6/i686-linux-gnu/. \
+	-I/usr/include/c++/4.6/i486-linux-gnu/. \
 	-I/usr/include/c++/4.6/backward \
-	-I/usr/lib/gcc/i686-linux-gnu/4.6.1/include \
+	-I/usr/lib/gcc/i486-linux-gnu/4.6/include \
 	-I/usr/local/include \
-	-I/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed \
-	-I/usr/include/i386-linux-gnu \
+	-I/usr/lib/gcc/i486-linux-gnu/4.6/include-fixed \
 	-I/usr/include \
-	-D_DEBUG -D__NO_CTYPE_INLINE \
-	-D_GNU_SOURCE \
-	-D__STDC_CONSTANT_MACROS \
-	-D__STDC_FORMAT_MACROS \
-	-D__STDC_LIMIT_MACROS
+	$(shell llvm-config --cppflags) \
+	-I/usr/local/include/lib/clang/3.1/include 
 
-LLVMFLAGS = \
-	-I/usr/local/include \
-	-D_DEBUG -D__NO_CTYPE_INLINE \
-	-D_GNU_SOURCE \
-	-D__STDC_CONSTANT_MACROS \
-	-D__STDC_FORMAT_MACROS \
-	-D__STDC_LIMIT_MACROS \
-	-O3 \
-	-fomit-frame-pointer \
-	-fvisibility-inlines-hidden \
-	-fno-exceptions -fno-rtti \
-	-Woverloaded-virtual \
-	-Wcast-qual
+LLVMFLAGS = $(shell llvm-config --cxxflags)
+#	-I/usr/local/include \
+#	-D_DEBUG -D__NO_CTYPE_INLINE \
+#	-D_GNU_SOURCE \
+#	-D__STDC_CONSTANT_MACROS \
+#	-D__STDC_FORMAT_MACROS \
+#	-D__STDC_LIMIT_MACROS \
+#	-O3 \
+#	-fomit-frame-pointer \
+#	-fvisibility-inlines-hidden \
+#	-fno-exceptions -fno-rtti \
+#	-Woverloaded-virtual \
+#	-Wcast-qual
 
-LLVMLIBS = \
-	-L/usr/local/lib \
-	-lLLVMMC -lLLVMObject -lLLVMCore -lLLVMSupport \
-	-lpthread -ldl -lm 
+LLVMLIBS = $(shell llvm-config --ldflags --libs core mc)
+#	-L/usr/local/lib \
+#	-lLLVMMC -lLLVMObject -lLLVMCore -lLLVMSupport \
+#	-lpthread -ldl -lm 
 
 CLANGLIBS = \
 	-lclangTooling \
@@ -55,7 +51,7 @@ all: print_all $(BIN)
 rebuild: clean all
 
 pch: $(PCH).h
-	$(CLANG) -cc1 -x c++-header ./$(PCH).h $(PCHFLAGS) -o ./$(PCH).h.pch
+	$(CLANG) -cc1 -emit-pch -x c++-header ./$(PCH).h $(PCHFLAGS) -o ./$(PCH).h.pch
 #	$(CXX) ./$(PCH).h $(PCHFLAGS) -o ./$(PCH).h.pch
 
 $(BIN): $(OBJS)

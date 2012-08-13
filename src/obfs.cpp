@@ -9,6 +9,7 @@
 #include "stdafx.h"
 
 using namespace std;
+using namespace clang;
 
 #define LLVM_PREFIX "/usr/local"
 

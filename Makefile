@@ -11,5 +11,4 @@ $(SRC_DIR): print
 	$(MAKE) -C $@ $(TARGET)
 
 print:
-	@echo "---- TARGET = $(TARGET)"
 
