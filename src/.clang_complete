@@ -1,0 +1,14 @@
+-I/usr/include/c++/4.6
+-I/usr/include/c++/4.6/i686-linux-gnu/.
+-I/usr/include/c++/4.6/backward
+-I/usr/lib/gcc/i686-linux-gnu/4.6.1/include
+-I/usr/local/include
+-I/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed
+-I/usr/include/i386-linux-gnu
+-I/usr/include
+-D_DEBUG -D__NO_CTYPE_INLINE
+-D_GNU_SOURCE
+-D__STDC_CONSTANT_MACROS
+-D__STDC_FORMAT_MACROS
+-D__STDC_LIMIT_MACROS
+-include-pch ./stdafx.h.pch
