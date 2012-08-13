@@ -1,3 +1,7 @@
+# Precompilered Header File
+*.pch
+*.gch
+
 # Compiled Object files
 *.slo
 *.lo
@@ -10,3 +14,9 @@
 *.lai
 *.la
 *.a
+
+# Executable Target File
+obfs
+
+# Swap file of vim 
+*.swp
