@@ -16,6 +16,7 @@
 #include "clang/Frontend/CompilerInstance.h"
 #include "clang/Lex/Preprocessor.h"
 #include "clang/Lex/HeaderSearch.h"
+#include "clang/Sema/Sema.h"
 #include "clang/Parse/ParseAST.h"
 #include "clang/Rewrite/Rewriter.h"
 #include "clang/Rewrite/Rewriters.h"

@@ -57,7 +57,7 @@ pch: $(PCH).h
 $(BIN): $(OBJS)
 	$(CXX) $(OBJS) -o $@ $(CLANGLIBS) $(LLVMLIBS)
 
-%.o: %.cpp
+%.o: %.cpp 
 	$(CXX) -c $< $(LLVMFLAGS)
 
 print_all:

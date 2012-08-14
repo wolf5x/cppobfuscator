@@ -5,6 +5,7 @@
 -I/usr/local/include
 -I/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed
 -I/usr/include/i386-linux-gnu
+-I/home/wolf5x/downloads/llvmbuild/llvm/include
 -I/usr/include
 -D_DEBUG -D__NO_CTYPE_INLINE
 -D_GNU_SOURCE
