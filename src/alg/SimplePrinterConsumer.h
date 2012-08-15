@@ -3,18 +3,19 @@
 
 #include "../stdafx.h"
 
-class SimplePrinterConsumer : public ASTConsumer {
+class SimplePrinterConsumer : public clang::ASTConsumer {
 protected:
 	llvm::raw_ostream &out;
-	CompilerInstance *compInst;
+	clang::CompilerInstance *compInst;
 
 public:
-	SimplePrinterConsumer(llvm::raw_ostream *O, CompilerInstance *CI)
-		: out(*O),
+	SimplePrinterConsumer(llvm::raw_ostream &O, clang::CompilerInstance *CI)
+		: out(O),
 		compInst(CI)
 	{}
+	~SimplePrinterConsumer(){}
 
-	virtual void HandleTopLevelDecl(DeclGroupRef D);
+	virtual bool HandleTopLevelDecl(clang::DeclGroupRef D);
 };
 
 #endif

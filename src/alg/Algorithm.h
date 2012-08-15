@@ -24,6 +24,4 @@ private:
 	static int32_t instCounter;
 };
 
-static int32_t Algorithm::instCounter = 0;
-
 #endif

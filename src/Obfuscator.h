@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "HeaderSearchPath.h"
+#include "Typedef.h"
+#include "alg/InitParseConsumer.h"
 
 using namespace std;
 using namespace clang;
@@ -7,9 +9,12 @@ using namespace clang;
 class Obfuscator {
 	OwningPtr<CompilerInstance> compInst;
 	OwningPtr<Rewriter> rw;
+	DeclGroupRefVec decls;
 	
 public:
 	void initialize() {
+		decls.clear();
+
 		compInst.reset(new CompilerInstance());
 		CompilerInvocation &compInvo = compInst->getInvocation();
 		HeaderSearchOptions &hsOpts = compInst->getHeaderSearchOpts();
@@ -59,13 +64,20 @@ public:
 				compInst->getLangOpts(),
 				&compInst->getPreprocessor());
 
-		//Sema &S = compInst->getSema();
-		llvm::errs() << "x";
 		ParseAST(compInst->getPreprocessor(),
-			   	new ASTConsumer(),
+			   	new InitParseConsumer(decls, compInst.get()),
 				compInst->getASTContext());
-		Sema &T = compInst->getSema();
-		llvm::errs() << "y";
+
+		llvm::errs() << " ###################################\n";
+		llvm::errs() << "           MAGIC   STARTS\n";
+		llvm::errs() << " ###################################\n";
+		for(int i = 0; i < decls.size(); i++) {
+			for(DeclGroupRef::iterator 
+					I = decls[i].begin(), E = decls[i].end();
+					I != E; ++I) {
+				(*I)->print(llvm::errs());
+			}
+		}
 
 	}
 

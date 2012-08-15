@@ -1,28 +1,27 @@
 #include "SimplePrinterConsumer.h"
 using namespace clang;
 
-virtual void
+bool
 SimplePrinterConsumer::HandleTopLevelDecl(DeclGroupRef D) {
-	if(D.isSingleDecl()) {
-		if(compInst->getSourceManager().isInSystemHeader(D.getSingleDecl()->getLocation())) {
-			return ;
-		}
+	if(D.begin() == D.end()) {
+		return true;
+	}
+	Decl *firstD = *(D.begin());
+	if(compInst->getSourceManager().isInSystemHeader(firstD->getLocation())) {
+		return true;
 	}
 
-	if(D.isDeclGroup()) {
-		if(compInst->getSourceManager().isInSystemHeader(D.getDeclGroup()[0]->getLocation())) {
-			return ;
-		}
-	}
-
-	PrintingPolicy policy = compInst->getASTContext().PrintingPolicy;
+	PrintingPolicy policy = compInst->getASTContext().getPrintingPolicy();
 	policy.Dump = false;
 	NullStmt *nullSt = new (compInst->getASTContext()) NullStmt(SourceLocation());
 
 	DeclGroupRef::iterator it;
-	for(it = D.begin(); it != D.end(); ++it) {
-		(*it)->print(out, policy);
+	for(DeclGroupRef::iterator 
+		   I = D.begin(), E = D.end();
+		   I != E; ++I) {
+		(*I)->print(out, policy);
 		nullSt->printPretty(out, NULL, policy);
 	}
+	return true;
 };
 

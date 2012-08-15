@@ -2,6 +2,7 @@
 #define _STDAFX_H_
 
 #include <iostream>
+#include <vector>
 #include <string>
 
 #include "clang/AST/ASTConsumer.h"
@@ -18,6 +19,7 @@
 #include "clang/Lex/HeaderSearch.h"
 #include "clang/Sema/Sema.h"
 #include "clang/Parse/ParseAST.h"
+#include "clang/Parse/Parser.h"
 #include "clang/Rewrite/Rewriter.h"
 #include "clang/Rewrite/Rewriters.h"
 #include "clang/Analysis/CFG.h"
