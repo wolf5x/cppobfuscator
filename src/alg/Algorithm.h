@@ -2,16 +2,14 @@
 #define OBFS_ALG_ALGORITHM_H
 
 #include "../stdafx.h"
+#include "../ResourceManager.h"
 
 class Algorithm {
 protected:
 	int32_t uid;
-	virtual bool consume(clang::Sema &S, clang::ASTConsumer *C);
 
 public:
-	virtual bool init();
-	virtual bool execute(clang::Sema &S);
-	virtual void print() {}
+	virtual bool execute(ResourceManager &RM, DeclGroupRefVec &decls);
 
 	Algorithm() : uid(++instCounter) {}
 	virtual ~Algorithm() {}

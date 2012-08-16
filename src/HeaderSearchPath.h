@@ -1,5 +1,5 @@
-#ifndef _HSPATH_H_
-#define _HSPATH_H_
+#ifndef OBFS_HSPATH_H
+#define OBFS_HSPATH_H
 
 #include "stdafx.h"
 

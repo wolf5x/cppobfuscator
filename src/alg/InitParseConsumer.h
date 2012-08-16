@@ -3,7 +3,7 @@
 
 #include "../stdafx.h"
 #include "../Typedef.h"
-#include "SimplePrinterConsumer.h"
+//#include "SimplePrinterConsumer.h"
 
 class InitParseConsumer : public clang::ASTConsumer {
 protected:
@@ -24,9 +24,7 @@ public:
 		} 
 
 		decls.push_back(DR);
-		llvm::errs() << "decls size = " << decls.size() << "\n";
-		SimplePrinterConsumer spc(llvm::errs(), compInst);
-		spc.HandleTopLevelDecl(DR);
+		DPRINT("+decl, size = %d\n", decls.size());
 		return true;
 	}
 };

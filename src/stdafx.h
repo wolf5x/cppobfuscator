@@ -1,6 +1,7 @@
 #ifndef _STDAFX_H_
 #define _STDAFX_H_
 
+#include <stdio.h>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -25,5 +26,15 @@
 #include "clang/Analysis/CFG.h"
 #include "llvm/Support/Host.h"
 #include "llvm/Support/raw_ostream.h"
+
+typedef std::vector<clang::DeclGroupRef> DeclGroupRefVec;
+typedef uint32_t ErrCode;
+
+#define DEBUG
+#ifdef DEBUG
+	#define DPRINT(fmt, ...) fprintf(stderr, fmt, ## __VA_ARGS__)
+#else
+	#define DPRINT(fmt, ...)
+#endif
 
 #endif

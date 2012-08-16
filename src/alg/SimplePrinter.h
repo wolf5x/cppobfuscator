@@ -3,14 +3,15 @@
 
 #include "Algorithm.h"
 #include "SimplePrinterConsumer.h"
-using namespace clang;
 
 class SimplePrinter: public Algorithm {
 protected:
-	SimplePrinterConsumer algConsumer;
 
 public:
-	virtual bool execute(Sema &S);
+	virtual bool execute(ResourceManager &RM, DeclGroupRefVec &decls);
+
+private:
+	bool consume(clang::ASTConsumer *C, DeclGroupRefVec &decls);
 };
 
 #endif

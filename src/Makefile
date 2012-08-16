@@ -2,14 +2,13 @@ CXX = g++
 CLANG = clang
 
 ROOT = .
-SUBDIR = alg
+SUBDIR = . alg
 INCLUDE = $(addprefix -I,$(SUBDIR))
 
 TARGET = obfs
 TAROBJ = $(TARGET).o
 
-SRCS = $(foreach dir,$(SUBDIR),$(wildcard $(dir)/*.cpp))
-
+SRCS = $(filter-out ./$(TARGET).cpp, $(foreach dir,$(SUBDIR),$(wildcard $(dir)/*.cpp)))
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 
 CXXFLAGS = -c $(INCLUDE)
@@ -64,14 +63,14 @@ pch: $(PCH).h
 	$(CLANG) -cc1 -emit-pch -x c++-header ./$(PCH).h $(PCHFLAGS) -o ./$(PCH).h.pch
 #	$(CXX) ./$(PCH).h $(PCHFLAGS) -o ./$(PCH).h.pch
 
-$(TARGET): $(TAROBJ) $(OBJS)
+$(TARGET): $(OBJS) $(TAROBJ) Makefile
 	$(CXX) $(TAROBJ) $(OBJS) -o $@ $(CLANGLIBS) $(LLVMLIBS) 
-
-$(TAROBJ): %.o:%.cpp %.h $(OBJS) $(wildcard *.h)
-	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
 
 $(OBJS): %.o:%.cpp %.h
 	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
 
+$(TAROBJ): %.o:%.cpp %.h
+	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
+
 clean:
-	rm -rf *.o $(TARGET) $(OBJS)
+	rm -rf $(TARGET) $(TAROBJ) $(OBJS) $(patsubst %.cpp,%.d,$(SRCS))

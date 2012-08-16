@@ -12,7 +12,6 @@ SimplePrinterConsumer::HandleTopLevelDecl(DeclGroupRef D) {
 	}
 
 	PrintingPolicy policy = compInst->getASTContext().getPrintingPolicy();
-	policy.Dump = false;
 	NullStmt *nullSt = new (compInst->getASTContext()) NullStmt(SourceLocation());
 
 	DeclGroupRef::iterator it;

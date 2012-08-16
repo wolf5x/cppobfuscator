@@ -1,16 +1,16 @@
+#include "obfs.h"
 #include "stdafx.h"
 #include "Obfuscator.h"
 using namespace std;
 using namespace clang;
 
-int main() {
+int main(int argc, char **argv) {
+	assert(argc == 2 && "No input file is specified.");
 	Obfuscator obfs;
-	obfs.initialize();
+	obfs.init();
 	cout << "done1" << endl;
-	obfs.initParseAST("test.cpp");
+	obfs.doit(argv[1]);
 	cout << "done2" << endl;
-	obfs.rewriteToSourceFile("testo.cpp");
-	cout << "done3" << endl;
 	return 0;
 }
 
