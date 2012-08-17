@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <iostream>
+#include "@test.h"
 using namespace std;
 
 class ThisShit {

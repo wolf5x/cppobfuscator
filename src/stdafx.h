@@ -5,6 +5,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <set>
+#include <libgen.h> // for basename(), dirname(), etc.
 
 #include "clang/AST/ASTConsumer.h"
 #include "clang/AST/RecursiveASTVisitor.h"
@@ -32,7 +34,10 @@ typedef uint32_t ErrCode;
 
 #define DEBUG
 #ifdef DEBUG
-	#define DPRINT(fmt, ...) fprintf(stderr, fmt, ## __VA_ARGS__)
+	#define DPRINT(fmt, ...)  \
+		fprintf(stderr, "[DEBUG][%s - line %d] ", __FILE__, __LINE__); \
+		fprintf(stderr, fmt, ## __VA_ARGS__); \
+		fprintf(stderr, "\n");
 #else
 	#define DPRINT(fmt, ...)
 #endif

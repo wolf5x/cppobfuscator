@@ -16,9 +16,11 @@ class ResourceManager {
 public:
 	void init();
 
-	void initParseAST(string srcMainFile);
+	bool initParseAST(string srcMainFile);
 
-	void rewriteToSourceFile(string desMainFile);
+	void rewriteToFile(string desMainFile);
+
+	bool prettyPrint(llvm::raw_ostream &out);
 
 	CompilerInstance& getCompilerInstance() {
 		return *compInst.get();

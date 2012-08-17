@@ -8,7 +8,7 @@ INCLUDE = $(addprefix -I,$(SUBDIR))
 TARGET = obfs
 TAROBJ = $(TARGET).o
 
-SRCS = $(filter-out ./$(TARGET).cpp, $(foreach dir,$(SUBDIR),$(wildcard $(dir)/*.cpp)))
+SRCS = $(filter-out ./$(TARGET).cpp, $(foreach dir,$(SUBDIR),$(wildcard $(dir)/[^@]*.cpp)))
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 
 CXXFLAGS = -c $(INCLUDE)
@@ -66,7 +66,7 @@ pch: $(PCH).h
 $(TARGET): $(OBJS) $(TAROBJ) Makefile
 	$(CXX) $(TAROBJ) $(OBJS) -o $@ $(CLANGLIBS) $(LLVMLIBS) 
 
-$(OBJS): %.o:%.cpp %.h
+$(OBJS): %.o:%.cpp %.h 
 	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
 
 $(TAROBJ): %.o:%.cpp %.h

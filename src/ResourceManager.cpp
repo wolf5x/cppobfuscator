@@ -46,7 +46,7 @@ ResourceManager::init() {
 	rw->setSourceMgr(srcMgr, compInst->getLangOpts());
 }
 
-void 
+bool 
 ResourceManager::initParseAST(string srcFileFullName) {
 	FileManager &fileMgr = compInst->getFileManager();
 	SourceManager &srcMgr = compInst->getSourceManager();
@@ -59,19 +59,79 @@ ResourceManager::initParseAST(string srcFileFullName) {
 	ParseAST(compInst->getPreprocessor(),
 			new InitParseConsumer(decls, compInst.get()),
 			compInst->getASTContext());
+
+	return true;
 }
 
 void 
-ResourceManager::rewriteToSourceFile(string desFileFullName) {
+ResourceManager::rewriteToFile(string desFileFullName) {
 	SourceManager &srcMgr = compInst->getSourceManager();
-	const RewriteBuffer *rwBuf = rw->getRewriteBufferFor(srcMgr.getMainFileID());
-	if(rwBuf != NULL) {
-		string errInfo;
-		llvm::raw_fd_ostream fos(desFileFullName.c_str(), errInfo);
-		fos << string(rwBuf->begin(), rwBuf->end());
-		fos.close();
-	} else {
-		llvm::errs() << "Nothing's changed.\n";
+	set<FileID> q;
+	for(int i = 0; i < decls.size(); i++ ){
+		for(DeclGroupRef::iterator
+				I = decls[i].begin(), E = decls[i].end(); 
+				I != E; ++I) {
+			Decl *d = *I;
+			FileID thisFileID = srcMgr.getFileID(d->getLocation());
+			q.insert(thisFileID);
+		}
 	}
+	const RewriteBuffer *rwBuf = NULL;
+	string errInfo;
+	for(set<FileID>::iterator
+			I = q.begin(), E = q.end();
+			I != E; ++I){
+		rwBuf = rw->getRewriteBufferFor(srcMgr.getMainFileID());
+		FileID thisFileID = *I;
+		string thisFileName = srcMgr.getFileEntryForID(thisFileID)->getName(); //FIXME: implemented as getFilename in clang3.2+
+		if(rwBuf != NULL) {
+			llvm::raw_fd_ostream fos(thisFileName.c_str(), errInfo);
+			fos << string(rwBuf->begin(), rwBuf->end());
+			fos.close();
+			DPRINT("src %s rewrited.", thisFileName.c_str());
+		} else {
+			DPRINT("src %s not changed.", thisFileName.c_str());
+		}
+	}
+}
+
+bool 
+ResourceManager::prettyPrint(llvm::raw_ostream &out) {
+	PrintingPolicy policy = compInst->getASTContext().getPrintingPolicy();
+	NullStmt *nullSt = new (compInst->getASTContext()) NullStmt(SourceLocation());
+	SourceManager &srcMgr = compInst->getSourceManager();
+
+	set<FileID> createdFileID;
+	FileID lastFileID;
+	OwningPtr<llvm::raw_fd_ostream> fout;
+	string errInfo = "";
+	for(int i = 0; i < decls.size(); i++ ){
+		for(DeclGroupRef::iterator 
+			   I = decls[i].begin(), E = decls[i].end();
+			   I != E; ++I) {
+			Decl *d = *I;
+			FileID thisFileID = srcMgr.getFileID(d->getLocation());
+			if(thisFileID != lastFileID) {
+				if(fout) {
+					fout.get()->close();
+					fout.reset();
+				}
+				string thisFileName = srcMgr.getFileEntryForID(thisFileID)->getName(); //FIXME: implemented as getFilename in clang3.2+
+				thisFileName.insert(thisFileName.find_last_of("/\\")+1, "@");
+				unsigned flags = createdFileID.find(thisFileID) != createdFileID.end() ? llvm::raw_fd_ostream::F_Append : 0;
+				fout.reset(new llvm::raw_fd_ostream(thisFileName.c_str(), errInfo, flags));
+				lastFileID = thisFileID;
+				createdFileID.insert(thisFileID);
+				DPRINT("Open desfile %s", thisFileName.c_str());
+			}
+			(*I)->print(*fout.get(), policy);
+			nullSt->printPretty(*fout.get(), NULL, policy);
+		}
+	}
+	if(fout){
+		fout.get()->close();
+	}
+	
+	return true;
 }
 
