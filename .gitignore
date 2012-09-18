@@ -20,3 +20,10 @@ obfs
 
 # Swap file of vim 
 *.swp
+
+# pack
+*.zip
+*.rar
+*.tar
+*.bz
+*.gz

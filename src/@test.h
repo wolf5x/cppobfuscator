@@ -1,19 +1,14 @@
-#ifndef TEST_H
-#define TEST_H
+#include <iostream>
 
-#include "stdio.h"
-
-class TestClass {
+template <typename T> 
+class MyClass {
 public:
-	TestClass() { puts("constructed."); }
-	~TestClass() { puts("destructed."); }
-
-	void touch() { puts("don't touch me!"); }
+	void out(T x) {
+		int a = 0;
+		while(a++ < 3) {
+			std::cout << x << a << std::endl;
+			for(int i = 0; i < 10 ;i++){
+			}
+		}
+	}
 };
-
-void func() {
-	TestClass A;
-	A.touch();
-}
-
-#endif

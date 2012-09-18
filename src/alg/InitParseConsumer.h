@@ -24,7 +24,7 @@ public:
 		} 
 
 		decls.push_back(DR);
-		DPRINT("+decl, size = %d\n", decls.size());
+		DPRINT("+decl, size = %d", decls.size());
 		return true;
 	}
 };

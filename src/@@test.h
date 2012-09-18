@@ -1,24 +1,29 @@
-class TestClass {
+template <typename T> class MyClass {
 public:
-    TestClass()     {
-        puts("constructed.");
-    }
-
-
-    void ~TestClass()     {
-        puts("destructed.");
-    }
-
-
-    void touch()     {
-        puts("don't touch me!");
+    void out(T x)     {
+        int a = 0;
+        while (a++ < 3)
+            {
+                std::cout << x << a << std::endl;
+                for (int i = 0; i < 10; i++) {
+                  ____lbl____0:
+                    ;
+                }
+            }
     }
 
 
 };
-void func() {
-    TestClass A;
-    A.touch();
+void out(int x) {
+    int a = 0;
+    while (a++ < 3)
+        {
+            std::cout << x << a << std::endl;
+            for (int i = 0; i < 10; i++) {
+              ____lbl____7:
+                ;
+            }
+        }
 }
 
 ;

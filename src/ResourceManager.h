@@ -11,6 +11,7 @@ using namespace clang;
 class ResourceManager {
 	OwningPtr<CompilerInstance> compInst;
 	OwningPtr<Rewriter> rw;
+	
 	DeclGroupRefVec decls; 
 	
 public:
@@ -33,6 +34,10 @@ public:
 	DeclGroupRefVec& getDeclGroupRefVec() {
 		return decls;
 	}
+
+	//TODO TopLevelDeclGroup is in DeclContext::decls_begin()~decls_end()
+	DeclGroupRef& updateAndGetDeclGroupRef();
+	DeclGroupRef& getDeclGroupRef();
 	
 };
 

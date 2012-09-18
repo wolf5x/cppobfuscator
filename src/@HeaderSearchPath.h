@@ -1,0 +1,1 @@
+const std::string HS_PATHS[7] = { "/usr/local/lib/clang/3.1/include", "/usr/local/include", "/usr/include", "/usr/include/linux", "/usr/include/c++/4.6", "/usr/include/c++/4.6/i486-linux-gnu", "/usr/include/c++/4.6/backward" };

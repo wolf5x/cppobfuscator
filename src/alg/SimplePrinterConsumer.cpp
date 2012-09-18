@@ -17,8 +17,18 @@ SimplePrinterConsumer::HandleTopLevelDecl(DeclGroupRef D) {
 	for(DeclGroupRef::iterator 
 		   I = D.begin(), E = D.end();
 		   I != E; ++I) {
-		(*I)->print(out, policy);
+		Decl *dd = *I;
+		
+		dd->print(out, policy);
 		nullSt->printPretty(out, NULL, policy);
+		//CFG
+		if(dd->hasBody()) {
+			CFG::BuildOptions buildOPts;
+			OwningPtr<CFG> cfg;
+			cfg.reset(CFG::buildCFG((const Decl*)dd, (Stmt*)(dd->getBody()), &compInst->getASTContext(), buildOPts));
+			assert(cfg.get() != NULL && "build CFG failed.");
+			cfg->dump(compInst->getLangOpts(), true);
+		}
 	}
 	return true;
 };

@@ -38,9 +38,11 @@ ResourceManager::init() {
 	SourceManager &srcMgr = compInst->getSourceManager();
 	compInst->createPreprocessor();
 	compInst->createASTContext();
-
+	compInst->setASTConsumer(new InitParseConsumer(this->decls, this->compInst.get()));
 	Preprocessor &pp = compInst->getPreprocessor();
 	pp.getBuiltinInfo().InitializeBuiltins(pp.getIdentifierTable(), pp.getLangOpts());
+
+	compInst->createSema(TU_Complete, NULL);
 
 	rw.reset(new Rewriter());
 	rw->setSourceMgr(srcMgr, compInst->getLangOpts());
@@ -55,10 +57,12 @@ ResourceManager::initParseAST(string srcFileFullName) {
 	compInst->getDiagnosticClient().BeginSourceFile(
 			compInst->getLangOpts(),
 			&compInst->getPreprocessor());
-
+	/*
 	ParseAST(compInst->getPreprocessor(),
 			new InitParseConsumer(decls, compInst.get()),
 			compInst->getASTContext());
+			*/
+	ParseAST(compInst->getSema());
 
 	return true;
 }

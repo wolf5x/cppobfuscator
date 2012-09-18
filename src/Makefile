@@ -11,7 +11,7 @@ TAROBJ = $(TARGET).o
 SRCS = $(filter-out ./$(TARGET).cpp, $(foreach dir,$(SUBDIR),$(wildcard $(dir)/[^@]*.cpp)))
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 
-CXXFLAGS = -c $(INCLUDE)
+CXXFLAGS = -g -c $(INCLUDE)
 
 #LLVM_LIBS = core mc
 #LLVM_CONFIG_COMMAND = $(LLVM_BIN_PATH)/llvm-config --cxxflags --ldflags \
@@ -66,7 +66,7 @@ pch: $(PCH).h
 $(TARGET): $(OBJS) $(TAROBJ) Makefile
 	$(CXX) $(TAROBJ) $(OBJS) -o $@ $(CLANGLIBS) $(LLVMLIBS) 
 
-$(OBJS): %.o:%.cpp %.h 
+$(OBJS): %.o:%.cpp %.h
 	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
 
 $(TAROBJ): %.o:%.cpp %.h
