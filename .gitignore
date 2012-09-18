@@ -27,3 +27,6 @@ obfs
 *.tar
 *.bz
 *.gz
+
+# test file
+@*
