@@ -8,7 +8,7 @@ INCLUDE = $(addprefix -I,$(SUBDIR))
 TARGET = obfs
 TAROBJ = $(TARGET).o
 
-SRCS = $(filter-out ./$(TARGET).cpp, $(foreach dir,$(SUBDIR),$(wildcard $(dir)/[^@]*.cpp)))
+SRCS = $(filter-out ./$(TARGET).cpp, $(foreach dir,$(SUBDIR),$(wildcard $(dir)/[^@_]*.cpp)))
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 
 CXXFLAGS = -g -c $(INCLUDE)

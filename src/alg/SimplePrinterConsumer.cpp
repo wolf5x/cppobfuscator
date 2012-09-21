@@ -28,6 +28,7 @@ SimplePrinterConsumer::HandleTopLevelDecl(DeclGroupRef D) {
 			cfg.reset(CFG::buildCFG((const Decl*)dd, (Stmt*)(dd->getBody()), &compInst->getASTContext(), buildOPts));
 			assert(cfg.get() != NULL && "build CFG failed.");
 			cfg->dump(compInst->getLangOpts(), true);
+			cfg->viewCFG(compInst->getLangOpts());
 		}
 	}
 	return true;

@@ -1,0 +1,1055 @@
+done1
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.1/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i486-linux-gnu
+ /usr/include/c++/4.6/backward
+End of search list.
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.1/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i486-linux-gnu
+ /usr/include/c++/4.6/backward
+End of search list.
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 1
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 2
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 3
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 4
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 5
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 6
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 7
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 8
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: UsingDirective
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- BOOL _Bool
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- INT int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+1;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- PINT int *
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+&INT;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+INT;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- STR string
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ExprWithCleanups
+"xx";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXConstructExpr
+"xx";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"xx";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"xx";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXDefaultArgExpr
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- PSTR string *
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+&STR;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+STR;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Function
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    int INT = 2;
+    {
+        extern int INT;
+        INT = 3;
+        printf("ext1 %d\n", INT);
+    }
+    printf("ext2 %d\n", INT);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int INT = 2;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- INT int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    extern int INT;
+    INT = 3;
+    printf("ext1 %d\n", INT);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+extern int INT;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- INT int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+INT = 3;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+INT;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+3;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+printf("ext1 %d\n", INT);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"ext1 %d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"ext1 %d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+INT;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+INT;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+printf("ext2 %d\n", ____locVar____0);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"ext2 %d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"ext2 %d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____0;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____0;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Function
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    int x = 1, y = 2;
+    x = 2;
+    const int *p = &x;
+    p = &y;
+    int *const q = &x;
+    *q = 4;
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int x = 1, y = 2;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- x int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+1;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- y int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____1 = 2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+const int *p = &____locVar____1;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- p const int *
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+&____locVar____1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+&____locVar____1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____3 = &____locVar____2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____3;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+&____locVar____2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+&____locVar____2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int *const q = &____locVar____1;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- q int *const
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+&____locVar____1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+*____locVar____4 = 4;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+*____locVar____4;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____4;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____4;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+4;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Function
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: ParmVar
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- ref string &
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: ParmVar
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- ptr string *
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    int x = (____locVar____5.length() , ____locVar____6->length());
+    int y = (____locVar____5.length() + ((*____locVar____6).length() * ____locVar____6->length())) / 2;
+    string rr = "test", ss("ttest");
+    string *rf;
+    if (____locVar____5.c_str() == ____locVar____6->c_str() && (rr = ____locVar____5).c_str() == (*____locVar____6).c_str()) {
+        string &f = *____locVar____6;
+        rf = &(*____locVar____6);
+        static int x, y = 3;
+        printf("static %d\n", ++y + x);
+    }
+    void (*fp)(string &, string *) = callfunc;
+    void (*&fpr)(string &, string *) = fp;
+    void (**fpp)(string &, string *) = &(fp);
+    printf("%u %u %u\n", (unsigned int)fp, (unsigned int)fpr, (unsigned int)(*fpp));
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int x = (____locVar____5.length() , ____locVar____6->length());
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- x int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+(____locVar____5.length() , ____locVar____6->length());
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+(____locVar____5.length() , ____locVar____6->length());
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____5.length() , ____locVar____6->length();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+____locVar____5.length();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+____locVar____5.length;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+____locVar____6->length();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+____locVar____6->length;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int y = (____locVar____5.length() + ((*____locVar____6).length() * ____locVar____6->length())) / 2;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- y int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+(____locVar____5.length() + ((*____locVar____6).length() * ____locVar____6->length())) / 2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+(____locVar____5.length() + ((*____locVar____6).length() * ____locVar____6->length())) / 2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+(____locVar____5.length() + ((*____locVar____6).length() * ____locVar____6->length()));
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____5.length() + ((*____locVar____6).length() * ____locVar____6->length());
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+____locVar____5.length();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+____locVar____5.length;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+((*____locVar____6).length() * ____locVar____6->length());
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+(*____locVar____6).length() * ____locVar____6->length();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+(*____locVar____6).length();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+(*____locVar____6).length;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+(*____locVar____6);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+(*____locVar____6);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+*____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+____locVar____6->length();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+____locVar____6->length;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+string rr = "test", ss("ttest");
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- rr string
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ExprWithCleanups
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXConstructExpr
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MaterializeTemporaryExpr
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXBindTemporaryExpr
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXConstructExpr
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"test";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXDefaultArgExpr
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- ss string
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ExprWithCleanups
+"ttest";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXConstructExpr
+"ttest";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"ttest";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"ttest";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXDefaultArgExpr
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+string *rf;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- rf string *
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IfStmt
+if (____locVar____5.c_str() == ____locVar____6->c_str() && (____locVar____9 = ____locVar____5).c_str() == (*____locVar____6).c_str()) {
+    string &f = *____locVar____6;
+    ____locVar____11 = &(*____locVar____6);
+    static int x, y = 3;
+    printf("static %d\n", ++y + x);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____5.c_str() == ____locVar____6->c_str() && (____locVar____9 = ____locVar____5).c_str() == (*____locVar____6).c_str();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____5.c_str() == ____locVar____6->c_str();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+____locVar____5.c_str();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+____locVar____5.c_str;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+____locVar____6->c_str();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+____locVar____6->c_str;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+(____locVar____9 = ____locVar____5).c_str() == (*____locVar____6).c_str();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+(____locVar____9 = ____locVar____5).c_str();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+(____locVar____9 = ____locVar____5).c_str;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+(____locVar____9 = ____locVar____5);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+(____locVar____9 = ____locVar____5);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXOperatorCallExpr
+____locVar____9 = ____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+operator=;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+operator=;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____9;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____5;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+(*____locVar____6).c_str();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+(*____locVar____6).c_str;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+(*____locVar____6);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+(*____locVar____6);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+*____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    string &f = *____locVar____6;
+    ____locVar____11 = &(*____locVar____6);
+    static int x, y = 3;
+    printf("static %d\n", ++y + x);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+string &f = *____locVar____6;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- f string &
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+*____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____11 = &(*____locVar____6);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____11;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+&(*____locVar____6);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+(*____locVar____6);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+*____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____6;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+static int x, y = 3;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- x int
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- y int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+3;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+printf("static %d\n", ++____locVar____14 + ____locVar____13);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"static %d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"static %d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+++____locVar____14 + ____locVar____13;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+++____locVar____14;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+++____locVar____14;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____14;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____13;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____13;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+void (*fp)(string &, string *) = callfunc;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- fp void (*)(string &, string *)
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: ParmVar
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- <anonymous> string &
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: ParmVar
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- <anonymous> string *
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+callfunc;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+callfunc;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+void (*&fpr)(string &, string *) = ____locVar____15;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- fpr void (*&)(string &, string *)
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: ParmVar
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- <anonymous> string &
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: ParmVar
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- <anonymous> string *
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____15;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+void (**fpp)(string &, string *) = &(____locVar____15);
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- fpp void (**)(string &, string *)
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: ParmVar
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- <anonymous> string &
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: ParmVar
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- <anonymous> string *
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+&(____locVar____15);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+(____locVar____15);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____15;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+printf("%u %u %u\n", (unsigned int)____locVar____15, (unsigned int)____locVar____18, (unsigned int)(*____locVar____21));
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"%u %u %u\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"%u %u %u\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CStyleCastExpr
+(unsigned int)____locVar____15;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____15;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____15;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CStyleCastExpr
+(unsigned int)____locVar____18;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____18;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____18;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CStyleCastExpr
+(unsigned int)(*____locVar____21);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+(*____locVar____21);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ParenExpr
+(*____locVar____21);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+*____locVar____21;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____21;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____21;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Function
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    string LSTR = STR;
+    printf("%s\n", LSTR.c_str());
+    externvar();
+    callfunc(LSTR, &LSTR);
+    int n = 3;
+  LBL1:
+    {
+        int ary[2] = { n, n * 2 };
+        printf("%d\n", ary[1]);
+    }
+  LBL2:
+    {
+        int ary[3] = { 3, n / 2 };
+        printf("%d\n", ary[1]);
+    }
+  LBL3:
+    {
+        int ary[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+        printf("%d %d\n", ary[1][1][0], ary[2][1][2]);
+    }
+    return 0;
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+string LSTR = STR;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- LSTR string
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXConstructExpr
+STR;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+STR;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+STR;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+printf("%s\n", ____locVar____24.c_str());
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"%s\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"%s\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CXXMemberCallExpr
+____locVar____24.c_str();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: MemberExpr
+____locVar____24.c_str;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____24;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____24;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+externvar();
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+externvar;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+externvar;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+callfunc(____locVar____24, &____locVar____24);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+callfunc;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+callfunc;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____24;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: UnaryOperator
+&____locVar____24;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____24;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int n = 3;
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- n int
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+3;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: LabelStmt
+LBL1:
+{
+    int ary[2] = { ____locVar____25, ____locVar____25 * 2 };
+    printf("%d\n", ary[1]);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    int ary[2] = { ____locVar____25, ____locVar____25 * 2 };
+    printf("%d\n", ary[1]);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int ary[2] = { ____locVar____25, ____locVar____25 * 2 };
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- ary int [2]
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ ____locVar____25, ____locVar____25 * 2 };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____25;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____25;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____25 * 2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____25;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____25;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+printf("%d\n", ____locVar____26[1]);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"%d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"%d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____26[1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ArraySubscriptExpr
+____locVar____26[1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____26;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____26;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: LabelStmt
+LBL2:
+{
+    int ary[3] = { 3, ____locVar____25 / 2 };
+    printf("%d\n", ary[1]);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    int ary[3] = { 3, ____locVar____25 / 2 };
+    printf("%d\n", ary[1]);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int ary[3] = { 3, ____locVar____25 / 2 };
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- ary int [3]
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+3;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ 3, ____locVar____25 / 2 };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+3;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: BinaryOperator
+____locVar____25 / 2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____25;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____25;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+printf("%d\n", ____locVar____27[1]);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"%d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"%d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____27[1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ArraySubscriptExpr
+____locVar____27[1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____27;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____27;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: LabelStmt
+LBL3:
+{
+    int ary[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+    printf("%d %d\n", ary[1][1][0], ary[2][1][2]);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CompoundStmt
+{
+    int ary[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+    printf("%d %d\n", ary[1][1][0], ary[2][1][2]);
+}
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclStmt
+int ary[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+;
+[DEBUG][alg/ForTransformer.cpp - line 62] decl: Var
+[DEBUG][alg/ForTransformer.cpp - line 67]  ---- ary int [3][2][3]
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+3;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ { 111, 112, 113 }, { 121, 122, 123 } };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ 111, 112, 113 };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+111;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+112;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+113;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ 121, 122, 123 };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+121;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+122;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+123;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ { 211, 212 }, { 221 } };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ 211, 212 };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+211;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+212;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{ 221 };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+221;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: InitListExpr
+{  };
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: CallExpr
+printf("%d %d\n", ____locVar____28[1][1][0], ____locVar____28[2][1][2]);
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+printf;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+"%d %d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: StringLiteral
+"%d %d\n";
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____28[1][1][0];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ArraySubscriptExpr
+____locVar____28[1][1][0];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____28[1][1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ArraySubscriptExpr
+____locVar____28[1][1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____28[1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ArraySubscriptExpr
+____locVar____28[1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____28;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____28;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+0;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____28[2][1][2];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ArraySubscriptExpr
+____locVar____28[2][1][2];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____28[2][1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ArraySubscriptExpr
+____locVar____28[2][1];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____28[2];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ArraySubscriptExpr
+____locVar____28[2];
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ImplicitCastExpr
+____locVar____28;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: DeclRefExpr
+____locVar____28;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+1;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+2;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: ReturnStmt
+return 0;
+;
+[DEBUG][alg/ForTransformer.cpp - line 37] stmt: IntegerLiteral
+0;
+[DEBUG][alg/SimplePrinter.cpp - line 7] alg started.
+using namespace std;
+bool BOOL;
+int INT = 1;
+int *PINT = &INT;
+string STR("xx");
+string *PSTR = &STR;
+void externvar() {
+    int ____locVar____0 = 2;
+    {
+        extern int INT;
+        INT = 3;
+        printf("ext1 %d\n", INT);
+    }
+    printf("ext2 %d\n", ____locVar____0);
+}
+
+;
+[0;1;33m
+ [B2 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B1]
+[0m   1: int ____locVar____0 = 2;
+   2: extern int INT;
+   3: INT = 3
+   4: printf("ext1 %d\n", INT)
+   5: printf("ext2 %d\n", ____locVar____0)
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_ERC0SY/CFG.dot'...  done. 
+void constvar() {
+    int ____locVar____1 = 1, ____locVar____2 = 2;
+    ____locVar____1 = 2;
+    const int *____locVar____3 = &____locVar____1;
+    ____locVar____3 = &____locVar____2;
+    int *const ____locVar____4 = &____locVar____1;
+    *____locVar____4 = 4;
+}
+
+;
+[0;1;33m
+ [B2 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B1]
+[0m   1: int ____locVar____1 = 1;
+   2: int ____locVar____2 = 2;
+   3: ____locVar____1 = 2
+   4: const int *____locVar____3 = &____locVar____1;
+   5: ____locVar____3 = &____locVar____2
+   6: int *const ____locVar____4 = &____locVar____1;
+   7: *____locVar____4 = 4
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_1BFBmH/CFG.dot'...  done. 
+void callfunc(string &____locVar____5, string *____locVar____6) {
+    int ____locVar____7 = (____locVar____5.length() , ____locVar____6->length());
+    int ____locVar____8 = (____locVar____5.length() + ((*____locVar____6).length() * ____locVar____6->length())) / 2;
+    string ____locVar____9 = "test", ____locVar____10("ttest");
+    string *____locVar____11;
+    if (____locVar____5.c_str() == ____locVar____6->c_str() && (____locVar____9 = ____locVar____5).c_str() == (*____locVar____6).c_str()) {
+        string &____locVar____12 = *____locVar____6;
+        ____locVar____11 = &(*____locVar____6);
+        static int ____locVar____13, ____locVar____14 = 3;
+        printf("static %d\n", ++____locVar____14 + ____locVar____13);
+    }
+    void (*____locVar____15)(string &, string *) = callfunc;
+    void (*&____locVar____18)(string &, string *) = ____locVar____15;
+    void (**____locVar____21)(string &, string *) = &(____locVar____15);
+    printf("%u %u %u\n", (unsigned int)____locVar____15, (unsigned int)____locVar____18, (unsigned int)(*____locVar____21));
+}
+
+;
+[0;1;33m
+ [B6 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B4[0m
+[0;1;33m
+ [B1]
+[0m   1: void (*____locVar____15)(string &, string *) = callfunc;
+   2: void (*&____locVar____18)(string &, string *) = ____locVar____15;
+   3: void (**____locVar____21)(string &, string *) = &(____locVar____15);
+   4: printf("%u %u %u\n", (unsigned int)____locVar____15, (unsigned int)____locVar____18, (unsigned int)(*____locVar____21))
+[0;34m   Preds [0m(2):[0;34m B2 B3[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B2]
+[0m   1: string &____locVar____12 = *____locVar____6;
+   2: ____locVar____11 = &(*____locVar____6)
+   3: static int ____locVar____13;
+   4: static int ____locVar____14 = 3;
+   5: printf("static %d\n", ++____locVar____14 + ____locVar____13)
+[0;34m   Preds [0m(1):[0;34m B3[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B3]
+[0m   1: [B4.17] && [B5.4]
+[0;32m   T: if [B3.1]
+[0m[0;34m   Preds [0m(2):[0;34m B5 B4[0m
+[0;35m   Succs [0m(2):[0;35m B2 B1[0m
+[0;1;33m
+ [B4]
+[0m   1: ____locVar____5.length()
+   2: ____locVar____6->length()
+   3: ... , [B4.2]
+   4: int ____locVar____7 = (____locVar____5.length() , ____locVar____6->length());
+   5: ____locVar____5.length()
+   6: (*____locVar____6).length()
+   7: ____locVar____6->length()
+   8: int ____locVar____8 = (____locVar____5.length() + ((*____locVar____6).length() * ____locVar____6->length())) / 2;
+   9: "test" (CXXConstructExpr, string)
+  10: [B4.9] (CXXConstructExpr, string)
+  11: string ____locVar____9 = "test";
+  12: "ttest" (CXXConstructExpr, string)
+  13: string ____locVar____10("ttest");
+  14: string *____locVar____11;
+  15: ____locVar____5.c_str()
+  16: ____locVar____6->c_str()
+  17: [B4.15] == [B4.16]
+[0;32m   T: [B4.17] && ...
+[0m[0;34m   Preds [0m(1):[0;34m B6[0m
+[0;35m   Succs [0m(2):[0;35m B5 B3[0m
+[0;1;33m
+ [B5]
+[0m   1: ____locVar____9 = ____locVar____5 (OperatorCall)
+   2: ([B5.1]).c_str()
+   3: (*____locVar____6).c_str()
+   4: [B5.2] == [B5.3]
+[0;34m   Preds [0m(1):[0;34m B4[0m
+[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_US0JQp/CFG.dot'...  done. 
+int main() {
+    string ____locVar____24 = STR;
+    printf("%s\n", ____locVar____24.c_str());
+    externvar();
+    callfunc(____locVar____24, &____locVar____24);
+    int ____locVar____25 = 3;
+  LBL1:
+    {
+        int ____locVar____26[2] = { ____locVar____25, ____locVar____25 * 2 };
+        printf("%d\n", ____locVar____26[1]);
+    }
+  LBL2:
+    {
+        int ____locVar____27[3] = { 3, ____locVar____25 / 2 };
+        printf("%d\n", ____locVar____27[1]);
+    }
+  LBL3:
+    {
+        int ____locVar____28[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+        printf("%d %d\n", ____locVar____28[1][1][0], ____locVar____28[2][1][2]);
+    }
+    return 0;
+}
+
+;
+[0;1;33m
+ [B5 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B4[0m
+[0;1;33m
+ [B1]
+[0m  LBL3:
+   1: int ____locVar____28[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+   2: printf("%d %d\n", ____locVar____28[1][1][0], ____locVar____28[2][1][2])
+   3: return 0;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B2]
+[0m  LBL2:
+   1: int ____locVar____27[3] = { 3, ____locVar____25 / 2 };
+   2: printf("%d\n", ____locVar____27[1])
+[0;34m   Preds [0m(1):[0;34m B3[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B3]
+[0m  LBL1:
+   1: int ____locVar____26[2] = { ____locVar____25, ____locVar____25 * 2 };
+   2: printf("%d\n", ____locVar____26[1])
+[0;34m   Preds [0m(1):[0;34m B4[0m
+[0;35m   Succs [0m(1):[0;35m B2[0m
+[0;1;33m
+ [B4]
+[0m   1: STR (CXXConstructExpr, string)
+   2: string ____locVar____24 = STR;
+   3: ____locVar____24.c_str()
+   4: printf("%s\n", [B4.3])
+   5: externvar()
+   6: callfunc(____locVar____24, &____locVar____24)
+   7: int ____locVar____25 = 3;
+[0;34m   Preds [0m(1):[0;34m B5[0m
+[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_ilzhl8/CFG.dot'...  done. 
+[DEBUG][alg/SimplePrinter.cpp - line 25] alg finished.
+[DEBUG][ResourceManager.cpp - line 97] src _decl.cpp not changed.
+[DEBUG][ResourceManager.cpp - line 129] Open desfile @_decl.cpp
+done2

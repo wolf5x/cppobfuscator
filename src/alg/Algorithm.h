@@ -43,15 +43,15 @@ protected:
 	LabelStmt* AddNewLabel(Stmt *stBody) {
 		//FIXME memory leak
 		//TODO @!#$!@#%
-		static int currLabel = 0;
-		string lbl("____lbl____");
-		IdentifierInfo &info = getUniqueIdentifier(lbl, currLabel);
+		static int counter = 0;
+		string lbl("____Label____");
+		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
 		DPRINT("info %u: %s %d", (unsigned int)&info, info.getNameStart(), info.getBuiltinID());
 		//Sema &S = this->compInst.getSema();
 		//LabelDecl *lblD = this->compInst.getSema().LookupOrCreateLabel(&info, stBody->getLocStart());
 		//DPRINT("tud: %u\n", (unsigned int)compInst.getASTContext().getTranslationUnitDecl());
 		LabelDecl *lblD = LabelDecl::Create(compInst.getASTContext(), 
-				TranslationUnitDecl::castToDeclContext(compInst.getASTContext().getTranslationUnitDecl()), 
+				compInst.getASTContext().getTranslationUnitDecl(),
 				SourceLocation(),
 				&info);
 		NullStmt *nullSt = new (this->compInst.getASTContext()) NullStmt(SourceLocation());
@@ -59,6 +59,14 @@ protected:
 			LabelStmt(SourceLocation(), lblD, nullSt/*StmtToCompound(stBody)*/);
 	}
 
+	VarDecl* renameVarDecl(VarDecl *d) {
+		static int counter = 0;
+		string lbl("____LocalVar____");
+		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
+		d->setDeclName(DeclarationName(&info));
+		return d;
+	}
+	
 	IdentifierInfo& getUniqueIdentifier(string sname, int &ccnt) {
 		IdentifierTable &idTable = this->compInst.getPreprocessor().getIdentifierTable();
 		int csz = idTable.size();
