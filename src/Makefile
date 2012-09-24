@@ -2,7 +2,7 @@ CXX = g++
 CLANG = clang
 
 ROOT = .
-SUBDIR = . alg
+SUBDIR = . alg alg/FlattenCFG
 INCLUDE = $(addprefix -I,$(SUBDIR))
 
 TARGET = obfs

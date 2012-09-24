@@ -3,7 +3,7 @@
 
 #include "Algorithm.h"
 #include "SimplePrinter.h"
-#include "ForTransformer.h"
+#include "FlattenCFG/FlattenCFGTransformer.h"
 
 extern Algorithm *AlgorithmPool[];
 extern const uint32_t AlgorithmPoolSize;

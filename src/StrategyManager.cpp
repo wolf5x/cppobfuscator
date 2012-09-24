@@ -17,7 +17,7 @@ StrategyManager::execute(string srcMainFile) {
 		DPRINT("res: %d\n", flag);
 	}
 	*/
-	ForTransformer(resMgr).execute();
+	FlattenCFGTransformer(resMgr).execute();
 	SimplePrinter(resMgr).execute();
 	
 	return 0;

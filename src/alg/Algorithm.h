@@ -59,19 +59,58 @@ protected:
 			LabelStmt(SourceLocation(), lblD, nullSt/*StmtToCompound(stBody)*/);
 	}
 
-	VarDecl* renameVarDecl(VarDecl *d) {
+	bool renameVarDecl(VarDecl *d) {
 		static int counter = 0;
 		string lbl("____LocalVar____");
 		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
 		d->setDeclName(DeclarationName(&info));
-		return d;
+		return true;
+	}
+
+	// create stmt: "lExpr = rExpr"
+	Expr* BuildAssignExpr(VarDecl *var, Expr* rExpr) {
+		DPRINT("--- ASSIGN EXPR BEGIN ---");
+		Sema &S = this->resMgr.getCompilerInstance().getSema();
+		DeclRefExpr *dExpr = BuildLocalVarDeclRefExpr(var);
+		DPRINT("--- DECLREF END ---");
+		//QualType Ty = var->getType();
+		ExprResult eRes = S.BuildBinOp(0, SourceLocation(), BO_Assign, dExpr, rExpr);
+		if(eRes.isInvalid()){
+			return NULL;
+		}
+		Expr *e = eRes.get();	
+		DPRINT("--- ASSIGN EXPR END ---");
+		return e;
+	}
+
+	DeclRefExpr* BuildLocalVarDeclRefExpr(VarDecl *var) {
+		ValueDecl *D = dyn_cast<ValueDecl>(var);
+		assert(D && "cast to ValueDecl failed");
+		QualType Ty = var->getType();
+		ExprValueKind VK = VK_LValue;
+		DeclarationNameInfo NameInfo(D->getDeclName(), SourceLocation());
+
+		DeclRefExpr *E = DeclRefExpr::Create(
+				resMgr.getCompilerInstance().getASTContext(),
+			   	NestedNameSpecifierLoc(),
+				SourceLocation(), 
+				D, false, 
+				NameInfo, Ty, VK);
+		// Sema::MarkDeclRefReferenced?
+		return E;
+	}
+
+	// convert "var" to "(*pvar)"
+	bool ConvertDeclRefToPtr(DeclRefExpr *var) {
+
+		return true;
 	}
 	
 	IdentifierInfo& getUniqueIdentifier(string sname, int &ccnt) {
 		IdentifierTable &idTable = this->compInst.getPreprocessor().getIdentifierTable();
 		int csz = idTable.size();
+		char lbl[128];
 		while(true) {
-			char lbl[128];
 			sprintf(lbl, "%s%d", sname.c_str(), ccnt++);
 			IdentifierInfo& info = idTable.get(string(lbl));
 			if(csz < idTable.size()) {

@@ -11,6 +11,7 @@
 
 #include "clang/AST/ASTConsumer.h"
 #include "clang/AST/RecursiveASTVisitor.h"
+#include "clang/AST/ParentMap.h"
 #include "clang/Basic/LangOptions.h"
 #include "clang/Basic/Version.h"
 #include "clang/Basic/Diagnostic.h"

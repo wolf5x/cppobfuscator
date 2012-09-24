@@ -26,6 +26,11 @@ void constvar() {
 	*q = 4;
 }
 
+void init() {
+	int xx(0), yy = 0, zz[] = {xx, yy};
+	({int xx(2); yy = 3;});
+}
+
 void callfunc(string &ref, string *ptr) {
 	int x = (ref.length(), ptr->length());
 	int y = (ref.length()+((*ptr).length() * ptr->length())) / 2;
