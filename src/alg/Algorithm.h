@@ -71,13 +71,14 @@ protected:
 	Expr* BuildAssignExpr(VarDecl *var, Expr* rExpr) {
 		DPRINT("--- ASSIGN EXPR BEGIN ---");
 		Sema &S = this->resMgr.getCompilerInstance().getSema();
+		//ExprResult dRes = S.BuildDeclRefExpr(dyn_cast<ValueDecl>(var), var->getType(), VK_LValue, SourceLocation());
+		//assert(!dRes.isInvalid());
+		//DeclRefExpr *dExpr = dyn_cast<DeclRefExpr>(dRes.get());
 		DeclRefExpr *dExpr = BuildLocalVarDeclRefExpr(var);
 		DPRINT("--- DECLREF END ---");
 		//QualType Ty = var->getType();
 		ExprResult eRes = S.BuildBinOp(0, SourceLocation(), BO_Assign, dExpr, rExpr);
-		if(eRes.isInvalid()){
-			return NULL;
-		}
+		assert(!eRes.isInvalid());
 		Expr *e = eRes.get();	
 		DPRINT("--- ASSIGN EXPR END ---");
 		return e;

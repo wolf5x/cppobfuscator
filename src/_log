@@ -24,661 +24,623 @@ End of search list.
 [DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 3
 [DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 4
 [DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 5
+_decl.cpp:21:14: error: expected unqualified-id
+                typedef int[n][n] varray;
+                           ^
+_decl.cpp:22:3: error: use of undeclared identifier 'varray'
+                varray ary[n];
+                ^
 [DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 6
 [DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 7
 [DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 8
 [DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 9
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 10
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: UsingDirective
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = BOOL | type = _Bool | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = BOOL | type = _Bool | const = 0 | extern = 0 | POD = 1
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = INT | type = int | const = 0 | extern = 0
-1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = INT | type = int | const = 0 | extern = 0 | POD = 1
+1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
 1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = PINT | type = int * | const = 0 | extern = 0
-&INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-&INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = PINT | type = int * | const = 0 | extern = 0 | POD = 1
+&INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+&INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
 INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = STR | type = string | const = 0 | extern = 0
-"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ExprWithCleanups
-"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXConstructExpr
-"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXDefaultArgExpr
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = STR | type = string | const = 0 | extern = 0 | POD = 0
+"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ExprWithCleanups
+"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXConstructExpr
+"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"xx"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXDefaultArgExpr
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = PSTR | type = string * | const = 0 | extern = 0
-&STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-&STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = PSTR | type = string * | const = 0 | extern = 0 | POD = 1
+&STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+&STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
 STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Function
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = INT | type = int | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = INT | type = int | const = 0 | extern = 0 | POD = 1
 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = INT | type = int | const = 0 | extern = 1
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = INT | type = int | const = 0 | extern = 1 | POD = 1
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
 {
     int ____LocalVar____0 = 2;
     {
         extern int INT;
         INT = 3;
-        printf("ext1 %d\n", INT);
     }
-    printf("ext2 %d\n", ____LocalVar____0);
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
 int ____LocalVar____0 = 2;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____0 = 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____0 = 2;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
 {
     extern int INT;
     INT = 3;
-    printf("ext1 %d\n", INT);
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
 extern int INT;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-INT = 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-printf("ext1 %d\n", INT)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"ext1 %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"ext1 %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-printf("ext2 %d\n", ____LocalVar____0)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"ext2 %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"ext2 %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Function
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 112] isExtern
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+INT = 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+INT[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Function
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = x | type = int | const = 0 | extern = 0
-1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = y | type = int | const = 0 | extern = 0
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = p | type = const int * | const = 0 | extern = 0
-&____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = q | type = int *const | const = 0 | extern = 0
-&____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = n | type = int | const = 0 | extern = 0 | POD = 1
+3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = ary | type = int [2] | const = 0 | extern = 0 | POD = 1
+{ ____LocalVar____1, ____LocalVar____1 * 2 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = ary | type = int [3] | const = 0 | extern = 0 | POD = 1
+{ 3, ____LocalVar____1 / 2 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = ary | type = int [3][2][3] | const = 0 | extern = 0 | POD = 1
+{ { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = ary | type = int [____LocalVar____1][____LocalVar____1 * 2] | const = 0 | extern = 0 | POD = 1
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
 {
-    int ____LocalVar____1 = 1, ____LocalVar____2 = 2;
-    ____LocalVar____1 = 2;
-    const int *____LocalVar____3 = &____LocalVar____1;
-    ____LocalVar____3 = &____LocalVar____2;
-    int *const ____LocalVar____4 = &____LocalVar____1;
-    *____LocalVar____4 = 4;
+    int ____LocalVar____1 = 3;
+    {
+    }
+    {
+        int ____LocalVar____2[2] = { ____LocalVar____1, ____LocalVar____1 * 2 };
+        printf("%d\n", ____LocalVar____2[1]);
+    }
+    {
+        int ____LocalVar____3[3] = { 3, ____LocalVar____1 / 2 };
+        printf("%d\n", ____LocalVar____3[1]);
+    }
+    {
+        int ____LocalVar____4[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+        printf("%d %d\n", ____LocalVar____4[1][1][0], ____LocalVar____4[2][1][2]);
+    }
+    {
+        int ____LocalVar____5[____LocalVar____1][____LocalVar____1 * 2];
+    }
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____1 = 1, ____LocalVar____2 = 2;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____1 = 3;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____1 = 1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____1 = 3;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
+{
+}
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
+{
+    int ____LocalVar____2[2] = { ____LocalVar____1, ____LocalVar____1 * 2 };
+    printf("%d\n", ____LocalVar____2[1]);
+}
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____2[2] = { ____LocalVar____1, ____LocalVar____1 * 2 };
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 130] isArrayType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ ____LocalVar____1, ____LocalVar____1 * 2 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____1 * 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CallExpr
+printf("%d\n", ____LocalVar____2[1])[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"%d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"%d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____2[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ArraySubscriptExpr
+____LocalVar____2[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
+{
+    int ____LocalVar____3[3] = { 3, ____LocalVar____1 / 2 };
+    printf("%d\n", ____LocalVar____3[1]);
+}
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____3[3] = { 3, ____LocalVar____1 / 2 };
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 130] isArrayType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ 3, ____LocalVar____1 / 2 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____1 / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CallExpr
+printf("%d\n", ____LocalVar____3[1])[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"%d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"%d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____3[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ArraySubscriptExpr
+____LocalVar____3[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
+{
+    int ____LocalVar____4[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+    printf("%d %d\n", ____LocalVar____4[1][1][0], ____LocalVar____4[2][1][2]);
+}
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____4[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 130] isArrayType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ { 111, 112, 113 }, { 121, 122, 123 } }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ 111, 112, 113 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+111[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+112[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+113[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ 121, 122, 123 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+121[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+122[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+123[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ { 211, 212 }, { 221 } }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ 211, 212 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+211[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+212[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ 221 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+221[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{  }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CallExpr
+printf("%d %d\n", ____LocalVar____4[1][1][0], ____LocalVar____4[2][1][2])[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"%d %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"%d %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____4[1][1][0][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ArraySubscriptExpr
+____LocalVar____4[1][1][0][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____4[1][1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ArraySubscriptExpr
+____LocalVar____4[1][1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____4[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ArraySubscriptExpr
+____LocalVar____4[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____4[2][1][2][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ArraySubscriptExpr
+____LocalVar____4[2][1][2][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____4[2][1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ArraySubscriptExpr
+____LocalVar____4[2][1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____4[2][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ArraySubscriptExpr
+____LocalVar____4[2][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
+{
+    int ____LocalVar____5[____LocalVar____1][____LocalVar____1 * 2];
+}
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____5[____LocalVar____1][____LocalVar____1 * 2];
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 130] isArrayType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____1 * 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Function
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = x | type = int | const = 0 | extern = 0 | POD = 1
+1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = y | type = int | const = 0 | extern = 0 | POD = 1
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = p | type = const int * | const = 0 | extern = 0 | POD = 1
+&____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = q | type = int *const | const = 0 | extern = 0 | POD = 1
+&____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
+{
+    int ____LocalVar____6 = 1, ____LocalVar____7 = 2;
+    ____LocalVar____6 = 2;
+    const int *____LocalVar____8 = &____LocalVar____6;
+    ____LocalVar____8 = &____LocalVar____7;
+    int *const ____LocalVar____9 = &____LocalVar____6;
+    *____LocalVar____9 = 4;
+}
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____6 = 1, ____LocalVar____7 = 2;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____2 = 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____1 = 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-const int *____LocalVar____3 = &____LocalVar____1;
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____6 = 1;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____3 = &____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-&____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-&____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____3 = &____LocalVar____2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-&____LocalVar____2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-&____LocalVar____2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int *const ____LocalVar____4 = &____LocalVar____1;
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____7 = 2;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____6 = 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+const int *____LocalVar____8 = &____LocalVar____6;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-error: read-only variable is not assignable
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-<NULL>[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-&____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-*____LocalVar____4 = 4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-*____LocalVar____4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____8 = &____LocalVar____6;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+&____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+&____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____8 = &____LocalVar____7[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____8[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+&____LocalVar____7[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+&____LocalVar____7[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____7[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int *const ____LocalVar____9 = &____LocalVar____6;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 118] isConstQualified : c 1
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+&____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+*____LocalVar____9 = 4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+*____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
 4[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Function
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = xx | type = int | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = xx | type = int | const = 0 | extern = 0 | POD = 1
 0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = yy | type = int | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = yy | type = int | const = 0 | extern = 0 | POD = 1
 0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = zz | type = int [2] | const = 0 | extern = 0
-{ ____LocalVar____5, ____LocalVar____6 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = xx | type = int | const = 0 | extern = 0
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = zz | type = int [2] | const = 0 | extern = 0 | POD = 1
+{ ____LocalVar____10, ____LocalVar____11 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = xx | type = int | const = 0 | extern = 0 | POD = 1
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
 {
-    int ____LocalVar____5(0), ____LocalVar____6 = 0, ____LocalVar____7[2] = { ____LocalVar____5, ____LocalVar____6 };
+    int ____LocalVar____10(0), ____LocalVar____11 = 0, ____LocalVar____12[2] = { ____LocalVar____10, ____LocalVar____11 };
     ({
-        int ____LocalVar____8(2);
-        ____LocalVar____6 = 3;
+        int ____LocalVar____13(2);
+        ____LocalVar____11 = 3;
     });
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____5(0), ____LocalVar____6 = 0, ____LocalVar____7[2] = { ____LocalVar____5, ____LocalVar____6 };
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____10(0), ____LocalVar____11 = 0, ____LocalVar____12[2] = { ____LocalVar____10, ____LocalVar____11 };
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____5 = 0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____10 = 0;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____6 = 0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-error: array type 'int [2]' is not assignable
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-<NULL>[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ ____LocalVar____5, ____LocalVar____6 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____5[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____5[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StmtExpr
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____11 = 0;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 130] isArrayType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt InitListExpr
+{ ____LocalVar____10, ____LocalVar____11 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____11[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____11[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StmtExpr
 ({
-    int ____LocalVar____8(2);
-    ____LocalVar____6 = 3;
-})[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
+    int ____LocalVar____13(2);
+    ____LocalVar____11 = 3;
+})[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
 {
-    int ____LocalVar____8(2);
-    ____LocalVar____6 = 3;
+    int ____LocalVar____13(2);
+    ____LocalVar____11 = 3;
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____8(2);
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____13(2);
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____8 = 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____6 = 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____6 = 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____6[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____13 = 2;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____11 = 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____11 = 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____11[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Function
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = ref | type = string & | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = ref | type = string & | const = 0 | extern = 0 | POD = 0
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = ptr | type = string * | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = ptr | type = string * | const = 0 | extern = 0 | POD = 1
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = x | type = int | const = 0 | extern = 0
-(____LocalVar____9.length() , ____LocalVar____10->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = y | type = int | const = 0 | extern = 0
-(____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = rr | type = string | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = x | type = int | const = 0 | extern = 0 | POD = 1
+(____LocalVar____14.length() , ____LocalVar____15->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = y | type = int | const = 0 | extern = 0 | POD = 1
+(____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = rr | type = string | const = 0 | extern = 0 | POD = 0
 "test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = ss | type = string | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = ss | type = string | const = 0 | extern = 0 | POD = 0
 "ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = rf | type = string * | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = rf | type = string * | const = 0 | extern = 0 | POD = 1
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = f | type = string & | const = 0 | extern = 0
-*____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = x | type = int | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = f | type = string & | const = 0 | extern = 0 | POD = 0
+*____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = x | type = int | const = 0 | extern = 0 | POD = 1
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = y | type = int | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = y | type = int | const = 0 | extern = 0 | POD = 1
 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = fp | type = void (*)(string &, string *) | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = fp | type = void (*)(string &, string *) | const = 0 | extern = 0 | POD = 1
 callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = <anonymous> | type = string & | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = <anonymous> | type = string & | const = 0 | extern = 0 | POD = 0
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = <anonymous> | type = string * | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = <anonymous> | type = string * | const = 0 | extern = 0 | POD = 1
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = fpr | type = void (*&)(string &, string *) | const = 0 | extern = 0
-____LocalVar____19[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = <anonymous> | type = string & | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = fpr | type = void (*&)(string &, string *) | const = 0 | extern = 0 | POD = 0
+____LocalVar____24[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = <anonymous> | type = string & | const = 0 | extern = 0 | POD = 0
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = <anonymous> | type = string * | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = <anonymous> | type = string * | const = 0 | extern = 0 | POD = 1
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = fpp | type = void (**)(string &, string *) | const = 0 | extern = 0
-&(____LocalVar____19)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = <anonymous> | type = string & | const = 0 | extern = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = fpp | type = void (**)(string &, string *) | const = 0 | extern = 0 | POD = 1
+&(____LocalVar____24)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = <anonymous> | type = string & | const = 0 | extern = 0 | POD = 0
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: ParmVar
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = <anonymous> | type = string * | const = 0 | extern = 0
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = <anonymous> | type = string * | const = 0 | extern = 0 | POD = 1
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
 {
-    int ____LocalVar____11 = (____LocalVar____9.length() , ____LocalVar____10->length());
-    int ____LocalVar____12 = (____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2;
-    string ____LocalVar____13 = "test", ____LocalVar____14("ttest");
-    string *____LocalVar____15;
-    if (____LocalVar____9.c_str() == ____LocalVar____10->c_str() && (____LocalVar____13 = ____LocalVar____9).c_str() == (*____LocalVar____10).c_str()) {
-        string &____LocalVar____16 = *____LocalVar____10;
-        ____LocalVar____15 = &(*____LocalVar____10);
-        static int ____LocalVar____17, ____LocalVar____18 = 3;
-        printf("static %d\n", ++____LocalVar____18 + ____LocalVar____17);
+    int ____LocalVar____16 = (____LocalVar____14.length() , ____LocalVar____15->length());
+    int ____LocalVar____17 = (____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2;
+    string ____LocalVar____18 = "test", ____LocalVar____19("ttest");
+    string *____LocalVar____20;
+    if (____LocalVar____14.c_str() == ____LocalVar____15->c_str() && (____LocalVar____18 = ____LocalVar____14).c_str() == (*____LocalVar____15).c_str()) {
+        string &____LocalVar____21 = *____LocalVar____15;
+        ____LocalVar____20 = &(*____LocalVar____15);
+        static int ____LocalVar____22, ____LocalVar____23 = 3;
+        printf("static %d\n", ++____LocalVar____23 + ____LocalVar____22);
     }
-    void (*____LocalVar____19)(string &, string *) = callfunc;
-    void (*&____LocalVar____20)(string &, string *) = ____LocalVar____19;
-    void (**____LocalVar____21)(string &, string *) = &(____LocalVar____19);
-    printf("%u %u %u\n", (unsigned int)____LocalVar____19, (unsigned int)____LocalVar____20, (unsigned int)(*____LocalVar____21));
+    void (*____LocalVar____24)(string &, string *) = callfunc;
+    void (*&____LocalVar____25)(string &, string *) = ____LocalVar____24;
+    void (**____LocalVar____26)(string &, string *) = &(____LocalVar____24);
+    printf("%u %u %u\n", (unsigned int)____LocalVar____24, (unsigned int)____LocalVar____25, (unsigned int)(*____LocalVar____26));
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____11 = (____LocalVar____9.length() , ____LocalVar____10->length());
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____16 = (____LocalVar____14.length() , ____LocalVar____15->length());
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____11 = (____LocalVar____9.length() , ____LocalVar____10->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-(____LocalVar____9.length() , ____LocalVar____10->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-(____LocalVar____9.length() , ____LocalVar____10->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____9.length() , ____LocalVar____10->length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-____LocalVar____9.length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-____LocalVar____9.length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-____LocalVar____10->length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-____LocalVar____10->length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____12 = (____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2;
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____16 = (____LocalVar____14.length() , ____LocalVar____15->length());
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+(____LocalVar____14.length() , ____LocalVar____15->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+(____LocalVar____14.length() , ____LocalVar____15->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____14.length() , ____LocalVar____15->length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+____LocalVar____14.length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+____LocalVar____14.length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+____LocalVar____15->length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+____LocalVar____15->length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+int ____LocalVar____17 = (____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____12 = (____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-(____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-(____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-(____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length()))[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-____LocalVar____9.length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-____LocalVar____9.length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-((*____LocalVar____10).length() * ____LocalVar____10->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-(*____LocalVar____10).length() * ____LocalVar____10->length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-(*____LocalVar____10).length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-(*____LocalVar____10).length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-(*____LocalVar____10)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-(*____LocalVar____10)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-*____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-____LocalVar____10->length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-____LocalVar____10->length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-string ____LocalVar____13 = "test", ____LocalVar____14("ttest");
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____17 = (____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+(____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+(____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+(____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length()))[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+____LocalVar____14.length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+____LocalVar____14.length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+((*____LocalVar____15).length() * ____LocalVar____15->length())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+(*____LocalVar____15).length() * ____LocalVar____15->length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+(*____LocalVar____15).length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+(*____LocalVar____15).length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+(*____LocalVar____15)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+(*____LocalVar____15)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+*____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+____LocalVar____15->length()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+____LocalVar____15->length[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+string ____LocalVar____18 = "test", ____LocalVar____19("ttest");
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____13 = "test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____18 = "test";
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____14 = "ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ExprWithCleanups
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXConstructExpr
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MaterializeTemporaryExpr
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXBindTemporaryExpr
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXConstructExpr
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXDefaultArgExpr
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ExprWithCleanups
-"ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXConstructExpr
-"ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXDefaultArgExpr
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-string *____LocalVar____15;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IfStmt
-if (____LocalVar____9.c_str() == ____LocalVar____10->c_str() && (____LocalVar____13 = ____LocalVar____9).c_str() == (*____LocalVar____10).c_str()) {
-    string &____LocalVar____16 = *____LocalVar____10;
-    ____LocalVar____15 = &(*____LocalVar____10);
-    static int ____LocalVar____17, ____LocalVar____18 = 3;
-    printf("static %d\n", ++____LocalVar____18 + ____LocalVar____17);
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____19 = "ttest";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ExprWithCleanups
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXConstructExpr
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MaterializeTemporaryExpr
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXBindTemporaryExpr
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXConstructExpr
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"test"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXDefaultArgExpr
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ExprWithCleanups
+"ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXConstructExpr
+"ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"ttest"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXDefaultArgExpr
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+string *____LocalVar____20;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IfStmt
+if (____LocalVar____14.c_str() == ____LocalVar____15->c_str() && (____LocalVar____18 = ____LocalVar____14).c_str() == (*____LocalVar____15).c_str()) {
+    string &____LocalVar____21 = *____LocalVar____15;
+    ____LocalVar____20 = &(*____LocalVar____15);
+    static int ____LocalVar____22, ____LocalVar____23 = 3;
+    printf("static %d\n", ++____LocalVar____23 + ____LocalVar____22);
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____9.c_str() == ____LocalVar____10->c_str() && (____LocalVar____13 = ____LocalVar____9).c_str() == (*____LocalVar____10).c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____9.c_str() == ____LocalVar____10->c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-____LocalVar____9.c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-____LocalVar____9.c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-____LocalVar____10->c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-____LocalVar____10->c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-(____LocalVar____13 = ____LocalVar____9).c_str() == (*____LocalVar____10).c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-(____LocalVar____13 = ____LocalVar____9).c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-(____LocalVar____13 = ____LocalVar____9).c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-(____LocalVar____13 = ____LocalVar____9)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-(____LocalVar____13 = ____LocalVar____9)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXOperatorCallExpr
-____LocalVar____13 = ____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-operator=[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-operator=[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____13[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____9[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-(*____LocalVar____10).c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-(*____LocalVar____10).c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-(*____LocalVar____10)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-(*____LocalVar____10)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-*____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____14.c_str() == ____LocalVar____15->c_str() && (____LocalVar____18 = ____LocalVar____14).c_str() == (*____LocalVar____15).c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____14.c_str() == ____LocalVar____15->c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+____LocalVar____14.c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+____LocalVar____14.c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+____LocalVar____15->c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+____LocalVar____15->c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+(____LocalVar____18 = ____LocalVar____14).c_str() == (*____LocalVar____15).c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+(____LocalVar____18 = ____LocalVar____14).c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+(____LocalVar____18 = ____LocalVar____14).c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+(____LocalVar____18 = ____LocalVar____14)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+(____LocalVar____18 = ____LocalVar____14)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXOperatorCallExpr
+____LocalVar____18 = ____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+operator=[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+operator=[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____18[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____14[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+(*____LocalVar____15).c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+(*____LocalVar____15).c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+(*____LocalVar____15)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+(*____LocalVar____15)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+*____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
 {
-    string &____LocalVar____16 = *____LocalVar____10;
-    ____LocalVar____15 = &(*____LocalVar____10);
-    static int ____LocalVar____17, ____LocalVar____18 = 3;
-    printf("static %d\n", ++____LocalVar____18 + ____LocalVar____17);
+    string &____LocalVar____21 = *____LocalVar____15;
+    ____LocalVar____20 = &(*____LocalVar____15);
+    static int ____LocalVar____22, ____LocalVar____23 = 3;
+    printf("static %d\n", ++____LocalVar____23 + ____LocalVar____22);
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-string &____LocalVar____16 = *____LocalVar____10;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-*____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____15 = &(*____LocalVar____10)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-&(*____LocalVar____10)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-(*____LocalVar____10)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-*____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____10[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-static int ____LocalVar____17, ____LocalVar____18 = 3;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+string &____LocalVar____21 = *____LocalVar____15;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 124] isReferenceType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+*____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+____LocalVar____20 = &(*____LocalVar____15)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____20[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+&(*____LocalVar____15)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+(*____LocalVar____15)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+*____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____15[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+static int ____LocalVar____22, ____LocalVar____23 = 3;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____18 = 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-printf("static %d\n", ++____LocalVar____18 + ____LocalVar____17)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"static %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"static %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-++____LocalVar____18 + ____LocalVar____17[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-++____LocalVar____18[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-++____LocalVar____18[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____18[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____17[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____17[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-void (*____LocalVar____19)(string &, string *) = callfunc;
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____23 = 3;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
+3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CallExpr
+printf("static %d\n", ++____LocalVar____23 + ____LocalVar____22)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"static %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"static %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt BinaryOperator
+++____LocalVar____23 + ____LocalVar____22[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+++____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+++____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____22[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____22[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+void (*____LocalVar____24)(string &, string *) = callfunc;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____19 = callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-void (*&____LocalVar____20)(string &, string *) = ____LocalVar____19;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____19[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-void (**____LocalVar____21)(string &, string *) = &(____LocalVar____19);
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____24 = callfunc;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+void (*&____LocalVar____25)(string &, string *) = ____LocalVar____24;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 124] isReferenceType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____24[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+void (**____LocalVar____26)(string &, string *) = &(____LocalVar____24);
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____21 = &(____LocalVar____19)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-&(____LocalVar____19)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-(____LocalVar____19)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____19[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-printf("%u %u %u\n", (unsigned int)____LocalVar____19, (unsigned int)____LocalVar____20, (unsigned int)(*____LocalVar____21))[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"%u %u %u\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"%u %u %u\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CStyleCastExpr
-(unsigned int)____LocalVar____19[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____19[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____19[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CStyleCastExpr
-(unsigned int)____LocalVar____20[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____20[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____20[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CStyleCastExpr
-(unsigned int)(*____LocalVar____21)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-(*____LocalVar____21)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ParenExpr
-(*____LocalVar____21)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-*____LocalVar____21[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____21[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____21[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Function
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____26 = &(____LocalVar____24);
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+&(____LocalVar____24)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+(____LocalVar____24)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____24[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CallExpr
+printf("%u %u %u\n", (unsigned int)____LocalVar____24, (unsigned int)____LocalVar____25, (unsigned int)(*____LocalVar____26))[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"%u %u %u\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"%u %u %u\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CStyleCastExpr
+(unsigned int)____LocalVar____24[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____24[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____24[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CStyleCastExpr
+(unsigned int)____LocalVar____25[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____25[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____25[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CStyleCastExpr
+(unsigned int)(*____LocalVar____26)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+(*____LocalVar____26)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ParenExpr
+(*____LocalVar____26)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+*____LocalVar____26[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____26[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____26[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Function
 [DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = LSTR | type = string | const = 0 | extern = 0
-STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = n | type = int | const = 0 | extern = 0
-3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = ary | type = int [2] | const = 0 | extern = 0
-{ ____LocalVar____23, ____LocalVar____23 * 2 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = ary | type = int [3] | const = 0 | extern = 0
-{ 3, ____LocalVar____23 / 2 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 66] decl: Var
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 73]  ---- name = ary | type = int [3][2][3] | const = 0 | extern = 0
-{ { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 74]  ---- name = LSTR | type = string | const = 0 | extern = 0 | POD = 0
+STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CompoundStmt
 {
-    string ____LocalVar____22 = STR;
-    printf("%s\n", ____LocalVar____22.c_str());
+    string ____LocalVar____27 = STR;
+    printf("%s\n", ____LocalVar____27.c_str());
     externvar();
-    callfunc(____LocalVar____22, &____LocalVar____22);
-    int ____LocalVar____23 = 3;
-  LBL1:
-    {
-        int ____LocalVar____24[2] = { ____LocalVar____23, ____LocalVar____23 * 2 };
-        printf("%d\n", ____LocalVar____24[1]);
-    }
-  LBL2:
-    {
-        int ____LocalVar____25[3] = { 3, ____LocalVar____23 / 2 };
-        printf("%d\n", ____LocalVar____25[1]);
-    }
-  LBL3:
-    {
-        int ____LocalVar____26[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
-        printf("%d %d\n", ____LocalVar____26[1][1][0], ____LocalVar____26[2][1][2]);
-    }
+    callfunc(____LocalVar____27, &____LocalVar____27);
     return 0;
 }
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-string ____LocalVar____22 = STR;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclStmt
+string ____LocalVar____27 = STR;
 [DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____22 = STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXConstructExpr
-STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-printf("%s\n", ____LocalVar____22.c_str())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"%s\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"%s\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CXXMemberCallExpr
-____LocalVar____22.c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt MemberExpr
-____LocalVar____22.c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____22[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____22[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-externvar()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-externvar[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-externvar[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-callfunc(____LocalVar____22, &____LocalVar____22)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____22[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt UnaryOperator
-&____LocalVar____22[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____22[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____23 = 3;
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 82] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-____LocalVar____23 = 3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt LabelStmt
-LBL1:
-{
-    int ____LocalVar____24[2] = { ____LocalVar____23, ____LocalVar____23 * 2 };
-    printf("%d\n", ____LocalVar____24[1]);
-}
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
-{
-    int ____LocalVar____24[2] = { ____LocalVar____23, ____LocalVar____23 * 2 };
-    printf("%d\n", ____LocalVar____24[1]);
-}
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____24[2] = { ____LocalVar____23, ____LocalVar____23 * 2 };
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-error: array type 'int [2]' is not assignable
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-<NULL>[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ ____LocalVar____23, ____LocalVar____23 * 2 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____23 * 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-printf("%d\n", ____LocalVar____24[1])[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"%d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"%d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____24[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ArraySubscriptExpr
-____LocalVar____24[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____24[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____24[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt LabelStmt
-LBL2:
-{
-    int ____LocalVar____25[3] = { 3, ____LocalVar____23 / 2 };
-    printf("%d\n", ____LocalVar____25[1]);
-}
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
-{
-    int ____LocalVar____25[3] = { 3, ____LocalVar____23 / 2 };
-    printf("%d\n", ____LocalVar____25[1]);
-}
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____25[3] = { 3, ____LocalVar____23 / 2 };
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-error: array type 'int [3]' is not assignable
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-<NULL>[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ 3, ____LocalVar____23 / 2 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt BinaryOperator
-____LocalVar____23 / 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____23[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-printf("%d\n", ____LocalVar____25[1])[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"%d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"%d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____25[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ArraySubscriptExpr
-____LocalVar____25[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____25[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____25[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt LabelStmt
-LBL3:
-{
-    int ____LocalVar____26[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
-    printf("%d %d\n", ____LocalVar____26[1][1][0], ____LocalVar____26[2][1][2]);
-}
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CompoundStmt
-{
-    int ____LocalVar____26[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
-    printf("%d %d\n", ____LocalVar____26[1][1][0], ____LocalVar____26[2][1][2]);
-}
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclStmt
-int ____LocalVar____26[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 72] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 75] --- DECLREF END ---
-error: array type 'int [3][2][3]' is not assignable
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 119] SHIt
-<NULL>[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 121] FUCk
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-3[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ { 111, 112, 113 }, { 121, 122, 123 } }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ 111, 112, 113 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-111[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-112[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-113[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ 121, 122, 123 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-121[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-122[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-123[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ { 211, 212 }, { 221 } }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ 211, 212 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-211[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-212[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{ 221 }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-221[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt InitListExpr
-{  }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt CallExpr
-printf("%d %d\n", ____LocalVar____26[1][1][0], ____LocalVar____26[2][1][2])[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-"%d %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt StringLiteral
-"%d %d\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____26[1][1][0][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ArraySubscriptExpr
-____LocalVar____26[1][1][0][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____26[1][1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ArraySubscriptExpr
-____LocalVar____26[1][1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____26[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ArraySubscriptExpr
-____LocalVar____26[1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____26[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____26[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-0[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____26[2][1][2][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ArraySubscriptExpr
-____LocalVar____26[2][1][2][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____26[2][1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ArraySubscriptExpr
-____LocalVar____26[2][1][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____26[2][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ArraySubscriptExpr
-____LocalVar____26[2][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ImplicitCastExpr
-____LocalVar____26[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt DeclRefExpr
-____LocalVar____26[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
-2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt ReturnStmt
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 78] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 83] --- ASSIGN EXPR END ---
+____LocalVar____27 = STR;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXConstructExpr
+STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+STR[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CallExpr
+printf("%s\n", ____LocalVar____27.c_str())[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+printf[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+"%s\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt StringLiteral
+"%s\n"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CXXMemberCallExpr
+____LocalVar____27.c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt MemberExpr
+____LocalVar____27.c_str[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+____LocalVar____27[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____27[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CallExpr
+externvar()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+externvar[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+externvar[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt CallExpr
+callfunc(____LocalVar____27, &____LocalVar____27)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ImplicitCastExpr
+callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+callfunc[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____27[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt UnaryOperator
+&____LocalVar____27[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt DeclRefExpr
+____LocalVar____27[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt ReturnStmt
 return 0;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 91] Stmt IntegerLiteral
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 92] Stmt IntegerLiteral
 0[DEBUG][alg/SimplePrinter.cpp - line 7] alg started.
 using namespace std;
 bool BOOL;
@@ -691,9 +653,7 @@ void externvar() {
     {
         extern int INT;
         INT = 3;
-        printf("ext1 %d\n", INT);
     }
-    printf("ext2 %d\n", ____LocalVar____0);
     ____LocalVar____0 = 2;
 }
 
@@ -706,106 +666,152 @@ void externvar() {
 [0m   1: int ____LocalVar____0 = 2;
    2: extern int INT;
    3: INT = 3
-   4: printf("ext1 %d\n", INT)
-   5: printf("ext2 %d\n", ____LocalVar____0)
-   6: ____LocalVar____0 = 2
+   4: ____LocalVar____0 = 2
 [0;34m   Preds [0m(1):[0;34m B2[0m
 [0;35m   Succs [0m(1):[0;35m B0[0m
 [0;1;33m
  [B0 (EXIT)]
 [0m[0;34m   Preds [0m(1):[0;34m B1[0m
 
-Writing '/tmp/llvm_NRNIcV/CFG.dot'...  done. 
-void constvar() {
-    int ____LocalVar____1 = 1, ____LocalVar____2 = 2;
-    ____LocalVar____1 = 2;
-    const int *____LocalVar____3 = &____LocalVar____1;
-    ____LocalVar____3 = &____LocalVar____2;
-    int *const ____LocalVar____4 = &____LocalVar____1;
-    *____LocalVar____4 = 4;
-    ____LocalVar____1 = 1;
-    ____LocalVar____2 = 2;
-    ____LocalVar____3 = &____LocalVar____1;
-}
-
-;
-[0;1;33m
- [B2 (ENTRY)]
-[0m[0;35m   Succs [0m(1):[0;35m B1[0m
-[0;1;33m
- [B1]
-[0m   1: int ____LocalVar____1 = 1;
-   2: int ____LocalVar____2 = 2;
-   3: ____LocalVar____1 = 2
-   4: const int *____LocalVar____3 = &____LocalVar____1;
-   5: ____LocalVar____3 = &____LocalVar____2
-   6: int *const ____LocalVar____4 = &____LocalVar____1;
-   7: *____LocalVar____4 = 4
-   8: ____LocalVar____1 = 1
-   9: ____LocalVar____2 = 2
-  10: ____LocalVar____3 = &____LocalVar____1
-[0;34m   Preds [0m(1):[0;34m B2[0m
-[0;35m   Succs [0m(1):[0;35m B0[0m
-[0;1;33m
- [B0 (EXIT)]
-[0m[0;34m   Preds [0m(1):[0;34m B1[0m
-
-Writing '/tmp/llvm_LAkO8F/CFG.dot'...  done. 
-void init() {
-    int ____LocalVar____5(0), ____LocalVar____6 = 0, ____LocalVar____7[2] = { ____LocalVar____5, ____LocalVar____6 };
-    ({
-        int ____LocalVar____8(2);
-        ____LocalVar____6 = 3;
-        ____LocalVar____8 = 2;
-    });
-    ____LocalVar____5 = 0;
-    ____LocalVar____6 = 0;
-}
-
-;
-[0;1;33m
- [B2 (ENTRY)]
-[0m[0;35m   Succs [0m(1):[0;35m B1[0m
-[0;1;33m
- [B1]
-[0m   1: int ____LocalVar____5(0);
-   2: int ____LocalVar____6 = 0;
-   3: int ____LocalVar____7[2] = { ____LocalVar____5, ____LocalVar____6 };
-   4: int ____LocalVar____8(2);
-   5: ____LocalVar____6 = 3 (ImplicitCastExpr, LValueToRValue, int)
-   6: ____LocalVar____8 = 2
-   7: ({ ... ; [B1.6] })
-   8: ____LocalVar____5 = 0
-   9: ____LocalVar____6 = 0
-[0;34m   Preds [0m(1):[0;34m B2[0m
-[0;35m   Succs [0m(1):[0;35m B0[0m
-[0;1;33m
- [B0 (EXIT)]
-[0m[0;34m   Preds [0m(1):[0;34m B1[0m
-
-Writing '/tmp/llvm_XYW14q/CFG.dot'...  done. 
-void callfunc(string &____LocalVar____9, string *____LocalVar____10) {
-    int ____LocalVar____11 = (____LocalVar____9.length() , ____LocalVar____10->length());
-    int ____LocalVar____12 = (____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2;
-    string ____LocalVar____13 = "test", ____LocalVar____14("ttest");
-    string *____LocalVar____15;
-    if (____LocalVar____9.c_str() == ____LocalVar____10->c_str() && (____LocalVar____13 = ____LocalVar____9).c_str() == (*____LocalVar____10).c_str()) {
-        string &____LocalVar____16 = *____LocalVar____10;
-        ____LocalVar____15 = &(*____LocalVar____10);
-        static int ____LocalVar____17, ____LocalVar____18 = 3;
-        printf("static %d\n", ++____LocalVar____18 + ____LocalVar____17);
-        ____LocalVar____18 = 3;
+Writing '/tmp/llvm_dFDFwS/CFG.dot'...  done. 
+void arraytype() {
+    int ____LocalVar____1 = 3;
+    {
     }
-    void (*____LocalVar____19)(string &, string *) = callfunc;
-    void (*&____LocalVar____20)(string &, string *) = ____LocalVar____19;
-    void (**____LocalVar____21)(string &, string *) = &(____LocalVar____19);
-    printf("%u %u %u\n", (unsigned int)____LocalVar____19, (unsigned int)____LocalVar____20, (unsigned int)(*____LocalVar____21));
-    ____LocalVar____11 = (____LocalVar____9.length() , ____LocalVar____10->length());
-    ____LocalVar____12 = (____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2;
-    ____LocalVar____13 = "test";
-    ____LocalVar____14 = "ttest";
-    ____LocalVar____19 = callfunc;
-    ____LocalVar____21 = &(____LocalVar____19);
+    {
+        int ____LocalVar____2[2] = { ____LocalVar____1, ____LocalVar____1 * 2 };
+        printf("%d\n", ____LocalVar____2[1]);
+    }
+    {
+        int ____LocalVar____3[3] = { 3, ____LocalVar____1 / 2 };
+        printf("%d\n", ____LocalVar____3[1]);
+    }
+    {
+        int ____LocalVar____4[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+        printf("%d %d\n", ____LocalVar____4[1][1][0], ____LocalVar____4[2][1][2]);
+    }
+    {
+        int ____LocalVar____5[____LocalVar____1][____LocalVar____1 * 2];
+    }
+    ____LocalVar____1 = 3;
+}
+
+;
+[0;1;33m
+ [B2 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B1]
+[0m   1: int ____LocalVar____1 = 3;
+   2: int ____LocalVar____2[2] = { ____LocalVar____1, ____LocalVar____1 * 2 };
+   3: printf("%d\n", ____LocalVar____2[1])
+   4: int ____LocalVar____3[3] = { 3, ____LocalVar____1 / 2 };
+   5: printf("%d\n", ____LocalVar____3[1])
+   6: int ____LocalVar____4[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
+   7: printf("%d %d\n", ____LocalVar____4[1][1][0], ____LocalVar____4[2][1][2])
+   8: ____LocalVar____1 * 2
+   9: ____LocalVar____1 (ImplicitCastExpr, LValueToRValue, int)
+  10: int ____LocalVar____5[____LocalVar____1][____LocalVar____1 * 2];
+  11: ____LocalVar____1 = 3
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_CE1Ir3/CFG.dot'...  done. 
+void __assume(bool) __attribute__((nothrow));
+void __noop() __attribute__((nothrow));
+void constvar() {
+    int ____LocalVar____6 = 1, ____LocalVar____7 = 2;
+    ____LocalVar____6 = 2;
+    const int *____LocalVar____8 = &____LocalVar____6;
+    ____LocalVar____8 = &____LocalVar____7;
+    int *const ____LocalVar____9 = &____LocalVar____6;
+    *____LocalVar____9 = 4;
+    ____LocalVar____6 = 1;
+    ____LocalVar____7 = 2;
+    ____LocalVar____8 = &____LocalVar____6;
+}
+
+;
+[0;1;33m
+ [B2 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B1]
+[0m   1: int ____LocalVar____6 = 1;
+   2: int ____LocalVar____7 = 2;
+   3: ____LocalVar____6 = 2
+   4: const int *____LocalVar____8 = &____LocalVar____6;
+   5: ____LocalVar____8 = &____LocalVar____7
+   6: int *const ____LocalVar____9 = &____LocalVar____6;
+   7: *____LocalVar____9 = 4
+   8: ____LocalVar____6 = 1
+   9: ____LocalVar____7 = 2
+  10: ____LocalVar____8 = &____LocalVar____6
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_G7TVme/CFG.dot'...  done. 
+void init() {
+    int ____LocalVar____10(0), ____LocalVar____11 = 0, ____LocalVar____12[2] = { ____LocalVar____10, ____LocalVar____11 };
+    ({
+        int ____LocalVar____13(2);
+        ____LocalVar____11 = 3;
+        ____LocalVar____13 = 2;
+    });
+    ____LocalVar____10 = 0;
+    ____LocalVar____11 = 0;
+}
+
+;
+[0;1;33m
+ [B2 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B1]
+[0m   1: int ____LocalVar____10(0);
+   2: int ____LocalVar____11 = 0;
+   3: int ____LocalVar____12[2] = { ____LocalVar____10, ____LocalVar____11 };
+   4: int ____LocalVar____13(2);
+   5: ____LocalVar____11 = 3 (ImplicitCastExpr, LValueToRValue, int)
+   6: ____LocalVar____13 = 2
+   7: ({ ... ; [B1.6] })
+   8: ____LocalVar____10 = 0
+   9: ____LocalVar____11 = 0
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_IDBhip/CFG.dot'...  done. 
+void callfunc(string &____LocalVar____14, string *____LocalVar____15) {
+    int ____LocalVar____16 = (____LocalVar____14.length() , ____LocalVar____15->length());
+    int ____LocalVar____17 = (____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2;
+    string ____LocalVar____18 = "test", ____LocalVar____19("ttest");
+    string *____LocalVar____20;
+    if (____LocalVar____14.c_str() == ____LocalVar____15->c_str() && (____LocalVar____18 = ____LocalVar____14).c_str() == (*____LocalVar____15).c_str()) {
+        string &____LocalVar____21 = *____LocalVar____15;
+        ____LocalVar____20 = &(*____LocalVar____15);
+        static int ____LocalVar____22, ____LocalVar____23 = 3;
+        printf("static %d\n", ++____LocalVar____23 + ____LocalVar____22);
+        ____LocalVar____23 = 3;
+    }
+    void (*____LocalVar____24)(string &, string *) = callfunc;
+    void (*&____LocalVar____25)(string &, string *) = ____LocalVar____24;
+    void (**____LocalVar____26)(string &, string *) = &(____LocalVar____24);
+    printf("%u %u %u\n", (unsigned int)____LocalVar____24, (unsigned int)____LocalVar____25, (unsigned int)(*____LocalVar____26));
+    ____LocalVar____16 = (____LocalVar____14.length() , ____LocalVar____15->length());
+    ____LocalVar____17 = (____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2;
+    ____LocalVar____18 = "test";
+    ____LocalVar____19 = "ttest";
+    ____LocalVar____24 = callfunc;
+    ____LocalVar____26 = &(____LocalVar____24);
 }
 
 ;
@@ -814,35 +820,35 @@ void callfunc(string &____LocalVar____9, string *____LocalVar____10) {
 [0m[0;35m   Succs [0m(1):[0;35m B4[0m
 [0;1;33m
  [B1]
-[0m   1: void (*____LocalVar____19)(string &, string *) = callfunc;
-   2: void (*&____LocalVar____20)(string &, string *) = ____LocalVar____19;
-   3: void (**____LocalVar____21)(string &, string *) = &(____LocalVar____19);
-   4: printf("%u %u %u\n", (unsigned int)____LocalVar____19, (unsigned int)____LocalVar____20, (unsigned int)(*____LocalVar____21))
+[0m   1: void (*____LocalVar____24)(string &, string *) = callfunc;
+   2: void (*&____LocalVar____25)(string &, string *) = ____LocalVar____24;
+   3: void (**____LocalVar____26)(string &, string *) = &(____LocalVar____24);
+   4: printf("%u %u %u\n", (unsigned int)____LocalVar____24, (unsigned int)____LocalVar____25, (unsigned int)(*____LocalVar____26))
    5: [B4.1]
    6: [B4.2]
    7: ... , [B4.2]
-   8: ____LocalVar____11 = ([B4.3])
+   8: ____LocalVar____16 = ([B4.3])
    9: [B4.5]
   10: [B4.6]
   11: [B4.7]
-  12: ____LocalVar____12 = ([B4.5] + ([B4.6] * [B4.7])) / 2
+  12: ____LocalVar____17 = ([B4.5] + ([B4.6] * [B4.7])) / 2
   13: [B4.9] (CXXConstructExpr, string)
   14: [B4.10] (CXXConstructExpr, string)
-  15: ____LocalVar____13 = [B4.10] (OperatorCall)
+  15: ____LocalVar____18 = [B4.10] (OperatorCall)
   16: [B4.12] (CXXConstructExpr, string)
-  17: ____LocalVar____14 = [B4.12] (OperatorCall)
-  18: ____LocalVar____19 = callfunc
-  19: ____LocalVar____21 = &(____LocalVar____19)
+  17: ____LocalVar____19 = [B4.12] (OperatorCall)
+  18: ____LocalVar____24 = callfunc
+  19: ____LocalVar____26 = &(____LocalVar____24)
 [0;34m   Preds [0m(2):[0;34m B2 B3[0m
 [0;35m   Succs [0m(1):[0;35m B0[0m
 [0;1;33m
  [B2]
-[0m   1: string &____LocalVar____16 = *____LocalVar____10;
-   2: ____LocalVar____15 = &(*____LocalVar____10)
-   3: static int ____LocalVar____17;
-   4: static int ____LocalVar____18 = 3;
-   5: printf("static %d\n", ++____LocalVar____18 + ____LocalVar____17)
-   6: ____LocalVar____18 = 3
+[0m   1: string &____LocalVar____21 = *____LocalVar____15;
+   2: ____LocalVar____20 = &(*____LocalVar____15)
+   3: static int ____LocalVar____22;
+   4: static int ____LocalVar____23 = 3;
+   5: printf("static %d\n", ++____LocalVar____23 + ____LocalVar____22)
+   6: ____LocalVar____23 = 3
 [0;34m   Preds [0m(1):[0;34m B3[0m
 [0;35m   Succs [0m(1):[0;35m B1[0m
 [0;1;33m
@@ -853,31 +859,31 @@ void callfunc(string &____LocalVar____9, string *____LocalVar____10) {
 [0;35m   Succs [0m(2):[0;35m B2 B1[0m
 [0;1;33m
  [B4]
-[0m   1: ____LocalVar____9.length()
-   2: ____LocalVar____10->length()
+[0m   1: ____LocalVar____14.length()
+   2: ____LocalVar____15->length()
    3: ... , [B4.2]
-   4: int ____LocalVar____11 = (____LocalVar____9.length() , ____LocalVar____10->length());
-   5: ____LocalVar____9.length()
-   6: (*____LocalVar____10).length()
-   7: ____LocalVar____10->length()
-   8: int ____LocalVar____12 = (____LocalVar____9.length() + ((*____LocalVar____10).length() * ____LocalVar____10->length())) / 2;
+   4: int ____LocalVar____16 = (____LocalVar____14.length() , ____LocalVar____15->length());
+   5: ____LocalVar____14.length()
+   6: (*____LocalVar____15).length()
+   7: ____LocalVar____15->length()
+   8: int ____LocalVar____17 = (____LocalVar____14.length() + ((*____LocalVar____15).length() * ____LocalVar____15->length())) / 2;
    9: "test" (CXXConstructExpr, string)
   10: [B4.9] (CXXConstructExpr, string)
-  11: string ____LocalVar____13 = "test";
+  11: string ____LocalVar____18 = "test";
   12: "ttest" (CXXConstructExpr, string)
-  13: string ____LocalVar____14("ttest");
-  14: string *____LocalVar____15;
-  15: ____LocalVar____9.c_str()
-  16: ____LocalVar____10->c_str()
+  13: string ____LocalVar____19("ttest");
+  14: string *____LocalVar____20;
+  15: ____LocalVar____14.c_str()
+  16: ____LocalVar____15->c_str()
   17: [B4.15] == [B4.16]
 [0;32m   T: [B4.17] && ...
 [0m[0;34m   Preds [0m(1):[0;34m B6[0m
 [0;35m   Succs [0m(2):[0;35m B5 B3[0m
 [0;1;33m
  [B5]
-[0m   1: ____LocalVar____13 = ____LocalVar____9 (OperatorCall)
+[0m   1: ____LocalVar____18 = ____LocalVar____14 (OperatorCall)
    2: ([B5.1]).c_str()
-   3: (*____LocalVar____10).c_str()
+   3: (*____LocalVar____15).c_str()
    4: [B5.2] == [B5.3]
 [0;34m   Preds [0m(1):[0;34m B4[0m
 [0;35m   Succs [0m(1):[0;35m B3[0m
@@ -885,81 +891,41 @@ void callfunc(string &____LocalVar____9, string *____LocalVar____10) {
  [B0 (EXIT)]
 [0m[0;34m   Preds [0m(1):[0;34m B1[0m
 
-Writing '/tmp/llvm_GgFF5b/CFG.dot'...  done. 
+Writing '/tmp/llvm_1NPeeA/CFG.dot'...  done. 
 int main() {
-    string ____LocalVar____22 = STR;
-    printf("%s\n", ____LocalVar____22.c_str());
+    string ____LocalVar____27 = STR;
+    printf("%s\n", ____LocalVar____27.c_str());
     externvar();
-    callfunc(____LocalVar____22, &____LocalVar____22);
-    int ____LocalVar____23 = 3;
-  LBL1:
-    {
-        int ____LocalVar____24[2] = { ____LocalVar____23, ____LocalVar____23 * 2 };
-        printf("%d\n", ____LocalVar____24[1]);
-    }
-  LBL2:
-    {
-        int ____LocalVar____25[3] = { 3, ____LocalVar____23 / 2 };
-        printf("%d\n", ____LocalVar____25[1]);
-    }
-  LBL3:
-    {
-        int ____LocalVar____26[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
-        printf("%d %d\n", ____LocalVar____26[1][1][0], ____LocalVar____26[2][1][2]);
-    }
+    callfunc(____LocalVar____27, &____LocalVar____27);
     return 0;
-    ____LocalVar____22 = STR;
-    ____LocalVar____23 = 3;
+    ____LocalVar____27 = STR;
 }
 
 ;
 [0;1;33m
- [B6 (ENTRY)]
-[0m[0;35m   Succs [0m(1):[0;35m B5[0m
+ [B3 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B2[0m
 [0;1;33m
  [B1]
-[0m   1: [B5.1] (CXXConstructExpr, string)
-   2: ____LocalVar____22 = [B5.1] (OperatorCall)
-   3: ____LocalVar____23 = 3
+[0m   1: [B2.1] (CXXConstructExpr, string)
+   2: ____LocalVar____27 = [B2.1] (OperatorCall)
 [0;35m   Succs [0m(1):[0;35m B0[0m
 [0;1;33m
  [B2]
-[0m  LBL3:
-   1: int ____LocalVar____26[3][2][3] = { { { 111, 112, 113 }, { 121, 122, 123 } }, { { 211, 212 }, { 221 } }, {  } };
-   2: printf("%d %d\n", ____LocalVar____26[1][1][0], ____LocalVar____26[2][1][2])
-   3: return 0;
+[0m   1: STR (CXXConstructExpr, string)
+   2: string ____LocalVar____27 = STR;
+   3: ____LocalVar____27.c_str()
+   4: printf("%s\n", [B2.3])
+   5: externvar()
+   6: callfunc(____LocalVar____27, &____LocalVar____27)
+   7: return 0;
 [0;34m   Preds [0m(1):[0;34m B3[0m
 [0;35m   Succs [0m(1):[0;35m B0[0m
-[0;1;33m
- [B3]
-[0m  LBL2:
-   1: int ____LocalVar____25[3] = { 3, ____LocalVar____23 / 2 };
-   2: printf("%d\n", ____LocalVar____25[1])
-[0;34m   Preds [0m(1):[0;34m B4[0m
-[0;35m   Succs [0m(1):[0;35m B2[0m
-[0;1;33m
- [B4]
-[0m  LBL1:
-   1: int ____LocalVar____24[2] = { ____LocalVar____23, ____LocalVar____23 * 2 };
-   2: printf("%d\n", ____LocalVar____24[1])
-[0;34m   Preds [0m(1):[0;34m B5[0m
-[0;35m   Succs [0m(1):[0;35m B3[0m
-[0;1;33m
- [B5]
-[0m   1: STR (CXXConstructExpr, string)
-   2: string ____LocalVar____22 = STR;
-   3: ____LocalVar____22.c_str()
-   4: printf("%s\n", [B5.3])
-   5: externvar()
-   6: callfunc(____LocalVar____22, &____LocalVar____22)
-   7: int ____LocalVar____23 = 3;
-[0;34m   Preds [0m(1):[0;34m B6[0m
-[0;35m   Succs [0m(1):[0;35m B4[0m
 [0;1;33m
  [B0 (EXIT)]
 [0m[0;34m   Preds [0m(2):[0;34m B1 B2[0m
 
-Writing '/tmp/llvm_T7hb7W/CFG.dot'...  done. 
+Writing '/tmp/llvm_K9wubL/CFG.dot'...  done. 
 [DEBUG][alg/SimplePrinter.cpp - line 25] alg finished.
 [DEBUG][ResourceManager.cpp - line 97] src _decl.cpp not changed.
 [DEBUG][ResourceManager.cpp - line 129] Open desfile @_decl.cpp

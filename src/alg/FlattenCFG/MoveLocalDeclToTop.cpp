@@ -66,11 +66,12 @@ RenameVarByUniqueId::VisitDecl(Decl *d) {
 	DPRINT("decl: %s", d->getDeclKindName());
 	if(isa<VarDecl>(d)) {
 		VarDecl *vD = dyn_cast<VarDecl>(d);
-		DPRINT(" ---- name = %s | type = %s | const = %d | extern = %d",
+		DPRINT(" ---- name = %s | type = %s | const = %d | extern = %d | POD = %d",
 				vD->getQualifiedNameAsString().c_str(),
 				vD->getType().getAsString().c_str(),
 				vD->isConstexpr(),
-				vD->hasExternalStorage());
+				vD->hasExternalStorage(),
+				vD->getType().isPODType(mover.resMgr.getCompilerInstance().getASTContext()));
 		if(vD->hasInit()) {
 			vD->getInit()->dumpPretty(mover.resMgr.getCompilerInstance().getASTContext());
 		}
@@ -88,8 +89,9 @@ RenameVarByUniqueId::VisitDecl(Decl *d) {
 
 bool
 ExtractVarDecl::VisitStmt(Stmt *s) {
+	ASTContext &Ctx = mover.resMgr.getCompilerInstance().getASTContext();
 	DPRINT("Stmt %s", s->getStmtClassName());
-	s->dumpPretty(mover.compInst.getASTContext());
+	s->dumpPretty(Ctx);
 	
 	if(isa<DeclStmt>(s)) {
 		DeclStmt *dst = dyn_cast<DeclStmt>(s);
@@ -99,28 +101,45 @@ ExtractVarDecl::VisitStmt(Stmt *s) {
 
 		for(DeclGroupRef::iterator I = decls.begin(), E = decls.end();
 				I != E; ++I) {
-			VarDecl *vD = dyn_cast<VarDecl>(*I);
-			if(vD) {
+			if(VarDecl *vD = dyn_cast<VarDecl>(*I)) {
 				QualType Ty = vD->getType();
-				// only local
+				// local var
 				// not anoymous
-				// not extern
-				// not const
-				// TODO not array
-				// not reference
-				// has init value/list
 				if(vD->isLocalVarDecl() 
-						&& vD->getDeclName()
-						&& !vD->hasExternalStorage()
-						&& !vD->isConstexpr()
-						&& !Ty->isReferenceType()
-						&& vD->hasInit()) {
-					Expr *assign = mover.BuildAssignExpr(vD, vD->getInit());
-					DPRINT("SHIt");
-					assign->dumpPretty(mover.resMgr.getCompilerInstance().getASTContext());
-					DPRINT("FUCk");
-					if(assign){
-						sbody[0].push_back(assign);
+						&& vD->getDeclName()){
+
+					// extern
+					if(vD->hasExternalStorage()) {
+						DPRINT("isExtern");
+						continue;
+					}
+					
+					// const
+					if(Ty.isConstant()) {
+						DPRINT("isConstant");
+						continue;
+					}
+
+					// reference type
+					if(Ty->isReferenceType()) {
+						DPRINT("isReferenceType");
+						continue;
+					}
+
+					// array type
+					if(isa<ArrayType>(Ty)){
+						DPRINT("isArrayType");
+						continue;
+					}
+
+					// has init value
+					if(vD->hasInit()) {
+						Expr *assign = mover.BuildAssignExpr(vD, vD->getInit());
+						assign->dumpPretty(Ctx);
+						NullStmt(SourceLocation()).dumpPretty(Ctx);
+						if(assign){
+							sbody[0].push_back(assign);
+						}
 					}
 				}
 			}

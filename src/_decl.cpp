@@ -12,9 +12,35 @@ void externvar() {
 	{
 		extern int INT;
 		INT = 3;
-		printf("ext1 %d\n", INT);
 	}
-	printf("ext2 %d\n", INT);
+}
+
+void arraytype(){
+	int n = 3;
+	{
+		typedef int[n][n] varray;
+		varray ary[n];
+	}
+	{
+		int ary[] = {n, n*2};
+		printf("%d\n", ary[1]);
+	}
+	{
+		int ary[3] = {3, n/2};
+		printf("%d\n", ary[1]);
+	}
+	{
+		int ary[][2][3] = { 
+			{ {111,112,113}, {121,122,123} },
+			{ {211,212}, {221} },
+			{}
+		};
+		printf("%d %d\n", ary[1][1][0], ary[2][1][2]);
+	}
+	{
+		int ary[n][n*2];
+	}
+
 }
 
 void constvar() {
@@ -55,25 +81,5 @@ int main() {
 	printf("%s\n", LSTR.c_str());
 	externvar();
 	callfunc(LSTR, &LSTR);
-	int n = 3;
-LBL1:
-	{
-		int ary[] = {n, n*2};
-		printf("%d\n", ary[1]);
-	}
-LBL2:
-	{
-		int ary[3] = {3, n/2};
-		printf("%d\n", ary[1]);
-	}
-LBL3:
-	{
-		int ary[][2][3] = { 
-			{ {111,112,113}, {121,122,123} },
-			{ {211,212}, {221} },
-			{}
-		};
-		printf("%d %d\n", ary[1][1][0], ary[2][1][2]);
-	}
 	return 0;
 }
