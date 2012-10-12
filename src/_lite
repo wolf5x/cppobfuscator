@@ -1,0 +1,182 @@
+done1
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.1/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i486-linux-gnu
+ /usr/include/c++/4.6/backward
+End of search list.
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.1/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i486-linux-gnu
+ /usr/include/c++/4.6/backward
+End of search list.
+_iteration.cpp:6:10: warning: using the result of an assignment as a condition without parentheses
+        while(y = 0+3) {
+              ~~^~~~~
+_iteration.cpp:6:10: note: place parentheses around the assignment to silence this warning
+        while(y = 0+3) {
+                ^
+              (      )
+_iteration.cpp:6:10: note: use '==' to turn this assignment into an equality comparison
+        while(y = 0+3) {
+                ^
+                ==
+_iteration.cpp:19:22: warning: using the result of an assignment as a condition without parentheses
+        for(int x = 1, y; y = x; x--) {
+                          ~~^~~
+_iteration.cpp:19:22: note: place parentheses around the assignment to silence this warning
+        for(int x = 1, y; y = x; x--) {
+                            ^
+                          (    )       
+_iteration.cpp:19:22: note: use '==' to turn this assignment into an equality comparison
+        for(int x = 1, y; y = x; x--) {
+                            ^
+                            ==       
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 1
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 30] enter FuncDecl
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Function
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = y | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Label
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = y | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+0[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Label
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = x | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+1[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = y | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = j | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+0[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Label
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt CompoundStmt ( a9ddb88 -> p 0 )
+(CompoundStmt 0xa9ddb88
+  (LabelStmt 0xa9dccb0 'LBL_WHILE'
+    (DeclStmt 0xa9dcc80
+      0xa9dcc50 "int ____localvar____0"))
+  (WhileStmt 0xa9dce38
+    <<<NULL>>>
+    (ImplicitCastExpr 0xa9dcd48 '_Bool' <IntegralToBoolean>
+      (ImplicitCastExpr 0xa9dcd38 'int' <LValueToRValue>
+        (BinaryOperator 0xa9dcd20 'int' lvalue '='
+          (DeclRefExpr 0xa9dccc0 'int' lvalue Var 0xa9dcc50 '____localvar____0' 'int')
+          (BinaryOperator 0xa9dcd08 'int' '+'
+            (IntegerLiteral 0xa9dccd8 'int' 0)
+            (IntegerLiteral 0xa9dccf0 'int' 3)))))
+    (CompoundStmt 0xa9dce20
+      (WhileStmt 0xa9dce00
+        <<<NULL>>>
+        (BinaryOperator 0xa9dcdc8 '_Bool' '>'
+          (BinaryOperator 0xa9dcd98 'int' '*'
+            (ImplicitCastExpr 0xa9dcd88 'int' <LValueToRValue>
+              (DeclRefExpr 0xa9dcd54 'int' lvalue Var 0xa9dcc50 '____localvar____0' 'int'))
+            (IntegerLiteral 0xa9dcd70 'int' 3))
+          (IntegerLiteral 0xa9dcdb0 'int' 0))
+        (CompoundStmt 0xa9dcde8
+          (BreakStmt 0xa9dcde0)))
+      (ContinueStmt 0xa9dce18)))
+  (LabelStmt 0xa9dd000 'LBL_DO'
+    (DoStmt 0xa9dcfc0
+      (CompoundStmt 0xa9dcf90
+        (DeclStmt 0xa9dcea8
+          0xa9dce60 "int ____localvar____1 =
+            (IntegerLiteral 0xa9dce90 'int' 0)")
+        (IfStmt 0xa9dcef8
+          <<<NULL>>>
+          (ImplicitCastExpr 0xa9dcee0 '_Bool' <IntegralToBoolean>
+            (ImplicitCastExpr 0xa9dced0 'int' <LValueToRValue>
+              (DeclRefExpr 0xa9dceb8 'int' lvalue Var 0xa9dce60 '____localvar____1' 'int')))
+          (BreakStmt 0xa9dcef0)
+          <<<NULL>>>)
+        (IfStmt 0xa9dcf70
+          <<<NULL>>>
+          (UnaryOperator 0xa9dcf50 '_Bool' prefix '!'
+            (ImplicitCastExpr 0xa9dcf40 '_Bool' <IntegralToBoolean>
+              (ImplicitCastExpr 0xa9dcf30 'int' <LValueToRValue>
+                (DeclRefExpr 0xa9dcf14 'int' lvalue Var 0xa9dce60 '____localvar____1' 'int'))))
+          (ContinueStmt 0xa9dcf68)
+          <<<NULL>>>))
+      (CXXBoolLiteralExpr 0xa9dcfb0 '_Bool' false)))
+  (LabelStmt 0xa9ddb50 'LBL_FOR'
+    (ForStmt 0xa9ddb08
+      (DeclStmt 0xa9dd8e0
+        0xa9dd020 "int ____localvar____2 =
+          (IntegerLiteral 0xa9dd050 'int' 1)"
+        0xa9dd8a0 "int ____localvar____3")
+      <<<NULL>>>
+      (ImplicitCastExpr 0xa9dd958 '_Bool' <IntegralToBoolean>
+        (ImplicitCastExpr 0xa9dd948 'int' <LValueToRValue>
+          (BinaryOperator 0xa9dd930 'int' lvalue '='
+            (DeclRefExpr 0xa9dd8f0 'int' lvalue Var 0xa9dd8a0 '____localvar____3' 'int')
+            (ImplicitCastExpr 0xa9dd920 'int' <LValueToRValue>
+              (DeclRefExpr 0xa9dd908 'int' lvalue Var 0xa9dd020 '____localvar____2' 'int')))))
+      (UnaryOperator 0xa9dd980 'int' postfix '--'
+        (DeclRefExpr 0xa9dd964 'int' lvalue Var 0xa9dd020 '____localvar____2' 'int'))
+      (CompoundStmt 0xa9ddaf0
+        (ForStmt 0xa9ddac0
+          (DeclStmt 0xa9dd9f8
+            0xa9dd9b0 "int ____localvar____4 =
+              (IntegerLiteral 0xa9dd9e0 'int' 0)")
+          <<<NULL>>>
+          (BinaryOperator 0xa9dda58 '_Bool' '!='
+            (ImplicitCastExpr 0xa9dda38 'int' <LValueToRValue>
+              (DeclRefExpr 0xa9dda08 'int' lvalue Var 0xa9dd9b0 '____localvar____4' 'int'))
+            (ImplicitCastExpr 0xa9dda48 'int' <LValueToRValue>
+              (DeclRefExpr 0xa9dda20 'int' lvalue Var 0xa9dd020 '____localvar____2' 'int')))
+          (UnaryOperator 0xa9dda88 'int' postfix '++'
+            (DeclRefExpr 0xa9dda70 'int' lvalue Var 0xa9dd9b0 '____localvar____4' 'int'))
+          (CompoundStmt 0xa9ddaa8
+            (ContinueStmt 0xa9ddaa0)))
+        (BreakStmt 0xa9ddae8))))
+  (ReturnStmt 0xa9ddb78
+    (IntegerLiteral 0xa9ddb60 'int' 0)))
+{
+  LBL_WHILE:
+    int ____localvar____0;
+    while (____localvar____0 = 0 + 3)
+        {
+            while (____localvar____0 * 3 > 0)
+                {
+                    break;
+                }
+            continue;
+        }
+  LBL_DO:
+    do {
+        int ____localvar____1 = 0;
+        if (____localvar____1)
+            break;
+        if (!____localvar____1)
+            continue;
+    } while (false);
+  LBL_FOR:
+    for (int ____localvar____2 = 1, ____localvar____3; ____localvar____3 = ____localvar____2; ____localvar____2--) {
+        for (int ____localvar____4 = 0; ____localvar____4 != ____localvar____2; ____localvar____4++) {
+            continue;
+        }
+        break;
+    }
+    return 0;
+}
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt LabelStmt ( a9dccb0 -> p a9ddb88 )
+(LabelStmt 0xa9dccb0 'LBL_WHILE'
+  (DeclStmt 0xa9dcc80
+    0xa9dcc50 "int ____localvar____0"))
+LBL_WHILE:
+int ____localvar____0;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclStmt ( a9dcc80 -> p a9dccb0 )
+(DeclStmt 0xa9dcc80
+  0xa9dcc50 "int ____localvar____0")
+int ____localvar____0;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 133] added to beginning decl

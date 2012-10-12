@@ -19,8 +19,8 @@ public:
 
 	bool HandleDecl(Decl *D);
 
-	//bool VisitStmt(Stmt *S);
-	TraverseCode VisitDecl(Decl *D);
+	//bool VisitStmt(Stmt *&S);
+	TraverseCode VisitDecl(Decl *&D);
 
 };
 

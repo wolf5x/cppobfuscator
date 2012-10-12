@@ -41,7 +41,7 @@ bool FlattenCFGTransformer::HandleAnyFunctionDecl(Decl *D){
 
 	//TODO
 	renamer.HandleDecl(fd);
-	preTranser.HandleDecl(fd);
+	//preTranser.HandleDecl(fd);
 	toper.HandelDecl(fd);
 
 	return true;

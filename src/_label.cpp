@@ -1,5 +1,18 @@
 #include <stdio.h>
 
+void lbl_body() {
+BODY0:
+	for(int x = 0;;) {
+BODY1:
+		if(true){
+BODY2:
+			x = 1;
+			x = 2;
+BODY3:{}
+		}
+	}
+}
+
 class A{
 public:
 	int m;
@@ -8,7 +21,8 @@ public:
 
 int main() 
 {
-	void *tbl[] = { &&LBL0, &&LBL1, &&LBL2, &&LBL3, &&LBL4, &&LBL5, &&LBL6 };
+//	void *tbl[] = { &&LBL0, &&LBL1, &&LBL2, &&LBL3, &&LBL4, &&LBL5, &&LBL6 };
+	/*
 LBL0:
 	int next = 0;
 	if(next == 0) goto *tbl[1];
@@ -26,5 +40,6 @@ LBL4:
 LBL5:
 	goto *tbl[0];
 LBL6:
+*/
 	return 0;
 }

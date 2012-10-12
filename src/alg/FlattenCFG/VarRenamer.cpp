@@ -9,7 +9,11 @@ bool VarRenamer::HandleDecl(Decl *D) {
 	return true;
 }
 
-TraverseCode VarRenamer::VisitDecl(Decl *D) {
+TraverseCode VarRenamer::VisitDecl(Decl *&D) {
+	if(!D){
+		return GOON;
+	}
+
 	DPRINT("decl: %s", D->getDeclKindName());
 
 	if(VarDecl *VD = dyn_cast<VarDecl>(D)) {
@@ -29,18 +33,18 @@ TraverseCode VarRenamer::VisitDecl(Decl *D) {
 		QualType Ty = VD->getType();
 		if((VD->isLocalVarDecl() || isa<ParmVarDecl>(VD))
 				&& !VD->hasExternalStorage()) { 
-			this->renameNamedDecl(VD);
+			this->renameVarDecl(VD);
 		}
 	} else if(isa<TagDecl>(D)) { //class/union/struct/enum
 		TagDecl *TD = dyn_cast<TagDecl>(D);
 		//rename all, no matter anoyomous or not
 		//if( !TD->getIdentifier()
 		//		&& !TD->getTypedefNameForAnonDecl()) {
-			this->renameNamedDecl(TD);
+			this->renameTagDecl(TD);
 		//}
 	} else if(isa<EnumConstantDecl>(D)) { //enum constant
 		EnumConstantDecl *ECD = dyn_cast<EnumConstantDecl>(D);
-		this->renameNamedDecl(ECD);
+		this->renameVarDecl(ECD);
 	} 
 	//TODO typedef rename
 	return GOON;

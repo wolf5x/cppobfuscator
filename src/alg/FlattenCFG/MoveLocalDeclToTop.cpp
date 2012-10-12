@@ -23,7 +23,7 @@ bool MoveLocalDeclToTop::HandelDecl(Decl *D) {
 
 TraverseCode ExtractVarDecl::VisitStmt(Stmt *s) {
 	ASTContext &Ctx = mover.resMgr.getCompilerInstance().getASTContext();
-	DPRINT("Stmt %s ( %u -> p %u )", s->getStmtClassName(), (unsigned int)s, (unsigned int)(parMap.get() ? parMap.get()->getParent(s) : 0));
+	DPRINT("Stmt %s ( %x -> p %x )", s->getStmtClassName(), (unsigned int)s, (unsigned int)(parMap.get() ? parMap.get()->getParent(s) : 0));
 	s->dump();
 	s->dumpPretty(Ctx);
 	NullStmt(SourceLocation()).dumpPretty(Ctx);
@@ -124,19 +124,23 @@ TraverseCode ExtractVarDecl::VisitStmt(Stmt *s) {
 							assert(t);
 							commaSt = t;
 						}
+						DPRINT("appended to comma expr");
 					}
 
 					// remove init value and create top decl
 					vD->setInit(NULL);
 					addBeginningDeclStmt(vD);
+					DPRINT("added to beginning decl");
 				}
 			}
 		}
 		//ifstmt
-		if(isa<IfStmt>(par)) {
+		if(par && isa<IfStmt>(par)) {
+			DPRINT("in if stmt");
 			IfStmt *IS = dyn_cast<IfStmt>(par);
-			assert(*I == *(IS->child_begin()));
+			assert(*I == s && *I == *(IS->child_begin()));
 			*I = NULL;
+			DPRINT("if modified");
 		}
 		// replace with comma assign expr
 		else if(commaSt) {

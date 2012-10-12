@@ -58,10 +58,11 @@ protected:
 				&info);
 		NullStmt *nullSt = new (this->compInst.getASTContext()) NullStmt(SourceLocation());
 		return new (this->compInst.getASTContext())
-			LabelStmt(SourceLocation(), lblD, nullSt/*StmtToCompound(stBody)*/);
+			LabelStmt(SourceLocation(), lblD, 
+					stBody ? (Stmt*)stBody : (Stmt*)nullSt);
 	}
 
-	bool renameVarDecl(VarDecl *D) {
+	bool renameVarDecl(NamedDecl *D) {
 		static int counter = 0;
 		string lbl("____localvar____");
 		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
@@ -69,7 +70,7 @@ protected:
 		return true;
 	}
 
-	bool renameTagDecl(TagDecl *D) {
+	bool renameTagDecl(NamedDecl *D) {
 		static int counter = 0;
 		string lbl("____localtag____");
 		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
@@ -197,7 +198,7 @@ protected:
 	inline CompoundStmt* StVecToCompound(StmtPtrSmallVector *v){
 		//FIXME memory leak
 		return new (this->compInst.getASTContext())
-			CompoundStmt(this->compInst.getASTContext(), &v[0][0], v[0].size(), SourceLocation(), SourceLocation());
+			CompoundStmt(this->compInst.getASTContext(), &v[0][0], v->size(), SourceLocation(), SourceLocation());
 	}
 
 	inline CompoundStmt* StmtToCompound(Stmt* s) {

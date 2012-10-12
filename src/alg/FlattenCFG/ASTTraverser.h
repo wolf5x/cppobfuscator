@@ -19,18 +19,17 @@ public:
 
 	Derived &getDerived() { return *static_cast<Derived*>(this); }
 
-	TraverseCode TraverseStmt(Stmt *S);
+	TraverseCode TraverseStmt(Stmt *&S);
 	TraverseCode TraverseDecl(Decl *D);
 
-	TraverseCode WalkUpFromStmt(Stmt *S) { return getDerived().VisitStmt(S); }
-	TraverseCode VisitStmt(Stmt *S) { return GOON; }
-	TraverseCode ExitStmt(Stmt *S) { return GOON; }
+	TraverseCode WalkUpFromStmt(Stmt *&S) { return getDerived().VisitStmt(S); }
+	TraverseCode VisitStmt(Stmt *&S) { return GOON; }
+	TraverseCode ExitStmt(Stmt *&S) { return GOON; }
 
-	TraverseCode WalkUpFromDecl(Decl *D) { return getDerived().VisitDecl(D); }
-	TraverseCode VisitDecl(Decl *D) { return GOON; }
-	TraverseCode ExitDecl(Decl *D) { return GOON; }
+	TraverseCode WalkUpFromDecl(Decl *&D) { return getDerived().VisitDecl(D); }
+	TraverseCode VisitDecl(Decl *&D) { return GOON; }
+	TraverseCode ExitDecl(Decl *&D) { return GOON; }
 };
-
 
 template<typename Derived>
 TraverseCode ASTTraverser<Derived>::TraverseDecl(Decl *D) {
@@ -46,12 +45,13 @@ TraverseCode ASTTraverser<Derived>::TraverseDecl(Decl *D) {
 	//DEF_TRAVERSE_DECL(DECL, CODE)
 	code = WalkUpFromDecl(D);
 	if(code != GOON) { 
-		return code;
+		return code == SKIP ? GOON : ABORT;
 	}
 	//CODE
-	code = TraverseStmt(D->getBody());
+	Stmt *S = D->getBody();
+	code = TraverseStmt(S);
 	if(code != GOON) {
-		return code;
+		return code == SKIP ? GOON : ABORT;
 	}
 	//TraverseDeclContextHelper(DeclContext*)
 	DeclContext *DC = dyn_cast<DeclContext>(D);
@@ -73,11 +73,11 @@ TraverseCode ASTTraverser<Derived>::TraverseDecl(Decl *D) {
 		}
 	}
 
-	return ExitDecl(D);
+	return getDerived().ExitDecl(D);
 }
 
 template<typename Derived>
-TraverseCode ASTTraverser<Derived>::TraverseStmt(Stmt *S) {
+TraverseCode ASTTraverser<Derived>::TraverseStmt(Stmt *&S) {
 	if(!S) {
 		return GOON;
 	}
@@ -86,7 +86,7 @@ TraverseCode ASTTraverser<Derived>::TraverseStmt(Stmt *S) {
 	
 	code = WalkUpFromStmt(S);
 	if(code != GOON) {
-		return code;
+		return code == SKIP ? GOON : ABORT;
 	}
 	//CODE
 	;
@@ -102,7 +102,7 @@ TraverseCode ASTTraverser<Derived>::TraverseStmt(Stmt *S) {
 		}
 	}
 
-	return ExitStmt(S);
+	return getDerived().ExitStmt(S);
 }
 
 #endif

@@ -19,554 +19,317 @@ End of search list.
  /usr/include/c++/4.6/i486-linux-gnu
  /usr/include/c++/4.6/backward
 End of search list.
+_while.cpp:20:9: warning: using the result of an assignment as a condition without parentheses
+        while(y=n){}
+              ~^~
+_while.cpp:20:9: note: place parentheses around the assignment to silence this warning
+        while(y=n){}
+               ^
+              (  )
+_while.cpp:20:9: note: use '==' to turn this assignment into an equality comparison
+        while(y=n){}
+               ^
+               ==
 [DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 1
 [DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 30] enter FuncDecl
-[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Function
-[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Var
-[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 21]  ---- name = n | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
-12[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Var
-[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 21]  ---- name = a | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
-____localvar____0[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Var
-[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 21]  ---- name = b | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
-____localvar____0--[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Var
-[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 21]  ---- name = y | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
-____localvar____0 + 2[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt CompoundStmt ( 151091312 -> p 0 )
-(CompoundStmt 0x9017870
-  (DeclStmt 0x9016b68
-    0x9016b20 "int ____localvar____0 =
-      (IntegerLiteral 0x9016b50 'int' 12)")
-  (WhileStmt 0x9016e50
-    (DeclStmt 0x9016e68
-      0x9016b90 "int ____localvar____1 =
-        (ImplicitCastExpr 0x9016bd8 'int' <LValueToRValue>
-          (DeclRefExpr 0x9016bc0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-    (ImplicitCastExpr 0x9016e40 '_Bool' <IntegralToBoolean>
-      (ImplicitCastExpr 0x9016e30 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016e18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int')))
-    (CompoundStmt 0x9016e00
-      (DeclStmt 0x9016c60
-        0x9016c00 "int ____localvar____2 =
-          (UnaryOperator 0x9016c48 'int' postfix '--'
-            (DeclRefExpr 0x9016c30 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-      (CallExpr 0x9016da8 'int'
-        (ImplicitCastExpr 0x9016d98 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
-          (DeclRefExpr 0x9016d48 'int (const char *restrict, ...)' lvalue Function 0x900f000 'printf' 'int (const char *restrict, ...)'))
-        (ImplicitCastExpr 0x9016dd0 'const char *' <ArrayToPointerDecay>
-          (StringLiteral 0x9016cf0 'const char [7]' lvalue "%d %d\n"))
-        (ImplicitCastExpr 0x9016de0 'int' <LValueToRValue>
-          (DeclRefExpr 0x9016d18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int'))
-        (ImplicitCastExpr 0x9016df0 'int' <LValueToRValue>
-          (DeclRefExpr 0x9016d30 'int' lvalue Var 0x9016c00 '____localvar____2' 'int')))))
-  (WhileStmt 0x9016f18
-    <<<NULL>>>
-    (BinaryOperator 0x9016eb8 '_Bool' '=='
-      (ImplicitCastExpr 0x9016ea8 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016e78 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-      (IntegerLiteral 0x9016e90 'int' 12))
-    (CompoundStmt 0x9016f00
-      (UnaryOperator 0x9016ee8 'int' postfix '++'
-        (DeclRefExpr 0x9016ed0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))))
-  (DeclStmt 0x90177e8
-    0x9017760 "int ____localvar____3 =
-      (BinaryOperator 0x90177d0 'int' '+'
-        (ImplicitCastExpr 0x90177c0 'int' <LValueToRValue>
-          (DeclRefExpr 0x9017790 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-        (IntegerLiteral 0x90177a8 'int' 2))")
-  (CompoundAssignOperator 0x9017828 'int' lvalue '*=' ComputeLHSTy='int' ComputeResultTy='int'
-    (DeclRefExpr 0x90177f8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-    (IntegerLiteral 0x9017810 'int' 2))
-  (ReturnStmt 0x9017860
-    (IntegerLiteral 0x9017848 'int' 0)))
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Function
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = n | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+12[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = a | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+____localvar____0 + 12[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = y | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+____localvar____0 + 2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt IntegerLiteral, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclRefExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ImplicitCastExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt IntegerLiteral, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt BinaryOperator, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclRefExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ImplicitCastExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ImplicitCastExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt CompoundStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt WhileStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 64] while to if trans
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150759720: ____label____0 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150759756: ____label____1 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150759792: ____label____2 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclRefExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ImplicitCastExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt IntegerLiteral, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt BinaryOperator, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclRefExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt UnaryOperator, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt CompoundStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt WhileStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 64] while to if trans
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150759828: ____label____3 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150759864: ____label____4 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150759900: ____label____5 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclRefExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ImplicitCastExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt IntegerLiteral, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt BinaryOperator, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclRefExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclRefExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ImplicitCastExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt BinaryOperator, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ImplicitCastExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ImplicitCastExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt CompoundStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt WhileStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 64] while to if trans
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150759936: ____label____6 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150759972: ____label____7 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 51] info 150760008: ____label____8 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt DeclRefExpr, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt IntegerLiteral, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt CompoundAssignOperator, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt IntegerLiteral, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt ReturnStmt, start transform
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 33] leaving Stmt CompoundStmt, start transform
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt CompoundStmt ( 150798336 -> p 0 )
+(CompoundStmt 0x8fd0000
+  (DeclStmt 0x8fcfc68
+    0x8fcfc20 "int ____localvar____0 =
+      (IntegerLiteral 0x8fcfc50 'int' 12)")
+  (LabelStmt 0x8fae930 '____label____0'
+    (CompoundStmt 0x8faea30
+      (IfStmt 0x8fae9c0
+        (DeclStmt 0x8fae9e0
+          0x8fcfc90 "int ____localvar____1 =
+            (BinaryOperator 0x8fcfd00 'int' '+'
+              (ImplicitCastExpr 0x8fcfcf0 'int' <LValueToRValue>
+                (DeclRefExpr 0x8fcfcc0 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int'))
+              (IntegerLiteral 0x8fcfcd8 'int' 12))")
+        (ImplicitCastExpr 0x8fcfd50 '_Bool' <IntegralToBoolean>
+          (ImplicitCastExpr 0x8fcfd40 'int' <LValueToRValue>
+            (DeclRefExpr 0x8fcfd28 'int' lvalue Var 0x8fcfc90 '____localvar____1' 'int')))
+        (CompoundStmt 0x8fae9a8
+          (CompoundStmt 0x8fcfd18)
+          (LabelStmt 0x8fae998 '____label____1'
+            (CompoundStmt 0x8fae980
+              (GotoStmt 0x8fae940 '____label____0':0x8fae900))))
+        <<<NULL>>>)
+      (LabelStmt 0x8faea20 '____label____2'
+        (NullStmt 0x8faea10))))
+  (LabelStmt 0x8faea80 '____label____3'
+    (CompoundStmt 0x8faeb70
+      (IfStmt 0x8faeb10
+        <<<NULL>>>
+        (BinaryOperator 0x8fcfdc8 '_Bool' '=='
+          (ImplicitCastExpr 0x8fcfdb8 'int' <LValueToRValue>
+            (DeclRefExpr 0x8fcfd88 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int'))
+          (IntegerLiteral 0x8fcfda0 'int' 12))
+        (CompoundStmt 0x8faeaf8
+          (CompoundStmt 0x8fcfe10
+            (UnaryOperator 0x8fcfdf8 'int' postfix '++'
+              (DeclRefExpr 0x8fcfde0 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int')))
+          (LabelStmt 0x8faeae8 '____label____4'
+            (CompoundStmt 0x8faead0
+              (GotoStmt 0x8faea90 '____label____3':0x8faea50))))
+        <<<NULL>>>)
+      (LabelStmt 0x8faeb60 '____label____5'
+        (NullStmt 0x8faeb50))))
+  (DeclStmt 0x8fcfed8
+    0x8fcfe50 "int ____localvar____2 =
+      (BinaryOperator 0x8fcfec0 'int' '+'
+        (ImplicitCastExpr 0x8fcfeb0 'int' <LValueToRValue>
+          (DeclRefExpr 0x8fcfe80 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int'))
+        (IntegerLiteral 0x8fcfe98 'int' 2))")
+  (LabelStmt 0x8faebc0 '____label____6'
+    (CompoundStmt 0x8faecb0
+      (IfStmt 0x8faec50
+        <<<NULL>>>
+        (ImplicitCastExpr 0x8fcff50 '_Bool' <IntegralToBoolean>
+          (ImplicitCastExpr 0x8fcff40 'int' <LValueToRValue>
+            (BinaryOperator 0x8fcff28 'int' lvalue '='
+              (DeclRefExpr 0x8fcfee8 'int' lvalue Var 0x8fcfe50 '____localvar____2' 'int')
+              (ImplicitCastExpr 0x8fcff18 'int' <LValueToRValue>
+                (DeclRefExpr 0x8fcff00 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int')))))
+        (CompoundStmt 0x8faec38
+          (CompoundStmt 0x8fcff60)
+          (LabelStmt 0x8faec28 '____label____7'
+            (CompoundStmt 0x8faec10
+              (GotoStmt 0x8faebd0 '____label____6':0x8faeb90))))
+        <<<NULL>>>)
+      (LabelStmt 0x8faeca0 '____label____8'
+        (NullStmt 0x8faec90))))
+  (CompoundAssignOperator 0x8fcffb8 'int' lvalue '*=' ComputeLHSTy='int' ComputeResultTy='int'
+    (DeclRefExpr 0x8fcff84 'int' lvalue Var 0x8fcfe50 '____localvar____2' 'int')
+    (IntegerLiteral 0x8fcffa0 'int' 2))
+  (ReturnStmt 0x8fcfff0
+    (IntegerLiteral 0x8fcffd8 'int' 0)))
 {
     int ____localvar____0 = 12;
-    while (____localvar____1)
-        {
-            int ____localvar____2 = ____localvar____0--;
-            printf("%d %d\n", ____localvar____1, ____localvar____2);
+  ____label____0:
+    {
+        if (____localvar____1) {
+            {
+            }
+          ____label____1:
+            {
+                goto ____label____0;
+            }
         }
-    while (____localvar____0 == 12)
-        {
-            ____localvar____0++;
+      ____label____2:
+        ;
+    }
+  ____label____3:
+    {
+        if (____localvar____0 == 12) {
+            {
+                ____localvar____0++;
+            }
+          ____label____4:
+            {
+                goto ____label____3;
+            }
         }
-    int ____localvar____3 = ____localvar____0 + 2;
-    ____localvar____3 *= 2;
+      ____label____5:
+        ;
+    }
+    int ____localvar____2 = ____localvar____0 + 2;
+  ____label____6:
+    {
+        if (____localvar____2 = ____localvar____0) {
+            {
+            }
+          ____label____7:
+            {
+                goto ____label____6;
+            }
+        }
+      ____label____8:
+        ;
+    }
+    ____localvar____2 *= 2;
     return 0;
 }
 ;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclStmt ( 151087976 -> p 151091312 )
-(DeclStmt 0x9016b68
-  0x9016b20 "int ____localvar____0 =
-    (IntegerLiteral 0x9016b50 'int' 12)")
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclStmt ( 150797416 -> p 150798336 )
+(DeclStmt 0x8fcfc68
+  0x8fcfc20 "int ____localvar____0 =
+    (IntegerLiteral 0x8fcfc50 'int' 12)")
 int ____localvar____0 = 12;
 ;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 102] initStyle 0
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt WhileStmt ( 151088720 -> p 151091312 )
-(WhileStmt 0x9016e50
-  (DeclStmt 0x9016e68
-    0x9016b90 "int ____localvar____1 =
-      (ImplicitCastExpr 0x9016bd8 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016bc0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-  (ImplicitCastExpr 0x9016e40 '_Bool' <IntegralToBoolean>
-    (ImplicitCastExpr 0x9016e30 'int' <LValueToRValue>
-      (DeclRefExpr 0x9016e18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int')))
-  (CompoundStmt 0x9016e00
-    (DeclStmt 0x9016c60
-      0x9016c00 "int ____localvar____2 =
-        (UnaryOperator 0x9016c48 'int' postfix '--'
-          (DeclRefExpr 0x9016c30 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-    (CallExpr 0x9016da8 'int'
-      (ImplicitCastExpr 0x9016d98 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
-        (DeclRefExpr 0x9016d48 'int (const char *restrict, ...)' lvalue Function 0x900f000 'printf' 'int (const char *restrict, ...)'))
-      (ImplicitCastExpr 0x9016dd0 'const char *' <ArrayToPointerDecay>
-        (StringLiteral 0x9016cf0 'const char [7]' lvalue "%d %d\n"))
-      (ImplicitCastExpr 0x9016de0 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016d18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int'))
-      (ImplicitCastExpr 0x9016df0 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016d30 'int' lvalue Var 0x9016c00 '____localvar____2' 'int')))))
-while (____localvar____1)
-    {
-        int ____localvar____2 = ____localvar____0--;
-        printf("%d %d\n", ____localvar____1, ____localvar____2);
-    }
-;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 35] skip atom
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt WhileStmt ( 151088920 -> p 151091312 )
-(WhileStmt 0x9016f18
-  <<<NULL>>>
-  (BinaryOperator 0x9016eb8 '_Bool' '=='
-    (ImplicitCastExpr 0x9016ea8 'int' <LValueToRValue>
-      (DeclRefExpr 0x9016e78 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-    (IntegerLiteral 0x9016e90 'int' 12))
-  (CompoundStmt 0x9016f00
-    (UnaryOperator 0x9016ee8 'int' postfix '++'
-      (DeclRefExpr 0x9016ed0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))))
-while (____localvar____0 == 12)
-    {
-        ____localvar____0++;
-    }
-;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 35] skip atom
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclStmt ( 151091176 -> p 151091312 )
-(DeclStmt 0x90177e8
-  0x9017760 "int ____localvar____3 =
-    (BinaryOperator 0x90177d0 'int' '+'
-      (ImplicitCastExpr 0x90177c0 'int' <LValueToRValue>
-        (DeclRefExpr 0x9017790 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-      (IntegerLiteral 0x90177a8 'int' 2))")
-int ____localvar____3 = ____localvar____0 + 2;
-;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 102] initStyle 0
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
-[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt CompoundAssignOperator ( 151091240 -> p 151091312 )
-(CompoundAssignOperator 0x9017828 'int' lvalue '*=' ComputeLHSTy='int' ComputeResultTy='int'
-  (DeclRefExpr 0x90177f8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-  (IntegerLiteral 0x9017810 'int' 2))
-____localvar____3 *= 2;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclRefExpr ( 151091192 -> p 151091240 )
-(DeclRefExpr 0x90177f8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-____localvar____3;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt IntegerLiteral ( 151091216 -> p 151091240 )
-(IntegerLiteral 0x9017810 'int' 2)
-2;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt ReturnStmt ( 151091296 -> p 151091312 )
-(ReturnStmt 0x9017860
-  (IntegerLiteral 0x9017848 'int' 0))
-return 0;
-;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt IntegerLiteral ( 151091272 -> p 151091296 )
-(IntegerLiteral 0x9017848 'int' 0)
-0;
-[DEBUG][alg/SimplePrinter.cpp - line 7] alg started.
-int main() {
-    int ____localvar____0;
-    int ____localvar____3;
-    ____localvar____0 = 12;
-    while (____localvar____1)
-        {
-            int ____localvar____2 = ____localvar____0--;
-            printf("%d %d\n", ____localvar____1, ____localvar____2);
-        }
-    while (____localvar____0 == 12)
-        {
-            ____localvar____0++;
-        }
-    ____localvar____3 = ____localvar____0 + 2;
-    ____localvar____3 *= 2;
-    return 0;
-}
-
-;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 151091312 -> p 0 )
-(CompoundStmt 0x9017870
-  (DeclStmt 0x90178c8
-    0x9016b20 "int ____localvar____0")
-  (DeclStmt 0x9017908
-    0x9017760 "int ____localvar____3")
-  (BinaryOperator 0x90178b0 'int' lvalue '='
-    (DeclRefExpr 0x9017898 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')
-    (IntegerLiteral 0x9016b50 'int' 12))
-  (WhileStmt 0x9016e50
-    (DeclStmt 0x9016e68
-      0x9016b90 "int ____localvar____1 =
-        (ImplicitCastExpr 0x9016bd8 'int' <LValueToRValue>
-          (DeclRefExpr 0x9016bc0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-    (ImplicitCastExpr 0x9016e40 '_Bool' <IntegralToBoolean>
-      (ImplicitCastExpr 0x9016e30 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016e18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int')))
-    (CompoundStmt 0x9016e00
-      (DeclStmt 0x9016c60
-        0x9016c00 "int ____localvar____2 =
-          (UnaryOperator 0x9016c48 'int' postfix '--'
-            (DeclRefExpr 0x9016c30 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-      (CallExpr 0x9016da8 'int'
-        (ImplicitCastExpr 0x9016d98 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
-          (DeclRefExpr 0x9016d48 'int (const char *restrict, ...)' lvalue Function 0x900f000 'printf' 'int (const char *restrict, ...)'))
-        (ImplicitCastExpr 0x9016dd0 'const char *' <ArrayToPointerDecay>
-          (StringLiteral 0x9016cf0 'const char [7]' lvalue "%d %d\n"))
-        (ImplicitCastExpr 0x9016de0 'int' <LValueToRValue>
-          (DeclRefExpr 0x9016d18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int'))
-        (ImplicitCastExpr 0x9016df0 'int' <LValueToRValue>
-          (DeclRefExpr 0x9016d30 'int' lvalue Var 0x9016c00 '____localvar____2' 'int')))))
-  (WhileStmt 0x9016f18
-    <<<NULL>>>
-    (BinaryOperator 0x9016eb8 '_Bool' '=='
-      (ImplicitCastExpr 0x9016ea8 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016e78 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-      (IntegerLiteral 0x9016e90 'int' 12))
-    (CompoundStmt 0x9016f00
-      (UnaryOperator 0x9016ee8 'int' postfix '++'
-        (DeclRefExpr 0x9016ed0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))))
-  (BinaryOperator 0x90178f0 'int' lvalue '='
-    (DeclRefExpr 0x90178d8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-    (BinaryOperator 0x90177d0 'int' '+'
-      (ImplicitCastExpr 0x90177c0 'int' <LValueToRValue>
-        (DeclRefExpr 0x9017790 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-      (IntegerLiteral 0x90177a8 'int' 2)))
-  (CompoundAssignOperator 0x9017828 'int' lvalue '*=' ComputeLHSTy='int' ComputeResultTy='int'
-    (DeclRefExpr 0x90177f8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-    (IntegerLiteral 0x9017810 'int' 2))
-  (ReturnStmt 0x9017860
-    (IntegerLiteral 0x9017848 'int' 0)))
-{
-    int ____localvar____0;
-    int ____localvar____3;
-    ____localvar____0 = 12;
-    while (____localvar____1)
-        {
-            int ____localvar____2 = ____localvar____0--;
-            printf("%d %d\n", ____localvar____1, ____localvar____2);
-        }
-    while (____localvar____0 == 12)
-        {
-            ____localvar____0++;
-        }
-    ____localvar____3 = ____localvar____0 + 2;
-    ____localvar____3 *= 2;
-    return 0;
-}
-;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 151091400 -> p 151091312 )
-(DeclStmt 0x90178c8
-  0x9016b20 "int ____localvar____0")
-int ____localvar____0;
-;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 151091464 -> p 151091312 )
-(DeclStmt 0x9017908
-  0x9017760 "int ____localvar____3")
-int ____localvar____3;
-;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 151091376 -> p 151091312 )
-(BinaryOperator 0x90178b0 'int' lvalue '='
-  (DeclRefExpr 0x9017898 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')
-  (IntegerLiteral 0x9016b50 'int' 12))
-____localvar____0 = 12;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151091352 -> p 151091376 )
-(DeclRefExpr 0x9017898 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 105] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 91] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 97] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 102] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclRefExpr ( 150662344 -> p 0 )
+(DeclRefExpr 0x8faecc8 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int')
 ____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 151087952 -> p 151091376 )
-(IntegerLiteral 0x9016b50 'int' 12)
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt IntegerLiteral ( 150797392 -> p 150797416 )
+(IntegerLiteral 0x8fcfc50 'int' 12)
 12;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt WhileStmt ( 151088720 -> p 151091312 )
-(WhileStmt 0x9016e50
-  (DeclStmt 0x9016e68
-    0x9016b90 "int ____localvar____1 =
-      (ImplicitCastExpr 0x9016bd8 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016bc0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-  (ImplicitCastExpr 0x9016e40 '_Bool' <IntegralToBoolean>
-    (ImplicitCastExpr 0x9016e30 'int' <LValueToRValue>
-      (DeclRefExpr 0x9016e18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int')))
-  (CompoundStmt 0x9016e00
-    (DeclStmt 0x9016c60
-      0x9016c00 "int ____localvar____2 =
-        (UnaryOperator 0x9016c48 'int' postfix '--'
-          (DeclRefExpr 0x9016c30 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-    (CallExpr 0x9016da8 'int'
-      (ImplicitCastExpr 0x9016d98 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
-        (DeclRefExpr 0x9016d48 'int (const char *restrict, ...)' lvalue Function 0x900f000 'printf' 'int (const char *restrict, ...)'))
-      (ImplicitCastExpr 0x9016dd0 'const char *' <ArrayToPointerDecay>
-        (StringLiteral 0x9016cf0 'const char [7]' lvalue "%d %d\n"))
-      (ImplicitCastExpr 0x9016de0 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016d18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int'))
-      (ImplicitCastExpr 0x9016df0 'int' <LValueToRValue>
-        (DeclRefExpr 0x9016d30 'int' lvalue Var 0x9016c00 '____localvar____2' 'int')))))
-while (____localvar____1)
-    {
-        int ____localvar____2 = ____localvar____0--;
-        printf("%d %d\n", ____localvar____1, ____localvar____2);
-    }
-;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 151088744 -> p 151088720 )
-(DeclStmt 0x9016e68
-  0x9016b90 "int ____localvar____1 =
-    (ImplicitCastExpr 0x9016bd8 'int' <LValueToRValue>
-      (DeclRefExpr 0x9016bc0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-int ____localvar____1 = ____localvar____0;
-;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151088088 -> p 151088744 )
-(ImplicitCastExpr 0x9016bd8 'int' <LValueToRValue>
-  (DeclRefExpr 0x9016bc0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151088064 -> p 151088088 )
-(DeclRefExpr 0x9016bc0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')
-____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151088704 -> p 151088720 )
-(ImplicitCastExpr 0x9016e40 '_Bool' <IntegralToBoolean>
-  (ImplicitCastExpr 0x9016e30 'int' <LValueToRValue>
-    (DeclRefExpr 0x9016e18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int')))
-____localvar____1;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151088688 -> p 151088704 )
-(ImplicitCastExpr 0x9016e30 'int' <LValueToRValue>
-  (DeclRefExpr 0x9016e18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int'))
-____localvar____1;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151088664 -> p 151088688 )
-(DeclRefExpr 0x9016e18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int')
-____localvar____1;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 151088640 -> p 151088720 )
-(CompoundStmt 0x9016e00
-  (DeclStmt 0x9016c60
-    0x9016c00 "int ____localvar____2 =
-      (UnaryOperator 0x9016c48 'int' postfix '--'
-        (DeclRefExpr 0x9016c30 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-  (CallExpr 0x9016da8 'int'
-    (ImplicitCastExpr 0x9016d98 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
-      (DeclRefExpr 0x9016d48 'int (const char *restrict, ...)' lvalue Function 0x900f000 'printf' 'int (const char *restrict, ...)'))
-    (ImplicitCastExpr 0x9016dd0 'const char *' <ArrayToPointerDecay>
-      (StringLiteral 0x9016cf0 'const char [7]' lvalue "%d %d\n"))
-    (ImplicitCastExpr 0x9016de0 'int' <LValueToRValue>
-      (DeclRefExpr 0x9016d18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int'))
-    (ImplicitCastExpr 0x9016df0 'int' <LValueToRValue>
-      (DeclRefExpr 0x9016d30 'int' lvalue Var 0x9016c00 '____localvar____2' 'int'))))
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt LabelStmt ( 150661424 -> p 150798336 )
+(LabelStmt 0x8fae930 '____label____0'
+  (CompoundStmt 0x8faea30
+    (IfStmt 0x8fae9c0
+      (DeclStmt 0x8fae9e0
+        0x8fcfc90 "int ____localvar____1 =
+          (BinaryOperator 0x8fcfd00 'int' '+'
+            (ImplicitCastExpr 0x8fcfcf0 'int' <LValueToRValue>
+              (DeclRefExpr 0x8fcfcc0 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int'))
+            (IntegerLiteral 0x8fcfcd8 'int' 12))")
+      (ImplicitCastExpr 0x8fcfd50 '_Bool' <IntegralToBoolean>
+        (ImplicitCastExpr 0x8fcfd40 'int' <LValueToRValue>
+          (DeclRefExpr 0x8fcfd28 'int' lvalue Var 0x8fcfc90 '____localvar____1' 'int')))
+      (CompoundStmt 0x8fae9a8
+        (CompoundStmt 0x8fcfd18)
+        (LabelStmt 0x8fae998 '____label____1'
+          (CompoundStmt 0x8fae980
+            (GotoStmt 0x8fae940 '____label____0':0x8fae900))))
+      <<<NULL>>>)
+    (LabelStmt 0x8faea20 '____label____2'
+      (NullStmt 0x8faea10))))
+____label____0:
 {
-    int ____localvar____2 = ____localvar____0--;
-    printf("%d %d\n", ____localvar____1, ____localvar____2);
+    if (____localvar____1) {
+        {
+        }
+      ____label____1:
+        {
+            goto ____label____0;
+        }
+    }
+  ____label____2:
+    ;
 }
 ;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 151088224 -> p 151088640 )
-(DeclStmt 0x9016c60
-  0x9016c00 "int ____localvar____2 =
-    (UnaryOperator 0x9016c48 'int' postfix '--'
-      (DeclRefExpr 0x9016c30 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))")
-int ____localvar____2 = ____localvar____0--;
-;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 151088200 -> p 151088224 )
-(UnaryOperator 0x9016c48 'int' postfix '--'
-  (DeclRefExpr 0x9016c30 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-____localvar____0--;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151088176 -> p 151088200 )
-(DeclRefExpr 0x9016c30 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')
-____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CallExpr ( 151088552 -> p 151088640 )
-(CallExpr 0x9016da8 'int'
-  (ImplicitCastExpr 0x9016d98 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
-    (DeclRefExpr 0x9016d48 'int (const char *restrict, ...)' lvalue Function 0x900f000 'printf' 'int (const char *restrict, ...)'))
-  (ImplicitCastExpr 0x9016dd0 'const char *' <ArrayToPointerDecay>
-    (StringLiteral 0x9016cf0 'const char [7]' lvalue "%d %d\n"))
-  (ImplicitCastExpr 0x9016de0 'int' <LValueToRValue>
-    (DeclRefExpr 0x9016d18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int'))
-  (ImplicitCastExpr 0x9016df0 'int' <LValueToRValue>
-    (DeclRefExpr 0x9016d30 'int' lvalue Var 0x9016c00 '____localvar____2' 'int')))
-printf("%d %d\n", ____localvar____1, ____localvar____2);
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151088536 -> p 151088552 )
-(ImplicitCastExpr 0x9016d98 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
-  (DeclRefExpr 0x9016d48 'int (const char *restrict, ...)' lvalue Function 0x900f000 'printf' 'int (const char *restrict, ...)'))
-printf;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151088456 -> p 151088536 )
-(DeclRefExpr 0x9016d48 'int (const char *restrict, ...)' lvalue Function 0x900f000 'printf' 'int (const char *restrict, ...)')
-printf;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151088592 -> p 151088552 )
-(ImplicitCastExpr 0x9016dd0 'const char *' <ArrayToPointerDecay>
-  (StringLiteral 0x9016cf0 'const char [7]' lvalue "%d %d\n"))
-"%d %d\n";
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt StringLiteral ( 151088368 -> p 151088592 )
-(StringLiteral 0x9016cf0 'const char [7]' lvalue "%d %d\n")
-"%d %d\n";
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151088608 -> p 151088552 )
-(ImplicitCastExpr 0x9016de0 'int' <LValueToRValue>
-  (DeclRefExpr 0x9016d18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int'))
-____localvar____1;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151088408 -> p 151088608 )
-(DeclRefExpr 0x9016d18 'int' lvalue Var 0x9016b90 '____localvar____1' 'int')
-____localvar____1;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151088624 -> p 151088552 )
-(ImplicitCastExpr 0x9016df0 'int' <LValueToRValue>
-  (DeclRefExpr 0x9016d30 'int' lvalue Var 0x9016c00 '____localvar____2' 'int'))
-____localvar____2;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151088432 -> p 151088624 )
-(DeclRefExpr 0x9016d30 'int' lvalue Var 0x9016c00 '____localvar____2' 'int')
-____localvar____2;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt WhileStmt ( 151088920 -> p 151091312 )
-(WhileStmt 0x9016f18
-  <<<NULL>>>
-  (BinaryOperator 0x9016eb8 '_Bool' '=='
-    (ImplicitCastExpr 0x9016ea8 'int' <LValueToRValue>
-      (DeclRefExpr 0x9016e78 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-    (IntegerLiteral 0x9016e90 'int' 12))
-  (CompoundStmt 0x9016f00
-    (UnaryOperator 0x9016ee8 'int' postfix '++'
-      (DeclRefExpr 0x9016ed0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))))
-while (____localvar____0 == 12)
-    {
-        ____localvar____0++;
-    }
-;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 151088824 -> p 151088920 )
-(BinaryOperator 0x9016eb8 '_Bool' '=='
-  (ImplicitCastExpr 0x9016ea8 'int' <LValueToRValue>
-    (DeclRefExpr 0x9016e78 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-  (IntegerLiteral 0x9016e90 'int' 12))
-____localvar____0 == 12;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151088808 -> p 151088824 )
-(ImplicitCastExpr 0x9016ea8 'int' <LValueToRValue>
-  (DeclRefExpr 0x9016e78 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151088760 -> p 151088808 )
-(DeclRefExpr 0x9016e78 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')
-____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 151088784 -> p 151088824 )
-(IntegerLiteral 0x9016e90 'int' 12)
-12;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 151088896 -> p 151088920 )
-(CompoundStmt 0x9016f00
-  (UnaryOperator 0x9016ee8 'int' postfix '++'
-    (DeclRefExpr 0x9016ed0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')))
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt CompoundStmt ( 150661680 -> p 150661424 )
+(CompoundStmt 0x8faea30
+  (IfStmt 0x8fae9c0
+    (DeclStmt 0x8fae9e0
+      0x8fcfc90 "int ____localvar____1 =
+        (BinaryOperator 0x8fcfd00 'int' '+'
+          (ImplicitCastExpr 0x8fcfcf0 'int' <LValueToRValue>
+            (DeclRefExpr 0x8fcfcc0 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int'))
+          (IntegerLiteral 0x8fcfcd8 'int' 12))")
+    (ImplicitCastExpr 0x8fcfd50 '_Bool' <IntegralToBoolean>
+      (ImplicitCastExpr 0x8fcfd40 'int' <LValueToRValue>
+        (DeclRefExpr 0x8fcfd28 'int' lvalue Var 0x8fcfc90 '____localvar____1' 'int')))
+    (CompoundStmt 0x8fae9a8
+      (CompoundStmt 0x8fcfd18)
+      (LabelStmt 0x8fae998 '____label____1'
+        (CompoundStmt 0x8fae980
+          (GotoStmt 0x8fae940 '____label____0':0x8fae900))))
+    <<<NULL>>>)
+  (LabelStmt 0x8faea20 '____label____2'
+    (NullStmt 0x8faea10)))
 {
-    ____localvar____0++;
+    if (____localvar____1) {
+        {
+        }
+      ____label____1:
+        {
+            goto ____label____0;
+        }
+    }
+  ____label____2:
+    ;
 }
 ;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 151088872 -> p 151088896 )
-(UnaryOperator 0x9016ee8 'int' postfix '++'
-  (DeclRefExpr 0x9016ed0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-____localvar____0++;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151088848 -> p 151088872 )
-(DeclRefExpr 0x9016ed0 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')
-____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 151091440 -> p 151091312 )
-(BinaryOperator 0x90178f0 'int' lvalue '='
-  (DeclRefExpr 0x90178d8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-  (BinaryOperator 0x90177d0 'int' '+'
-    (ImplicitCastExpr 0x90177c0 'int' <LValueToRValue>
-      (DeclRefExpr 0x9017790 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-    (IntegerLiteral 0x90177a8 'int' 2)))
-____localvar____3 = ____localvar____0 + 2;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151091416 -> p 151091440 )
-(DeclRefExpr 0x90178d8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-____localvar____3;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 151091152 -> p 151091440 )
-(BinaryOperator 0x90177d0 'int' '+'
-  (ImplicitCastExpr 0x90177c0 'int' <LValueToRValue>
-    (DeclRefExpr 0x9017790 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-  (IntegerLiteral 0x90177a8 'int' 2))
-____localvar____0 + 2;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 151091136 -> p 151091152 )
-(ImplicitCastExpr 0x90177c0 'int' <LValueToRValue>
-  (DeclRefExpr 0x9017790 'int' lvalue Var 0x9016b20 '____localvar____0' 'int'))
-____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151091088 -> p 151091136 )
-(DeclRefExpr 0x9017790 'int' lvalue Var 0x9016b20 '____localvar____0' 'int')
-____localvar____0;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 151091112 -> p 151091152 )
-(IntegerLiteral 0x90177a8 'int' 2)
-2;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundAssignOperator ( 151091240 -> p 151091312 )
-(CompoundAssignOperator 0x9017828 'int' lvalue '*=' ComputeLHSTy='int' ComputeResultTy='int'
-  (DeclRefExpr 0x90177f8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-  (IntegerLiteral 0x9017810 'int' 2))
-____localvar____3 *= 2;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 151091192 -> p 151091240 )
-(DeclRefExpr 0x90177f8 'int' lvalue Var 0x9017760 '____localvar____3' 'int')
-____localvar____3;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 151091216 -> p 151091240 )
-(IntegerLiteral 0x9017810 'int' 2)
-2;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ReturnStmt ( 151091296 -> p 151091312 )
-(ReturnStmt 0x9017860
-  (IntegerLiteral 0x9017848 'int' 0))
-return 0;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt IfStmt ( 150661568 -> p 150661680 )
+(IfStmt 0x8fae9c0
+  (DeclStmt 0x8fae9e0
+    0x8fcfc90 "int ____localvar____1 =
+      (BinaryOperator 0x8fcfd00 'int' '+'
+        (ImplicitCastExpr 0x8fcfcf0 'int' <LValueToRValue>
+          (DeclRefExpr 0x8fcfcc0 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int'))
+        (IntegerLiteral 0x8fcfcd8 'int' 12))")
+  (ImplicitCastExpr 0x8fcfd50 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0x8fcfd40 'int' <LValueToRValue>
+      (DeclRefExpr 0x8fcfd28 'int' lvalue Var 0x8fcfc90 '____localvar____1' 'int')))
+  (CompoundStmt 0x8fae9a8
+    (CompoundStmt 0x8fcfd18)
+    (LabelStmt 0x8fae998 '____label____1'
+      (CompoundStmt 0x8fae980
+        (GotoStmt 0x8fae940 '____label____0':0x8fae900))))
+  <<<NULL>>>)
+if (____localvar____1) {
+    {
+    }
+  ____label____1:
+    {
+        goto ____label____0;
+    }
+}
 ;
-[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 151091272 -> p 151091296 )
-(IntegerLiteral 0x9017848 'int' 0)
-0;
-[0;1;33m
- [B9 (ENTRY)]
-[0m[0;35m   Succs [0m(1):[0;35m B8[0m
-[0;1;33m
- [B1]
-[0m   1: ____localvar____3 = ____localvar____0 + 2
-   2: ____localvar____3 *= 2
-   3: return 0;
-[0;34m   Preds [0m(1):[0;34m B2[0m
-[0;35m   Succs [0m(1):[0;35m B0[0m
-[0;1;33m
- [B2]
-[0m   1: ____localvar____0 == 12
-[0;32m   T: while [B2.1]
-[0m[0;34m   Preds [0m(2):[0;34m B3 B5[0m
-[0;35m   Succs [0m(2):[0;35m B4 B1[0m
-[0;1;33m
- [B3]
-[0m[0;34m   Preds [0m(1):[0;34m B4[0m
-[0;35m   Succs [0m(1):[0;35m B2[0m
-[0;1;33m
- [B4]
-[0m   1: ____localvar____0++
-[0;34m   Preds [0m(1):[0;34m B2[0m
-[0;35m   Succs [0m(1):[0;35m B3[0m
-[0;1;33m
- [B5]
-[0m   1: ____localvar____0 (ImplicitCastExpr, LValueToRValue, int)
-   2: int ____localvar____1 = ____localvar____0;
-   3: ____localvar____1 (ImplicitCastExpr, IntegralToBoolean, _Bool)
-[0;32m   T: while [B5.3]
-[0m[0;34m   Preds [0m(2):[0;34m B6 B8[0m
-[0;35m   Succs [0m(2):[0;35m B7 B2[0m
-[0;1;33m
- [B6]
-[0m[0;34m   Preds [0m(1):[0;34m B7[0m
-[0;35m   Succs [0m(1):[0;35m B5[0m
-[0;1;33m
- [B7]
-[0m   1: int ____localvar____2 = ____localvar____0--;
-   2: printf("%d %d\n", ____localvar____1, ____localvar____2)
-[0;34m   Preds [0m(1):[0;34m B5[0m
-[0;35m   Succs [0m(1):[0;35m B6[0m
-[0;1;33m
- [B8]
-[0m   1: int ____localvar____0;
-   2: int ____localvar____3;
-   3: ____localvar____0 = 12
-[0;34m   Preds [0m(1):[0;34m B9[0m
-[0;35m   Succs [0m(1):[0;35m B5[0m
-[0;1;33m
- [B0 (EXIT)]
-[0m[0;34m   Preds [0m(1):[0;34m B1[0m
-
-Writing '/tmp/llvm_6nanga/CFG.dot'...  done. 
-[DEBUG][alg/SimplePrinter.cpp - line 24] alg finished.
-[DEBUG][ResourceManager.cpp - line 98] src _while.cpp not changed.
-[DEBUG][ResourceManager.cpp - line 136] Open desfile @_while.cpp
-done2
+____localvar____1int ____localvar____1 = ____localvar____0 + 12;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclStmt ( 150661600 -> p 150661568 )
+(DeclStmt 0x8fae9e0
+  0x8fcfc90 "int ____localvar____1 =
+    (BinaryOperator 0x8fcfd00 'int' '+'
+      (ImplicitCastExpr 0x8fcfcf0 'int' <LValueToRValue>
+        (DeclRefExpr 0x8fcfcc0 'int' lvalue Var 0x8fcfc20 '____localvar____0' 'int'))
+      (IntegerLiteral 0x8fcfcd8 'int' 12))")
+int ____localvar____1 = ____localvar____0 + 12;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 105] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 91] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 97] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 102] --- ASSIGN EXPR END ---
