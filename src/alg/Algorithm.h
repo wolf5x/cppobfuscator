@@ -4,6 +4,10 @@
 #include "../stdafx.h"
 #include "../ResourceManager.h"
 
+//FIXME move
+typedef SmallVector<Stmt*, 32> StmtPtrSmallVector;
+typedef SmallVector<Decl*, 32> DeclPtrSmallVector;
+
 class Algorithm {
 public:
 	virtual bool execute();
@@ -26,15 +30,13 @@ protected:
 	ResourceManager &resMgr;
 	CompilerInstance &compInst;
 
-	typedef SmallVector<Stmt*, 32> StmtPtrSmallVector;
-
 	StmtPtrSmallVector* ICCopy(Stmt* s) {
 		//FIXME memory leak
 		StmtPtrSmallVector *res = new StmtPtrSmallVector();
 		for(Stmt::child_iterator I = s->child_begin(), E = s->child_end();
 				I != E; ++I){
 			if(*I) {
-				res[0].push_back(*I);
+				res->push_back(*I);
 			}
 		}
 		return res;
@@ -44,7 +46,7 @@ protected:
 		//FIXME memory leak
 		//TODO @!#$!@#%
 		static int counter = 0;
-		string lbl("____Label____");
+		string lbl("____label____");
 		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
 		DPRINT("info %u: %s %d", (unsigned int)&info, info.getNameStart(), info.getBuiltinID());
 		//Sema &S = this->compInst.getSema();
@@ -59,11 +61,27 @@ protected:
 			LabelStmt(SourceLocation(), lblD, nullSt/*StmtToCompound(stBody)*/);
 	}
 
-	bool renameVarDecl(VarDecl *d) {
+	bool renameVarDecl(VarDecl *D) {
 		static int counter = 0;
-		string lbl("____LocalVar____");
+		string lbl("____localvar____");
 		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
-		d->setDeclName(DeclarationName(&info));
+		D->setDeclName(DeclarationName(&info));
+		return true;
+	}
+
+	bool renameTagDecl(TagDecl *D) {
+		static int counter = 0;
+		string lbl("____localtag____");
+		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
+		D->setDeclName(DeclarationName(&info));
+		return true;
+	}
+
+	bool renameNamedDecl(NamedDecl *D) {
+		static int counter = 0;
+		string lbl("____nameddecl____");
+		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
+		D->setDeclName(DeclarationName(&info));
 		return true;
 	}
 
@@ -84,6 +102,16 @@ protected:
 		return e;
 	}
 
+	Expr* BuildCommaExpr(Expr *lExpr, Expr *rExpr) {
+		DPRINT("Comma BEGIN");
+		Sema &S = this->resMgr.getCompilerInstance().getSema();
+		ExprResult eRes = S.BuildBinOp(0, SourceLocation(), BO_Comma, lExpr, rExpr);
+		assert(!eRes.isInvalid());
+		DPRINT("Comma END");
+		return eRes.get();
+	}
+
+	// build DeclRefExpr using a VarDecl
 	DeclRefExpr* BuildLocalVarDeclRefExpr(VarDecl *var) {
 		ValueDecl *D = dyn_cast<ValueDecl>(var);
 		assert(D && "cast to ValueDecl failed");
@@ -91,21 +119,61 @@ protected:
 		ExprValueKind VK = VK_LValue;
 		DeclarationNameInfo NameInfo(D->getDeclName(), SourceLocation());
 
-		DeclRefExpr *E = DeclRefExpr::Create(
+		DeclRefExpr *e = DeclRefExpr::Create(
 				resMgr.getCompilerInstance().getASTContext(),
 			   	NestedNameSpecifierLoc(),
 				SourceLocation(), 
 				D, false, 
 				NameInfo, Ty, VK);
 		// Sema::MarkDeclRefReferenced?
-		return E;
+		return e;
 	}
 
+	// build vardecl which will be placed at the begnning of a function body
+	DeclStmt* BuildVarDeclStmt(VarDecl *var) {
+		return new (resMgr.getCompilerInstance().getASTContext())
+			DeclStmt(DeclGroupRef(var), SourceLocation(), SourceLocation());
+	}
+
+
+	// build ObjectType(Expr)
+	// is used to make expr: "ObjectType xx = ObjectType(Expr)"
+	ExprResult BuildTempObjectConstuctExpr(QualType Ty, Expr *expr) {
+		assert(expr && "init expr should not be null");
+		ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+		TypeSourceInfo *TInfo = Ctx.CreateTypeSourceInfo(Ty);
+		/*
+		Expr *initExpr = expr;
+		if( !isa<InitListExpr>(initExpr) ) {
+			initExpr = new (Ctx) InitListExpr(Ctx, SourceLocation(), &expr, 1, SourceLocation());
+			assert(initExpr && "convert Expr to InitListExpr failed.");
+		}
+		*/
+
+		Sema &S = this->resMgr.getCompilerInstance().getSema();
+		//don't use Sema because it depends on valid SourceLocation
+		ExprResult res = S.BuildCXXTypeConstructExpr(TInfo, SourceLocation().getLocWithOffset(1), MultiExprArg(&expr, 1), SourceLocation().getLocWithOffset(1));
+		return res;
+/*
+		// Part of BuildCXXTypeConstructExpr
+		if ( Ty->isDependentType() || 
+				CallExpr::hasAnyTypeDependentArguments(
+					llvm::makeArrayRef(expr))) {
+			return S.Owned(CXXUnresolvedConstructExpr::Create(Ctx, TInfo, SourceLocation(), &expr, 1, SourceLocation()));
+		}
+
+		return S.BuildCXXFunctionalCastExpr(TInfo, SourceLocation().getLocWithOffset(1), expr, SourceLocation().getLocWithOffset(1));
+		*/
+
+	}
+
+	// TODO
 	// convert "var" to "(*pvar)"
 	bool ConvertDeclRefToPtr(DeclRefExpr *var) {
 
 		return true;
 	}
+	
 	
 	IdentifierInfo& getUniqueIdentifier(string sname, int &ccnt) {
 		IdentifierTable &idTable = this->compInst.getPreprocessor().getIdentifierTable();
@@ -139,19 +207,29 @@ protected:
 	}
 
 	bool updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
+		ASTContext &Ctx = this->compInst.getASTContext();
 		switch (fparent->getStmtClass()) {
 			case Stmt::CompoundStmtClass:
-				dyn_cast<CompoundStmt>(fparent)->setStmts(this->compInst.getASTContext(), reinterpret_cast<Stmt**>(&fpv[0][0]), fpv[0].size());
+				dyn_cast<CompoundStmt>(fparent)->setStmts(Ctx, reinterpret_cast<Stmt**>(&fpv->front()), fpv->size());
 				break;
 			case Stmt::ForStmtClass:
-				dyn_cast<ForStmt>(fparent)->setBody((Stmt*)(fpv[0][0]));
-				break;
-			case Stmt::DoStmtClass:
-				dyn_cast<DoStmt>(fparent)->setBody((Stmt*)(fpv[0][0]));
-				break;
+				{
+					Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
+					dyn_cast<ForStmt>(fparent)->setBody(st);
+					break;
+				}
+			case Stmt::DoStmtClass: 
+				{
+					Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
+					dyn_cast<DoStmt>(fparent)->setBody(st);
+					break;
+				}
 			case Stmt::WhileStmtClass:
-				dyn_cast<WhileStmt>(fparent)->setBody((Stmt*)(fpv[0][0]));
-				break;
+				{
+					Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
+					dyn_cast<WhileStmt>(fparent)->setBody(st);
+					break;
+				}
 			default:
 				return false;
 		}

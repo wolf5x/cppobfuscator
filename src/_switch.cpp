@@ -2,29 +2,20 @@
 
 int main() 
 {
+	int x = 1, y = x*2;
 	int next = 0;
 	for(;;){
-		switch(next) {
+		switch(int next = x*y) {
 			case 0:
 				next = 2;
-				break;
-			case 1:
-				int x = 1;
-				next = -1;
-				break;
-			case 2:
-				x = x+1;
-				printf("%d ", x);
-				next = 4;
-				break;
-			case 3:
-				int y = 2;
-				next = 1;
+			case  2 ... 3:
 				break;
 			case 4:
 				y = y - 2;
 				next = 3;
 				break;
+			case 5:
+				;
 			default:
 				goto ____lbl____0;
 				break;

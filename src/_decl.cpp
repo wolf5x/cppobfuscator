@@ -3,23 +3,65 @@
 #include <assert.h>
 using namespace std;
 
+class CCC{
+public:
+	void ehaha() {
+		static int fuck = 0;
+		{
+			int fuck = 1;
+		}
+		fuck++;
+	}
+};
+
 bool BOOL;
 int INT = 1, *PINT = &INT;
 string STR("xx"), *PSTR = &STR;
 
+template<typename T>
+void tpl(T aa) {
+	T yy = T();
+	T zz = T("yy");
+	yy = T();
+	yy = "yy";
+}
+
+void assign() {
+	int x;
+	x = int(10);
+
+	string uu = "yy";
+	string yy = string();
+	string zz = string("yy");
+	yy = string();
+	yy = string("yy");
+	yy = "yy";
+
+	uu = "yy", yy = "zz", zz = string();
+}
+
+
 void externvar() {
+	tpl<string>("yy");
 	int INT = 2;
 	{
 		extern int INT;
 		INT = 3;
 	}
+	{}
 }
 
 void arraytype(){
 	int n = 3;
 	{
-		typedef int[n][n] varray;
-		varray ary[n];
+		typedef string stype;
+		string str;
+		stype ary;
+		stype bry = ary;
+	}
+	{
+		typedef int varray[n][n];
+		varray ary;
 	}
 	{
 		int ary[] = {n, n*2};

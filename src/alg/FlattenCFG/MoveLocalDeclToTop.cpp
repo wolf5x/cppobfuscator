@@ -1,108 +1,67 @@
 #include "MoveLocalDeclToTop.h"
+#include "StmtPretransformer.h"
 using namespace std;
 using namespace clang;
 
-bool
-MoveLocalDeclToTop::HandleTopLevelDecl(DeclGroupRef D) {
-	/*
-	for(DeclGroupRef::iterator I = D.begin(), E = D.end();
-			I != E; ++I ){
-		Stmt *stmtBody = (*I)->getBody();
-		if(stmtBody) {
-			CompoundStmt *stmtBodyComp= dyn_cast<CompoundStmt>(stmtBody);
-			LabelStmt *stmtLbl;
-			SourceLocation numloc;
-		}
-	}
-	*/
-	return true;
-}
+int ExtractVarDecl::atomLevel = 0;
 
-bool
-MoveLocalDeclToTop::execute() {
-	TranslationUnitDecl *decls = this->resMgr.getCompilerInstance().getASTContext().getTranslationUnitDecl();
-	for(TranslationUnitDecl::decl_iterator I = decls->decls_begin(), E = decls->decls_end();
-			I != E; ++I) {
-		Decl *d = *I;
-
-		if(this->compInst.getSourceManager().isInSystemHeader(d->getLocation())){
-			continue;
-		}
-		RenameVarByUniqueId(*this).TraverseDecl(d);
-		ExtractVarDecl(*this, d->getBody()).TraverseDecl(d);
+bool MoveLocalDeclToTop::HandelDecl(Decl *D) {
+	Stmt *body = D->getBody();
+	if(!body){
+		DPRINT("no stmt body");
+		return true;
 	}
+	ExtractVarDecl ext(*this, body);
+	ext.TraverseDecl(D);
+	StmtPtrSmallVector *newBody = ICCopy(body);
+	newBody->insert(newBody->begin(), ext.topDeclStmts.begin(), ext.topDeclStmts.end());
+	updateChildrenStmts(body, newBody);
+
 	return true;
 }
 
 
-bool 
-RenameVarByUniqueId::VisitStmt(Stmt *s) {
-	
-	/*
-	DPRINT("stmt: %s", s->getStmtClassName());
-	s->dumpPretty(mover.compInst.getASTContext());
-	NullStmt(SourceLocation()).dumpPretty(mover.compInst.getASTContext());
-	if(isa<ForStmt>(S)) {
-		ForStmt *forSt = dyn_cast<ForStmt>(S);
-		//NullStmt *nullSt = new (mover.compInst.getASTContext()) NullStmt(SourceLocation());
-		BuiltinType *biInt = new BuiltinType(BuiltinType::Int);
-
-		StmtPtrSmallVector *fbody = mover.ICCopy(forSt->getBody());
-		Expr* incS = (forSt->getInc()!=NULL) ? forSt->getInc() : mover.CrLiteralX(1, biInt);
-		LabelStmt *lsmt = mover.AddNewLabel(incS);
-		fbody[0].insert(fbody[0].begin(), lsmt);
-		forSt->setBody(mover.StVecToCompound(fbody));
-		//TODO
-
-		//mover.updateChildrenStmts(s, <#StmtPtrSmallVector *fpv#>)
-	}
-	*/
-
-	return true;
-}
-
-bool
-RenameVarByUniqueId::VisitDecl(Decl *d) {
-	DPRINT("decl: %s", d->getDeclKindName());
-	if(isa<VarDecl>(d)) {
-		VarDecl *vD = dyn_cast<VarDecl>(d);
-		DPRINT(" ---- name = %s | type = %s | const = %d | extern = %d | POD = %d",
-				vD->getQualifiedNameAsString().c_str(),
-				vD->getType().getAsString().c_str(),
-				vD->isConstexpr(),
-				vD->hasExternalStorage(),
-				vD->getType().isPODType(mover.resMgr.getCompilerInstance().getASTContext()));
-		if(vD->hasInit()) {
-			vD->getInit()->dumpPretty(mover.resMgr.getCompilerInstance().getASTContext());
-		}
-		// don't rename global vars
-		// don't rename extern vars
-		if((vD->isLocalVarDecl() || isa<ParmVarDecl>(vD))
-				&& vD->getDeclName()
-				&& !vD->hasExternalStorage()) { 
-			mover.renameVarDecl(vD);
-		}
-	}
-
-	return true;
-}
-
-bool
-ExtractVarDecl::VisitStmt(Stmt *s) {
+TraverseCode ExtractVarDecl::VisitStmt(Stmt *s) {
 	ASTContext &Ctx = mover.resMgr.getCompilerInstance().getASTContext();
-	DPRINT("Stmt %s", s->getStmtClassName());
+	DPRINT("Stmt %s ( %u -> p %u )", s->getStmtClassName(), (unsigned int)s, (unsigned int)(parMap.get() ? parMap.get()->getParent(s) : 0));
+	s->dump();
 	s->dumpPretty(Ctx);
+	NullStmt(SourceLocation()).dumpPretty(Ctx);
 	
+	if (isa<WhileStmt>(s)
+			|| isa<DoStmt>(s)
+			|| isa<ForStmt>(s)
+			|| isa<CXXTryStmt>(s)) {
+		DPRINT("skip atom");
+		return SKIP;
+	} else if (isa<IfStmt>(s)) {
+		dyn_cast<IfStmt>(s)->getCond()->dumpPretty(Ctx);
+		dyn_cast<IfStmt>(s)->getConditionVariableDeclStmt()->dumpPretty(Ctx);
+	}
+
 	if(isa<DeclStmt>(s)) {
 		DeclStmt *dst = dyn_cast<DeclStmt>(s);
 		DeclGroupRef decls = dst->getDeclGroup();
-		Stmt *par = this->parMap.getParent(s);
-		Algorithm::StmtPtrSmallVector *sbody = mover.ICCopy(par);
+		//get the pointer that point to this DeclStmt
+		Stmt *par = parMap.get()->getParent(s);
+		//StmtPtrSmallVector *sbody = mover.ICCopy(par);
+		Stmt::child_iterator I = par->child_begin(), E = par->child_end();
+		int ICnt = 0;
+		for( ; I != E; ++I, ++ICnt) {
+			if(*I == s) {
+				break;
+			}
+		}
+		assert(I != E && "No declStmt in copied vector.");
+		// store "x=a, y=b, z=c" expr to replace the original DeclStmt
+		Expr *commaSt = 0;
 
+		//if more than assign is created, then bulit them into a Comma expression
 		for(DeclGroupRef::iterator I = decls.begin(), E = decls.end();
 				I != E; ++I) {
 			if(VarDecl *vD = dyn_cast<VarDecl>(*I)) {
 				QualType Ty = vD->getType();
+				QualType dTy = Ty.getDesugaredType(Ctx);
 				// local var
 				// not anoymous
 				if(vD->isLocalVarDecl() 
@@ -111,11 +70,15 @@ ExtractVarDecl::VisitStmt(Stmt *s) {
 					// extern
 					if(vD->hasExternalStorage()) {
 						DPRINT("isExtern");
+						addBeginningDeclStmt(vD);
 						continue;
 					}
 					
-					// const
-					if(Ty.isConstant()) {
+					// const TODO
+					// remove const
+					// treat as normal
+					if(Ty.isConstant(Ctx)) {
+						//vD->getType().removeLocalConst();
 						DPRINT("isConstant");
 						continue;
 					}
@@ -132,20 +95,81 @@ ExtractVarDecl::VisitStmt(Stmt *s) {
 						continue;
 					}
 
-					// has init value
+					if(!Ty.isPODType(Ctx)) {
+						DPRINT("notPODType");
+						//continue;
+					}
+
+					// PODType
 					if(vD->hasInit()) {
-						Expr *assign = mover.BuildAssignExpr(vD, vD->getInit());
-						assign->dumpPretty(Ctx);
-						NullStmt(SourceLocation()).dumpPretty(Ctx);
-						if(assign){
-							sbody[0].push_back(assign);
+						DPRINT("initStyle %d", vD->getInitStyle());
+						//FIXME: if is already ObjConstruct(init), then don't build again
+						Expr *init = vD->getInit();
+						Expr *constructInit;
+						if(Ty.isPODType(Ctx)) {
+							constructInit = init;
+						} else {
+							ExprResult constructInitRes = mover.BuildTempObjectConstuctExpr(Ty, init);
+							assert(!constructInitRes.isInvalid());
+							constructInit = constructInitRes.get();
+						}
+						Expr *assign = mover.BuildAssignExpr(vD, constructInit);
+						assert(assign);
+
+						if( commaSt == NULL ) {
+							commaSt = assign;
+						} else {
+							// make comma expr
+							Expr *t = mover.BuildCommaExpr(commaSt, assign);
+							assert(t);
+							commaSt = t;
 						}
 					}
+
+					// remove init value and create top decl
+					vD->setInit(NULL);
+					addBeginningDeclStmt(vD);
 				}
 			}
 		}
-		mover.updateChildrenStmts(par, sbody);
+		//ifstmt
+		if(isa<IfStmt>(par)) {
+			IfStmt *IS = dyn_cast<IfStmt>(par);
+			assert(*I == *(IS->child_begin()));
+			*I = NULL;
+		}
+		// replace with comma assign expr
+		else if(commaSt) {
+			Stmt *&r = *I;
+			r = commaSt;
+			//*(&(*I)) = commaSt;	
+		} else{
+			if(CompoundStmt *cpdSt = dyn_cast<CompoundStmt>(par)) {
+				StmtPtrSmallVector *t = mover.ICCopy(par);
+				t->erase(t->begin() + ICnt);
+				mover.updateChildrenStmts(par, t);
+				/*
+				Stmt *&r = *I;
+				r = NULL:
+				*/
+			}  else {
+				Stmt *&r = *I;
+				r = commaSt;
+				//*(&(*I)) = commaSt;
+			}
+		}
+
 	}
+	return GOON;
+}
+
+bool ExtractVarDecl::addBeginningDeclStmt(VarDecl *D) {
+	DeclStmt *S = mover.BuildVarDeclStmt(D);
+	assert(S && "BulidVarDeclStmt failed.");
+	this->topDeclStmts.push_back(S);
 	return true;
 }
+
+
+
 

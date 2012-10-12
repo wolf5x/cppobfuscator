@@ -2,54 +2,53 @@
 #define OBFS_ALG_FLATTENCFG_MOVELOCALDECLTOTOP_H
 
 #include "../Algorithm.h"
-#include "FlattenCFGTransformer.h"
+//#include "FlattenCFGTransformer.h"
+#include "ASTTraverser.h"
+#include "StmtPretransformer.h"
 
+using namespace clang;
+
+class MoveLocalDeclToTop;
+class ExtractVarDecl;
 
 class MoveLocalDeclToTop: public Algorithm {
 public:
-	friend class RenameVarByUniqueId;
 	friend class ExtractVarDecl;
 
 	MoveLocalDeclToTop(ResourceManager &RM)
 		: Algorithm(RM)
 	{}
 
-	virtual bool execute();
+	bool HandelDecl(Decl *D);
 
 protected:
-	bool HandleTopLevelDecl(clang::DeclGroupRef D);
 
-};
-
-// rename all local vars(except extern) with unique identifiers
-class RenameVarByUniqueId: public RecursiveASTVisitor<RenameVarByUniqueId> {
-public:
-	RenameVarByUniqueId(MoveLocalDeclToTop &M)
-		: mover(M)
-	{}
-
-	bool VisitStmt(clang::Stmt *S);
-	bool VisitDecl(clang::Decl *D);
-
-private:
-	MoveLocalDeclToTop &mover;
 };
 
 // move variable declarations to the top of the function,
 // transform the original declaration to an assign operation
-class ExtractVarDecl: public RecursiveASTVisitor<ExtractVarDecl> {
+class ExtractVarDecl: public ASTTraverser<ExtractVarDecl> {
 public:
+	friend class MoveLocalDeclToTop;
+
 	ExtractVarDecl(MoveLocalDeclToTop &M, Stmt *R)
 		: mover(M),
-		parMap(ParentMap(R))
+		topStmt(R),
+		parMap(new ParentMap(R)),
+		topDeclStmts(StmtPtrSmallVector())
 	{}
 
-	//bool VisitDecl(clang::Decl *d);
-	bool VisitStmt(clang::Stmt *s);
+	TraverseCode VisitStmt(Stmt *S);
 
-private:
+protected:
+	bool addBeginningDeclStmt(clang::VarDecl *D);
+
 	MoveLocalDeclToTop &mover;
-	ParentMap parMap;
+	Stmt *topStmt;
+	StmtPtrSmallVector topDeclStmts;
+	OwningPtr<ParentMap> parMap;
+
+	static int atomLevel;
 };
 
 #endif

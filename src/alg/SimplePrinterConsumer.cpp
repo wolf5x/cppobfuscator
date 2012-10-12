@@ -1,6 +1,27 @@
 #include "SimplePrinterConsumer.h"
 using namespace clang;
 
+class StmtPrinter : public RecursiveASTVisitor<StmtPrinter> {
+public:
+	StmtPrinter(CompilerInstance *CI, Stmt *S)
+		: compInst(CI),
+		parMap(new ParentMap(S))
+	{}
+
+	bool VisitStmt(Stmt *s) {
+		ASTContext &Ctx = compInst->getASTContext();
+		DPRINT("Stmt %s ( %u -> p %u )", s->getStmtClassName(), (unsigned int)s, (unsigned int)(parMap.get() ? parMap.get()->getParent(s) : 0));
+		s->dump();
+		s->dumpPretty(Ctx);
+		NullStmt(SourceLocation()).dumpPretty(Ctx);
+		return true;
+	}
+
+protected:
+	CompilerInstance *compInst;
+	OwningPtr<ParentMap> parMap;
+};
+
 bool
 SimplePrinterConsumer::HandleTopLevelDecl(DeclGroupRef D) {
 	if(D.begin() == D.end()) {
@@ -21,8 +42,12 @@ SimplePrinterConsumer::HandleTopLevelDecl(DeclGroupRef D) {
 		
 		dd->print(out, policy);
 		nullSt->printPretty(out, NULL, policy);
-		//CFG
 		if(dd->hasBody()) {
+			Stmt *ss = dd->getBody();
+			// Print Stmts
+			StmtPrinter(compInst, dd->getBody()).TraverseDecl(dd);
+
+			// CFG
 			CFG::BuildOptions buildOPts;
 			OwningPtr<CFG> cfg;
 			cfg.reset(CFG::buildCFG((const Decl*)dd, (Stmt*)(dd->getBody()), &compInst->getASTContext(), buildOPts));

@@ -1,0 +1,1285 @@
+done1
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.1/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i486-linux-gnu
+ /usr/include/c++/4.6/backward
+End of search list.
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.1/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i486-linux-gnu
+ /usr/include/c++/4.6/backward
+End of search list.
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 1
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 2
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 3
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 4
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 5
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Function
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = p | type = char *[2] | desugared type = char *[2] | const = 0 | extern = 0 | POD = 1
+{ const_cast<char *>("a"), const_cast<char *>("b") }[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CompoundStmt ( 169236552 -> p 0 )
+(CompoundStmt 0xa165848
+  (DeclStmt 0xa165838
+    0xa1656a0 "char *____LocalVar____0[2] =
+      (InitListExpr 0xa165800 'char *[2]'
+        (CXXConstCastExpr 0xa165758 'char *' const_cast<char *> <NoOp>
+          (ImplicitCastExpr 0xa165748 'const char *' <ArrayToPointerDecay>
+            (StringLiteral 0xa165710 'const char [2]' lvalue "a")))
+        (CXXConstCastExpr 0xa1657b8 'char *' const_cast<char *> <NoOp>
+          (ImplicitCastExpr 0xa1657a8 'const char *' <ArrayToPointerDecay>
+            (StringLiteral 0xa165770 'const char [2]' lvalue "b"))))"))
+{
+    char *____LocalVar____0[2] = { const_cast<char *>("a"), const_cast<char *>("b") };
+}
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169236536 -> p 169236552 )
+(DeclStmt 0xa165838
+  0xa1656a0 "char *____LocalVar____0[2] =
+    (InitListExpr 0xa165800 'char *[2]'
+      (CXXConstCastExpr 0xa165758 'char *' const_cast<char *> <NoOp>
+        (ImplicitCastExpr 0xa165748 'const char *' <ArrayToPointerDecay>
+          (StringLiteral 0xa165710 'const char [2]' lvalue "a")))
+      (CXXConstCastExpr 0xa1657b8 'char *' const_cast<char *> <NoOp>
+        (ImplicitCastExpr 0xa1657a8 'const char *' <ArrayToPointerDecay>
+          (StringLiteral 0xa165770 'const char [2]' lvalue "b"))))")
+char *____LocalVar____0[2] = { const_cast<char *>("a"), const_cast<char *>("b") };
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 171] isArrayType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt InitListExpr ( 169236432 -> p 0 )
+(InitListExpr 0xa1657d0 'char *[2]'
+  (CXXConstCastExpr 0xa165758 'char *' const_cast<char *> <NoOp>
+    (ImplicitCastExpr 0xa165748 'const char *' <ArrayToPointerDecay>
+      (StringLiteral 0xa165710 'const char [2]' lvalue "a")))
+  (CXXConstCastExpr 0xa1657b8 'char *' const_cast<char *> <NoOp>
+    (ImplicitCastExpr 0xa1657a8 'const char *' <ArrayToPointerDecay>
+      (StringLiteral 0xa165770 'const char [2]' lvalue "b"))))
+{ const_cast<char *>("a"), const_cast<char *>("b") };
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CXXConstCastExpr ( 169236312 -> p 169236480 )
+(CXXConstCastExpr 0xa165758 'char *' const_cast<char *> <NoOp>
+  (ImplicitCastExpr 0xa165748 'const char *' <ArrayToPointerDecay>
+    (StringLiteral 0xa165710 'const char [2]' lvalue "a")))
+const_cast<char *>("a");
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169236296 -> p 169236312 )
+(ImplicitCastExpr 0xa165748 'const char *' <ArrayToPointerDecay>
+  (StringLiteral 0xa165710 'const char [2]' lvalue "a"))
+"a";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt StringLiteral ( 169236240 -> p 169236296 )
+(StringLiteral 0xa165710 'const char [2]' lvalue "a")
+"a";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CXXConstCastExpr ( 169236408 -> p 169236480 )
+(CXXConstCastExpr 0xa1657b8 'char *' const_cast<char *> <NoOp>
+  (ImplicitCastExpr 0xa1657a8 'const char *' <ArrayToPointerDecay>
+    (StringLiteral 0xa165770 'const char [2]' lvalue "b")))
+const_cast<char *>("b");
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169236392 -> p 169236408 )
+(ImplicitCastExpr 0xa1657a8 'const char *' <ArrayToPointerDecay>
+  (StringLiteral 0xa165770 'const char [2]' lvalue "b"))
+"b";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt StringLiteral ( 169236336 -> p 169236392 )
+(StringLiteral 0xa165770 'const char [2]' lvalue "b")
+"b";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Function
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CompoundStmt ( 169236904 -> p 0 )
+(CompoundStmt 0xa1659a8
+  (ReturnStmt 0xa165998
+    (ImplicitCastExpr 0xa165988 'const string':'const class std::basic_string<char>' lvalue <NoOp>
+      (DeclRefExpr 0xa165970 'string':'class std::basic_string<char>' lvalue Var 0xa165870 'gs' 'string':'class std::basic_string<char>'))))
+{
+    return gs;
+}
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ReturnStmt ( 169236888 -> p 169236904 )
+(ReturnStmt 0xa165998
+  (ImplicitCastExpr 0xa165988 'const string':'const class std::basic_string<char>' lvalue <NoOp>
+    (DeclRefExpr 0xa165970 'string':'class std::basic_string<char>' lvalue Var 0xa165870 'gs' 'string':'class std::basic_string<char>')))
+return gs;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169236872 -> p 169236888 )
+(ImplicitCastExpr 0xa165988 'const string':'const class std::basic_string<char>' lvalue <NoOp>
+  (DeclRefExpr 0xa165970 'string':'class std::basic_string<char>' lvalue Var 0xa165870 'gs' 'string':'class std::basic_string<char>'))
+gs;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169236848 -> p 169236872 )
+(DeclRefExpr 0xa165970 'string':'class std::basic_string<char>' lvalue Var 0xa165870 'gs' 'string':'class std::basic_string<char>')
+gs;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Function
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = cp | type = int * | desugared type = int * | const = 0 | extern = 0 | POD = 1
+(int *)new const int(1024)[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = str | type = string | desugared type = class std::basic_string<char> | const = 0 | extern = 0 | POD = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = pstr | type = char * | desugared type = char * | const = 0 | extern = 0 | POD = 1
+(char *)____LocalVar____2.c_str()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = cstr | type = const string | desugared type = const class std::basic_string<char> | const = 0 | extern = 0 | POD = 0
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = qstr | type = string * | desugared type = string * | const = 0 | extern = 0 | POD = 1
+(string *)&func()[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = p | type = char * | desugared type = char * | const = 0 | extern = 0 | POD = 1
+const_cast<char *>(&("haha")[0])[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = q | type = const char * | desugared type = const char * | const = 0 | extern = 0 | POD = 1
+&("haha")[0][DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = xx | type = char [5] | desugared type = char [5] | const = 0 | extern = 0 | POD = 1
+"hoho"[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 87] decl: Var
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 95]  ---- name = px | type = char * | desugared type = char * | const = 0 | extern = 0 | POD = 1
+____LocalVar____8[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CompoundStmt ( 169240160 -> p 0 )
+(CompoundStmt 0xa166660
+  (DeclStmt 0xa165b28
+    0xa165a50 "int *____LocalVar____1 =
+      (CStyleCastExpr 0xa165b10 'int *' <NoOp>
+        (CXXNewExpr 0xa165ac8 'const int *'
+          (IntegerLiteral 0xa165a80 'int' 1024)))")
+  (CallExpr 0xa165c68 'int'
+    (ImplicitCastExpr 0xa165c58 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0xa165c04 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0xa165c90 'const char *' <ArrayToPointerDecay>
+      (StringLiteral 0xa165b90 'const char [4]' lvalue "%d "))
+    (ImplicitCastExpr 0xa165ca0 'int' <LValueToRValue>
+      (UnaryOperator 0xa165bf0 'int' lvalue prefix '*'
+        (ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+          (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))))
+  (BinaryOperator 0xa165d08 'int' lvalue '='
+    (UnaryOperator 0xa165cd8 'int' lvalue prefix '*'
+      (ImplicitCastExpr 0xa165cc8 'int *' <LValueToRValue>
+        (DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+    (IntegerLiteral 0xa165cf0 'int' 20))
+  (CallExpr 0xa165de0 'int'
+    (ImplicitCastExpr 0xa165dd0 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0xa165db4 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0xa165e08 'const char *' <ArrayToPointerDecay>
+      (StringLiteral 0xa165d54 'const char [4]' lvalue "%d\n"))
+    (ImplicitCastExpr 0xa165e18 'int' <LValueToRValue>
+      (UnaryOperator 0xa165da0 'int' lvalue prefix '*'
+        (ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+          (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))))
+  (DeclStmt 0xa165e80
+    0xa165e30 "string ____LocalVar____2 =
+      (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)')")
+  (DeclStmt 0xa165f80
+    0xa165ea0 "char *____LocalVar____3 =
+      (CStyleCastExpr 0xa165f68 'char *' <NoOp>
+        (CXXMemberCallExpr 0xa165f08 'const char *'
+          (MemberExpr 0xa165ee8 '<bound member function type>' .c_str 0xa150620
+            (ImplicitCastExpr 0xa165f48 'const class std::basic_string<char>' lvalue <NoOp>
+              (DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>')))))")
+  (DeclStmt 0xa165ff0
+    0xa165fa0 "const string ____LocalVar____4 =
+      (CXXConstructExpr 0xa165fd0 'const string':'const class std::basic_string<char>''void (void)')")
+  (BinaryOperator 0xa166098 'char *' lvalue '='
+    (DeclRefExpr 0xa166000 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+    (CStyleCastExpr 0xa166080 'char *' <NoOp>
+      (CXXMemberCallExpr 0xa166050 'const char *'
+        (MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+          (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>')))))
+  (DeclStmt 0xa166228
+    0xa1660e0 "string *____LocalVar____5 =
+      (CStyleCastExpr 0xa166210 'string *' <NoOp>
+        (UnaryOperator 0xa1661e8 'const string *' prefix '&'
+          (CallExpr 0xa1661a8 'const string':'const class std::basic_string<char>' lvalue
+            (ImplicitCastExpr 0xa166198 'const string &(*)(void)' <FunctionToPointerDecay>
+              (DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)')))))")
+  (DeclStmt 0xa166380
+    0xa166250 "char *____LocalVar____6 =
+      (CXXConstCastExpr 0xa166368 'char *' const_cast<char *> <NoOp>
+        (UnaryOperator 0xa166340 'const char *' prefix '&'
+          (ArraySubscriptExpr 0xa166328 'const char' lvalue
+            (ImplicitCastExpr 0xa166318 'const char *' <ArrayToPointerDecay>
+              (ParenExpr 0xa1662e8 'const char [5]' lvalue
+                (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")))
+            (IntegerLiteral 0xa166300 'int' 0))))")
+  (DeclStmt 0xa166468
+    0xa1663a0 "const char *____LocalVar____7 =
+      (UnaryOperator 0xa166450 'const char *' prefix '&'
+        (ArraySubscriptExpr 0xa166438 'const char' lvalue
+          (ImplicitCastExpr 0xa166428 'const char *' <ArrayToPointerDecay>
+            (ParenExpr 0xa1663f8 'const char [5]' lvalue
+              (StringLiteral 0xa1663d0 'const char [5]' lvalue "haha")))
+          (IntegerLiteral 0xa166410 'int' 0)))")
+  (DeclStmt 0xa166508
+    0xa1664b0 "char ____LocalVar____8[5] =
+      (StringLiteral 0xa1664e0 'const char [5]' lvalue "hoho")")
+  (DeclStmt 0xa166588
+    0xa166530 "char *____LocalVar____9 =
+      (ImplicitCastExpr 0xa166578 'char *' <ArrayToPointerDecay>
+        (DeclRefExpr 0xa166560 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))")
+  (BinaryOperator 0xa166620 'char *' lvalue '='
+    (DeclRefExpr 0xa166598 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+    (UnaryOperator 0xa166608 'char *' prefix '&'
+      (ArraySubscriptExpr 0xa1665f0 'char' lvalue
+        (ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+          (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+        (IntegerLiteral 0xa1665c8 'int' 0))))
+  (ReturnStmt 0xa166650
+    (IntegerLiteral 0xa166638 'int' 0)))
+{
+    int *____LocalVar____1 = (int *)new const int(1024);
+    printf("%d ", *____LocalVar____1);
+    *____LocalVar____1 = 20;
+    printf("%d\n", *____LocalVar____1);
+    string ____LocalVar____2;
+    char *____LocalVar____3 = (char *)____LocalVar____2.c_str();
+    const string ____LocalVar____4;
+    ____LocalVar____3 = (char *)____LocalVar____4.c_str();
+    string *____LocalVar____5 = (string *)&func();
+    char *____LocalVar____6 = const_cast<char *>(&("haha")[0]);
+    const char *____LocalVar____7 = &("haha")[0];
+    char ____LocalVar____8[5] = "hoho";
+    char *____LocalVar____9 = ____LocalVar____8;
+    ____LocalVar____9 = &____LocalVar____8[0];
+    return 0;
+}
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169237288 -> p 169240160 )
+(DeclStmt 0xa165b28
+  0xa165a50 "int *____LocalVar____1 =
+    (CStyleCastExpr 0xa165b10 'int *' <NoOp>
+      (CXXNewExpr 0xa165ac8 'const int *'
+        (IntegerLiteral 0xa165a80 'int' 1024)))")
+int *____LocalVar____1 = (int *)new const int(1024);
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 182] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CallExpr ( 169237608 -> p 169240160 )
+(CallExpr 0xa165c68 'int'
+  (ImplicitCastExpr 0xa165c58 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+    (DeclRefExpr 0xa165c04 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+  (ImplicitCastExpr 0xa165c90 'const char *' <ArrayToPointerDecay>
+    (StringLiteral 0xa165b90 'const char [4]' lvalue "%d "))
+  (ImplicitCastExpr 0xa165ca0 'int' <LValueToRValue>
+    (UnaryOperator 0xa165bf0 'int' lvalue prefix '*'
+      (ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+        (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))))
+printf("%d ", *____LocalVar____1);
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169237592 -> p 169237608 )
+(ImplicitCastExpr 0xa165c58 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+  (DeclRefExpr 0xa165c04 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+printf;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169237508 -> p 169237592 )
+(DeclRefExpr 0xa165c04 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)')
+printf;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169237648 -> p 169237608 )
+(ImplicitCastExpr 0xa165c90 'const char *' <ArrayToPointerDecay>
+  (StringLiteral 0xa165b90 'const char [4]' lvalue "%d "))
+"%d ";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt StringLiteral ( 169237392 -> p 169237648 )
+(StringLiteral 0xa165b90 'const char [4]' lvalue "%d ")
+"%d ";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169237664 -> p 169237608 )
+(ImplicitCastExpr 0xa165ca0 'int' <LValueToRValue>
+  (UnaryOperator 0xa165bf0 'int' lvalue prefix '*'
+    (ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+      (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))))
+*____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt UnaryOperator ( 169237488 -> p 169237664 )
+(UnaryOperator 0xa165bf0 'int' lvalue prefix '*'
+  (ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+    (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+*____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169237472 -> p 169237488 )
+(ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+  (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))
+____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169237448 -> p 169237472 )
+(DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt BinaryOperator ( 169237768 -> p 169240160 )
+(BinaryOperator 0xa165d08 'int' lvalue '='
+  (UnaryOperator 0xa165cd8 'int' lvalue prefix '*'
+    (ImplicitCastExpr 0xa165cc8 'int *' <LValueToRValue>
+      (DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+  (IntegerLiteral 0xa165cf0 'int' 20))
+*____LocalVar____1 = 20;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt UnaryOperator ( 169237720 -> p 169237768 )
+(UnaryOperator 0xa165cd8 'int' lvalue prefix '*'
+  (ImplicitCastExpr 0xa165cc8 'int *' <LValueToRValue>
+    (DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+*____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169237704 -> p 169237720 )
+(ImplicitCastExpr 0xa165cc8 'int *' <LValueToRValue>
+  (DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))
+____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169237676 -> p 169237704 )
+(DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt IntegerLiteral ( 169237744 -> p 169237768 )
+(IntegerLiteral 0xa165cf0 'int' 20)
+20;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CallExpr ( 169237984 -> p 169240160 )
+(CallExpr 0xa165de0 'int'
+  (ImplicitCastExpr 0xa165dd0 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+    (DeclRefExpr 0xa165db4 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+  (ImplicitCastExpr 0xa165e08 'const char *' <ArrayToPointerDecay>
+    (StringLiteral 0xa165d54 'const char [4]' lvalue "%d\n"))
+  (ImplicitCastExpr 0xa165e18 'int' <LValueToRValue>
+    (UnaryOperator 0xa165da0 'int' lvalue prefix '*'
+      (ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+        (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))))
+printf("%d\n", *____LocalVar____1);
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169237968 -> p 169237984 )
+(ImplicitCastExpr 0xa165dd0 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+  (DeclRefExpr 0xa165db4 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+printf;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169237940 -> p 169237968 )
+(DeclRefExpr 0xa165db4 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)')
+printf;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169238024 -> p 169237984 )
+(ImplicitCastExpr 0xa165e08 'const char *' <ArrayToPointerDecay>
+  (StringLiteral 0xa165d54 'const char [4]' lvalue "%d\n"))
+"%d\n";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt StringLiteral ( 169237844 -> p 169238024 )
+(StringLiteral 0xa165d54 'const char [4]' lvalue "%d\n")
+"%d\n";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169238040 -> p 169237984 )
+(ImplicitCastExpr 0xa165e18 'int' <LValueToRValue>
+  (UnaryOperator 0xa165da0 'int' lvalue prefix '*'
+    (ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+      (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))))
+*____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt UnaryOperator ( 169237920 -> p 169238040 )
+(UnaryOperator 0xa165da0 'int' lvalue prefix '*'
+  (ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+    (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+*____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169237904 -> p 169237920 )
+(ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+  (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))
+____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169237876 -> p 169237904 )
+(DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+____LocalVar____1;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169238144 -> p 169240160 )
+(DeclStmt 0xa165e80
+  0xa165e30 "string ____LocalVar____2 =
+    (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)')")
+string ____LocalVar____2;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 176] notPODType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 182] initStyle 1
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169238400 -> p 169240160 )
+(DeclStmt 0xa165f80
+  0xa165ea0 "char *____LocalVar____3 =
+    (CStyleCastExpr 0xa165f68 'char *' <NoOp>
+      (CXXMemberCallExpr 0xa165f08 'const char *'
+        (MemberExpr 0xa165ee8 '<bound member function type>' .c_str 0xa150620
+          (ImplicitCastExpr 0xa165f48 'const class std::basic_string<char>' lvalue <NoOp>
+            (DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>')))))")
+char *____LocalVar____3 = (char *)____LocalVar____2.c_str();
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 182] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169238512 -> p 169240160 )
+(DeclStmt 0xa165ff0
+  0xa165fa0 "const string ____LocalVar____4 =
+    (CXXConstructExpr 0xa165fd0 'const string':'const class std::basic_string<char>''void (void)')")
+const string ____LocalVar____4;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 159] isConstant
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CXXConstructExpr ( 169238480 -> p 169238512 )
+(CXXConstructExpr 0xa165fd0 'const string':'const class std::basic_string<char>''void (void)')
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt BinaryOperator ( 169238680 -> p 169240160 )
+(BinaryOperator 0xa166098 'char *' lvalue '='
+  (DeclRefExpr 0xa166000 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+  (CStyleCastExpr 0xa166080 'char *' <NoOp>
+    (CXXMemberCallExpr 0xa166050 'const char *'
+      (MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+        (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>')))))
+____LocalVar____3 = (char *)____LocalVar____4.c_str();
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169238528 -> p 169238680 )
+(DeclRefExpr 0xa166000 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+____LocalVar____3;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CStyleCastExpr ( 169238656 -> p 169238680 )
+(CStyleCastExpr 0xa166080 'char *' <NoOp>
+  (CXXMemberCallExpr 0xa166050 'const char *'
+    (MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+      (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>'))))
+(char *)____LocalVar____4.c_str();
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt CXXMemberCallExpr ( 169238608 -> p 169238656 )
+(CXXMemberCallExpr 0xa166050 'const char *'
+  (MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+    (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>')))
+____LocalVar____4.c_str();
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt MemberExpr ( 169238576 -> p 169238608 )
+(MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+  (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>'))
+____LocalVar____4.c_str;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169238552 -> p 169238576 )
+(DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>')
+____LocalVar____4;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169239080 -> p 169240160 )
+(DeclStmt 0xa166228
+  0xa1660e0 "string *____LocalVar____5 =
+    (CStyleCastExpr 0xa166210 'string *' <NoOp>
+      (UnaryOperator 0xa1661e8 'const string *' prefix '&'
+        (CallExpr 0xa1661a8 'const string':'const class std::basic_string<char>' lvalue
+          (ImplicitCastExpr 0xa166198 'const string &(*)(void)' <FunctionToPointerDecay>
+            (DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)')))))")
+string *____LocalVar____5 = (string *)&func();
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 182] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169239424 -> p 169240160 )
+(DeclStmt 0xa166380
+  0xa166250 "char *____LocalVar____6 =
+    (CXXConstCastExpr 0xa166368 'char *' const_cast<char *> <NoOp>
+      (UnaryOperator 0xa166340 'const char *' prefix '&'
+        (ArraySubscriptExpr 0xa166328 'const char' lvalue
+          (ImplicitCastExpr 0xa166318 'const char *' <ArrayToPointerDecay>
+            (ParenExpr 0xa1662e8 'const char [5]' lvalue
+              (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")))
+          (IntegerLiteral 0xa166300 'int' 0))))")
+char *____LocalVar____6 = const_cast<char *>(&("haha")[0]);
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 182] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169239656 -> p 169240160 )
+(DeclStmt 0xa166468
+  0xa1663a0 "const char *____LocalVar____7 =
+    (UnaryOperator 0xa166450 'const char *' prefix '&'
+      (ArraySubscriptExpr 0xa166438 'const char' lvalue
+        (ImplicitCastExpr 0xa166428 'const char *' <ArrayToPointerDecay>
+          (ParenExpr 0xa1663f8 'const char [5]' lvalue
+            (StringLiteral 0xa1663d0 'const char [5]' lvalue "haha")))
+        (IntegerLiteral 0xa166410 'int' 0)))")
+const char *____LocalVar____7 = &("haha")[0];
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 182] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169239816 -> p 169240160 )
+(DeclStmt 0xa166508
+  0xa1664b0 "char ____LocalVar____8[5] =
+    (StringLiteral 0xa1664e0 'const char [5]' lvalue "hoho")")
+char ____LocalVar____8[5] = "hoho";
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 171] isArrayType
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt StringLiteral ( 169239776 -> p 169239816 )
+(StringLiteral 0xa1664e0 'const char [5]' lvalue "hoho")
+"hoho";
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclStmt ( 169239944 -> p 169240160 )
+(DeclStmt 0xa166588
+  0xa166530 "char *____LocalVar____9 =
+    (ImplicitCastExpr 0xa166578 'char *' <ArrayToPointerDecay>
+      (DeclRefExpr 0xa166560 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))")
+char *____LocalVar____9 = ____LocalVar____8;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 182] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt BinaryOperator ( 169240096 -> p 169240160 )
+(BinaryOperator 0xa166620 'char *' lvalue '='
+  (DeclRefExpr 0xa166598 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+  (UnaryOperator 0xa166608 'char *' prefix '&'
+    (ArraySubscriptExpr 0xa1665f0 'char' lvalue
+      (ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+        (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+      (IntegerLiteral 0xa1665c8 'int' 0))))
+____LocalVar____9 = &____LocalVar____8[0];
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169239960 -> p 169240096 )
+(DeclRefExpr 0xa166598 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+____LocalVar____9;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt UnaryOperator ( 169240072 -> p 169240096 )
+(UnaryOperator 0xa166608 'char *' prefix '&'
+  (ArraySubscriptExpr 0xa1665f0 'char' lvalue
+    (ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+      (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+    (IntegerLiteral 0xa1665c8 'int' 0)))
+&____LocalVar____8[0];
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ArraySubscriptExpr ( 169240048 -> p 169240072 )
+(ArraySubscriptExpr 0xa1665f0 'char' lvalue
+  (ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+    (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+  (IntegerLiteral 0xa1665c8 'int' 0))
+____LocalVar____8[0];
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ImplicitCastExpr ( 169240032 -> p 169240048 )
+(ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+  (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+____LocalVar____8;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt DeclRefExpr ( 169239984 -> p 169240032 )
+(DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]')
+____LocalVar____8;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt IntegerLiteral ( 169240008 -> p 169240048 )
+(IntegerLiteral 0xa1665c8 'int' 0)
+0;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt ReturnStmt ( 169240144 -> p 169240160 )
+(ReturnStmt 0xa166650
+  (IntegerLiteral 0xa166638 'int' 0))
+return 0;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 114] Stmt IntegerLiteral ( 169240120 -> p 169240144 )
+(IntegerLiteral 0xa166638 'int' 0)
+0;
+[DEBUG][alg/SimplePrinter.cpp - line 7] alg started.
+using namespace std;
+void carray() {
+}
+
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 169236552 -> p 0 )
+(CompoundStmt 0xa165848)
+{
+}
+;
+[0;1;33m
+ [B1 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_7FuROv/CFG.dot'...  done. 
+string gs;
+const string &func() {
+    return gs;
+}
+
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 169236904 -> p 0 )
+(CompoundStmt 0xa1659a8
+  (ReturnStmt 0xa165998
+    (ImplicitCastExpr 0xa165988 'const string':'const class std::basic_string<char>' lvalue <NoOp>
+      (DeclRefExpr 0xa165970 'string':'class std::basic_string<char>' lvalue Var 0xa165870 'gs' 'string':'class std::basic_string<char>'))))
+{
+    return gs;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ReturnStmt ( 169236888 -> p 169236904 )
+(ReturnStmt 0xa165998
+  (ImplicitCastExpr 0xa165988 'const string':'const class std::basic_string<char>' lvalue <NoOp>
+    (DeclRefExpr 0xa165970 'string':'class std::basic_string<char>' lvalue Var 0xa165870 'gs' 'string':'class std::basic_string<char>')))
+return gs;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169236872 -> p 169236888 )
+(ImplicitCastExpr 0xa165988 'const string':'const class std::basic_string<char>' lvalue <NoOp>
+  (DeclRefExpr 0xa165970 'string':'class std::basic_string<char>' lvalue Var 0xa165870 'gs' 'string':'class std::basic_string<char>'))
+gs;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169236848 -> p 169236872 )
+(DeclRefExpr 0xa165970 'string':'class std::basic_string<char>' lvalue Var 0xa165870 'gs' 'string':'class std::basic_string<char>')
+gs;
+[0;1;33m
+ [B2 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B1]
+[0m   1: return gs;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_VpVPan/CFG.dot'...  done. 
+int main() {
+    int *____LocalVar____1;
+    string ____LocalVar____2;
+    char *____LocalVar____3;
+    string *____LocalVar____5;
+    char *____LocalVar____6;
+    const char *____LocalVar____7;
+    char *____LocalVar____9;
+    ____LocalVar____1 = (int *)new const int(1024);
+    printf("%d ", *____LocalVar____1);
+    *____LocalVar____1 = 20;
+    printf("%d\n", *____LocalVar____1);
+    ____LocalVar____2 = string();
+    ____LocalVar____3 = (char *)____LocalVar____2.c_str();
+    ____LocalVar____3 = (char *)____LocalVar____4.c_str();
+    ____LocalVar____5 = (string *)&func();
+    ____LocalVar____6 = const_cast<char *>(&("haha")[0]);
+    ____LocalVar____7 = &("haha")[0];
+    ____LocalVar____9 = ____LocalVar____8;
+    ____LocalVar____9 = &____LocalVar____8[0];
+    return 0;
+}
+
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 169240160 -> p 0 )
+(CompoundStmt 0xa166660
+  (DeclStmt 0xa167be0
+    0xa165a50 "int *____LocalVar____1")
+  (DeclStmt 0xa167d10
+    0xa165e30 "string ____LocalVar____2")
+  (DeclStmt 0xa167d50
+    0xa165ea0 "char *____LocalVar____3")
+  (DeclStmt 0xa167dc8
+    0xa1660e0 "string *____LocalVar____5")
+  (DeclStmt 0xa167e08
+    0xa166250 "char *____LocalVar____6")
+  (DeclStmt 0xa167e48
+    0xa1663a0 "const char *____LocalVar____7")
+  (DeclStmt 0xa167ec0
+    0xa166530 "char *____LocalVar____9")
+  (BinaryOperator 0xa167bc8 'int *' lvalue '='
+    (DeclRefExpr 0xa167bac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+    (CStyleCastExpr 0xa165b10 'int *' <NoOp>
+      (CXXNewExpr 0xa165ac8 'const int *'
+        (IntegerLiteral 0xa165a80 'int' 1024))))
+  (CallExpr 0xa165c68 'int'
+    (ImplicitCastExpr 0xa165c58 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0xa165c04 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0xa165c90 'const char *' <ArrayToPointerDecay>
+      (StringLiteral 0xa165b90 'const char [4]' lvalue "%d "))
+    (ImplicitCastExpr 0xa165ca0 'int' <LValueToRValue>
+      (UnaryOperator 0xa165bf0 'int' lvalue prefix '*'
+        (ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+          (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))))
+  (BinaryOperator 0xa165d08 'int' lvalue '='
+    (UnaryOperator 0xa165cd8 'int' lvalue prefix '*'
+      (ImplicitCastExpr 0xa165cc8 'int *' <LValueToRValue>
+        (DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+    (IntegerLiteral 0xa165cf0 'int' 20))
+  (CallExpr 0xa165de0 'int'
+    (ImplicitCastExpr 0xa165dd0 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0xa165db4 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0xa165e08 'const char *' <ArrayToPointerDecay>
+      (StringLiteral 0xa165d54 'const char [4]' lvalue "%d\n"))
+    (ImplicitCastExpr 0xa165e18 'int' <LValueToRValue>
+      (UnaryOperator 0xa165da0 'int' lvalue prefix '*'
+        (ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+          (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))))
+  (CXXOperatorCallExpr 0xa167ce8 'class std::basic_string<char>' lvalue
+    (ImplicitCastExpr 0xa167cd8 'class std::basic_string<char> &(*)(const class std::basic_string<char> &)' <FunctionToPointerDecay>
+      (DeclRefExpr 0xa167ca8 'class std::basic_string<char> &(const class std::basic_string<char> &)' lvalue CXXMethod 0xa149a40 'operator=' 'class std::basic_string<char> &(const class std::basic_string<char> &)'))
+    (DeclRefExpr 0xa167c70 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>')
+    (MaterializeTemporaryExpr 0xa167c98 'const class std::basic_string<char>' lvalue
+      (ImplicitCastExpr 0xa167c88 'const class std::basic_string<char>' <NoOp>
+        (CXXFunctionalCastExpr 0xa167c58 'string':'class std::basic_string<char>' functional cast to string <ConstructorConversion>
+          (CXXBindTemporaryExpr 0xa167c48 'string':'class std::basic_string<char>' (CXXTemporary 0xa167c40)
+            (CXXConstructExpr 0xa167c18 'string':'class std::basic_string<char>''void (const class std::basic_string<char> &)' elidable
+              (MaterializeTemporaryExpr 0xa167c08 'const class std::basic_string<char>' lvalue
+                (ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+                  (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)')))))))))
+  (BinaryOperator 0xa167d38 'char *' lvalue '='
+    (DeclRefExpr 0xa167d20 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+    (CStyleCastExpr 0xa165f68 'char *' <NoOp>
+      (CXXMemberCallExpr 0xa165f08 'const char *'
+        (MemberExpr 0xa165ee8 '<bound member function type>' .c_str 0xa150620
+          (ImplicitCastExpr 0xa165f48 'const class std::basic_string<char>' lvalue <NoOp>
+            (DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>'))))))
+  (BinaryOperator 0xa166098 'char *' lvalue '='
+    (DeclRefExpr 0xa166000 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+    (CStyleCastExpr 0xa166080 'char *' <NoOp>
+      (CXXMemberCallExpr 0xa166050 'const char *'
+        (MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+          (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>')))))
+  (BinaryOperator 0xa167db0 'string *' lvalue '='
+    (DeclRefExpr 0xa167d98 'string *' lvalue Var 0xa1660e0 '____LocalVar____5' 'string *')
+    (CStyleCastExpr 0xa166210 'string *' <NoOp>
+      (UnaryOperator 0xa1661e8 'const string *' prefix '&'
+        (CallExpr 0xa1661a8 'const string':'const class std::basic_string<char>' lvalue
+          (ImplicitCastExpr 0xa166198 'const string &(*)(void)' <FunctionToPointerDecay>
+            (DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)'))))))
+  (BinaryOperator 0xa167df0 'char *' lvalue '='
+    (DeclRefExpr 0xa167dd8 'char *' lvalue Var 0xa166250 '____LocalVar____6' 'char *')
+    (CXXConstCastExpr 0xa166368 'char *' const_cast<char *> <NoOp>
+      (UnaryOperator 0xa166340 'const char *' prefix '&'
+        (ArraySubscriptExpr 0xa166328 'const char' lvalue
+          (ImplicitCastExpr 0xa166318 'const char *' <ArrayToPointerDecay>
+            (ParenExpr 0xa1662e8 'const char [5]' lvalue
+              (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")))
+          (IntegerLiteral 0xa166300 'int' 0)))))
+  (BinaryOperator 0xa167e30 'const char *' lvalue '='
+    (DeclRefExpr 0xa167e18 'const char *' lvalue Var 0xa1663a0 '____LocalVar____7' 'const char *')
+    (UnaryOperator 0xa166450 'const char *' prefix '&'
+      (ArraySubscriptExpr 0xa166438 'const char' lvalue
+        (ImplicitCastExpr 0xa166428 'const char *' <ArrayToPointerDecay>
+          (ParenExpr 0xa1663f8 'const char [5]' lvalue
+            (StringLiteral 0xa1663d0 'const char [5]' lvalue "haha")))
+        (IntegerLiteral 0xa166410 'int' 0))))
+  (BinaryOperator 0xa167ea8 'char *' lvalue '='
+    (DeclRefExpr 0xa167e8c 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+    (ImplicitCastExpr 0xa166578 'char *' <ArrayToPointerDecay>
+      (DeclRefExpr 0xa166560 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]')))
+  (BinaryOperator 0xa166620 'char *' lvalue '='
+    (DeclRefExpr 0xa166598 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+    (UnaryOperator 0xa166608 'char *' prefix '&'
+      (ArraySubscriptExpr 0xa1665f0 'char' lvalue
+        (ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+          (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+        (IntegerLiteral 0xa1665c8 'int' 0))))
+  (ReturnStmt 0xa166650
+    (IntegerLiteral 0xa166638 'int' 0)))
+{
+    int *____LocalVar____1;
+    string ____LocalVar____2;
+    char *____LocalVar____3;
+    string *____LocalVar____5;
+    char *____LocalVar____6;
+    const char *____LocalVar____7;
+    char *____LocalVar____9;
+    ____LocalVar____1 = (int *)new const int(1024);
+    printf("%d ", *____LocalVar____1);
+    *____LocalVar____1 = 20;
+    printf("%d\n", *____LocalVar____1);
+    ____LocalVar____2 = string();
+    ____LocalVar____3 = (char *)____LocalVar____2.c_str();
+    ____LocalVar____3 = (char *)____LocalVar____4.c_str();
+    ____LocalVar____5 = (string *)&func();
+    ____LocalVar____6 = const_cast<char *>(&("haha")[0]);
+    ____LocalVar____7 = &("haha")[0];
+    ____LocalVar____9 = ____LocalVar____8;
+    ____LocalVar____9 = &____LocalVar____8[0];
+    return 0;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 169245664 -> p 169240160 )
+(DeclStmt 0xa167be0
+  0xa165a50 "int *____LocalVar____1")
+int *____LocalVar____1;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 169245968 -> p 169240160 )
+(DeclStmt 0xa167d10
+  0xa165e30 "string ____LocalVar____2")
+string ____LocalVar____2;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 169246032 -> p 169240160 )
+(DeclStmt 0xa167d50
+  0xa165ea0 "char *____LocalVar____3")
+char *____LocalVar____3;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 169246152 -> p 169240160 )
+(DeclStmt 0xa167dc8
+  0xa1660e0 "string *____LocalVar____5")
+string *____LocalVar____5;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 169246216 -> p 169240160 )
+(DeclStmt 0xa167e08
+  0xa166250 "char *____LocalVar____6")
+char *____LocalVar____6;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 169246280 -> p 169240160 )
+(DeclStmt 0xa167e48
+  0xa1663a0 "const char *____LocalVar____7")
+const char *____LocalVar____7;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 169246400 -> p 169240160 )
+(DeclStmt 0xa167ec0
+  0xa166530 "char *____LocalVar____9")
+char *____LocalVar____9;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169245640 -> p 169240160 )
+(BinaryOperator 0xa167bc8 'int *' lvalue '='
+  (DeclRefExpr 0xa167bac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+  (CStyleCastExpr 0xa165b10 'int *' <NoOp>
+    (CXXNewExpr 0xa165ac8 'const int *'
+      (IntegerLiteral 0xa165a80 'int' 1024))))
+____LocalVar____1 = (int *)new const int(1024);
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169245612 -> p 169245640 )
+(DeclRefExpr 0xa167bac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CStyleCastExpr ( 169237264 -> p 169245640 )
+(CStyleCastExpr 0xa165b10 'int *' <NoOp>
+  (CXXNewExpr 0xa165ac8 'const int *'
+    (IntegerLiteral 0xa165a80 'int' 1024)))
+(int *)new const int(1024);
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXNewExpr ( 169237192 -> p 169237264 )
+(CXXNewExpr 0xa165ac8 'const int *'
+  (IntegerLiteral 0xa165a80 'int' 1024))
+new const int(1024);
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 169237120 -> p 169237192 )
+(IntegerLiteral 0xa165a80 'int' 1024)
+1024;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CallExpr ( 169237608 -> p 169240160 )
+(CallExpr 0xa165c68 'int'
+  (ImplicitCastExpr 0xa165c58 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+    (DeclRefExpr 0xa165c04 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+  (ImplicitCastExpr 0xa165c90 'const char *' <ArrayToPointerDecay>
+    (StringLiteral 0xa165b90 'const char [4]' lvalue "%d "))
+  (ImplicitCastExpr 0xa165ca0 'int' <LValueToRValue>
+    (UnaryOperator 0xa165bf0 'int' lvalue prefix '*'
+      (ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+        (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))))
+printf("%d ", *____LocalVar____1);
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169237592 -> p 169237608 )
+(ImplicitCastExpr 0xa165c58 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+  (DeclRefExpr 0xa165c04 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+printf;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169237508 -> p 169237592 )
+(DeclRefExpr 0xa165c04 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)')
+printf;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169237648 -> p 169237608 )
+(ImplicitCastExpr 0xa165c90 'const char *' <ArrayToPointerDecay>
+  (StringLiteral 0xa165b90 'const char [4]' lvalue "%d "))
+"%d ";
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt StringLiteral ( 169237392 -> p 169237648 )
+(StringLiteral 0xa165b90 'const char [4]' lvalue "%d ")
+"%d ";
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169237664 -> p 169237608 )
+(ImplicitCastExpr 0xa165ca0 'int' <LValueToRValue>
+  (UnaryOperator 0xa165bf0 'int' lvalue prefix '*'
+    (ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+      (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))))
+*____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 169237488 -> p 169237664 )
+(UnaryOperator 0xa165bf0 'int' lvalue prefix '*'
+  (ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+    (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+*____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169237472 -> p 169237488 )
+(ImplicitCastExpr 0xa165be0 'int *' <LValueToRValue>
+  (DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))
+____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169237448 -> p 169237472 )
+(DeclRefExpr 0xa165bc8 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169237768 -> p 169240160 )
+(BinaryOperator 0xa165d08 'int' lvalue '='
+  (UnaryOperator 0xa165cd8 'int' lvalue prefix '*'
+    (ImplicitCastExpr 0xa165cc8 'int *' <LValueToRValue>
+      (DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+  (IntegerLiteral 0xa165cf0 'int' 20))
+*____LocalVar____1 = 20;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 169237720 -> p 169237768 )
+(UnaryOperator 0xa165cd8 'int' lvalue prefix '*'
+  (ImplicitCastExpr 0xa165cc8 'int *' <LValueToRValue>
+    (DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+*____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169237704 -> p 169237720 )
+(ImplicitCastExpr 0xa165cc8 'int *' <LValueToRValue>
+  (DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))
+____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169237676 -> p 169237704 )
+(DeclRefExpr 0xa165cac 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 169237744 -> p 169237768 )
+(IntegerLiteral 0xa165cf0 'int' 20)
+20;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CallExpr ( 169237984 -> p 169240160 )
+(CallExpr 0xa165de0 'int'
+  (ImplicitCastExpr 0xa165dd0 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+    (DeclRefExpr 0xa165db4 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+  (ImplicitCastExpr 0xa165e08 'const char *' <ArrayToPointerDecay>
+    (StringLiteral 0xa165d54 'const char [4]' lvalue "%d\n"))
+  (ImplicitCastExpr 0xa165e18 'int' <LValueToRValue>
+    (UnaryOperator 0xa165da0 'int' lvalue prefix '*'
+      (ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+        (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))))
+printf("%d\n", *____LocalVar____1);
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169237968 -> p 169237984 )
+(ImplicitCastExpr 0xa165dd0 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+  (DeclRefExpr 0xa165db4 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)'))
+printf;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169237940 -> p 169237968 )
+(DeclRefExpr 0xa165db4 'int (const char *restrict, ...)' lvalue Function 0x9f18ef0 'printf' 'int (const char *restrict, ...)')
+printf;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169238024 -> p 169237984 )
+(ImplicitCastExpr 0xa165e08 'const char *' <ArrayToPointerDecay>
+  (StringLiteral 0xa165d54 'const char [4]' lvalue "%d\n"))
+"%d\n";
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt StringLiteral ( 169237844 -> p 169238024 )
+(StringLiteral 0xa165d54 'const char [4]' lvalue "%d\n")
+"%d\n";
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169238040 -> p 169237984 )
+(ImplicitCastExpr 0xa165e18 'int' <LValueToRValue>
+  (UnaryOperator 0xa165da0 'int' lvalue prefix '*'
+    (ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+      (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))))
+*____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 169237920 -> p 169238040 )
+(UnaryOperator 0xa165da0 'int' lvalue prefix '*'
+  (ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+    (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')))
+*____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169237904 -> p 169237920 )
+(ImplicitCastExpr 0xa165d90 'int *' <LValueToRValue>
+  (DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *'))
+____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169237876 -> p 169237904 )
+(DeclRefExpr 0xa165d74 'int *' lvalue Var 0xa165a50 '____LocalVar____1' 'int *')
+____LocalVar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXOperatorCallExpr ( 169245928 -> p 169240160 )
+(CXXOperatorCallExpr 0xa167ce8 'class std::basic_string<char>' lvalue
+  (ImplicitCastExpr 0xa167cd8 'class std::basic_string<char> &(*)(const class std::basic_string<char> &)' <FunctionToPointerDecay>
+    (DeclRefExpr 0xa167ca8 'class std::basic_string<char> &(const class std::basic_string<char> &)' lvalue CXXMethod 0xa149a40 'operator=' 'class std::basic_string<char> &(const class std::basic_string<char> &)'))
+  (DeclRefExpr 0xa167c70 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>')
+  (MaterializeTemporaryExpr 0xa167c98 'const class std::basic_string<char>' lvalue
+    (ImplicitCastExpr 0xa167c88 'const class std::basic_string<char>' <NoOp>
+      (CXXFunctionalCastExpr 0xa167c58 'string':'class std::basic_string<char>' functional cast to string <ConstructorConversion>
+        (CXXBindTemporaryExpr 0xa167c48 'string':'class std::basic_string<char>' (CXXTemporary 0xa167c40)
+          (CXXConstructExpr 0xa167c18 'string':'class std::basic_string<char>''void (const class std::basic_string<char> &)' elidable
+            (MaterializeTemporaryExpr 0xa167c08 'const class std::basic_string<char>' lvalue
+              (ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+                (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)')))))))))
+____LocalVar____2 = string();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169245912 -> p 169245928 )
+(ImplicitCastExpr 0xa167cd8 'class std::basic_string<char> &(*)(const class std::basic_string<char> &)' <FunctionToPointerDecay>
+  (DeclRefExpr 0xa167ca8 'class std::basic_string<char> &(const class std::basic_string<char> &)' lvalue CXXMethod 0xa149a40 'operator=' 'class std::basic_string<char> &(const class std::basic_string<char> &)'))
+operator=;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169245864 -> p 169245912 )
+(DeclRefExpr 0xa167ca8 'class std::basic_string<char> &(const class std::basic_string<char> &)' lvalue CXXMethod 0xa149a40 'operator=' 'class std::basic_string<char> &(const class std::basic_string<char> &)')
+operator=;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169245808 -> p 169245928 )
+(DeclRefExpr 0xa167c70 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>')
+____LocalVar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt MaterializeTemporaryExpr ( 169245848 -> p 169245928 )
+(MaterializeTemporaryExpr 0xa167c98 'const class std::basic_string<char>' lvalue
+  (ImplicitCastExpr 0xa167c88 'const class std::basic_string<char>' <NoOp>
+    (CXXFunctionalCastExpr 0xa167c58 'string':'class std::basic_string<char>' functional cast to string <ConstructorConversion>
+      (CXXBindTemporaryExpr 0xa167c48 'string':'class std::basic_string<char>' (CXXTemporary 0xa167c40)
+        (CXXConstructExpr 0xa167c18 'string':'class std::basic_string<char>''void (const class std::basic_string<char> &)' elidable
+          (MaterializeTemporaryExpr 0xa167c08 'const class std::basic_string<char>' lvalue
+            (ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+              (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)'))))))))
+string();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169245832 -> p 169245848 )
+(ImplicitCastExpr 0xa167c88 'const class std::basic_string<char>' <NoOp>
+  (CXXFunctionalCastExpr 0xa167c58 'string':'class std::basic_string<char>' functional cast to string <ConstructorConversion>
+    (CXXBindTemporaryExpr 0xa167c48 'string':'class std::basic_string<char>' (CXXTemporary 0xa167c40)
+      (CXXConstructExpr 0xa167c18 'string':'class std::basic_string<char>''void (const class std::basic_string<char> &)' elidable
+        (MaterializeTemporaryExpr 0xa167c08 'const class std::basic_string<char>' lvalue
+          (ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+            (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)')))))))
+string();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXFunctionalCastExpr ( 169245784 -> p 169245832 )
+(CXXFunctionalCastExpr 0xa167c58 'string':'class std::basic_string<char>' functional cast to string <ConstructorConversion>
+  (CXXBindTemporaryExpr 0xa167c48 'string':'class std::basic_string<char>' (CXXTemporary 0xa167c40)
+    (CXXConstructExpr 0xa167c18 'string':'class std::basic_string<char>''void (const class std::basic_string<char> &)' elidable
+      (MaterializeTemporaryExpr 0xa167c08 'const class std::basic_string<char>' lvalue
+        (ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+          (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)'))))))
+string();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXBindTemporaryExpr ( 169245768 -> p 169245784 )
+(CXXBindTemporaryExpr 0xa167c48 'string':'class std::basic_string<char>' (CXXTemporary 0xa167c40)
+  (CXXConstructExpr 0xa167c18 'string':'class std::basic_string<char>''void (const class std::basic_string<char> &)' elidable
+    (MaterializeTemporaryExpr 0xa167c08 'const class std::basic_string<char>' lvalue
+      (ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+        (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)')))))
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXConstructExpr ( 169245720 -> p 169245768 )
+(CXXConstructExpr 0xa167c18 'string':'class std::basic_string<char>''void (const class std::basic_string<char> &)' elidable
+  (MaterializeTemporaryExpr 0xa167c08 'const class std::basic_string<char>' lvalue
+    (ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+      (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)'))))
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt MaterializeTemporaryExpr ( 169245704 -> p 169245720 )
+(MaterializeTemporaryExpr 0xa167c08 'const class std::basic_string<char>' lvalue
+  (ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+    (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)')))
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169245688 -> p 169245704 )
+(ImplicitCastExpr 0xa167bf8 'const class std::basic_string<char>' <NoOp>
+  (CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)'))
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXConstructExpr ( 169238112 -> p 169245688 )
+(CXXConstructExpr 0xa165e60 'string':'class std::basic_string<char>''void (void)')
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169246008 -> p 169240160 )
+(BinaryOperator 0xa167d38 'char *' lvalue '='
+  (DeclRefExpr 0xa167d20 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+  (CStyleCastExpr 0xa165f68 'char *' <NoOp>
+    (CXXMemberCallExpr 0xa165f08 'const char *'
+      (MemberExpr 0xa165ee8 '<bound member function type>' .c_str 0xa150620
+        (ImplicitCastExpr 0xa165f48 'const class std::basic_string<char>' lvalue <NoOp>
+          (DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>'))))))
+____LocalVar____3 = (char *)____LocalVar____2.c_str();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169245984 -> p 169246008 )
+(DeclRefExpr 0xa167d20 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+____LocalVar____3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CStyleCastExpr ( 169238376 -> p 169246008 )
+(CStyleCastExpr 0xa165f68 'char *' <NoOp>
+  (CXXMemberCallExpr 0xa165f08 'const char *'
+    (MemberExpr 0xa165ee8 '<bound member function type>' .c_str 0xa150620
+      (ImplicitCastExpr 0xa165f48 'const class std::basic_string<char>' lvalue <NoOp>
+        (DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>')))))
+(char *)____LocalVar____2.c_str();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXMemberCallExpr ( 169238280 -> p 169238376 )
+(CXXMemberCallExpr 0xa165f08 'const char *'
+  (MemberExpr 0xa165ee8 '<bound member function type>' .c_str 0xa150620
+    (ImplicitCastExpr 0xa165f48 'const class std::basic_string<char>' lvalue <NoOp>
+      (DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>'))))
+____LocalVar____2.c_str();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt MemberExpr ( 169238248 -> p 169238280 )
+(MemberExpr 0xa165ee8 '<bound member function type>' .c_str 0xa150620
+  (ImplicitCastExpr 0xa165f48 'const class std::basic_string<char>' lvalue <NoOp>
+    (DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>')))
+____LocalVar____2.c_str;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169238344 -> p 169238248 )
+(ImplicitCastExpr 0xa165f48 'const class std::basic_string<char>' lvalue <NoOp>
+  (DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>'))
+____LocalVar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169238224 -> p 169238344 )
+(DeclRefExpr 0xa165ed0 'string':'class std::basic_string<char>' lvalue Var 0xa165e30 '____LocalVar____2' 'string':'class std::basic_string<char>')
+____LocalVar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169238680 -> p 169240160 )
+(BinaryOperator 0xa166098 'char *' lvalue '='
+  (DeclRefExpr 0xa166000 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+  (CStyleCastExpr 0xa166080 'char *' <NoOp>
+    (CXXMemberCallExpr 0xa166050 'const char *'
+      (MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+        (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>')))))
+____LocalVar____3 = (char *)____LocalVar____4.c_str();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169238528 -> p 169238680 )
+(DeclRefExpr 0xa166000 'char *' lvalue Var 0xa165ea0 '____LocalVar____3' 'char *')
+____LocalVar____3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CStyleCastExpr ( 169238656 -> p 169238680 )
+(CStyleCastExpr 0xa166080 'char *' <NoOp>
+  (CXXMemberCallExpr 0xa166050 'const char *'
+    (MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+      (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>'))))
+(char *)____LocalVar____4.c_str();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXMemberCallExpr ( 169238608 -> p 169238656 )
+(CXXMemberCallExpr 0xa166050 'const char *'
+  (MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+    (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>')))
+____LocalVar____4.c_str();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt MemberExpr ( 169238576 -> p 169238608 )
+(MemberExpr 0xa166030 '<bound member function type>' .c_str 0xa150620
+  (DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>'))
+____LocalVar____4.c_str;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169238552 -> p 169238576 )
+(DeclRefExpr 0xa166018 'const string':'const class std::basic_string<char>' lvalue Var 0xa165fa0 '____LocalVar____4' 'const string':'const class std::basic_string<char>')
+____LocalVar____4;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169246128 -> p 169240160 )
+(BinaryOperator 0xa167db0 'string *' lvalue '='
+  (DeclRefExpr 0xa167d98 'string *' lvalue Var 0xa1660e0 '____LocalVar____5' 'string *')
+  (CStyleCastExpr 0xa166210 'string *' <NoOp>
+    (UnaryOperator 0xa1661e8 'const string *' prefix '&'
+      (CallExpr 0xa1661a8 'const string':'const class std::basic_string<char>' lvalue
+        (ImplicitCastExpr 0xa166198 'const string &(*)(void)' <FunctionToPointerDecay>
+          (DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)'))))))
+____LocalVar____5 = (string *)&func();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169246104 -> p 169246128 )
+(DeclRefExpr 0xa167d98 'string *' lvalue Var 0xa1660e0 '____LocalVar____5' 'string *')
+____LocalVar____5;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CStyleCastExpr ( 169239056 -> p 169246128 )
+(CStyleCastExpr 0xa166210 'string *' <NoOp>
+  (UnaryOperator 0xa1661e8 'const string *' prefix '&'
+    (CallExpr 0xa1661a8 'const string':'const class std::basic_string<char>' lvalue
+      (ImplicitCastExpr 0xa166198 'const string &(*)(void)' <FunctionToPointerDecay>
+        (DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)')))))
+(string *)&func();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 169239016 -> p 169239056 )
+(UnaryOperator 0xa1661e8 'const string *' prefix '&'
+  (CallExpr 0xa1661a8 'const string':'const class std::basic_string<char>' lvalue
+    (ImplicitCastExpr 0xa166198 'const string &(*)(void)' <FunctionToPointerDecay>
+      (DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)'))))
+&func();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CallExpr ( 169238952 -> p 169239016 )
+(CallExpr 0xa1661a8 'const string':'const class std::basic_string<char>' lvalue
+  (ImplicitCastExpr 0xa166198 'const string &(*)(void)' <FunctionToPointerDecay>
+    (DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)')))
+func();
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169238936 -> p 169238952 )
+(ImplicitCastExpr 0xa166198 'const string &(*)(void)' <FunctionToPointerDecay>
+  (DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)'))
+func;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169238852 -> p 169238936 )
+(DeclRefExpr 0xa166144 'const string &(void)' lvalue Function 0xa165910 'func' 'const string &(void)')
+func;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169246192 -> p 169240160 )
+(BinaryOperator 0xa167df0 'char *' lvalue '='
+  (DeclRefExpr 0xa167dd8 'char *' lvalue Var 0xa166250 '____LocalVar____6' 'char *')
+  (CXXConstCastExpr 0xa166368 'char *' const_cast<char *> <NoOp>
+    (UnaryOperator 0xa166340 'const char *' prefix '&'
+      (ArraySubscriptExpr 0xa166328 'const char' lvalue
+        (ImplicitCastExpr 0xa166318 'const char *' <ArrayToPointerDecay>
+          (ParenExpr 0xa1662e8 'const char [5]' lvalue
+            (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")))
+        (IntegerLiteral 0xa166300 'int' 0)))))
+____LocalVar____6 = const_cast<char *>(&("haha")[0]);
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169246168 -> p 169246192 )
+(DeclRefExpr 0xa167dd8 'char *' lvalue Var 0xa166250 '____LocalVar____6' 'char *')
+____LocalVar____6;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXConstCastExpr ( 169239400 -> p 169246192 )
+(CXXConstCastExpr 0xa166368 'char *' const_cast<char *> <NoOp>
+  (UnaryOperator 0xa166340 'const char *' prefix '&'
+    (ArraySubscriptExpr 0xa166328 'const char' lvalue
+      (ImplicitCastExpr 0xa166318 'const char *' <ArrayToPointerDecay>
+        (ParenExpr 0xa1662e8 'const char [5]' lvalue
+          (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")))
+      (IntegerLiteral 0xa166300 'int' 0))))
+const_cast<char *>(&("haha")[0]);
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 169239360 -> p 169239400 )
+(UnaryOperator 0xa166340 'const char *' prefix '&'
+  (ArraySubscriptExpr 0xa166328 'const char' lvalue
+    (ImplicitCastExpr 0xa166318 'const char *' <ArrayToPointerDecay>
+      (ParenExpr 0xa1662e8 'const char [5]' lvalue
+        (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")))
+    (IntegerLiteral 0xa166300 'int' 0)))
+&("haha")[0];
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ArraySubscriptExpr ( 169239336 -> p 169239360 )
+(ArraySubscriptExpr 0xa166328 'const char' lvalue
+  (ImplicitCastExpr 0xa166318 'const char *' <ArrayToPointerDecay>
+    (ParenExpr 0xa1662e8 'const char [5]' lvalue
+      (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")))
+  (IntegerLiteral 0xa166300 'int' 0))
+("haha")[0];
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169239320 -> p 169239336 )
+(ImplicitCastExpr 0xa166318 'const char *' <ArrayToPointerDecay>
+  (ParenExpr 0xa1662e8 'const char [5]' lvalue
+    (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")))
+("haha");
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ParenExpr ( 169239272 -> p 169239320 )
+(ParenExpr 0xa1662e8 'const char [5]' lvalue
+  (StringLiteral 0xa1662c0 'const char [5]' lvalue "haha"))
+("haha");
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt StringLiteral ( 169239232 -> p 169239272 )
+(StringLiteral 0xa1662c0 'const char [5]' lvalue "haha")
+"haha";
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 169239296 -> p 169239336 )
+(IntegerLiteral 0xa166300 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169246256 -> p 169240160 )
+(BinaryOperator 0xa167e30 'const char *' lvalue '='
+  (DeclRefExpr 0xa167e18 'const char *' lvalue Var 0xa1663a0 '____LocalVar____7' 'const char *')
+  (UnaryOperator 0xa166450 'const char *' prefix '&'
+    (ArraySubscriptExpr 0xa166438 'const char' lvalue
+      (ImplicitCastExpr 0xa166428 'const char *' <ArrayToPointerDecay>
+        (ParenExpr 0xa1663f8 'const char [5]' lvalue
+          (StringLiteral 0xa1663d0 'const char [5]' lvalue "haha")))
+      (IntegerLiteral 0xa166410 'int' 0))))
+____LocalVar____7 = &("haha")[0];
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169246232 -> p 169246256 )
+(DeclRefExpr 0xa167e18 'const char *' lvalue Var 0xa1663a0 '____LocalVar____7' 'const char *')
+____LocalVar____7;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 169239632 -> p 169246256 )
+(UnaryOperator 0xa166450 'const char *' prefix '&'
+  (ArraySubscriptExpr 0xa166438 'const char' lvalue
+    (ImplicitCastExpr 0xa166428 'const char *' <ArrayToPointerDecay>
+      (ParenExpr 0xa1663f8 'const char [5]' lvalue
+        (StringLiteral 0xa1663d0 'const char [5]' lvalue "haha")))
+    (IntegerLiteral 0xa166410 'int' 0)))
+&("haha")[0];
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ArraySubscriptExpr ( 169239608 -> p 169239632 )
+(ArraySubscriptExpr 0xa166438 'const char' lvalue
+  (ImplicitCastExpr 0xa166428 'const char *' <ArrayToPointerDecay>
+    (ParenExpr 0xa1663f8 'const char [5]' lvalue
+      (StringLiteral 0xa1663d0 'const char [5]' lvalue "haha")))
+  (IntegerLiteral 0xa166410 'int' 0))
+("haha")[0];
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169239592 -> p 169239608 )
+(ImplicitCastExpr 0xa166428 'const char *' <ArrayToPointerDecay>
+  (ParenExpr 0xa1663f8 'const char [5]' lvalue
+    (StringLiteral 0xa1663d0 'const char [5]' lvalue "haha")))
+("haha");
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ParenExpr ( 169239544 -> p 169239592 )
+(ParenExpr 0xa1663f8 'const char [5]' lvalue
+  (StringLiteral 0xa1663d0 'const char [5]' lvalue "haha"))
+("haha");
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt StringLiteral ( 169239504 -> p 169239544 )
+(StringLiteral 0xa1663d0 'const char [5]' lvalue "haha")
+"haha";
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 169239568 -> p 169239608 )
+(IntegerLiteral 0xa166410 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169246376 -> p 169240160 )
+(BinaryOperator 0xa167ea8 'char *' lvalue '='
+  (DeclRefExpr 0xa167e8c 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+  (ImplicitCastExpr 0xa166578 'char *' <ArrayToPointerDecay>
+    (DeclRefExpr 0xa166560 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]')))
+____LocalVar____9 = ____LocalVar____8;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169246348 -> p 169246376 )
+(DeclRefExpr 0xa167e8c 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+____LocalVar____9;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169239928 -> p 169246376 )
+(ImplicitCastExpr 0xa166578 'char *' <ArrayToPointerDecay>
+  (DeclRefExpr 0xa166560 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+____LocalVar____8;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169239904 -> p 169239928 )
+(DeclRefExpr 0xa166560 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]')
+____LocalVar____8;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 169240096 -> p 169240160 )
+(BinaryOperator 0xa166620 'char *' lvalue '='
+  (DeclRefExpr 0xa166598 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+  (UnaryOperator 0xa166608 'char *' prefix '&'
+    (ArraySubscriptExpr 0xa1665f0 'char' lvalue
+      (ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+        (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+      (IntegerLiteral 0xa1665c8 'int' 0))))
+____LocalVar____9 = &____LocalVar____8[0];
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169239960 -> p 169240096 )
+(DeclRefExpr 0xa166598 'char *' lvalue Var 0xa166530 '____LocalVar____9' 'char *')
+____LocalVar____9;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 169240072 -> p 169240096 )
+(UnaryOperator 0xa166608 'char *' prefix '&'
+  (ArraySubscriptExpr 0xa1665f0 'char' lvalue
+    (ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+      (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+    (IntegerLiteral 0xa1665c8 'int' 0)))
+&____LocalVar____8[0];
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ArraySubscriptExpr ( 169240048 -> p 169240072 )
+(ArraySubscriptExpr 0xa1665f0 'char' lvalue
+  (ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+    (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+  (IntegerLiteral 0xa1665c8 'int' 0))
+____LocalVar____8[0];
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 169240032 -> p 169240048 )
+(ImplicitCastExpr 0xa1665e0 'char *' <ArrayToPointerDecay>
+  (DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]'))
+____LocalVar____8;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 169239984 -> p 169240032 )
+(DeclRefExpr 0xa1665b0 'char [5]' lvalue Var 0xa1664b0 '____LocalVar____8' 'char [5]')
+____LocalVar____8;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 169240008 -> p 169240048 )
+(IntegerLiteral 0xa1665c8 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ReturnStmt ( 169240144 -> p 169240160 )
+(ReturnStmt 0xa166650
+  (IntegerLiteral 0xa166638 'int' 0))
+return 0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 169240120 -> p 169240144 )
+(IntegerLiteral 0xa166638 'int' 0)
+0;
+[0;1;33m
+ [B2 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B1]
+[0m   1: int *____LocalVar____1;
+   2: string ____LocalVar____2;
+   3: char *____LocalVar____3;
+   4: string *____LocalVar____5;
+   5: char *____LocalVar____6;
+   6: const char *____LocalVar____7;
+   7: char *____LocalVar____9;
+   8: ____LocalVar____1 = (int *)new const int(1024)
+   9: printf("%d ", *____LocalVar____1)
+  10: *____LocalVar____1 = 20
+  11: printf("%d\n", *____LocalVar____1)
+  12:  (CXXConstructExpr, string)
+  13: [B1.12] (CXXConstructExpr, string)
+  14: ____LocalVar____2 = string([B1.13]) (OperatorCall)
+  15: ____LocalVar____2.c_str()
+  16: ____LocalVar____3 = (char *)[B1.15]
+  17: ____LocalVar____4.c_str()
+  18: ____LocalVar____3 = (char *)[B1.17]
+  19: func()
+  20: ____LocalVar____5 = (string *)&[B1.19]
+  21: ____LocalVar____6 = const_cast<char *>(&("haha")[0])
+  22: ____LocalVar____7 = &("haha")[0]
+  23: ____LocalVar____9 = ____LocalVar____8
+  24: ____LocalVar____9 = &____LocalVar____8[0]
+  25: return 0;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_fcAhBe/CFG.dot'...  done. 
+[DEBUG][alg/SimplePrinter.cpp - line 24] alg finished.
+[DEBUG][ResourceManager.cpp - line 98] src _const.cpp not changed.
+[DEBUG][ResourceManager.cpp - line 136] Open desfile @_const.cpp
+done2

@@ -1,0 +1,936 @@
+done1
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.1/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i486-linux-gnu
+ /usr/include/c++/4.6/backward
+End of search list.
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.1/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i486-linux-gnu
+ /usr/include/c++/4.6/backward
+End of search list.
+[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 1
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 30] enter FuncDecl
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Function
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 21]  ---- name = x | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+1[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 21]  ---- name = y | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+____localvar____0 * 2[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 21]  ---- name = next | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+0[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 13] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 21]  ---- name = next | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+____localvar____0 * ____localvar____1[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt CompoundStmt ( 155929112 -> p 0 )
+(CompoundStmt 0x94b4a18
+  (DeclStmt 0x94b3d38
+    0x94b3c40 "int ____localvar____0 =
+      (IntegerLiteral 0x94b3c70 'int' 1)"
+    0x94b3ca0 "int ____localvar____1 =
+      (BinaryOperator 0x94b3d10 'int' '*'
+        (ImplicitCastExpr 0x94b3d00 'int' <LValueToRValue>
+          (DeclRefExpr 0x94b3cd0 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+        (IntegerLiteral 0x94b3ce8 'int' 2))")
+  (DeclStmt 0x94b3da8
+    0x94b3d60 "int ____localvar____2 =
+      (IntegerLiteral 0x94b3d90 'int' 0)")
+  (ForStmt 0x94b49b8
+    <<<NULL>>>
+    <<<NULL>>>
+    <<<NULL>>>
+    <<<NULL>>>
+    (CompoundStmt 0x94b49a0
+      (SwitchStmt 0x94b3e90
+        (DeclStmt 0x94b3eb0
+          0x94b3dd0 "int ____localvar____3 =
+            (BinaryOperator 0x94b3e50 'int' '*'
+              (ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+                (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+              (ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+                (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')))")
+        (ImplicitCastExpr 0x94b3e80 'int' <LValueToRValue>
+          (DeclRefExpr 0x94b3e68 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int'))
+        (CompoundStmt 0x94b4970
+          (CaseStmt 0x94b3ed8
+            (IntegerLiteral 0x94b3ec0 'int' 0)
+            <<<NULL>>>
+            (BinaryOperator 0x94b3f28 'int' lvalue '='
+              (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+              (IntegerLiteral 0x94b3f10 'int' 2)))
+          (CaseStmt 0x94b3f70
+            (IntegerLiteral 0x94b3f40 'int' 2)
+            (IntegerLiteral 0x94b3f58 'int' 3)
+            (BreakStmt 0x94b3f90))
+          (CaseStmt 0x94b3fb0
+            (IntegerLiteral 0x94b3f98 'int' 4)
+            <<<NULL>>>
+            (BinaryOperator 0x94b4040 'int' lvalue '='
+              (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+              (BinaryOperator 0x94b4028 'int' '-'
+                (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+                  (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+                (IntegerLiteral 0x94b4000 'int' 2))))
+          (BinaryOperator 0x94b48b0 'int' lvalue '='
+            (DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+            (IntegerLiteral 0x94b4898 'int' 3))
+          (BreakStmt 0x94b48c8)
+          (CaseStmt 0x94b48e8
+            (IntegerLiteral 0x94b48d0 'int' 5)
+            <<<NULL>>>
+            (NullStmt 0x94b4908))
+          (DefaultStmt 0x94b4950
+            (GotoStmt 0x94b4940 '____lbl____0':0x94b4920))
+          (BreakStmt 0x94b4968)))))
+  (LabelStmt 0x94b4a08 '____lbl____0'
+    (ReturnStmt 0x94b49f8
+      (IntegerLiteral 0x94b49e0 'int' 0))))
+{
+    int ____localvar____0 = 1, ____localvar____1 = ____localvar____0 * 2;
+    int ____localvar____2 = 0;
+    for (;;) {
+        switch (____localvar____3) {
+          case 0:
+            ____localvar____3 = 2;
+          case 2 ... 3:
+            break;
+          case 4:
+            ____localvar____1 = ____localvar____1 - 2;
+            ____localvar____3 = 3;
+            break;
+          case 5:
+            ;
+          default:
+            goto ____lbl____0;
+            break;
+        }
+    }
+  ____lbl____0:
+    return 0;
+}
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclStmt ( 155925816 -> p 155929112 )
+(DeclStmt 0x94b3d38
+  0x94b3c40 "int ____localvar____0 =
+    (IntegerLiteral 0x94b3c70 'int' 1)"
+  0x94b3ca0 "int ____localvar____1 =
+    (BinaryOperator 0x94b3d10 'int' '*'
+      (ImplicitCastExpr 0x94b3d00 'int' <LValueToRValue>
+        (DeclRefExpr 0x94b3cd0 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+      (IntegerLiteral 0x94b3ce8 'int' 2))")
+int ____localvar____0 = 1, ____localvar____1 = ____localvar____0 * 2;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 102] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 102] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 90] Comma BEGIN
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 94] Comma END
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclStmt ( 155925928 -> p 155929112 )
+(DeclStmt 0x94b3da8
+  0x94b3d60 "int ____localvar____2 =
+    (IntegerLiteral 0x94b3d90 'int' 0)")
+int ____localvar____2 = 0;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 102] initStyle 0
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 74] --- ASSIGN EXPR BEGIN ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 80] --- DECLREF END ---
+[DEBUG][alg/FlattenCFG/../Algorithm.h - line 85] --- ASSIGN EXPR END ---
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt ForStmt ( 155929016 -> p 155929112 )
+(ForStmt 0x94b49b8
+  <<<NULL>>>
+  <<<NULL>>>
+  <<<NULL>>>
+  <<<NULL>>>
+  (CompoundStmt 0x94b49a0
+    (SwitchStmt 0x94b3e90
+      (DeclStmt 0x94b3eb0
+        0x94b3dd0 "int ____localvar____3 =
+          (BinaryOperator 0x94b3e50 'int' '*'
+            (ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+              (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+            (ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+              (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')))")
+      (ImplicitCastExpr 0x94b3e80 'int' <LValueToRValue>
+        (DeclRefExpr 0x94b3e68 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int'))
+      (CompoundStmt 0x94b4970
+        (CaseStmt 0x94b3ed8
+          (IntegerLiteral 0x94b3ec0 'int' 0)
+          <<<NULL>>>
+          (BinaryOperator 0x94b3f28 'int' lvalue '='
+            (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+            (IntegerLiteral 0x94b3f10 'int' 2)))
+        (CaseStmt 0x94b3f70
+          (IntegerLiteral 0x94b3f40 'int' 2)
+          (IntegerLiteral 0x94b3f58 'int' 3)
+          (BreakStmt 0x94b3f90))
+        (CaseStmt 0x94b3fb0
+          (IntegerLiteral 0x94b3f98 'int' 4)
+          <<<NULL>>>
+          (BinaryOperator 0x94b4040 'int' lvalue '='
+            (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+            (BinaryOperator 0x94b4028 'int' '-'
+              (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+                (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+              (IntegerLiteral 0x94b4000 'int' 2))))
+        (BinaryOperator 0x94b48b0 'int' lvalue '='
+          (DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+          (IntegerLiteral 0x94b4898 'int' 3))
+        (BreakStmt 0x94b48c8)
+        (CaseStmt 0x94b48e8
+          (IntegerLiteral 0x94b48d0 'int' 5)
+          <<<NULL>>>
+          (NullStmt 0x94b4908))
+        (DefaultStmt 0x94b4950
+          (GotoStmt 0x94b4940 '____lbl____0':0x94b4920))
+        (BreakStmt 0x94b4968)))))
+for (;;) {
+    switch (____localvar____3) {
+      case 0:
+        ____localvar____3 = 2;
+      case 2 ... 3:
+        break;
+      case 4:
+        ____localvar____1 = ____localvar____1 - 2;
+        ____localvar____3 = 3;
+        break;
+      case 5:
+        ;
+      default:
+        goto ____lbl____0;
+        break;
+    }
+}
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 35] skip atom
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt LabelStmt ( 155929096 -> p 155929112 )
+(LabelStmt 0x94b4a08 '____lbl____0'
+  (ReturnStmt 0x94b49f8
+    (IntegerLiteral 0x94b49e0 'int' 0)))
+____lbl____0:
+return 0;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt ReturnStmt ( 155929080 -> p 155929096 )
+(ReturnStmt 0x94b49f8
+  (IntegerLiteral 0x94b49e0 'int' 0))
+return 0;
+;
+[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt IntegerLiteral ( 155929056 -> p 155929080 )
+(IntegerLiteral 0x94b49e0 'int' 0)
+0;
+[DEBUG][alg/SimplePrinter.cpp - line 7] alg started.
+int main() {
+    int ____localvar____0;
+    int ____localvar____1;
+    int ____localvar____2;
+    ____localvar____0 = 1 , ____localvar____1 = ____localvar____0 * 2;
+    ____localvar____2 = 0;
+    for (;;) {
+        switch (____localvar____3) {
+          case 0:
+            ____localvar____3 = 2;
+          case 2 ... 3:
+            break;
+          case 4:
+            ____localvar____1 = ____localvar____1 - 2;
+            ____localvar____3 = 3;
+            break;
+          case 5:
+            ;
+          default:
+            goto ____lbl____0;
+            break;
+        }
+    }
+  ____lbl____0:
+    return 0;
+}
+
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 155929112 -> p 0 )
+(CompoundStmt 0x94b4a18
+  (DeclStmt 0x94b4a68
+    0x94b3c40 "int ____localvar____0")
+  (DeclStmt 0x94b4ac0
+    0x94b3ca0 "int ____localvar____1")
+  (DeclStmt 0x94b4b00
+    0x94b3d60 "int ____localvar____2")
+  (BinaryOperator 0x94b4aa8 'int' lvalue ','
+    (BinaryOperator 0x94b4a50 'int' lvalue '='
+      (DeclRefExpr 0x94b4a38 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int')
+      (IntegerLiteral 0x94b3c70 'int' 1))
+    (BinaryOperator 0x94b4a90 'int' lvalue '='
+      (DeclRefExpr 0x94b4a78 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+      (BinaryOperator 0x94b3d10 'int' '*'
+        (ImplicitCastExpr 0x94b3d00 'int' <LValueToRValue>
+          (DeclRefExpr 0x94b3cd0 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+        (IntegerLiteral 0x94b3ce8 'int' 2))))
+  (BinaryOperator 0x94b4ae8 'int' lvalue '='
+    (DeclRefExpr 0x94b4ad0 'int' lvalue Var 0x94b3d60 '____localvar____2' 'int')
+    (IntegerLiteral 0x94b3d90 'int' 0))
+  (ForStmt 0x94b49b8
+    <<<NULL>>>
+    <<<NULL>>>
+    <<<NULL>>>
+    <<<NULL>>>
+    (CompoundStmt 0x94b49a0
+      (SwitchStmt 0x94b3e90
+        (DeclStmt 0x94b3eb0
+          0x94b3dd0 "int ____localvar____3 =
+            (BinaryOperator 0x94b3e50 'int' '*'
+              (ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+                (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+              (ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+                (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')))")
+        (ImplicitCastExpr 0x94b3e80 'int' <LValueToRValue>
+          (DeclRefExpr 0x94b3e68 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int'))
+        (CompoundStmt 0x94b4970
+          (CaseStmt 0x94b3ed8
+            (IntegerLiteral 0x94b3ec0 'int' 0)
+            <<<NULL>>>
+            (BinaryOperator 0x94b3f28 'int' lvalue '='
+              (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+              (IntegerLiteral 0x94b3f10 'int' 2)))
+          (CaseStmt 0x94b3f70
+            (IntegerLiteral 0x94b3f40 'int' 2)
+            (IntegerLiteral 0x94b3f58 'int' 3)
+            (BreakStmt 0x94b3f90))
+          (CaseStmt 0x94b3fb0
+            (IntegerLiteral 0x94b3f98 'int' 4)
+            <<<NULL>>>
+            (BinaryOperator 0x94b4040 'int' lvalue '='
+              (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+              (BinaryOperator 0x94b4028 'int' '-'
+                (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+                  (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+                (IntegerLiteral 0x94b4000 'int' 2))))
+          (BinaryOperator 0x94b48b0 'int' lvalue '='
+            (DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+            (IntegerLiteral 0x94b4898 'int' 3))
+          (BreakStmt 0x94b48c8)
+          (CaseStmt 0x94b48e8
+            (IntegerLiteral 0x94b48d0 'int' 5)
+            <<<NULL>>>
+            (NullStmt 0x94b4908))
+          (DefaultStmt 0x94b4950
+            (GotoStmt 0x94b4940 '____lbl____0':0x94b4920))
+          (BreakStmt 0x94b4968)))))
+  (LabelStmt 0x94b4a08 '____lbl____0'
+    (ReturnStmt 0x94b49f8
+      (IntegerLiteral 0x94b49e0 'int' 0))))
+{
+    int ____localvar____0;
+    int ____localvar____1;
+    int ____localvar____2;
+    ____localvar____0 = 1 , ____localvar____1 = ____localvar____0 * 2;
+    ____localvar____2 = 0;
+    for (;;) {
+        switch (____localvar____3) {
+          case 0:
+            ____localvar____3 = 2;
+          case 2 ... 3:
+            break;
+          case 4:
+            ____localvar____1 = ____localvar____1 - 2;
+            ____localvar____3 = 3;
+            break;
+          case 5:
+            ;
+          default:
+            goto ____lbl____0;
+            break;
+        }
+    }
+  ____lbl____0:
+    return 0;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 155929192 -> p 155929112 )
+(DeclStmt 0x94b4a68
+  0x94b3c40 "int ____localvar____0")
+int ____localvar____0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 155929280 -> p 155929112 )
+(DeclStmt 0x94b4ac0
+  0x94b3ca0 "int ____localvar____1")
+int ____localvar____1;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 155929344 -> p 155929112 )
+(DeclStmt 0x94b4b00
+  0x94b3d60 "int ____localvar____2")
+int ____localvar____2;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155929256 -> p 155929112 )
+(BinaryOperator 0x94b4aa8 'int' lvalue ','
+  (BinaryOperator 0x94b4a50 'int' lvalue '='
+    (DeclRefExpr 0x94b4a38 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int')
+    (IntegerLiteral 0x94b3c70 'int' 1))
+  (BinaryOperator 0x94b4a90 'int' lvalue '='
+    (DeclRefExpr 0x94b4a78 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+    (BinaryOperator 0x94b3d10 'int' '*'
+      (ImplicitCastExpr 0x94b3d00 'int' <LValueToRValue>
+        (DeclRefExpr 0x94b3cd0 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+      (IntegerLiteral 0x94b3ce8 'int' 2))))
+____localvar____0 = 1 , ____localvar____1 = ____localvar____0 * 2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155929168 -> p 155929256 )
+(BinaryOperator 0x94b4a50 'int' lvalue '='
+  (DeclRefExpr 0x94b4a38 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int')
+  (IntegerLiteral 0x94b3c70 'int' 1))
+____localvar____0 = 1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155929144 -> p 155929168 )
+(DeclRefExpr 0x94b4a38 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int')
+____localvar____0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155925616 -> p 155929168 )
+(IntegerLiteral 0x94b3c70 'int' 1)
+1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155929232 -> p 155929256 )
+(BinaryOperator 0x94b4a90 'int' lvalue '='
+  (DeclRefExpr 0x94b4a78 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+  (BinaryOperator 0x94b3d10 'int' '*'
+    (ImplicitCastExpr 0x94b3d00 'int' <LValueToRValue>
+      (DeclRefExpr 0x94b3cd0 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+    (IntegerLiteral 0x94b3ce8 'int' 2)))
+____localvar____1 = ____localvar____0 * 2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155929208 -> p 155929232 )
+(DeclRefExpr 0x94b4a78 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155925776 -> p 155929232 )
+(BinaryOperator 0x94b3d10 'int' '*'
+  (ImplicitCastExpr 0x94b3d00 'int' <LValueToRValue>
+    (DeclRefExpr 0x94b3cd0 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+  (IntegerLiteral 0x94b3ce8 'int' 2))
+____localvar____0 * 2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 155925760 -> p 155925776 )
+(ImplicitCastExpr 0x94b3d00 'int' <LValueToRValue>
+  (DeclRefExpr 0x94b3cd0 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+____localvar____0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155925712 -> p 155925760 )
+(DeclRefExpr 0x94b3cd0 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int')
+____localvar____0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155925736 -> p 155925776 )
+(IntegerLiteral 0x94b3ce8 'int' 2)
+2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155929320 -> p 155929112 )
+(BinaryOperator 0x94b4ae8 'int' lvalue '='
+  (DeclRefExpr 0x94b4ad0 'int' lvalue Var 0x94b3d60 '____localvar____2' 'int')
+  (IntegerLiteral 0x94b3d90 'int' 0))
+____localvar____2 = 0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155929296 -> p 155929320 )
+(DeclRefExpr 0x94b4ad0 'int' lvalue Var 0x94b3d60 '____localvar____2' 'int')
+____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155925904 -> p 155929320 )
+(IntegerLiteral 0x94b3d90 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ForStmt ( 155929016 -> p 155929112 )
+(ForStmt 0x94b49b8
+  <<<NULL>>>
+  <<<NULL>>>
+  <<<NULL>>>
+  <<<NULL>>>
+  (CompoundStmt 0x94b49a0
+    (SwitchStmt 0x94b3e90
+      (DeclStmt 0x94b3eb0
+        0x94b3dd0 "int ____localvar____3 =
+          (BinaryOperator 0x94b3e50 'int' '*'
+            (ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+              (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+            (ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+              (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')))")
+      (ImplicitCastExpr 0x94b3e80 'int' <LValueToRValue>
+        (DeclRefExpr 0x94b3e68 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int'))
+      (CompoundStmt 0x94b4970
+        (CaseStmt 0x94b3ed8
+          (IntegerLiteral 0x94b3ec0 'int' 0)
+          <<<NULL>>>
+          (BinaryOperator 0x94b3f28 'int' lvalue '='
+            (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+            (IntegerLiteral 0x94b3f10 'int' 2)))
+        (CaseStmt 0x94b3f70
+          (IntegerLiteral 0x94b3f40 'int' 2)
+          (IntegerLiteral 0x94b3f58 'int' 3)
+          (BreakStmt 0x94b3f90))
+        (CaseStmt 0x94b3fb0
+          (IntegerLiteral 0x94b3f98 'int' 4)
+          <<<NULL>>>
+          (BinaryOperator 0x94b4040 'int' lvalue '='
+            (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+            (BinaryOperator 0x94b4028 'int' '-'
+              (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+                (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+              (IntegerLiteral 0x94b4000 'int' 2))))
+        (BinaryOperator 0x94b48b0 'int' lvalue '='
+          (DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+          (IntegerLiteral 0x94b4898 'int' 3))
+        (BreakStmt 0x94b48c8)
+        (CaseStmt 0x94b48e8
+          (IntegerLiteral 0x94b48d0 'int' 5)
+          <<<NULL>>>
+          (NullStmt 0x94b4908))
+        (DefaultStmt 0x94b4950
+          (GotoStmt 0x94b4940 '____lbl____0':0x94b4920))
+        (BreakStmt 0x94b4968)))))
+for (;;) {
+    switch (____localvar____3) {
+      case 0:
+        ____localvar____3 = 2;
+      case 2 ... 3:
+        break;
+      case 4:
+        ____localvar____1 = ____localvar____1 - 2;
+        ____localvar____3 = 3;
+        break;
+      case 5:
+        ;
+      default:
+        goto ____lbl____0;
+        break;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 155928992 -> p 155929016 )
+(CompoundStmt 0x94b49a0
+  (SwitchStmt 0x94b3e90
+    (DeclStmt 0x94b3eb0
+      0x94b3dd0 "int ____localvar____3 =
+        (BinaryOperator 0x94b3e50 'int' '*'
+          (ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+            (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+          (ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+            (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')))")
+    (ImplicitCastExpr 0x94b3e80 'int' <LValueToRValue>
+      (DeclRefExpr 0x94b3e68 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int'))
+    (CompoundStmt 0x94b4970
+      (CaseStmt 0x94b3ed8
+        (IntegerLiteral 0x94b3ec0 'int' 0)
+        <<<NULL>>>
+        (BinaryOperator 0x94b3f28 'int' lvalue '='
+          (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+          (IntegerLiteral 0x94b3f10 'int' 2)))
+      (CaseStmt 0x94b3f70
+        (IntegerLiteral 0x94b3f40 'int' 2)
+        (IntegerLiteral 0x94b3f58 'int' 3)
+        (BreakStmt 0x94b3f90))
+      (CaseStmt 0x94b3fb0
+        (IntegerLiteral 0x94b3f98 'int' 4)
+        <<<NULL>>>
+        (BinaryOperator 0x94b4040 'int' lvalue '='
+          (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+          (BinaryOperator 0x94b4028 'int' '-'
+            (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+              (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+            (IntegerLiteral 0x94b4000 'int' 2))))
+      (BinaryOperator 0x94b48b0 'int' lvalue '='
+        (DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+        (IntegerLiteral 0x94b4898 'int' 3))
+      (BreakStmt 0x94b48c8)
+      (CaseStmt 0x94b48e8
+        (IntegerLiteral 0x94b48d0 'int' 5)
+        <<<NULL>>>
+        (NullStmt 0x94b4908))
+      (DefaultStmt 0x94b4950
+        (GotoStmt 0x94b4940 '____lbl____0':0x94b4920))
+      (BreakStmt 0x94b4968))))
+{
+    switch (____localvar____3) {
+      case 0:
+        ____localvar____3 = 2;
+      case 2 ... 3:
+        break;
+      case 4:
+        ____localvar____1 = ____localvar____1 - 2;
+        ____localvar____3 = 3;
+        break;
+      case 5:
+        ;
+      default:
+        goto ____lbl____0;
+        break;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt SwitchStmt ( 155926160 -> p 155928992 )
+(SwitchStmt 0x94b3e90
+  (DeclStmt 0x94b3eb0
+    0x94b3dd0 "int ____localvar____3 =
+      (BinaryOperator 0x94b3e50 'int' '*'
+        (ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+          (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+        (ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+          (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')))")
+  (ImplicitCastExpr 0x94b3e80 'int' <LValueToRValue>
+    (DeclRefExpr 0x94b3e68 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int'))
+  (CompoundStmt 0x94b4970
+    (CaseStmt 0x94b3ed8
+      (IntegerLiteral 0x94b3ec0 'int' 0)
+      <<<NULL>>>
+      (BinaryOperator 0x94b3f28 'int' lvalue '='
+        (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+        (IntegerLiteral 0x94b3f10 'int' 2)))
+    (CaseStmt 0x94b3f70
+      (IntegerLiteral 0x94b3f40 'int' 2)
+      (IntegerLiteral 0x94b3f58 'int' 3)
+      (BreakStmt 0x94b3f90))
+    (CaseStmt 0x94b3fb0
+      (IntegerLiteral 0x94b3f98 'int' 4)
+      <<<NULL>>>
+      (BinaryOperator 0x94b4040 'int' lvalue '='
+        (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+        (BinaryOperator 0x94b4028 'int' '-'
+          (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+            (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+          (IntegerLiteral 0x94b4000 'int' 2))))
+    (BinaryOperator 0x94b48b0 'int' lvalue '='
+      (DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+      (IntegerLiteral 0x94b4898 'int' 3))
+    (BreakStmt 0x94b48c8)
+    (CaseStmt 0x94b48e8
+      (IntegerLiteral 0x94b48d0 'int' 5)
+      <<<NULL>>>
+      (NullStmt 0x94b4908))
+    (DefaultStmt 0x94b4950
+      (GotoStmt 0x94b4940 '____lbl____0':0x94b4920))
+    (BreakStmt 0x94b4968)))
+switch (____localvar____3) {
+  case 0:
+    ____localvar____3 = 2;
+  case 2 ... 3:
+    break;
+  case 4:
+    ____localvar____1 = ____localvar____1 - 2;
+    ____localvar____3 = 3;
+    break;
+  case 5:
+    ;
+  default:
+    goto ____lbl____0;
+    break;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 155926192 -> p 155926160 )
+(DeclStmt 0x94b3eb0
+  0x94b3dd0 "int ____localvar____3 =
+    (BinaryOperator 0x94b3e50 'int' '*'
+      (ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+        (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+      (ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+        (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')))")
+int ____localvar____3 = ____localvar____0 * ____localvar____1;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155926096 -> p 155926192 )
+(BinaryOperator 0x94b3e50 'int' '*'
+  (ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+    (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+  (ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+    (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')))
+____localvar____0 * ____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 155926064 -> p 155926096 )
+(ImplicitCastExpr 0x94b3e30 'int' <LValueToRValue>
+  (DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int'))
+____localvar____0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155926016 -> p 155926064 )
+(DeclRefExpr 0x94b3e00 'int' lvalue Var 0x94b3c40 '____localvar____0' 'int')
+____localvar____0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 155926080 -> p 155926096 )
+(ImplicitCastExpr 0x94b3e40 'int' <LValueToRValue>
+  (DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155926040 -> p 155926080 )
+(DeclRefExpr 0x94b3e18 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 155926144 -> p 155926160 )
+(ImplicitCastExpr 0x94b3e80 'int' <LValueToRValue>
+  (DeclRefExpr 0x94b3e68 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int'))
+____localvar____3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155926120 -> p 155926144 )
+(DeclRefExpr 0x94b3e68 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+____localvar____3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 155928944 -> p 155926160 )
+(CompoundStmt 0x94b4970
+  (CaseStmt 0x94b3ed8
+    (IntegerLiteral 0x94b3ec0 'int' 0)
+    <<<NULL>>>
+    (BinaryOperator 0x94b3f28 'int' lvalue '='
+      (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+      (IntegerLiteral 0x94b3f10 'int' 2)))
+  (CaseStmt 0x94b3f70
+    (IntegerLiteral 0x94b3f40 'int' 2)
+    (IntegerLiteral 0x94b3f58 'int' 3)
+    (BreakStmt 0x94b3f90))
+  (CaseStmt 0x94b3fb0
+    (IntegerLiteral 0x94b3f98 'int' 4)
+    <<<NULL>>>
+    (BinaryOperator 0x94b4040 'int' lvalue '='
+      (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+      (BinaryOperator 0x94b4028 'int' '-'
+        (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+          (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+        (IntegerLiteral 0x94b4000 'int' 2))))
+  (BinaryOperator 0x94b48b0 'int' lvalue '='
+    (DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+    (IntegerLiteral 0x94b4898 'int' 3))
+  (BreakStmt 0x94b48c8)
+  (CaseStmt 0x94b48e8
+    (IntegerLiteral 0x94b48d0 'int' 5)
+    <<<NULL>>>
+    (NullStmt 0x94b4908))
+  (DefaultStmt 0x94b4950
+    (GotoStmt 0x94b4940 '____lbl____0':0x94b4920))
+  (BreakStmt 0x94b4968))
+{
+  case 0:
+    ____localvar____3 = 2;
+  case 2 ... 3:
+    break;
+  case 4:
+    ____localvar____1 = ____localvar____1 - 2;
+    ____localvar____3 = 3;
+    break;
+  case 5:
+    ;
+  default:
+    goto ____lbl____0;
+    break;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CaseStmt ( 155926232 -> p 155928944 )
+(CaseStmt 0x94b3ed8
+  (IntegerLiteral 0x94b3ec0 'int' 0)
+  <<<NULL>>>
+  (BinaryOperator 0x94b3f28 'int' lvalue '='
+    (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+    (IntegerLiteral 0x94b3f10 'int' 2)))
+case 0:
+____localvar____3 = 2;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155926208 -> p 155926232 )
+(IntegerLiteral 0x94b3ec0 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155926312 -> p 155926232 )
+(BinaryOperator 0x94b3f28 'int' lvalue '='
+  (DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+  (IntegerLiteral 0x94b3f10 'int' 2))
+____localvar____3 = 2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155926264 -> p 155926312 )
+(DeclRefExpr 0x94b3ef8 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+____localvar____3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155926288 -> p 155926312 )
+(IntegerLiteral 0x94b3f10 'int' 2)
+2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CaseStmt ( 155926384 -> p 155928944 )
+(CaseStmt 0x94b3f70
+  (IntegerLiteral 0x94b3f40 'int' 2)
+  (IntegerLiteral 0x94b3f58 'int' 3)
+  (BreakStmt 0x94b3f90))
+case 2 ... 3:
+break;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155926336 -> p 155926384 )
+(IntegerLiteral 0x94b3f40 'int' 2)
+2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155926360 -> p 155926384 )
+(IntegerLiteral 0x94b3f58 'int' 3)
+3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BreakStmt ( 155926416 -> p 155926384 )
+(BreakStmt 0x94b3f90)
+break;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CaseStmt ( 155926448 -> p 155928944 )
+(CaseStmt 0x94b3fb0
+  (IntegerLiteral 0x94b3f98 'int' 4)
+  <<<NULL>>>
+  (BinaryOperator 0x94b4040 'int' lvalue '='
+    (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+    (BinaryOperator 0x94b4028 'int' '-'
+      (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+        (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+      (IntegerLiteral 0x94b4000 'int' 2))))
+case 4:
+____localvar____1 = ____localvar____1 - 2;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155926424 -> p 155926448 )
+(IntegerLiteral 0x94b3f98 'int' 4)
+4;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155926592 -> p 155926448 )
+(BinaryOperator 0x94b4040 'int' lvalue '='
+  (DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+  (BinaryOperator 0x94b4028 'int' '-'
+    (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+      (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+    (IntegerLiteral 0x94b4000 'int' 2)))
+____localvar____1 = ____localvar____1 - 2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155926480 -> p 155926592 )
+(DeclRefExpr 0x94b3fd0 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155926568 -> p 155926592 )
+(BinaryOperator 0x94b4028 'int' '-'
+  (ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+    (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+  (IntegerLiteral 0x94b4000 'int' 2))
+____localvar____1 - 2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 155926552 -> p 155926568 )
+(ImplicitCastExpr 0x94b4018 'int' <LValueToRValue>
+  (DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int'))
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155926504 -> p 155926552 )
+(DeclRefExpr 0x94b3fe8 'int' lvalue Var 0x94b3ca0 '____localvar____1' 'int')
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155926528 -> p 155926568 )
+(IntegerLiteral 0x94b4000 'int' 2)
+2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 155928752 -> p 155928944 )
+(BinaryOperator 0x94b48b0 'int' lvalue '='
+  (DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+  (IntegerLiteral 0x94b4898 'int' 3))
+____localvar____3 = 3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 155928704 -> p 155928752 )
+(DeclRefExpr 0x94b4880 'int' lvalue Var 0x94b3dd0 '____localvar____3' 'int')
+____localvar____3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155928728 -> p 155928752 )
+(IntegerLiteral 0x94b4898 'int' 3)
+3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BreakStmt ( 155928776 -> p 155928944 )
+(BreakStmt 0x94b48c8)
+break;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CaseStmt ( 155928808 -> p 155928944 )
+(CaseStmt 0x94b48e8
+  (IntegerLiteral 0x94b48d0 'int' 5)
+  <<<NULL>>>
+  (NullStmt 0x94b4908))
+case 5:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155928784 -> p 155928808 )
+(IntegerLiteral 0x94b48d0 'int' 5)
+5;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 155928840 -> p 155928808 )
+(NullStmt 0x94b4908)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DefaultStmt ( 155928912 -> p 155928944 )
+(DefaultStmt 0x94b4950
+  (GotoStmt 0x94b4940 '____lbl____0':0x94b4920))
+default:
+goto ____lbl____0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 155928896 -> p 155928912 )
+(GotoStmt 0x94b4940 '____lbl____0':0x94b4920)
+goto ____lbl____0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BreakStmt ( 155928936 -> p 155928944 )
+(BreakStmt 0x94b4968)
+break;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 155929096 -> p 155929112 )
+(LabelStmt 0x94b4a08 '____lbl____0'
+  (ReturnStmt 0x94b49f8
+    (IntegerLiteral 0x94b49e0 'int' 0)))
+____lbl____0:
+return 0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ReturnStmt ( 155929080 -> p 155929096 )
+(ReturnStmt 0x94b49f8
+  (IntegerLiteral 0x94b49e0 'int' 0))
+return 0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 155929056 -> p 155929080 )
+(IntegerLiteral 0x94b49e0 'int' 0)
+0;
+[0;1;33m
+ [B12 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B11[0m
+[0;1;33m
+ [B1]
+[0m  ____lbl____0:
+   1: return 0;
+[0;34m   Preds [0m(1):[0;34m B6[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B2]
+[0m[0;32m   T: for (; ; )
+[0m[0;34m   Preds [0m(2):[0;34m B3 B11[0m
+[0;35m   Succs [0m(2):[0;35m B4 NULL[0m
+[0;1;33m
+ [B3]
+[0m[0;34m   Preds [0m(3):[0;34m B5 B8 B9[0m
+[0;35m   Succs [0m(1):[0;35m B2[0m
+[0;1;33m
+ [B4]
+[0m   1: ____localvar____0 * ____localvar____1
+   2: int ____localvar____3 = ____localvar____0 * ____localvar____1;
+   3: ____localvar____3 (ImplicitCastExpr, LValueToRValue, int)
+[0;32m   T: switch [B4.3]
+[0m[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(5):[0;35m B7 B8
+     B9 B10 B6[0m
+[0;1;33m
+ [B5]
+[0m[0;32m   T: break;
+
+[0m[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B6]
+[0m  default:
+[0;32m   T: goto ____lbl____0;
+
+[0m[0;34m   Preds [0m(2):[0;34m B7 B4[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B7]
+[0m  case 5:
+[0;34m   Preds [0m(1):[0;34m B4[0m
+[0;35m   Succs [0m(1):[0;35m B6[0m
+[0;1;33m
+ [B8]
+[0m  case 4:
+   1: ____localvar____1 = ____localvar____1 - 2
+   2: ____localvar____3 = 3
+[0;32m   T: break;
+
+[0m[0;34m   Preds [0m(1):[0;34m B4[0m
+[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B9]
+[0m  case 2 ... 3:
+[0;32m   T: break;
+
+[0m[0;34m   Preds [0m(2):[0;34m B4 B10[0m
+[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B10]
+[0m  case 0:
+   1: ____localvar____3 = 2
+[0;34m   Preds [0m(1):[0;34m B4[0m
+[0;35m   Succs [0m(1):[0;35m B9[0m
+[0;1;33m
+ [B11]
+[0m   1: int ____localvar____0;
+   2: int ____localvar____1;
+   3: int ____localvar____2;
+   4: ____localvar____0 = 1
+   5: ____localvar____1 = ____localvar____0 * 2
+   6: ... , [B11.5]
+   7: ____localvar____2 = 0
+[0;34m   Preds [0m(1):[0;34m B12[0m
+[0;35m   Succs [0m(1):[0;35m B2[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_1Qfz5g/CFG.dot'...  done. 
+[DEBUG][alg/SimplePrinter.cpp - line 24] alg finished.
+[DEBUG][ResourceManager.cpp - line 98] src _switch.cpp not changed.
+[DEBUG][ResourceManager.cpp - line 136] Open desfile @_switch.cpp
+done2
