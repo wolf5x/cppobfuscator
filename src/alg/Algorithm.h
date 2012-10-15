@@ -1,8 +1,12 @@
 #ifndef OBFS_ALG_ALGORITHM_H
 #define OBFS_ALG_ALGORITHM_H
 
-#include "../stdafx.h"
-#include "../ResourceManager.h"
+#include "stdafx.h"
+#include "ResourceManager.h"
+
+#include <string>
+
+using std::string;
 
 //FIXME move
 typedef SmallVector<Stmt*, 32> StmtPtrSmallVector;
@@ -42,12 +46,14 @@ protected:
 		return res;
 	}
 
+	NullStmt* AddNewNullStmt() {
+		return new (this->resMgr.getCompilerInstance().getASTContext())
+			NullStmt(SourceLocation());
+	}
+
 	LabelStmt* AddNewLabel(Stmt *stBody) {
 		//FIXME memory leak
-		//TODO @!#$!@#%
-		static int counter = 0;
-		string lbl("____label____");
-		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
+		IdentifierInfo &info = getUniqueLabelName();
 		DPRINT("info %u: %s %d", (unsigned int)&info, info.getNameStart(), info.getBuiltinID());
 		//Sema &S = this->compInst.getSema();
 		//LabelDecl *lblD = this->compInst.getSema().LookupOrCreateLabel(&info, stBody->getLocStart());
@@ -62,19 +68,18 @@ protected:
 					stBody ? (Stmt*)stBody : (Stmt*)nullSt);
 	}
 
+	GotoStmt* AddNewGoto(LabelStmt *lblDes) {
+		return new (this->resMgr.getCompilerInstance().getASTContext())
+			GotoStmt(lblDes->getDecl(), SourceLocation(), SourceLocation());
+	}
+
 	bool renameVarDecl(NamedDecl *D) {
-		static int counter = 0;
-		string lbl("____localvar____");
-		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
-		D->setDeclName(DeclarationName(&info));
+		D->setDeclName(DeclarationName(&getUniqueVarName()));
 		return true;
 	}
 
 	bool renameTagDecl(NamedDecl *D) {
-		static int counter = 0;
-		string lbl("____localtag____");
-		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
-		D->setDeclName(DeclarationName(&info));
+		D->setDeclName(DeclarationName(&getUniqueTagName()));
 		return true;
 	}
 
@@ -84,6 +89,24 @@ protected:
 		IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
 		D->setDeclName(DeclarationName(&info));
 		return true;
+	}
+
+	IdentifierInfo &getUniqueVarName() {
+		static int counter = 0;
+		const string lbl("____localvar____");
+		return getUniqueIdentifier(lbl, counter);
+	}
+
+	IdentifierInfo &getUniqueTagName() {
+		static int counter = 0;
+		const string lbl("____localtag____");
+		return getUniqueIdentifier(lbl, counter);
+	}
+
+	IdentifierInfo &getUniqueLabelName() {
+		static int counter = 0;
+		const string lbl("____label____");
+		return getUniqueIdentifier(lbl, counter);
 	}
 
 	// create stmt: "lExpr = rExpr"
@@ -130,10 +153,17 @@ protected:
 		return e;
 	}
 
+	Expr* BuildImpCastExprToType(Expr *E, QualType Ty, CastKind CK) {
+		Sema &S = this->resMgr.getCompilerInstance().getSema();
+		ExprResult eRes = S.ImpCastExprToType(E, Ty, CK);
+		assert(!eRes.isInvalid());
+		return eRes.get();
+	}
+
 	// build vardecl which will be placed at the begnning of a function body
-	DeclStmt* BuildVarDeclStmt(VarDecl *var) {
+	DeclStmt* BuildVarDeclStmt(VarDecl *VD) {
 		return new (resMgr.getCompilerInstance().getASTContext())
-			DeclStmt(DeclGroupRef(var), SourceLocation(), SourceLocation());
+			DeclStmt(DeclGroupRef(VD), SourceLocation(), SourceLocation());
 	}
 
 
@@ -174,7 +204,26 @@ protected:
 
 		return true;
 	}
-	
+
+	//build EL == ER
+	Expr* BuildEqualCondExpr(Expr *EL, Expr *ER) {
+		Sema &S = this->resMgr.getCompilerInstance().getSema();
+		ExprResult eRes = S.BuildBinOp(0, SourceLocation(), clang::BO_EQ, EL, ER);
+		assert(!eRes.isInvalid());
+		return eRes.get();
+	}
+
+	//build EL <= EV && EV <= ER
+	Expr* BuildRangeCondExpr(Expr *EV, Expr *EL, Expr *EH) {
+		Sema &S = this->resMgr.getCompilerInstance().getSema();
+		ExprResult resLeft = S.BuildBinOp(0, SourceLocation(), clang::BO_LE, EL, EV);
+		assert(!resLeft.isInvalid());
+		ExprResult resRight = S.BuildBinOp(0, SourceLocation(), clang::BO_LE, EV, EH);
+		assert(!resRight.isInvalid());
+		ExprResult eRes = S.BuildBinOp(0, SourceLocation(), clang::BO_Add, resLeft.get(), resRight.get());
+		assert(!eRes.isInvalid());
+		return eRes.get();
+	}
 	
 	IdentifierInfo& getUniqueIdentifier(string sname, int &ccnt) {
 		IdentifierTable &idTable = this->compInst.getPreprocessor().getIdentifierTable();
@@ -189,22 +238,46 @@ protected:
 		}
 	}
 
-	inline IntegerLiteral* CrLiteralX(int x, BuiltinType* biInt) {
-		//FIXME memory leak
-		return new (this->compInst.getASTContext())
-			IntegerLiteral(this->compInst.getASTContext(), llvm::APInt(32,x), biInt->desugar(), SourceLocation());
+	inline IntegerLiteral* CrLiteralX(int x) {
+		ASTContext &Ctx = resMgr.getCompilerInstance().getSema().getASTContext();
+		return new (Ctx)
+			IntegerLiteral(Ctx, llvm::APInt(32,x), Ctx.IntTy, SourceLocation());
 	}
+
+	inline CXXBoolLiteralExpr* BuildCXXBoolLiteralExpr(bool val) {
+		ASTContext &Ctx = resMgr.getCompilerInstance().getSema().getASTContext();
+		return new (Ctx)
+			CXXBoolLiteralExpr(val, Ctx.BoolTy, SourceLocation());
+	}
+
+	//create a new BuiltinType var
+	DeclStmt* CreateVar(QualType Ty, Expr *initList, clang::StorageClass SC);
+	//
+	//Create a new int var
+	DeclStmt* CreateIntVar(Expr *initVal, clang::StorageClass SC);
+
+	//create a new bool var
+	DeclStmt* CreateBoolVar(Expr *initVal, clang::StorageClass SC);
 
 	inline CompoundStmt* StVecToCompound(StmtPtrSmallVector *v){
 		//FIXME memory leak
+		//change NULL to NullStmt
+		for(int i = 0; i < v->size(); i++) {
+			if(v->operator[](i) == NULL) {
+				v->operator[](i) = this->AddNewNullStmt();
+			}
+		}
 		return new (this->compInst.getASTContext())
-			CompoundStmt(this->compInst.getASTContext(), &v[0][0], v->size(), SourceLocation(), SourceLocation());
+			CompoundStmt(this->compInst.getASTContext(), &v->front(), v->size(), SourceLocation(), SourceLocation());
 	}
 
-	inline CompoundStmt* StmtToCompound(Stmt* s) {
+	inline CompoundStmt* StmtToCompound(Stmt* S) {
 		//FIXME memory leak
+		if(isa<CompoundStmt>(S)){
+			return dyn_cast<CompoundStmt>(S);
+		}
 		return new (this->compInst.getASTContext())
-			CompoundStmt(this->compInst.getASTContext(), (Stmt**)(&s), 1, SourceLocation(), SourceLocation());
+			CompoundStmt(this->compInst.getASTContext(), (Stmt**)(&S), 1, SourceLocation(), SourceLocation());
 	}
 
 	bool updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {

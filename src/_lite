@@ -19,29 +19,179 @@ End of search list.
  /usr/include/c++/4.6/i486-linux-gnu
  /usr/include/c++/4.6/backward
 End of search list.
-_iteration.cpp:6:10: warning: using the result of an assignment as a condition without parentheses
+[DEBUG][alg/InitParseConsumer.h - line 30] +decl, size = 1
+_iteration.cpp:12:10: warning: using the result of an assignment as a condition without parentheses
         while(y = 0+3) {
               ~~^~~~~
-_iteration.cpp:6:10: note: place parentheses around the assignment to silence this warning
+_iteration.cpp:12:10: note: place parentheses around the assignment to silence this warning
         while(y = 0+3) {
                 ^
               (      )
-_iteration.cpp:6:10: note: use '==' to turn this assignment into an equality comparison
+_iteration.cpp:12:10: note: use '==' to turn this assignment into an equality comparison
         while(y = 0+3) {
                 ^
                 ==
-_iteration.cpp:19:22: warning: using the result of an assignment as a condition without parentheses
+_iteration.cpp:25:22: warning: using the result of an assignment as a condition without parentheses
         for(int x = 1, y; y = x; x--) {
                           ~~^~~
-_iteration.cpp:19:22: note: place parentheses around the assignment to silence this warning
+_iteration.cpp:25:22: note: place parentheses around the assignment to silence this warning
         for(int x = 1, y; y = x; x--) {
                             ^
                           (    )       
-_iteration.cpp:19:22: note: use '==' to turn this assignment into an equality comparison
+_iteration.cpp:25:22: note: use '==' to turn this assignment into an equality comparison
         for(int x = 1, y; y = x; x--) {
                             ^
                             ==       
-[DEBUG][alg/InitParseConsumer.h - line 27] +decl, size = 1
+[DEBUG][alg/InitParseConsumer.h - line 30] +decl, size = 2
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 30] enter FuncDecl
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Function
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a77fd48 a747e88 a747e88
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt WhileStmt a77fcc0 a7107e0 a7107e0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CXXBoolLiteralExpr a77fca0 a710780 a710780
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CXXBoolLiteralExpr, start transform
+(CXXBoolLiteralExpr 0xa77fca0 '_Bool' true)
+true[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a77fcb0 a7368b0 a7368b0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa77fcb0)
+{
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt WhileStmt, start transform
+(WhileStmt 0xa77fcc0
+  <<<NULL>>>
+  (CXXBoolLiteralExpr 0xa77fca0 '_Bool' true)
+  (CompoundStmt 0xa77fcb0))
+while (true)
+    {
+    }
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 80] while to if trans
+[DEBUG][./alg/Algorithm.h - line 57] info 175597976: ____label____0 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175598012: ____label____1 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175598048: ____label____2 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CompoundStmt (bffa2448) a77fcb0 a77fccc 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CXXBoolLiteralExpr (bffa2448) a77fca0 a77fcc8 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DoStmt a77fcf8 a710780 a710780
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a77fcd8 a7368b0 a7368b0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa77fcd8)
+{
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CXXBoolLiteralExpr a77fce8 a737c60 a737c60
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CXXBoolLiteralExpr, start transform
+(CXXBoolLiteralExpr 0xa77fce8 '_Bool' true)
+true[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DoStmt, start transform
+(DoStmt 0xa77fcf8
+  (CompoundStmt 0xa77fcd8)
+  (CXXBoolLiteralExpr 0xa77fce8 '_Bool' true))
+do {
+} while (true);
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 132] do to if trans
+[DEBUG][./alg/Algorithm.h - line 57] info 175598084: ____label____3 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175598120: ____label____4 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175598156: ____label____5 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175598192: ____label____6 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CXXBoolLiteralExpr (bffa2438) a77fce8 a77fd00 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CompoundStmt (bffa2438) a77fcd8 a77fcfc 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ForStmt a77fd20 a7368b0 a7368b0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a77fd10 a737c60 a737c60
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa77fd10)
+{
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ForStmt, start transform
+(ForStmt 0xa77fd20
+  <<<NULL>>>
+  <<<NULL>>>
+  <<<NULL>>>
+  <<<NULL>>>
+  (CompoundStmt 0xa77fd10))
+for (;;) {
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 177] for to if trans
+[DEBUG][./alg/Algorithm.h - line 57] info 175598228: ____label____7 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175598264: ____label____8 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175598300: ____label____9 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175598336: ____label____10 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CompoundStmt (bffa2438) a77fd10 a77fd34 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa77fd48
+  (LabelStmt 0xa780d90 '____label____0'
+    (CompoundStmt 0xa780e68
+      (IfStmt 0xa780e48
+        <<<NULL>>>
+        (CXXBoolLiteralExpr 0xa77fca0 '_Bool' true)
+        (CompoundStmt 0xa780e30
+          (CompoundStmt 0xa77fcb0)
+          (LabelStmt 0xa780dd0 '____label____1'
+            (GotoStmt 0xa780e20 '____label____0':0xa780d60)))
+        <<<NULL>>>)
+      (LabelStmt 0xa780e10 '____label____2'
+        (NullStmt 0xa780e00))))
+  (LabelStmt 0xa780eb0 '____label____3'
+    (CompoundStmt 0xa780fb0
+      (LabelStmt 0xa780ef0 '____label____4'
+        (CompoundStmt 0xa77fcd8))
+      (LabelStmt 0xa780f30 '____label____5'
+        (IfStmt 0xa780f90
+          <<<NULL>>>
+          (CXXBoolLiteralExpr 0xa77fce8 '_Bool' true)
+          (GotoStmt 0xa780f80 '____label____3':0xa780e80)
+          <<<NULL>>>))
+      (LabelStmt 0xa780f70 '____label____6'
+        (NullStmt 0xa780f60))))
+  (LabelStmt 0xa781000 '____label____7'
+    (CompoundStmt 0xa781150
+      (NullStmt 0xa781140)
+      (LabelStmt 0xa781040 '____label____8'
+        (IfStmt 0xa781120
+          <<<NULL>>>
+          (CXXBoolLiteralExpr 0xa7810f8 '_Bool' true)
+          (CompoundStmt 0xa781108
+            (CompoundStmt 0xa77fd10)
+            (LabelStmt 0xa781080 '____label____9'
+              (CompoundStmt 0xa7810e0
+                (GotoStmt 0xa7810d0 '____label____8':0xa781010))))
+          <<<NULL>>>))
+      (LabelStmt 0xa7810c0 '____label____10'
+        (NullStmt 0xa7810b0)))))
+{
+  ____label____0:
+    {
+        if (true) {
+            {
+            }
+          ____label____1:
+            goto ____label____0;
+        }
+      ____label____2:
+        ;
+    }
+  ____label____3:
+    {
+      ____label____4:
+        {
+        }
+      ____label____5:
+        if (true)
+            goto ____label____3;
+      ____label____6:
+        ;
+    }
+  ____label____7:
+    {
+        ;
+      ____label____8:
+        if (true) {
+            {
+            }
+          ____label____9:
+            {
+                goto ____label____8;
+            }
+        }
+      ____label____10:
+        ;
+    }
+}
 [DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 30] enter FuncDecl
 [DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Function
 [DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
@@ -57,126 +207,3671 @@ _iteration.cpp:19:22: note: use '==' to turn this assignment into an equality co
 [DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Var
 [DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 26]  ---- name = j | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
 0[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 17] decl: Label
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt CompoundStmt ( a9ddb88 -> p 0 )
-(CompoundStmt 0xa9ddb88
-  (LabelStmt 0xa9dccb0 'LBL_WHILE'
-    (DeclStmt 0xa9dcc80
-      0xa9dcc50 "int ____localvar____0"))
-  (WhileStmt 0xa9dce38
-    <<<NULL>>>
-    (ImplicitCastExpr 0xa9dcd48 '_Bool' <IntegralToBoolean>
-      (ImplicitCastExpr 0xa9dcd38 'int' <LValueToRValue>
-        (BinaryOperator 0xa9dcd20 'int' lvalue '='
-          (DeclRefExpr 0xa9dccc0 'int' lvalue Var 0xa9dcc50 '____localvar____0' 'int')
-          (BinaryOperator 0xa9dcd08 'int' '+'
-            (IntegerLiteral 0xa9dccd8 'int' 0)
-            (IntegerLiteral 0xa9dccf0 'int' 3)))))
-    (CompoundStmt 0xa9dce20
-      (WhileStmt 0xa9dce00
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a780d38 a710780 a710780
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt LabelStmt a77fe50 a7107e0 a7107e0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclStmt a77fe20 a75cd68 a75cd68
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclStmt, start transform
+(DeclStmt 0xa77fe20
+  0xa77fdf0 "int ____localvar____0")
+int ____localvar____0;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt LabelStmt, start transform
+(LabelStmt 0xa77fe50 'LBL_WHILE'
+  (DeclStmt 0xa77fe20
+    0xa77fdf0 "int ____localvar____0"))
+LBL_WHILE:
+int ____localvar____0;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt WhileStmt a77ffd8 a737c60 a737c60
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a77fee8 a73ea68 a73ea68
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a77fed8 a754ec0 a754ec0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BinaryOperator a77fec0 a754ef0 a754ef0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a77fe60 a708cf8 a708cf8
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+____localvar____0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BinaryOperator a77fea8 a708a58 a708a58
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IntegerLiteral a77fe78 a708a68 a708a68
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IntegerLiteral, start transform
+(IntegerLiteral 0xa77fe78 'int' 0)
+0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IntegerLiteral a77fe90 a708a98 a708a98
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IntegerLiteral, start transform
+(IntegerLiteral 0xa77fe90 'int' 3)
+3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BinaryOperator, start transform
+(BinaryOperator 0xa77fea8 'int' '+'
+  (IntegerLiteral 0xa77fe78 'int' 0)
+  (IntegerLiteral 0xa77fe90 'int' 3))
+0 + 3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BinaryOperator, start transform
+(BinaryOperator 0xa77fec0 'int' lvalue '='
+  (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+  (BinaryOperator 0xa77fea8 'int' '+'
+    (IntegerLiteral 0xa77fe78 'int' 0)
+    (IntegerLiteral 0xa77fe90 'int' 3)))
+____localvar____0 = 0 + 3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+  (BinaryOperator 0xa77fec0 'int' lvalue '='
+    (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+    (BinaryOperator 0xa77fea8 'int' '+'
+      (IntegerLiteral 0xa77fe78 'int' 0)
+      (IntegerLiteral 0xa77fe90 'int' 3))))
+____localvar____0 = 0 + 3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa77fee8 '_Bool' <IntegralToBoolean>
+  (ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+    (BinaryOperator 0xa77fec0 'int' lvalue '='
+      (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+      (BinaryOperator 0xa77fea8 'int' '+'
+        (IntegerLiteral 0xa77fe78 'int' 0)
+        (IntegerLiteral 0xa77fe90 'int' 3)))))
+____localvar____0 = 0 + 3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a77ffc0 a708980 a708980
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt WhileStmt a77ffa0 a7089b0 a7089b0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BinaryOperator a77ff68 a7089e0 a7089e0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BinaryOperator a77ff38 a708a10 a708a10
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a77ff28 a70b630 a70b630
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a77fef4 a70b660 a70b660
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+____localvar____0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+  (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+____localvar____0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IntegerLiteral a77ff10 a70b690 a70b690
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IntegerLiteral, start transform
+(IntegerLiteral 0xa77ff10 'int' 3)
+3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BinaryOperator, start transform
+(BinaryOperator 0xa77ff38 'int' '*'
+  (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+    (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+  (IntegerLiteral 0xa77ff10 'int' 3))
+____localvar____0 * 3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IntegerLiteral a77ff50 a754f68 a754f68
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IntegerLiteral, start transform
+(IntegerLiteral 0xa77ff50 'int' 0)
+0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BinaryOperator, start transform
+(BinaryOperator 0xa77ff68 '_Bool' '>'
+  (BinaryOperator 0xa77ff38 'int' '*'
+    (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+      (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+    (IntegerLiteral 0xa77ff10 'int' 3))
+  (IntegerLiteral 0xa77ff50 'int' 0))
+____localvar____0 * 3 > 0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a77ff88 a754f98 a754f98
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BreakStmt a77ff80 a754fc8 a754fc8
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BreakStmt, start transform
+(BreakStmt 0xa77ff80)
+break;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa77ff88
+  (BreakStmt 0xa77ff80))
+{
+    break;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt WhileStmt, start transform
+(WhileStmt 0xa77ffa0
+  <<<NULL>>>
+  (BinaryOperator 0xa77ff68 '_Bool' '>'
+    (BinaryOperator 0xa77ff38 'int' '*'
+      (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+        (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+      (IntegerLiteral 0xa77ff10 'int' 3))
+    (IntegerLiteral 0xa77ff50 'int' 0))
+  (CompoundStmt 0xa77ff88
+    (BreakStmt 0xa77ff80)))
+while (____localvar____0 * 3 > 0)
+    {
+        break;
+    }
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 80] while to if trans
+[DEBUG][./alg/Algorithm.h - line 57] info 175499828: ____label____11 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175499864: ____label____12 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175499900: ____label____13 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BreakStmt (bffa23a8) a77ff80 a77ff98 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CompoundStmt (bffa23a8) a77ff88 a77ffac 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IntegerLiteral (bffa23a8) a77ff50 a77ff7c 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IntegerLiteral (bffa23a8) a77ff10 a77ff4c 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa23a8) a77fef4 a77ff30 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa23a8) a77ff28 a77ff48 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BinaryOperator (bffa23a8) a77ff38 a77ff78 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BinaryOperator (bffa23a8) a77ff68 a77ffa8 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ContinueStmt a77ffb8 a7089e0 a7089e0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ContinueStmt, start transform
+(ContinueStmt 0xa77ffb8)
+continue;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa77ffc0
+  (LabelStmt 0xa7811a0 '____label____11'
+    (CompoundStmt 0xa781288
+      (IfStmt 0xa781268
         <<<NULL>>>
-        (BinaryOperator 0xa9dcdc8 '_Bool' '>'
-          (BinaryOperator 0xa9dcd98 'int' '*'
-            (ImplicitCastExpr 0xa9dcd88 'int' <LValueToRValue>
-              (DeclRefExpr 0xa9dcd54 'int' lvalue Var 0xa9dcc50 '____localvar____0' 'int'))
-            (IntegerLiteral 0xa9dcd70 'int' 3))
-          (IntegerLiteral 0xa9dcdb0 'int' 0))
-        (CompoundStmt 0xa9dcde8
-          (BreakStmt 0xa9dcde0)))
-      (ContinueStmt 0xa9dce18)))
-  (LabelStmt 0xa9dd000 'LBL_DO'
-    (DoStmt 0xa9dcfc0
-      (CompoundStmt 0xa9dcf90
-        (DeclStmt 0xa9dcea8
-          0xa9dce60 "int ____localvar____1 =
-            (IntegerLiteral 0xa9dce90 'int' 0)")
-        (IfStmt 0xa9dcef8
+        (BinaryOperator 0xa77ff68 '_Bool' '>'
+          (BinaryOperator 0xa77ff38 'int' '*'
+            (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+              (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+            (IntegerLiteral 0xa77ff10 'int' 3))
+          (IntegerLiteral 0xa77ff50 'int' 0))
+        (CompoundStmt 0xa781250
+          (CompoundStmt 0xa77ff88
+            (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+          (LabelStmt 0xa7811e0 '____label____12'
+            (GotoStmt 0xa781240 '____label____11':0xa781170)))
+        <<<NULL>>>)
+      (LabelStmt 0xa781220 '____label____13'
+        (NullStmt 0xa781210))))
+  (ContinueStmt 0xa77ffb8))
+{
+  ____label____11:
+    {
+        if (____localvar____0 * 3 > 0) {
+            {
+                goto ____label____13;
+            }
+          ____label____12:
+            goto ____label____11;
+        }
+      ____label____13:
+        ;
+    }
+    continue;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt WhileStmt, start transform
+(WhileStmt 0xa77ffd8
+  <<<NULL>>>
+  (ImplicitCastExpr 0xa77fee8 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+      (BinaryOperator 0xa77fec0 'int' lvalue '='
+        (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+        (BinaryOperator 0xa77fea8 'int' '+'
+          (IntegerLiteral 0xa77fe78 'int' 0)
+          (IntegerLiteral 0xa77fe90 'int' 3)))))
+  (CompoundStmt 0xa77ffc0
+    (LabelStmt 0xa7811a0 '____label____11'
+      (CompoundStmt 0xa781288
+        (IfStmt 0xa781268
           <<<NULL>>>
-          (ImplicitCastExpr 0xa9dcee0 '_Bool' <IntegralToBoolean>
-            (ImplicitCastExpr 0xa9dced0 'int' <LValueToRValue>
-              (DeclRefExpr 0xa9dceb8 'int' lvalue Var 0xa9dce60 '____localvar____1' 'int')))
-          (BreakStmt 0xa9dcef0)
+          (BinaryOperator 0xa77ff68 '_Bool' '>'
+            (BinaryOperator 0xa77ff38 'int' '*'
+              (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+                (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+              (IntegerLiteral 0xa77ff10 'int' 3))
+            (IntegerLiteral 0xa77ff50 'int' 0))
+          (CompoundStmt 0xa781250
+            (CompoundStmt 0xa77ff88
+              (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+            (LabelStmt 0xa7811e0 '____label____12'
+              (GotoStmt 0xa781240 '____label____11':0xa781170)))
           <<<NULL>>>)
-        (IfStmt 0xa9dcf70
-          <<<NULL>>>
-          (UnaryOperator 0xa9dcf50 '_Bool' prefix '!'
-            (ImplicitCastExpr 0xa9dcf40 '_Bool' <IntegralToBoolean>
-              (ImplicitCastExpr 0xa9dcf30 'int' <LValueToRValue>
-                (DeclRefExpr 0xa9dcf14 'int' lvalue Var 0xa9dce60 '____localvar____1' 'int'))))
-          (ContinueStmt 0xa9dcf68)
-          <<<NULL>>>))
-      (CXXBoolLiteralExpr 0xa9dcfb0 '_Bool' false)))
-  (LabelStmt 0xa9ddb50 'LBL_FOR'
-    (ForStmt 0xa9ddb08
-      (DeclStmt 0xa9dd8e0
-        0xa9dd020 "int ____localvar____2 =
-          (IntegerLiteral 0xa9dd050 'int' 1)"
-        0xa9dd8a0 "int ____localvar____3")
+        (LabelStmt 0xa781220 '____label____13'
+          (NullStmt 0xa781210))))
+    (ContinueStmt 0xa77ffb8)))
+while (____localvar____0 = 0 + 3)
+    {
+      ____label____11:
+        {
+            if (____localvar____0 * 3 > 0) {
+                {
+                    goto ____label____13;
+                }
+              ____label____12:
+                goto ____label____11;
+            }
+          ____label____13:
+            ;
+        }
+        continue;
+    }
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 80] while to if trans
+[DEBUG][./alg/Algorithm.h - line 57] info 175499936: ____label____14 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175499972: ____label____15 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500008: ____label____16 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ContinueStmt (bffa2448) a77ffb8 a77ffd4 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt WhileStmt (bffa2448) a77ffa0 a77ffd0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CompoundStmt (bffa2448) a77ffc0 a77ffe4 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IntegerLiteral (bffa2448) a77fe90 a77febc 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IntegerLiteral (bffa2448) a77fe78 a77feb8 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BinaryOperator (bffa2448) a77fea8 a77fed4 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa2448) a77fe60 a77fed0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BinaryOperator (bffa2448) a77fec0 a77fee0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa2448) a77fed8 a77fef0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa2448) a77fee8 a77ffe0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt LabelStmt a7809d0 a73ea68 a73ea68
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DoStmt a780990 a754ec0 a754ec0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a780960 a708cf8 a708cf8
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclStmt a780048 a708a58 a708a58
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IntegerLiteral a780030 a708a68 a708a68
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IntegerLiteral, start transform
+(IntegerLiteral 0xa780030 'int' 0)
+0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclStmt, start transform
+(DeclStmt 0xa780048
+  0xa780000 "int ____localvar____1 =
+    (IntegerLiteral 0xa780030 'int' 0)")
+int ____localvar____1 = 0;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IfStmt a7808c8 a754ef0 a754ef0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780080 a737c00 a737c00
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780070 a708a98 a708a98
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a780058 a708890 a708890
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')
+____localvar____1[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+  (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))
+____localvar____1[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+  (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+    (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+____localvar____1[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BreakStmt a780090 a7088c0 a7088c0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BreakStmt, start transform
+(BreakStmt 0xa780090)
+break;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IfStmt, start transform
+(IfStmt 0xa7808c8
+  <<<NULL>>>
+  (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+      (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+  (BreakStmt 0xa780090)
+  <<<NULL>>>)
+if (____localvar____1)
+    break;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IfStmt a780940 a7088f0 a7088f0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt UnaryOperator a780920 a708920 a708920
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780910 a7089a0 a7089a0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780900 a7089d0 a7089d0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a7808e4 a708a00 a708a00
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int')
+____localvar____1[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+  (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))
+____localvar____1[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+  (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+    (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+____localvar____1[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt UnaryOperator, start transform
+(UnaryOperator 0xa780920 '_Bool' prefix '!'
+  (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+      (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+!____localvar____1[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ContinueStmt a780938 a70b630 a70b630
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ContinueStmt, start transform
+(ContinueStmt 0xa780938)
+continue;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IfStmt, start transform
+(IfStmt 0xa780940
+  <<<NULL>>>
+  (UnaryOperator 0xa780920 '_Bool' prefix '!'
+    (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+      (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+        (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+  (ContinueStmt 0xa780938)
+  <<<NULL>>>)
+if (!____localvar____1)
+    continue;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa780960
+  (DeclStmt 0xa780048
+    0xa780000 "int ____localvar____1 =
+      (IntegerLiteral 0xa780030 'int' 0)")
+  (IfStmt 0xa7808c8
+    <<<NULL>>>
+    (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+      (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+        (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+    (BreakStmt 0xa780090)
+    <<<NULL>>>)
+  (IfStmt 0xa780940
+    <<<NULL>>>
+    (UnaryOperator 0xa780920 '_Bool' prefix '!'
+      (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+        (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+          (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+    (ContinueStmt 0xa780938)
+    <<<NULL>>>))
+{
+    int ____localvar____1 = 0;
+    if (____localvar____1)
+        break;
+    if (!____localvar____1)
+        continue;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CXXBoolLiteralExpr a780980 a708a10 a708a10
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CXXBoolLiteralExpr, start transform
+(CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+false[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DoStmt, start transform
+(DoStmt 0xa780990
+  (CompoundStmt 0xa780960
+    (DeclStmt 0xa780048
+      0xa780000 "int ____localvar____1 =
+        (IntegerLiteral 0xa780030 'int' 0)")
+    (IfStmt 0xa7808c8
       <<<NULL>>>
-      (ImplicitCastExpr 0xa9dd958 '_Bool' <IntegralToBoolean>
-        (ImplicitCastExpr 0xa9dd948 'int' <LValueToRValue>
-          (BinaryOperator 0xa9dd930 'int' lvalue '='
-            (DeclRefExpr 0xa9dd8f0 'int' lvalue Var 0xa9dd8a0 '____localvar____3' 'int')
-            (ImplicitCastExpr 0xa9dd920 'int' <LValueToRValue>
-              (DeclRefExpr 0xa9dd908 'int' lvalue Var 0xa9dd020 '____localvar____2' 'int')))))
-      (UnaryOperator 0xa9dd980 'int' postfix '--'
-        (DeclRefExpr 0xa9dd964 'int' lvalue Var 0xa9dd020 '____localvar____2' 'int'))
-      (CompoundStmt 0xa9ddaf0
-        (ForStmt 0xa9ddac0
-          (DeclStmt 0xa9dd9f8
-            0xa9dd9b0 "int ____localvar____4 =
-              (IntegerLiteral 0xa9dd9e0 'int' 0)")
+      (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+        (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+          (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+      (BreakStmt 0xa780090)
+      <<<NULL>>>)
+    (IfStmt 0xa780940
+      <<<NULL>>>
+      (UnaryOperator 0xa780920 '_Bool' prefix '!'
+        (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+          (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+            (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+      (ContinueStmt 0xa780938)
+      <<<NULL>>>))
+  (CXXBoolLiteralExpr 0xa780980 '_Bool' false))
+do {
+    int ____localvar____1 = 0;
+    if (____localvar____1)
+        break;
+    if (!____localvar____1)
+        continue;
+} while (false);
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 132] do to if trans
+[DEBUG][./alg/Algorithm.h - line 57] info 175500044: ____label____17 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500080: ____label____18 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500116: ____label____19 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500152: ____label____20 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CXXBoolLiteralExpr (bffa23e8) a780980 a780998 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ContinueStmt (bffa23e8) a780938 a78094c 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa23e8) a7808e4 a780908 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa23e8) a780900 a780918 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa23e8) a780910 a780930 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt UnaryOperator (bffa23e8) a780920 a780948 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IfStmt (bffa23e8) a780940 a780978 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BreakStmt (bffa23e8) a780090 a7808d4 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa23e8) a780058 a780078 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa23e8) a780070 a780088 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa23e8) a780080 a7808d0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IfStmt (bffa23e8) a7808c8 a780974 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IntegerLiteral (bffa23e8) a780030 a780028 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclStmt (bffa23e8) a780048 a780970 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CompoundStmt (bffa23e8) a780960 a780994 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt LabelStmt, start transform
+(LabelStmt 0xa7809d0 'LBL_DO'
+  (LabelStmt 0xa781400 '____label____17'
+    (CompoundStmt 0xa781520
+      (LabelStmt 0xa781440 '____label____18'
+        (CompoundStmt 0xa780960
+          (DeclStmt 0xa780048
+            0xa780000 "int ____localvar____1 =
+              (IntegerLiteral 0xa780030 'int' 0)")
+          (IfStmt 0xa7808c8
+            <<<NULL>>>
+            (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+              (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+                (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+            (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+            <<<NULL>>>)
+          (IfStmt 0xa780940
+            <<<NULL>>>
+            (UnaryOperator 0xa780920 '_Bool' prefix '!'
+              (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+                (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+            (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+            <<<NULL>>>)))
+      (LabelStmt 0xa781480 '____label____19'
+        (IfStmt 0xa781500
           <<<NULL>>>
-          (BinaryOperator 0xa9dda58 '_Bool' '!='
-            (ImplicitCastExpr 0xa9dda38 'int' <LValueToRValue>
-              (DeclRefExpr 0xa9dda08 'int' lvalue Var 0xa9dd9b0 '____localvar____4' 'int'))
-            (ImplicitCastExpr 0xa9dda48 'int' <LValueToRValue>
-              (DeclRefExpr 0xa9dda20 'int' lvalue Var 0xa9dd020 '____localvar____2' 'int')))
-          (UnaryOperator 0xa9dda88 'int' postfix '++'
-            (DeclRefExpr 0xa9dda70 'int' lvalue Var 0xa9dd9b0 '____localvar____4' 'int'))
-          (CompoundStmt 0xa9ddaa8
-            (ContinueStmt 0xa9ddaa0)))
-        (BreakStmt 0xa9ddae8))))
-  (ReturnStmt 0xa9ddb78
-    (IntegerLiteral 0xa9ddb60 'int' 0)))
+          (CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+          (GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+          <<<NULL>>>))
+      (LabelStmt 0xa7814c0 '____label____20'
+        (NullStmt 0xa7814b0)))))
+LBL_DO:
+____label____17:
+{
+  ____label____18:
+    {
+        int ____localvar____1 = 0;
+        if (____localvar____1)
+            goto ____label____20;
+        if (!____localvar____1)
+            goto ____label____19;
+    }
+  ____label____19:
+    if (false)
+        goto ____label____17;
+  ____label____20:
+    ;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt LabelStmt a780d00 a737be0 a737be0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ForStmt a780cb8 a708cd8 a708cd8
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclStmt a780a90 a708d08 a708d08
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IntegerLiteral a780a20 a708d38 a708d38
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IntegerLiteral, start transform
+(IntegerLiteral 0xa780a20 'int' 1)
+1[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclStmt, start transform
+(DeclStmt 0xa780a90
+  0xa7809f0 "int ____localvar____2 =
+    (IntegerLiteral 0xa780a20 'int' 1)"
+  0xa780a50 "int ____localvar____3")
+int ____localvar____2 = 1, ____localvar____3;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780b08 a754ef0 a754ef0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780af8 a708a60 a708a60
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BinaryOperator a780ae0 a708a90 a708a90
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a780aa0 a7365c0 a7365c0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+____localvar____3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780ad0 a736608 a736608
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a780ab8 a736638 a736638
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')
+____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+  (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BinaryOperator, start transform
+(BinaryOperator 0xa780ae0 'int' lvalue '='
+  (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+  (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+    (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+____localvar____3 = ____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+  (BinaryOperator 0xa780ae0 'int' lvalue '='
+    (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+    (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+      (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))))
+____localvar____3 = ____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+  (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+    (BinaryOperator 0xa780ae0 'int' lvalue '='
+      (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+      (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+        (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+____localvar____3 = ____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt UnaryOperator a780b30 a708890 a708890
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a780b14 a7088c0 a7088c0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')
+____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt UnaryOperator, start transform
+(UnaryOperator 0xa780b30 'int' postfix '--'
+  (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+____localvar____2--[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a780ca0 a7088f0 a7088f0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ForStmt a780c70 a708920 a708920
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclStmt a780ba8 a7089a0 a7089a0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IntegerLiteral a780b90 a7089d0 a7089d0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IntegerLiteral, start transform
+(IntegerLiteral 0xa780b90 'int' 0)
+0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclStmt, start transform
+(DeclStmt 0xa780ba8
+  0xa780b60 "int ____localvar____4 =
+    (IntegerLiteral 0xa780b90 'int' 0)")
+int ____localvar____4 = 0;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BinaryOperator a780c08 a70b610 a70b610
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780be8 a70b640 a70b640
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a780bb8 a70b670 a70b670
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int')
+____localvar____4[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+  (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+____localvar____4[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ImplicitCastExpr a780bf8 a70b6a0 a70b6a0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a780bd0 a754f68 a754f68
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')
+____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ImplicitCastExpr, start transform
+(ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+  (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BinaryOperator, start transform
+(BinaryOperator 0xa780c08 '_Bool' '!='
+  (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+    (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+  (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+    (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+____localvar____4 != ____localvar____2[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt UnaryOperator a780c38 a754f98 a754f98
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt DeclRefExpr a780c20 a754fc8 a754fc8
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt DeclRefExpr, start transform
+(DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int')
+____localvar____4[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt UnaryOperator, start transform
+(UnaryOperator 0xa780c38 'int' postfix '++'
+  (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+____localvar____4++[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt CompoundStmt a780c58 a75acd8 a75acd8
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ContinueStmt a780c50 a75ad08 a75ad08
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ContinueStmt, start transform
+(ContinueStmt 0xa780c50)
+continue;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa780c58
+  (ContinueStmt 0xa780c50))
+{
+    continue;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ForStmt, start transform
+(ForStmt 0xa780c70
+  (DeclStmt 0xa780ba8
+    0xa780b60 "int ____localvar____4 =
+      (IntegerLiteral 0xa780b90 'int' 0)")
+  <<<NULL>>>
+  (BinaryOperator 0xa780c08 '_Bool' '!='
+    (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+      (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+    (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+      (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+  (UnaryOperator 0xa780c38 'int' postfix '++'
+    (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+  (CompoundStmt 0xa780c58
+    (ContinueStmt 0xa780c50)))
+for (int ____localvar____4 = 0; ____localvar____4 != ____localvar____2; ____localvar____4++) {
+    continue;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 177] for to if trans
+[DEBUG][./alg/Algorithm.h - line 57] info 175500188: ____label____21 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500224: ____label____22 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500260: ____label____23 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500296: ____label____24 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ContinueStmt (bffa2348) a780c50 a780c68 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CompoundStmt (bffa2348) a780c58 a780c84 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa2348) a780c20 a780c48 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt UnaryOperator (bffa2348) a780c38 a780c80 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa2348) a780bd0 a780c00 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa2348) a780bf8 a780c1c 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa2348) a780bb8 a780bf0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa2348) a780be8 a780c18 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BinaryOperator (bffa2348) a780c08 a780c7c 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IntegerLiteral (bffa2348) a780b90 a780b88 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclStmt (bffa2348) a780ba8 a780c74 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt BreakStmt a780c98 a7365f0 a7365f0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt BreakStmt, start transform
+(BreakStmt 0xa780c98)
+break;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa780ca0
+  (LabelStmt 0xa781570 '____label____21'
+    (CompoundStmt 0xa7816b0
+      (DeclStmt 0xa780ba8
+        0xa780b60 "int ____localvar____4 =
+          (IntegerLiteral 0xa780b90 'int' 0)")
+      (LabelStmt 0xa7815b0 '____label____22'
+        (IfStmt 0xa781690
+          <<<NULL>>>
+          (BinaryOperator 0xa780c08 '_Bool' '!='
+            (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+              (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+            (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+              (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+          (CompoundStmt 0xa781678
+            (CompoundStmt 0xa780c58
+              (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+            (LabelStmt 0xa7815f0 '____label____23'
+              (CompoundStmt 0xa781660
+                (UnaryOperator 0xa780c38 'int' postfix '++'
+                  (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                (GotoStmt 0xa781650 '____label____22':0xa781580))))
+          <<<NULL>>>))
+      (LabelStmt 0xa781630 '____label____24'
+        (NullStmt 0xa781620))))
+  (BreakStmt 0xa780c98))
+{
+  ____label____21:
+    {
+        int ____localvar____4 = 0;
+      ____label____22:
+        if (____localvar____4 != ____localvar____2) {
+            {
+                goto ____label____23;
+            }
+          ____label____23:
+            {
+                ____localvar____4++;
+                goto ____label____22;
+            }
+        }
+      ____label____24:
+        ;
+    }
+    break;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ForStmt, start transform
+(ForStmt 0xa780cb8
+  (DeclStmt 0xa780a90
+    0xa7809f0 "int ____localvar____2 =
+      (IntegerLiteral 0xa780a20 'int' 1)"
+    0xa780a50 "int ____localvar____3")
+  <<<NULL>>>
+  (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+      (BinaryOperator 0xa780ae0 'int' lvalue '='
+        (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+        (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+          (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+  (UnaryOperator 0xa780b30 'int' postfix '--'
+    (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+  (CompoundStmt 0xa780ca0
+    (LabelStmt 0xa781570 '____label____21'
+      (CompoundStmt 0xa7816b0
+        (DeclStmt 0xa780ba8
+          0xa780b60 "int ____localvar____4 =
+            (IntegerLiteral 0xa780b90 'int' 0)")
+        (LabelStmt 0xa7815b0 '____label____22'
+          (IfStmt 0xa781690
+            <<<NULL>>>
+            (BinaryOperator 0xa780c08 '_Bool' '!='
+              (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+              (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+            (CompoundStmt 0xa781678
+              (CompoundStmt 0xa780c58
+                (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+              (LabelStmt 0xa7815f0 '____label____23'
+                (CompoundStmt 0xa781660
+                  (UnaryOperator 0xa780c38 'int' postfix '++'
+                    (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                  (GotoStmt 0xa781650 '____label____22':0xa781580))))
+            <<<NULL>>>))
+        (LabelStmt 0xa781630 '____label____24'
+          (NullStmt 0xa781620))))
+    (BreakStmt 0xa780c98)))
+for (int ____localvar____2 = 1, ____localvar____3; ____localvar____3 = ____localvar____2; ____localvar____2--) {
+  ____label____21:
+    {
+        int ____localvar____4 = 0;
+      ____label____22:
+        if (____localvar____4 != ____localvar____2) {
+            {
+                goto ____label____23;
+            }
+          ____label____23:
+            {
+                ____localvar____4++;
+                goto ____label____22;
+            }
+        }
+      ____label____24:
+        ;
+    }
+    break;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 177] for to if trans
+[DEBUG][./alg/Algorithm.h - line 57] info 175500332: ____label____25 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500368: ____label____26 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500404: ____label____27 0
+[DEBUG][./alg/Algorithm.h - line 57] info 175500440: ____label____28 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BreakStmt (bffa23e8) a780c98 a780cb4 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ForStmt (bffa23e8) a780c70 a780cb0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt CompoundStmt (bffa23e8) a780ca0 a780ccc 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa23e8) a780b14 a780b40 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt UnaryOperator (bffa23e8) a780b30 a780cc8 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa23e8) a780ab8 a780ad8 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa23e8) a780ad0 a780af4 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclRefExpr (bffa23e8) a780aa0 a780af0 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt BinaryOperator (bffa23e8) a780ae0 a780b00 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa23e8) a780af8 a780b10 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt ImplicitCastExpr (bffa23e8) a780b08 a780cc4 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt IntegerLiteral (bffa23e8) a780a20 a780a18 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 419] pop stmt DeclStmt (bffa23e8) a780a90 a780cbc 0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt LabelStmt, start transform
+(LabelStmt 0xa780d00 'LBL_FOR'
+  (LabelStmt 0xa781700 '____label____25'
+    (CompoundStmt 0xa781840
+      (DeclStmt 0xa780a90
+        0xa7809f0 "int ____localvar____2 =
+          (IntegerLiteral 0xa780a20 'int' 1)"
+        0xa780a50 "int ____localvar____3")
+      (LabelStmt 0xa781740 '____label____26'
+        (IfStmt 0xa781820
+          <<<NULL>>>
+          (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+            (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+              (BinaryOperator 0xa780ae0 'int' lvalue '='
+                (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+                (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+          (CompoundStmt 0xa781808
+            (CompoundStmt 0xa780ca0
+              (LabelStmt 0xa781570 '____label____21'
+                (CompoundStmt 0xa7816b0
+                  (DeclStmt 0xa780ba8
+                    0xa780b60 "int ____localvar____4 =
+                      (IntegerLiteral 0xa780b90 'int' 0)")
+                  (LabelStmt 0xa7815b0 '____label____22'
+                    (IfStmt 0xa781690
+                      <<<NULL>>>
+                      (BinaryOperator 0xa780c08 '_Bool' '!='
+                        (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                          (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                        (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                          (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+                      (CompoundStmt 0xa781678
+                        (CompoundStmt 0xa780c58
+                          (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+                        (LabelStmt 0xa7815f0 '____label____23'
+                          (CompoundStmt 0xa781660
+                            (UnaryOperator 0xa780c38 'int' postfix '++'
+                              (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                            (GotoStmt 0xa781650 '____label____22':0xa781580))))
+                      <<<NULL>>>))
+                  (LabelStmt 0xa781630 '____label____24'
+                    (NullStmt 0xa781620))))
+              (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+            (LabelStmt 0xa781780 '____label____27'
+              (CompoundStmt 0xa7817f0
+                (UnaryOperator 0xa780b30 'int' postfix '--'
+                  (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+                (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+          <<<NULL>>>))
+      (LabelStmt 0xa7817c0 '____label____28'
+        (NullStmt 0xa7817b0)))))
+LBL_FOR:
+____label____25:
+{
+    int ____localvar____2 = 1, ____localvar____3;
+  ____label____26:
+    if (____localvar____3 = ____localvar____2) {
+        {
+          ____label____21:
+            {
+                int ____localvar____4 = 0;
+              ____label____22:
+                if (____localvar____4 != ____localvar____2) {
+                    {
+                        goto ____label____23;
+                    }
+                  ____label____23:
+                    {
+                        ____localvar____4++;
+                        goto ____label____22;
+                    }
+                }
+              ____label____24:
+                ;
+            }
+            goto ____label____28;
+        }
+      ____label____27:
+        {
+            ____localvar____2--;
+            goto ____label____26;
+        }
+    }
+  ____label____28:
+    ;
+}
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt ReturnStmt a780d28 a708d08 a708d08
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 39] push stmt IntegerLiteral a780d10 a708d38 a708d38
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt IntegerLiteral, start transform
+(IntegerLiteral 0xa780d10 'int' 0)
+0[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt ReturnStmt, start transform
+(ReturnStmt 0xa780d28
+  (IntegerLiteral 0xa780d10 'int' 0))
+return 0;
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 47] leaving Stmt CompoundStmt, start transform
+(CompoundStmt 0xa780d38
+  (LabelStmt 0xa77fe50 'LBL_WHILE'
+    (DeclStmt 0xa77fe20
+      0xa77fdf0 "int ____localvar____0"))
+  (LabelStmt 0xa7812d0 '____label____14'
+    (CompoundStmt 0xa7813b8
+      (IfStmt 0xa781398
+        <<<NULL>>>
+        (ImplicitCastExpr 0xa77fee8 '_Bool' <IntegralToBoolean>
+          (ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+            (BinaryOperator 0xa77fec0 'int' lvalue '='
+              (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+              (BinaryOperator 0xa77fea8 'int' '+'
+                (IntegerLiteral 0xa77fe78 'int' 0)
+                (IntegerLiteral 0xa77fe90 'int' 3)))))
+        (CompoundStmt 0xa781380
+          (CompoundStmt 0xa77ffc0
+            (LabelStmt 0xa7811a0 '____label____11'
+              (CompoundStmt 0xa781288
+                (IfStmt 0xa781268
+                  <<<NULL>>>
+                  (BinaryOperator 0xa77ff68 '_Bool' '>'
+                    (BinaryOperator 0xa77ff38 'int' '*'
+                      (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+                        (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+                      (IntegerLiteral 0xa77ff10 'int' 3))
+                    (IntegerLiteral 0xa77ff50 'int' 0))
+                  (CompoundStmt 0xa781250
+                    (CompoundStmt 0xa77ff88
+                      (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+                    (LabelStmt 0xa7811e0 '____label____12'
+                      (GotoStmt 0xa781240 '____label____11':0xa781170)))
+                  <<<NULL>>>)
+                (LabelStmt 0xa781220 '____label____13'
+                  (NullStmt 0xa781210))))
+            (GotoStmt 0xa781360 '____label____15':0xa7812e0))
+          (LabelStmt 0xa781310 '____label____15'
+            (GotoStmt 0xa781370 '____label____14':0xa7812a0)))
+        <<<NULL>>>)
+      (LabelStmt 0xa781350 '____label____16'
+        (NullStmt 0xa781340))))
+  (LabelStmt 0xa7809d0 'LBL_DO'
+    (LabelStmt 0xa781400 '____label____17'
+      (CompoundStmt 0xa781520
+        (LabelStmt 0xa781440 '____label____18'
+          (CompoundStmt 0xa780960
+            (DeclStmt 0xa780048
+              0xa780000 "int ____localvar____1 =
+                (IntegerLiteral 0xa780030 'int' 0)")
+            (IfStmt 0xa7808c8
+              <<<NULL>>>
+              (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+                (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+              (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+              <<<NULL>>>)
+            (IfStmt 0xa780940
+              <<<NULL>>>
+              (UnaryOperator 0xa780920 '_Bool' prefix '!'
+                (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+                  (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+                    (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+              (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+              <<<NULL>>>)))
+        (LabelStmt 0xa781480 '____label____19'
+          (IfStmt 0xa781500
+            <<<NULL>>>
+            (CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+            (GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+            <<<NULL>>>))
+        (LabelStmt 0xa7814c0 '____label____20'
+          (NullStmt 0xa7814b0)))))
+  (LabelStmt 0xa780d00 'LBL_FOR'
+    (LabelStmt 0xa781700 '____label____25'
+      (CompoundStmt 0xa781840
+        (DeclStmt 0xa780a90
+          0xa7809f0 "int ____localvar____2 =
+            (IntegerLiteral 0xa780a20 'int' 1)"
+          0xa780a50 "int ____localvar____3")
+        (LabelStmt 0xa781740 '____label____26'
+          (IfStmt 0xa781820
+            <<<NULL>>>
+            (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+              (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+                (BinaryOperator 0xa780ae0 'int' lvalue '='
+                  (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+                  (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+                    (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+            (CompoundStmt 0xa781808
+              (CompoundStmt 0xa780ca0
+                (LabelStmt 0xa781570 '____label____21'
+                  (CompoundStmt 0xa7816b0
+                    (DeclStmt 0xa780ba8
+                      0xa780b60 "int ____localvar____4 =
+                        (IntegerLiteral 0xa780b90 'int' 0)")
+                    (LabelStmt 0xa7815b0 '____label____22'
+                      (IfStmt 0xa781690
+                        <<<NULL>>>
+                        (BinaryOperator 0xa780c08 '_Bool' '!='
+                          (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                            (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                          (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                            (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+                        (CompoundStmt 0xa781678
+                          (CompoundStmt 0xa780c58
+                            (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+                          (LabelStmt 0xa7815f0 '____label____23'
+                            (CompoundStmt 0xa781660
+                              (UnaryOperator 0xa780c38 'int' postfix '++'
+                                (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                              (GotoStmt 0xa781650 '____label____22':0xa781580))))
+                        <<<NULL>>>))
+                    (LabelStmt 0xa781630 '____label____24'
+                      (NullStmt 0xa781620))))
+                (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+              (LabelStmt 0xa781780 '____label____27'
+                (CompoundStmt 0xa7817f0
+                  (UnaryOperator 0xa780b30 'int' postfix '--'
+                    (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+                  (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+            <<<NULL>>>))
+        (LabelStmt 0xa7817c0 '____label____28'
+          (NullStmt 0xa7817b0)))))
+  (ReturnStmt 0xa780d28
+    (IntegerLiteral 0xa780d10 'int' 0)))
 {
   LBL_WHILE:
     int ____localvar____0;
-    while (____localvar____0 = 0 + 3)
-        {
-            while (____localvar____0 * 3 > 0)
+  ____label____14:
+    {
+        if (____localvar____0 = 0 + 3) {
+            {
+              ____label____11:
                 {
-                    break;
+                    if (____localvar____0 * 3 > 0) {
+                        {
+                            goto ____label____13;
+                        }
+                      ____label____12:
+                        goto ____label____11;
+                    }
+                  ____label____13:
+                    ;
                 }
-            continue;
+                goto ____label____15;
+            }
+          ____label____15:
+            goto ____label____14;
         }
+      ____label____16:
+        ;
+    }
   LBL_DO:
-    do {
-        int ____localvar____1 = 0;
-        if (____localvar____1)
-            break;
-        if (!____localvar____1)
-            continue;
-    } while (false);
-  LBL_FOR:
-    for (int ____localvar____2 = 1, ____localvar____3; ____localvar____3 = ____localvar____2; ____localvar____2--) {
-        for (int ____localvar____4 = 0; ____localvar____4 != ____localvar____2; ____localvar____4++) {
-            continue;
+  ____label____17:
+    {
+      ____label____18:
+        {
+            int ____localvar____1 = 0;
+            if (____localvar____1)
+                goto ____label____20;
+            if (!____localvar____1)
+                goto ____label____19;
         }
-        break;
+      ____label____19:
+        if (false)
+            goto ____label____17;
+      ____label____20:
+        ;
+    }
+  LBL_FOR:
+  ____label____25:
+    {
+        int ____localvar____2 = 1, ____localvar____3;
+      ____label____26:
+        if (____localvar____3 = ____localvar____2) {
+            {
+              ____label____21:
+                {
+                    int ____localvar____4 = 0;
+                  ____label____22:
+                    if (____localvar____4 != ____localvar____2) {
+                        {
+                            goto ____label____23;
+                        }
+                      ____label____23:
+                        {
+                            ____localvar____4++;
+                            goto ____label____22;
+                        }
+                    }
+                  ____label____24:
+                    ;
+                }
+                goto ____label____28;
+            }
+          ____label____27:
+            {
+                ____localvar____2--;
+                goto ____label____26;
+            }
+        }
+      ____label____28:
+        ;
+    }
+    return 0;
+}
+[DEBUG][alg/SimplePrinter.cpp - line 7] alg started.
+void nullbody() {
+  ____label____0:
+    {
+        if (true) {
+            {
+            }
+          ____label____1:
+            goto ____label____0;
+        }
+      ____label____2:
+        ;
+    }
+  ____label____3:
+    {
+      ____label____4:
+        {
+        }
+      ____label____5:
+        if (true)
+            goto ____label____3;
+      ____label____6:
+        ;
+    }
+  ____label____7:
+    {
+        ;
+      ____label____8:
+        if (true) {
+            {
+            }
+          ____label____9:
+            {
+                goto ____label____8;
+            }
+        }
+      ____label____10:
+        ;
+    }
+}
+
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175635784 -> p 0 )
+(CompoundStmt 0xa77fd48
+  (LabelStmt 0xa780d90 '____label____0'
+    (CompoundStmt 0xa780e68
+      (IfStmt 0xa780e48
+        <<<NULL>>>
+        (CXXBoolLiteralExpr 0xa77fca0 '_Bool' true)
+        (CompoundStmt 0xa780e30
+          (CompoundStmt 0xa77fcb0)
+          (LabelStmt 0xa780dd0 '____label____1'
+            (GotoStmt 0xa780e20 '____label____0':0xa780d60)))
+        <<<NULL>>>)
+      (LabelStmt 0xa780e10 '____label____2'
+        (NullStmt 0xa780e00))))
+  (LabelStmt 0xa780eb0 '____label____3'
+    (CompoundStmt 0xa780fb0
+      (LabelStmt 0xa780ef0 '____label____4'
+        (CompoundStmt 0xa77fcd8))
+      (LabelStmt 0xa780f30 '____label____5'
+        (IfStmt 0xa780f90
+          <<<NULL>>>
+          (CXXBoolLiteralExpr 0xa77fce8 '_Bool' true)
+          (GotoStmt 0xa780f80 '____label____3':0xa780e80)
+          <<<NULL>>>))
+      (LabelStmt 0xa780f70 '____label____6'
+        (NullStmt 0xa780f60))))
+  (LabelStmt 0xa781000 '____label____7'
+    (CompoundStmt 0xa781150
+      (NullStmt 0xa781140)
+      (LabelStmt 0xa781040 '____label____8'
+        (IfStmt 0xa781120
+          <<<NULL>>>
+          (CXXBoolLiteralExpr 0xa7810f8 '_Bool' true)
+          (CompoundStmt 0xa781108
+            (CompoundStmt 0xa77fd10)
+            (LabelStmt 0xa781080 '____label____9'
+              (CompoundStmt 0xa7810e0
+                (GotoStmt 0xa7810d0 '____label____8':0xa781010))))
+          <<<NULL>>>))
+      (LabelStmt 0xa7810c0 '____label____10'
+        (NullStmt 0xa7810b0)))))
+{
+  ____label____0:
+    {
+        if (true) {
+            {
+            }
+          ____label____1:
+            goto ____label____0;
+        }
+      ____label____2:
+        ;
+    }
+  ____label____3:
+    {
+      ____label____4:
+        {
+        }
+      ____label____5:
+        if (true)
+            goto ____label____3;
+      ____label____6:
+        ;
+    }
+  ____label____7:
+    {
+        ;
+      ____label____8:
+        if (true) {
+            {
+            }
+          ____label____9:
+            {
+                goto ____label____8;
+            }
+        }
+      ____label____10:
+        ;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175639952 -> p 175635784 )
+(LabelStmt 0xa780d90 '____label____0'
+  (CompoundStmt 0xa780e68
+    (IfStmt 0xa780e48
+      <<<NULL>>>
+      (CXXBoolLiteralExpr 0xa77fca0 '_Bool' true)
+      (CompoundStmt 0xa780e30
+        (CompoundStmt 0xa77fcb0)
+        (LabelStmt 0xa780dd0 '____label____1'
+          (GotoStmt 0xa780e20 '____label____0':0xa780d60)))
+      <<<NULL>>>)
+    (LabelStmt 0xa780e10 '____label____2'
+      (NullStmt 0xa780e00))))
+____label____0:
+{
+    if (true) {
+        {
+        }
+      ____label____1:
+        goto ____label____0;
+    }
+  ____label____2:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175640168 -> p 175639952 )
+(CompoundStmt 0xa780e68
+  (IfStmt 0xa780e48
+    <<<NULL>>>
+    (CXXBoolLiteralExpr 0xa77fca0 '_Bool' true)
+    (CompoundStmt 0xa780e30
+      (CompoundStmt 0xa77fcb0)
+      (LabelStmt 0xa780dd0 '____label____1'
+        (GotoStmt 0xa780e20 '____label____0':0xa780d60)))
+    <<<NULL>>>)
+  (LabelStmt 0xa780e10 '____label____2'
+    (NullStmt 0xa780e00)))
+{
+    if (true) {
+        {
+        }
+      ____label____1:
+        goto ____label____0;
+    }
+  ____label____2:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175640136 -> p 175640168 )
+(IfStmt 0xa780e48
+  <<<NULL>>>
+  (CXXBoolLiteralExpr 0xa77fca0 '_Bool' true)
+  (CompoundStmt 0xa780e30
+    (CompoundStmt 0xa77fcb0)
+    (LabelStmt 0xa780dd0 '____label____1'
+      (GotoStmt 0xa780e20 '____label____0':0xa780d60)))
+  <<<NULL>>>)
+if (true) {
+    {
+    }
+  ____label____1:
+    goto ____label____0;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXBoolLiteralExpr ( 175635616 -> p 175640136 )
+(CXXBoolLiteralExpr 0xa77fca0 '_Bool' true)
+true;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175640112 -> p 175640136 )
+(CompoundStmt 0xa780e30
+  (CompoundStmt 0xa77fcb0)
+  (LabelStmt 0xa780dd0 '____label____1'
+    (GotoStmt 0xa780e20 '____label____0':0xa780d60)))
+{
+    {
+    }
+  ____label____1:
+    goto ____label____0;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175635632 -> p 175640112 )
+(CompoundStmt 0xa77fcb0)
+{
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640016 -> p 175640112 )
+(LabelStmt 0xa780dd0 '____label____1'
+  (GotoStmt 0xa780e20 '____label____0':0xa780d60))
+____label____1:
+goto ____label____0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175640096 -> p 175640016 )
+(GotoStmt 0xa780e20 '____label____0':0xa780d60)
+goto ____label____0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640080 -> p 175640168 )
+(LabelStmt 0xa780e10 '____label____2'
+  (NullStmt 0xa780e00))
+____label____2:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175640064 -> p 175640080 )
+(NullStmt 0xa780e00)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640240 -> p 175635784 )
+(LabelStmt 0xa780eb0 '____label____3'
+  (CompoundStmt 0xa780fb0
+    (LabelStmt 0xa780ef0 '____label____4'
+      (CompoundStmt 0xa77fcd8))
+    (LabelStmt 0xa780f30 '____label____5'
+      (IfStmt 0xa780f90
+        <<<NULL>>>
+        (CXXBoolLiteralExpr 0xa77fce8 '_Bool' true)
+        (GotoStmt 0xa780f80 '____label____3':0xa780e80)
+        <<<NULL>>>))
+    (LabelStmt 0xa780f70 '____label____6'
+      (NullStmt 0xa780f60))))
+____label____3:
+{
+  ____label____4:
+    {
+    }
+  ____label____5:
+    if (true)
+        goto ____label____3;
+  ____label____6:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175640496 -> p 175640240 )
+(CompoundStmt 0xa780fb0
+  (LabelStmt 0xa780ef0 '____label____4'
+    (CompoundStmt 0xa77fcd8))
+  (LabelStmt 0xa780f30 '____label____5'
+    (IfStmt 0xa780f90
+      <<<NULL>>>
+      (CXXBoolLiteralExpr 0xa77fce8 '_Bool' true)
+      (GotoStmt 0xa780f80 '____label____3':0xa780e80)
+      <<<NULL>>>))
+  (LabelStmt 0xa780f70 '____label____6'
+    (NullStmt 0xa780f60)))
+{
+  ____label____4:
+    {
+    }
+  ____label____5:
+    if (true)
+        goto ____label____3;
+  ____label____6:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640304 -> p 175640496 )
+(LabelStmt 0xa780ef0 '____label____4'
+  (CompoundStmt 0xa77fcd8))
+____label____4:
+{
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175635672 -> p 175640304 )
+(CompoundStmt 0xa77fcd8)
+{
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640368 -> p 175640496 )
+(LabelStmt 0xa780f30 '____label____5'
+  (IfStmt 0xa780f90
+    <<<NULL>>>
+    (CXXBoolLiteralExpr 0xa77fce8 '_Bool' true)
+    (GotoStmt 0xa780f80 '____label____3':0xa780e80)
+    <<<NULL>>>))
+____label____5:
+if (true)
+    goto ____label____3;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175640464 -> p 175640368 )
+(IfStmt 0xa780f90
+  <<<NULL>>>
+  (CXXBoolLiteralExpr 0xa77fce8 '_Bool' true)
+  (GotoStmt 0xa780f80 '____label____3':0xa780e80)
+  <<<NULL>>>)
+if (true)
+    goto ____label____3;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXBoolLiteralExpr ( 175635688 -> p 175640464 )
+(CXXBoolLiteralExpr 0xa77fce8 '_Bool' true)
+true;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175640448 -> p 175640464 )
+(GotoStmt 0xa780f80 '____label____3':0xa780e80)
+goto ____label____3;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640432 -> p 175640496 )
+(LabelStmt 0xa780f70 '____label____6'
+  (NullStmt 0xa780f60))
+____label____6:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175640416 -> p 175640432 )
+(NullStmt 0xa780f60)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640576 -> p 175635784 )
+(LabelStmt 0xa781000 '____label____7'
+  (CompoundStmt 0xa781150
+    (NullStmt 0xa781140)
+    (LabelStmt 0xa781040 '____label____8'
+      (IfStmt 0xa781120
+        <<<NULL>>>
+        (CXXBoolLiteralExpr 0xa7810f8 '_Bool' true)
+        (CompoundStmt 0xa781108
+          (CompoundStmt 0xa77fd10)
+          (LabelStmt 0xa781080 '____label____9'
+            (CompoundStmt 0xa7810e0
+              (GotoStmt 0xa7810d0 '____label____8':0xa781010))))
+        <<<NULL>>>))
+    (LabelStmt 0xa7810c0 '____label____10'
+      (NullStmt 0xa7810b0))))
+____label____7:
+{
+    ;
+  ____label____8:
+    if (true) {
+        {
+        }
+      ____label____9:
+        {
+            goto ____label____8;
+        }
+    }
+  ____label____10:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175640912 -> p 175640576 )
+(CompoundStmt 0xa781150
+  (NullStmt 0xa781140)
+  (LabelStmt 0xa781040 '____label____8'
+    (IfStmt 0xa781120
+      <<<NULL>>>
+      (CXXBoolLiteralExpr 0xa7810f8 '_Bool' true)
+      (CompoundStmt 0xa781108
+        (CompoundStmt 0xa77fd10)
+        (LabelStmt 0xa781080 '____label____9'
+          (CompoundStmt 0xa7810e0
+            (GotoStmt 0xa7810d0 '____label____8':0xa781010))))
+      <<<NULL>>>))
+  (LabelStmt 0xa7810c0 '____label____10'
+    (NullStmt 0xa7810b0)))
+{
+    ;
+  ____label____8:
+    if (true) {
+        {
+        }
+      ____label____9:
+        {
+            goto ____label____8;
+        }
+    }
+  ____label____10:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175640896 -> p 175640912 )
+(NullStmt 0xa781140)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640640 -> p 175640912 )
+(LabelStmt 0xa781040 '____label____8'
+  (IfStmt 0xa781120
+    <<<NULL>>>
+    (CXXBoolLiteralExpr 0xa7810f8 '_Bool' true)
+    (CompoundStmt 0xa781108
+      (CompoundStmt 0xa77fd10)
+      (LabelStmt 0xa781080 '____label____9'
+        (CompoundStmt 0xa7810e0
+          (GotoStmt 0xa7810d0 '____label____8':0xa781010))))
+    <<<NULL>>>))
+____label____8:
+if (true) {
+    {
+    }
+  ____label____9:
+    {
+        goto ____label____8;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175640864 -> p 175640640 )
+(IfStmt 0xa781120
+  <<<NULL>>>
+  (CXXBoolLiteralExpr 0xa7810f8 '_Bool' true)
+  (CompoundStmt 0xa781108
+    (CompoundStmt 0xa77fd10)
+    (LabelStmt 0xa781080 '____label____9'
+      (CompoundStmt 0xa7810e0
+        (GotoStmt 0xa7810d0 '____label____8':0xa781010))))
+  <<<NULL>>>)
+if (true) {
+    {
+    }
+  ____label____9:
+    {
+        goto ____label____8;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXBoolLiteralExpr ( 175640824 -> p 175640864 )
+(CXXBoolLiteralExpr 0xa7810f8 '_Bool' true)
+true;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175640840 -> p 175640864 )
+(CompoundStmt 0xa781108
+  (CompoundStmt 0xa77fd10)
+  (LabelStmt 0xa781080 '____label____9'
+    (CompoundStmt 0xa7810e0
+      (GotoStmt 0xa7810d0 '____label____8':0xa781010))))
+{
+    {
+    }
+  ____label____9:
+    {
+        goto ____label____8;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175635728 -> p 175640840 )
+(CompoundStmt 0xa77fd10)
+{
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640704 -> p 175640840 )
+(LabelStmt 0xa781080 '____label____9'
+  (CompoundStmt 0xa7810e0
+    (GotoStmt 0xa7810d0 '____label____8':0xa781010)))
+____label____9:
+{
+    goto ____label____8;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175640800 -> p 175640704 )
+(CompoundStmt 0xa7810e0
+  (GotoStmt 0xa7810d0 '____label____8':0xa781010))
+{
+    goto ____label____8;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175640784 -> p 175640800 )
+(GotoStmt 0xa7810d0 '____label____8':0xa781010)
+goto ____label____8;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640768 -> p 175640912 )
+(LabelStmt 0xa7810c0 '____label____10'
+  (NullStmt 0xa7810b0))
+____label____10:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175640752 -> p 175640768 )
+(NullStmt 0xa7810b0)
+;
+;
+[0;1;33m
+ [B13 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B12[0m
+[0;1;33m
+ [B1]
+[0m  ____label____10:
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B2]
+[0m  ____label____9:
+[0;32m   T: goto ____label____8;
+
+[0m[0;34m   Preds [0m(1):[0;34m B3[0m
+[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B3]
+[0m  ____label____8:
+   1: true
+[0;32m   T: if [B3.1]
+[0m[0;34m   Preds [0m(2):[0;34m B4 B2[0m
+[0;35m   Succs [0m(2):[0;35m B2 NULL[0m
+[0;1;33m
+ [B4]
+[0m  ____label____7:
+[0;34m   Preds [0m(1):[0;34m B5[0m
+[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B5]
+[0m  ____label____6:
+[0;35m   Succs [0m(1):[0;35m B4[0m
+[0;1;33m
+ [B6]
+[0m[0;32m   T: goto ____label____3;
+
+[0m[0;34m   Preds [0m(1):[0;34m B7[0m
+[0;35m   Succs [0m(1):[0;35m B9[0m
+[0;1;33m
+ [B7]
+[0m  ____label____5:
+   1: true
+[0;32m   T: if [B7.1]
+[0m[0;34m   Preds [0m(1):[0;34m B8[0m
+[0;35m   Succs [0m(2):[0;35m B6 NULL[0m
+[0;1;33m
+ [B8]
+[0m  ____label____4:
+[0;34m   Preds [0m(1):[0;34m B9[0m
+[0;35m   Succs [0m(1):[0;35m B7[0m
+[0;1;33m
+ [B9]
+[0m  ____label____3:
+[0;34m   Preds [0m(2):[0;34m B10 B6[0m
+[0;35m   Succs [0m(1):[0;35m B8[0m
+[0;1;33m
+ [B10]
+[0m  ____label____2:
+[0;35m   Succs [0m(1):[0;35m B9[0m
+[0;1;33m
+ [B11]
+[0m  ____label____1:
+[0;32m   T: goto ____label____0;
+
+[0m[0;34m   Preds [0m(1):[0;34m B12[0m
+[0;35m   Succs [0m(1):[0;35m B12[0m
+[0;1;33m
+ [B12]
+[0m  ____label____0:
+   1: true
+[0;32m   T: if [B12.1]
+[0m[0;34m   Preds [0m(2):[0;34m B11 B13[0m
+[0;35m   Succs [0m(2):[0;35m B11 NULL[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_rMjEyE/CFG.dot'...  done. 
+int main() {
+  LBL_WHILE:
+    int ____localvar____0;
+  ____label____14:
+    {
+        if (____localvar____0 = 0 + 3) {
+            {
+              ____label____11:
+                {
+                    if (____localvar____0 * 3 > 0) {
+                        {
+                            goto ____label____13;
+                        }
+                      ____label____12:
+                        goto ____label____11;
+                    }
+                  ____label____13:
+                    ;
+                }
+                goto ____label____15;
+            }
+          ____label____15:
+            goto ____label____14;
+        }
+      ____label____16:
+        ;
+    }
+  LBL_DO:
+  ____label____17:
+    {
+      ____label____18:
+        {
+            int ____localvar____1 = 0;
+            if (____localvar____1)
+                goto ____label____20;
+            if (!____localvar____1)
+                goto ____label____19;
+        }
+      ____label____19:
+        if (false)
+            goto ____label____17;
+      ____label____20:
+        ;
+    }
+  LBL_FOR:
+  ____label____25:
+    {
+        int ____localvar____2 = 1, ____localvar____3;
+      ____label____26:
+        if (____localvar____3 = ____localvar____2) {
+            {
+              ____label____21:
+                {
+                    int ____localvar____4 = 0;
+                  ____label____22:
+                    if (____localvar____4 != ____localvar____2) {
+                        {
+                            goto ____label____23;
+                        }
+                      ____label____23:
+                        {
+                            ____localvar____4++;
+                            goto ____label____22;
+                        }
+                    }
+                  ____label____24:
+                    ;
+                }
+                goto ____label____28;
+            }
+          ____label____27:
+            {
+                ____localvar____2--;
+                goto ____label____26;
+            }
+        }
+      ____label____28:
+        ;
+    }
+    return 0;
+}
+
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175639864 -> p 0 )
+(CompoundStmt 0xa780d38
+  (LabelStmt 0xa77fe50 'LBL_WHILE'
+    (DeclStmt 0xa77fe20
+      0xa77fdf0 "int ____localvar____0"))
+  (LabelStmt 0xa7812d0 '____label____14'
+    (CompoundStmt 0xa7813b8
+      (IfStmt 0xa781398
+        <<<NULL>>>
+        (ImplicitCastExpr 0xa77fee8 '_Bool' <IntegralToBoolean>
+          (ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+            (BinaryOperator 0xa77fec0 'int' lvalue '='
+              (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+              (BinaryOperator 0xa77fea8 'int' '+'
+                (IntegerLiteral 0xa77fe78 'int' 0)
+                (IntegerLiteral 0xa77fe90 'int' 3)))))
+        (CompoundStmt 0xa781380
+          (CompoundStmt 0xa77ffc0
+            (LabelStmt 0xa7811a0 '____label____11'
+              (CompoundStmt 0xa781288
+                (IfStmt 0xa781268
+                  <<<NULL>>>
+                  (BinaryOperator 0xa77ff68 '_Bool' '>'
+                    (BinaryOperator 0xa77ff38 'int' '*'
+                      (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+                        (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+                      (IntegerLiteral 0xa77ff10 'int' 3))
+                    (IntegerLiteral 0xa77ff50 'int' 0))
+                  (CompoundStmt 0xa781250
+                    (CompoundStmt 0xa77ff88
+                      (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+                    (LabelStmt 0xa7811e0 '____label____12'
+                      (GotoStmt 0xa781240 '____label____11':0xa781170)))
+                  <<<NULL>>>)
+                (LabelStmt 0xa781220 '____label____13'
+                  (NullStmt 0xa781210))))
+            (GotoStmt 0xa781360 '____label____15':0xa7812e0))
+          (LabelStmt 0xa781310 '____label____15'
+            (GotoStmt 0xa781370 '____label____14':0xa7812a0)))
+        <<<NULL>>>)
+      (LabelStmt 0xa781350 '____label____16'
+        (NullStmt 0xa781340))))
+  (LabelStmt 0xa7809d0 'LBL_DO'
+    (LabelStmt 0xa781400 '____label____17'
+      (CompoundStmt 0xa781520
+        (LabelStmt 0xa781440 '____label____18'
+          (CompoundStmt 0xa780960
+            (DeclStmt 0xa780048
+              0xa780000 "int ____localvar____1 =
+                (IntegerLiteral 0xa780030 'int' 0)")
+            (IfStmt 0xa7808c8
+              <<<NULL>>>
+              (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+                (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+              (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+              <<<NULL>>>)
+            (IfStmt 0xa780940
+              <<<NULL>>>
+              (UnaryOperator 0xa780920 '_Bool' prefix '!'
+                (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+                  (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+                    (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+              (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+              <<<NULL>>>)))
+        (LabelStmt 0xa781480 '____label____19'
+          (IfStmt 0xa781500
+            <<<NULL>>>
+            (CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+            (GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+            <<<NULL>>>))
+        (LabelStmt 0xa7814c0 '____label____20'
+          (NullStmt 0xa7814b0)))))
+  (LabelStmt 0xa780d00 'LBL_FOR'
+    (LabelStmt 0xa781700 '____label____25'
+      (CompoundStmt 0xa781840
+        (DeclStmt 0xa780a90
+          0xa7809f0 "int ____localvar____2 =
+            (IntegerLiteral 0xa780a20 'int' 1)"
+          0xa780a50 "int ____localvar____3")
+        (LabelStmt 0xa781740 '____label____26'
+          (IfStmt 0xa781820
+            <<<NULL>>>
+            (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+              (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+                (BinaryOperator 0xa780ae0 'int' lvalue '='
+                  (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+                  (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+                    (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+            (CompoundStmt 0xa781808
+              (CompoundStmt 0xa780ca0
+                (LabelStmt 0xa781570 '____label____21'
+                  (CompoundStmt 0xa7816b0
+                    (DeclStmt 0xa780ba8
+                      0xa780b60 "int ____localvar____4 =
+                        (IntegerLiteral 0xa780b90 'int' 0)")
+                    (LabelStmt 0xa7815b0 '____label____22'
+                      (IfStmt 0xa781690
+                        <<<NULL>>>
+                        (BinaryOperator 0xa780c08 '_Bool' '!='
+                          (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                            (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                          (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                            (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+                        (CompoundStmt 0xa781678
+                          (CompoundStmt 0xa780c58
+                            (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+                          (LabelStmt 0xa7815f0 '____label____23'
+                            (CompoundStmt 0xa781660
+                              (UnaryOperator 0xa780c38 'int' postfix '++'
+                                (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                              (GotoStmt 0xa781650 '____label____22':0xa781580))))
+                        <<<NULL>>>))
+                    (LabelStmt 0xa781630 '____label____24'
+                      (NullStmt 0xa781620))))
+                (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+              (LabelStmt 0xa781780 '____label____27'
+                (CompoundStmt 0xa7817f0
+                  (UnaryOperator 0xa780b30 'int' postfix '--'
+                    (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+                  (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+            <<<NULL>>>))
+        (LabelStmt 0xa7817c0 '____label____28'
+          (NullStmt 0xa7817b0)))))
+  (ReturnStmt 0xa780d28
+    (IntegerLiteral 0xa780d10 'int' 0)))
+{
+  LBL_WHILE:
+    int ____localvar____0;
+  ____label____14:
+    {
+        if (____localvar____0 = 0 + 3) {
+            {
+              ____label____11:
+                {
+                    if (____localvar____0 * 3 > 0) {
+                        {
+                            goto ____label____13;
+                        }
+                      ____label____12:
+                        goto ____label____11;
+                    }
+                  ____label____13:
+                    ;
+                }
+                goto ____label____15;
+            }
+          ____label____15:
+            goto ____label____14;
+        }
+      ____label____16:
+        ;
+    }
+  LBL_DO:
+  ____label____17:
+    {
+      ____label____18:
+        {
+            int ____localvar____1 = 0;
+            if (____localvar____1)
+                goto ____label____20;
+            if (!____localvar____1)
+                goto ____label____19;
+        }
+      ____label____19:
+        if (false)
+            goto ____label____17;
+      ____label____20:
+        ;
+    }
+  LBL_FOR:
+  ____label____25:
+    {
+        int ____localvar____2 = 1, ____localvar____3;
+      ____label____26:
+        if (____localvar____3 = ____localvar____2) {
+            {
+              ____label____21:
+                {
+                    int ____localvar____4 = 0;
+                  ____label____22:
+                    if (____localvar____4 != ____localvar____2) {
+                        {
+                            goto ____label____23;
+                        }
+                      ____label____23:
+                        {
+                            ____localvar____4++;
+                            goto ____label____22;
+                        }
+                    }
+                  ____label____24:
+                    ;
+                }
+                goto ____label____28;
+            }
+          ____label____27:
+            {
+                ____localvar____2--;
+                goto ____label____26;
+            }
+        }
+      ____label____28:
+        ;
     }
     return 0;
 }
 ;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt LabelStmt ( a9dccb0 -> p a9ddb88 )
-(LabelStmt 0xa9dccb0 'LBL_WHILE'
-  (DeclStmt 0xa9dcc80
-    0xa9dcc50 "int ____localvar____0"))
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175636048 -> p 175639864 )
+(LabelStmt 0xa77fe50 'LBL_WHILE'
+  (DeclStmt 0xa77fe20
+    0xa77fdf0 "int ____localvar____0"))
 LBL_WHILE:
 int ____localvar____0;
 ;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 26] Stmt DeclStmt ( a9dcc80 -> p a9dccb0 )
-(DeclStmt 0xa9dcc80
-  0xa9dcc50 "int ____localvar____0")
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 175636000 -> p 175636048 )
+(DeclStmt 0xa77fe20
+  0xa77fdf0 "int ____localvar____0")
 int ____localvar____0;
 ;
-[DEBUG][alg/FlattenCFG/MoveLocalDeclToTop.cpp - line 133] added to beginning decl
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641296 -> p 175639864 )
+(LabelStmt 0xa7812d0 '____label____14'
+  (CompoundStmt 0xa7813b8
+    (IfStmt 0xa781398
+      <<<NULL>>>
+      (ImplicitCastExpr 0xa77fee8 '_Bool' <IntegralToBoolean>
+        (ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+          (BinaryOperator 0xa77fec0 'int' lvalue '='
+            (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+            (BinaryOperator 0xa77fea8 'int' '+'
+              (IntegerLiteral 0xa77fe78 'int' 0)
+              (IntegerLiteral 0xa77fe90 'int' 3)))))
+      (CompoundStmt 0xa781380
+        (CompoundStmt 0xa77ffc0
+          (LabelStmt 0xa7811a0 '____label____11'
+            (CompoundStmt 0xa781288
+              (IfStmt 0xa781268
+                <<<NULL>>>
+                (BinaryOperator 0xa77ff68 '_Bool' '>'
+                  (BinaryOperator 0xa77ff38 'int' '*'
+                    (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+                      (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+                    (IntegerLiteral 0xa77ff10 'int' 3))
+                  (IntegerLiteral 0xa77ff50 'int' 0))
+                (CompoundStmt 0xa781250
+                  (CompoundStmt 0xa77ff88
+                    (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+                  (LabelStmt 0xa7811e0 '____label____12'
+                    (GotoStmt 0xa781240 '____label____11':0xa781170)))
+                <<<NULL>>>)
+              (LabelStmt 0xa781220 '____label____13'
+                (NullStmt 0xa781210))))
+          (GotoStmt 0xa781360 '____label____15':0xa7812e0))
+        (LabelStmt 0xa781310 '____label____15'
+          (GotoStmt 0xa781370 '____label____14':0xa7812a0)))
+      <<<NULL>>>)
+    (LabelStmt 0xa781350 '____label____16'
+      (NullStmt 0xa781340))))
+____label____14:
+{
+    if (____localvar____0 = 0 + 3) {
+        {
+          ____label____11:
+            {
+                if (____localvar____0 * 3 > 0) {
+                    {
+                        goto ____label____13;
+                    }
+                  ____label____12:
+                    goto ____label____11;
+                }
+              ____label____13:
+                ;
+            }
+            goto ____label____15;
+        }
+      ____label____15:
+        goto ____label____14;
+    }
+  ____label____16:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175641528 -> p 175641296 )
+(CompoundStmt 0xa7813b8
+  (IfStmt 0xa781398
+    <<<NULL>>>
+    (ImplicitCastExpr 0xa77fee8 '_Bool' <IntegralToBoolean>
+      (ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+        (BinaryOperator 0xa77fec0 'int' lvalue '='
+          (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+          (BinaryOperator 0xa77fea8 'int' '+'
+            (IntegerLiteral 0xa77fe78 'int' 0)
+            (IntegerLiteral 0xa77fe90 'int' 3)))))
+    (CompoundStmt 0xa781380
+      (CompoundStmt 0xa77ffc0
+        (LabelStmt 0xa7811a0 '____label____11'
+          (CompoundStmt 0xa781288
+            (IfStmt 0xa781268
+              <<<NULL>>>
+              (BinaryOperator 0xa77ff68 '_Bool' '>'
+                (BinaryOperator 0xa77ff38 'int' '*'
+                  (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+                    (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+                  (IntegerLiteral 0xa77ff10 'int' 3))
+                (IntegerLiteral 0xa77ff50 'int' 0))
+              (CompoundStmt 0xa781250
+                (CompoundStmt 0xa77ff88
+                  (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+                (LabelStmt 0xa7811e0 '____label____12'
+                  (GotoStmt 0xa781240 '____label____11':0xa781170)))
+              <<<NULL>>>)
+            (LabelStmt 0xa781220 '____label____13'
+              (NullStmt 0xa781210))))
+        (GotoStmt 0xa781360 '____label____15':0xa7812e0))
+      (LabelStmt 0xa781310 '____label____15'
+        (GotoStmt 0xa781370 '____label____14':0xa7812a0)))
+    <<<NULL>>>)
+  (LabelStmt 0xa781350 '____label____16'
+    (NullStmt 0xa781340)))
+{
+    if (____localvar____0 = 0 + 3) {
+        {
+          ____label____11:
+            {
+                if (____localvar____0 * 3 > 0) {
+                    {
+                        goto ____label____13;
+                    }
+                  ____label____12:
+                    goto ____label____11;
+                }
+              ____label____13:
+                ;
+            }
+            goto ____label____15;
+        }
+      ____label____15:
+        goto ____label____14;
+    }
+  ____label____16:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175641496 -> p 175641528 )
+(IfStmt 0xa781398
+  <<<NULL>>>
+  (ImplicitCastExpr 0xa77fee8 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+      (BinaryOperator 0xa77fec0 'int' lvalue '='
+        (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+        (BinaryOperator 0xa77fea8 'int' '+'
+          (IntegerLiteral 0xa77fe78 'int' 0)
+          (IntegerLiteral 0xa77fe90 'int' 3)))))
+  (CompoundStmt 0xa781380
+    (CompoundStmt 0xa77ffc0
+      (LabelStmt 0xa7811a0 '____label____11'
+        (CompoundStmt 0xa781288
+          (IfStmt 0xa781268
+            <<<NULL>>>
+            (BinaryOperator 0xa77ff68 '_Bool' '>'
+              (BinaryOperator 0xa77ff38 'int' '*'
+                (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+                (IntegerLiteral 0xa77ff10 'int' 3))
+              (IntegerLiteral 0xa77ff50 'int' 0))
+            (CompoundStmt 0xa781250
+              (CompoundStmt 0xa77ff88
+                (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+              (LabelStmt 0xa7811e0 '____label____12'
+                (GotoStmt 0xa781240 '____label____11':0xa781170)))
+            <<<NULL>>>)
+          (LabelStmt 0xa781220 '____label____13'
+            (NullStmt 0xa781210))))
+      (GotoStmt 0xa781360 '____label____15':0xa7812e0))
+    (LabelStmt 0xa781310 '____label____15'
+      (GotoStmt 0xa781370 '____label____14':0xa7812a0)))
+  <<<NULL>>>)
+if (____localvar____0 = 0 + 3) {
+    {
+      ____label____11:
+        {
+            if (____localvar____0 * 3 > 0) {
+                {
+                    goto ____label____13;
+                }
+              ____label____12:
+                goto ____label____11;
+            }
+          ____label____13:
+            ;
+        }
+        goto ____label____15;
+    }
+  ____label____15:
+    goto ____label____14;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175636200 -> p 175641496 )
+(ImplicitCastExpr 0xa77fee8 '_Bool' <IntegralToBoolean>
+  (ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+    (BinaryOperator 0xa77fec0 'int' lvalue '='
+      (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+      (BinaryOperator 0xa77fea8 'int' '+'
+        (IntegerLiteral 0xa77fe78 'int' 0)
+        (IntegerLiteral 0xa77fe90 'int' 3)))))
+____localvar____0 = 0 + 3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175636184 -> p 175636200 )
+(ImplicitCastExpr 0xa77fed8 'int' <LValueToRValue>
+  (BinaryOperator 0xa77fec0 'int' lvalue '='
+    (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+    (BinaryOperator 0xa77fea8 'int' '+'
+      (IntegerLiteral 0xa77fe78 'int' 0)
+      (IntegerLiteral 0xa77fe90 'int' 3))))
+____localvar____0 = 0 + 3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 175636160 -> p 175636184 )
+(BinaryOperator 0xa77fec0 'int' lvalue '='
+  (DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+  (BinaryOperator 0xa77fea8 'int' '+'
+    (IntegerLiteral 0xa77fe78 'int' 0)
+    (IntegerLiteral 0xa77fe90 'int' 3)))
+____localvar____0 = 0 + 3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175636064 -> p 175636160 )
+(DeclRefExpr 0xa77fe60 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+____localvar____0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 175636136 -> p 175636160 )
+(BinaryOperator 0xa77fea8 'int' '+'
+  (IntegerLiteral 0xa77fe78 'int' 0)
+  (IntegerLiteral 0xa77fe90 'int' 3))
+0 + 3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 175636088 -> p 175636136 )
+(IntegerLiteral 0xa77fe78 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 175636112 -> p 175636136 )
+(IntegerLiteral 0xa77fe90 'int' 3)
+3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175641472 -> p 175641496 )
+(CompoundStmt 0xa781380
+  (CompoundStmt 0xa77ffc0
+    (LabelStmt 0xa7811a0 '____label____11'
+      (CompoundStmt 0xa781288
+        (IfStmt 0xa781268
+          <<<NULL>>>
+          (BinaryOperator 0xa77ff68 '_Bool' '>'
+            (BinaryOperator 0xa77ff38 'int' '*'
+              (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+                (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+              (IntegerLiteral 0xa77ff10 'int' 3))
+            (IntegerLiteral 0xa77ff50 'int' 0))
+          (CompoundStmt 0xa781250
+            (CompoundStmt 0xa77ff88
+              (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+            (LabelStmt 0xa7811e0 '____label____12'
+              (GotoStmt 0xa781240 '____label____11':0xa781170)))
+          <<<NULL>>>)
+        (LabelStmt 0xa781220 '____label____13'
+          (NullStmt 0xa781210))))
+    (GotoStmt 0xa781360 '____label____15':0xa7812e0))
+  (LabelStmt 0xa781310 '____label____15'
+    (GotoStmt 0xa781370 '____label____14':0xa7812a0)))
+{
+    {
+      ____label____11:
+        {
+            if (____localvar____0 * 3 > 0) {
+                {
+                    goto ____label____13;
+                }
+              ____label____12:
+                goto ____label____11;
+            }
+          ____label____13:
+            ;
+        }
+        goto ____label____15;
+    }
+  ____label____15:
+    goto ____label____14;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175636416 -> p 175641472 )
+(CompoundStmt 0xa77ffc0
+  (LabelStmt 0xa7811a0 '____label____11'
+    (CompoundStmt 0xa781288
+      (IfStmt 0xa781268
+        <<<NULL>>>
+        (BinaryOperator 0xa77ff68 '_Bool' '>'
+          (BinaryOperator 0xa77ff38 'int' '*'
+            (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+              (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+            (IntegerLiteral 0xa77ff10 'int' 3))
+          (IntegerLiteral 0xa77ff50 'int' 0))
+        (CompoundStmt 0xa781250
+          (CompoundStmt 0xa77ff88
+            (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+          (LabelStmt 0xa7811e0 '____label____12'
+            (GotoStmt 0xa781240 '____label____11':0xa781170)))
+        <<<NULL>>>)
+      (LabelStmt 0xa781220 '____label____13'
+        (NullStmt 0xa781210))))
+  (GotoStmt 0xa781360 '____label____15':0xa7812e0))
+{
+  ____label____11:
+    {
+        if (____localvar____0 * 3 > 0) {
+            {
+                goto ____label____13;
+            }
+          ____label____12:
+            goto ____label____11;
+        }
+      ____label____13:
+        ;
+    }
+    goto ____label____15;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175640992 -> p 175636416 )
+(LabelStmt 0xa7811a0 '____label____11'
+  (CompoundStmt 0xa781288
+    (IfStmt 0xa781268
+      <<<NULL>>>
+      (BinaryOperator 0xa77ff68 '_Bool' '>'
+        (BinaryOperator 0xa77ff38 'int' '*'
+          (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+            (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+          (IntegerLiteral 0xa77ff10 'int' 3))
+        (IntegerLiteral 0xa77ff50 'int' 0))
+      (CompoundStmt 0xa781250
+        (CompoundStmt 0xa77ff88
+          (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+        (LabelStmt 0xa7811e0 '____label____12'
+          (GotoStmt 0xa781240 '____label____11':0xa781170)))
+      <<<NULL>>>)
+    (LabelStmt 0xa781220 '____label____13'
+      (NullStmt 0xa781210))))
+____label____11:
+{
+    if (____localvar____0 * 3 > 0) {
+        {
+            goto ____label____13;
+        }
+      ____label____12:
+        goto ____label____11;
+    }
+  ____label____13:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175641224 -> p 175640992 )
+(CompoundStmt 0xa781288
+  (IfStmt 0xa781268
+    <<<NULL>>>
+    (BinaryOperator 0xa77ff68 '_Bool' '>'
+      (BinaryOperator 0xa77ff38 'int' '*'
+        (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+          (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+        (IntegerLiteral 0xa77ff10 'int' 3))
+      (IntegerLiteral 0xa77ff50 'int' 0))
+    (CompoundStmt 0xa781250
+      (CompoundStmt 0xa77ff88
+        (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+      (LabelStmt 0xa7811e0 '____label____12'
+        (GotoStmt 0xa781240 '____label____11':0xa781170)))
+    <<<NULL>>>)
+  (LabelStmt 0xa781220 '____label____13'
+    (NullStmt 0xa781210)))
+{
+    if (____localvar____0 * 3 > 0) {
+        {
+            goto ____label____13;
+        }
+      ____label____12:
+        goto ____label____11;
+    }
+  ____label____13:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175641192 -> p 175641224 )
+(IfStmt 0xa781268
+  <<<NULL>>>
+  (BinaryOperator 0xa77ff68 '_Bool' '>'
+    (BinaryOperator 0xa77ff38 'int' '*'
+      (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+        (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+      (IntegerLiteral 0xa77ff10 'int' 3))
+    (IntegerLiteral 0xa77ff50 'int' 0))
+  (CompoundStmt 0xa781250
+    (CompoundStmt 0xa77ff88
+      (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+    (LabelStmt 0xa7811e0 '____label____12'
+      (GotoStmt 0xa781240 '____label____11':0xa781170)))
+  <<<NULL>>>)
+if (____localvar____0 * 3 > 0) {
+    {
+        goto ____label____13;
+    }
+  ____label____12:
+    goto ____label____11;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 175636328 -> p 175641192 )
+(BinaryOperator 0xa77ff68 '_Bool' '>'
+  (BinaryOperator 0xa77ff38 'int' '*'
+    (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+      (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+    (IntegerLiteral 0xa77ff10 'int' 3))
+  (IntegerLiteral 0xa77ff50 'int' 0))
+____localvar____0 * 3 > 0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 175636280 -> p 175636328 )
+(BinaryOperator 0xa77ff38 'int' '*'
+  (ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+    (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+  (IntegerLiteral 0xa77ff10 'int' 3))
+____localvar____0 * 3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175636264 -> p 175636280 )
+(ImplicitCastExpr 0xa77ff28 'int' <LValueToRValue>
+  (DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int'))
+____localvar____0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175636212 -> p 175636264 )
+(DeclRefExpr 0xa77fef4 'int' lvalue Var 0xa77fdf0 '____localvar____0' 'int')
+____localvar____0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 175636240 -> p 175636280 )
+(IntegerLiteral 0xa77ff10 'int' 3)
+3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 175636304 -> p 175636328 )
+(IntegerLiteral 0xa77ff50 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175641168 -> p 175641192 )
+(CompoundStmt 0xa781250
+  (CompoundStmt 0xa77ff88
+    (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+  (LabelStmt 0xa7811e0 '____label____12'
+    (GotoStmt 0xa781240 '____label____11':0xa781170)))
+{
+    {
+        goto ____label____13;
+    }
+  ____label____12:
+    goto ____label____11;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175636360 -> p 175641168 )
+(CompoundStmt 0xa77ff88
+  (GotoStmt 0xa781230 '____label____13':0xa7811f0))
+{
+    goto ____label____13;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175641136 -> p 175636360 )
+(GotoStmt 0xa781230 '____label____13':0xa7811f0)
+goto ____label____13;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641056 -> p 175641168 )
+(LabelStmt 0xa7811e0 '____label____12'
+  (GotoStmt 0xa781240 '____label____11':0xa781170))
+____label____12:
+goto ____label____11;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175641152 -> p 175641056 )
+(GotoStmt 0xa781240 '____label____11':0xa781170)
+goto ____label____11;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641120 -> p 175641224 )
+(LabelStmt 0xa781220 '____label____13'
+  (NullStmt 0xa781210))
+____label____13:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175641104 -> p 175641120 )
+(NullStmt 0xa781210)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175641440 -> p 175636416 )
+(GotoStmt 0xa781360 '____label____15':0xa7812e0)
+goto ____label____15;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641360 -> p 175641472 )
+(LabelStmt 0xa781310 '____label____15'
+  (GotoStmt 0xa781370 '____label____14':0xa7812a0))
+____label____15:
+goto ____label____14;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175641456 -> p 175641360 )
+(GotoStmt 0xa781370 '____label____14':0xa7812a0)
+goto ____label____14;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641424 -> p 175641528 )
+(LabelStmt 0xa781350 '____label____16'
+  (NullStmt 0xa781340))
+____label____16:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175641408 -> p 175641424 )
+(NullStmt 0xa781340)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175638992 -> p 175639864 )
+(LabelStmt 0xa7809d0 'LBL_DO'
+  (LabelStmt 0xa781400 '____label____17'
+    (CompoundStmt 0xa781520
+      (LabelStmt 0xa781440 '____label____18'
+        (CompoundStmt 0xa780960
+          (DeclStmt 0xa780048
+            0xa780000 "int ____localvar____1 =
+              (IntegerLiteral 0xa780030 'int' 0)")
+          (IfStmt 0xa7808c8
+            <<<NULL>>>
+            (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+              (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+                (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+            (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+            <<<NULL>>>)
+          (IfStmt 0xa780940
+            <<<NULL>>>
+            (UnaryOperator 0xa780920 '_Bool' prefix '!'
+              (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+                (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+            (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+            <<<NULL>>>)))
+      (LabelStmt 0xa781480 '____label____19'
+        (IfStmt 0xa781500
+          <<<NULL>>>
+          (CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+          (GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+          <<<NULL>>>))
+      (LabelStmt 0xa7814c0 '____label____20'
+        (NullStmt 0xa7814b0)))))
+LBL_DO:
+____label____17:
+{
+  ____label____18:
+    {
+        int ____localvar____1 = 0;
+        if (____localvar____1)
+            goto ____label____20;
+        if (!____localvar____1)
+            goto ____label____19;
+    }
+  ____label____19:
+    if (false)
+        goto ____label____17;
+  ____label____20:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641600 -> p 175638992 )
+(LabelStmt 0xa781400 '____label____17'
+  (CompoundStmt 0xa781520
+    (LabelStmt 0xa781440 '____label____18'
+      (CompoundStmt 0xa780960
+        (DeclStmt 0xa780048
+          0xa780000 "int ____localvar____1 =
+            (IntegerLiteral 0xa780030 'int' 0)")
+        (IfStmt 0xa7808c8
+          <<<NULL>>>
+          (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+            (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+              (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+          (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+          <<<NULL>>>)
+        (IfStmt 0xa780940
+          <<<NULL>>>
+          (UnaryOperator 0xa780920 '_Bool' prefix '!'
+            (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+              (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+                (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+          (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+          <<<NULL>>>)))
+    (LabelStmt 0xa781480 '____label____19'
+      (IfStmt 0xa781500
+        <<<NULL>>>
+        (CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+        (GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+        <<<NULL>>>))
+    (LabelStmt 0xa7814c0 '____label____20'
+      (NullStmt 0xa7814b0))))
+____label____17:
+{
+  ____label____18:
+    {
+        int ____localvar____1 = 0;
+        if (____localvar____1)
+            goto ____label____20;
+        if (!____localvar____1)
+            goto ____label____19;
+    }
+  ____label____19:
+    if (false)
+        goto ____label____17;
+  ____label____20:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175641888 -> p 175641600 )
+(CompoundStmt 0xa781520
+  (LabelStmt 0xa781440 '____label____18'
+    (CompoundStmt 0xa780960
+      (DeclStmt 0xa780048
+        0xa780000 "int ____localvar____1 =
+          (IntegerLiteral 0xa780030 'int' 0)")
+      (IfStmt 0xa7808c8
+        <<<NULL>>>
+        (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+          (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+            (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+        (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+        <<<NULL>>>)
+      (IfStmt 0xa780940
+        <<<NULL>>>
+        (UnaryOperator 0xa780920 '_Bool' prefix '!'
+          (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+            (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+              (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+        (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+        <<<NULL>>>)))
+  (LabelStmt 0xa781480 '____label____19'
+    (IfStmt 0xa781500
+      <<<NULL>>>
+      (CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+      (GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+      <<<NULL>>>))
+  (LabelStmt 0xa7814c0 '____label____20'
+    (NullStmt 0xa7814b0)))
+{
+  ____label____18:
+    {
+        int ____localvar____1 = 0;
+        if (____localvar____1)
+            goto ____label____20;
+        if (!____localvar____1)
+            goto ____label____19;
+    }
+  ____label____19:
+    if (false)
+        goto ____label____17;
+  ____label____20:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641664 -> p 175641888 )
+(LabelStmt 0xa781440 '____label____18'
+  (CompoundStmt 0xa780960
+    (DeclStmt 0xa780048
+      0xa780000 "int ____localvar____1 =
+        (IntegerLiteral 0xa780030 'int' 0)")
+    (IfStmt 0xa7808c8
+      <<<NULL>>>
+      (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+        (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+          (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+      (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+      <<<NULL>>>)
+    (IfStmt 0xa780940
+      <<<NULL>>>
+      (UnaryOperator 0xa780920 '_Bool' prefix '!'
+        (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+          (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+            (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+      (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+      <<<NULL>>>)))
+____label____18:
+{
+    int ____localvar____1 = 0;
+    if (____localvar____1)
+        goto ____label____20;
+    if (!____localvar____1)
+        goto ____label____19;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175638880 -> p 175641664 )
+(CompoundStmt 0xa780960
+  (DeclStmt 0xa780048
+    0xa780000 "int ____localvar____1 =
+      (IntegerLiteral 0xa780030 'int' 0)")
+  (IfStmt 0xa7808c8
+    <<<NULL>>>
+    (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+      (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+        (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+    (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+    <<<NULL>>>)
+  (IfStmt 0xa780940
+    <<<NULL>>>
+    (UnaryOperator 0xa780920 '_Bool' prefix '!'
+      (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+        (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+          (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+    (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+    <<<NULL>>>))
+{
+    int ____localvar____1 = 0;
+    if (____localvar____1)
+        goto ____label____20;
+    if (!____localvar____1)
+        goto ____label____19;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 175636552 -> p 175638880 )
+(DeclStmt 0xa780048
+  0xa780000 "int ____localvar____1 =
+    (IntegerLiteral 0xa780030 'int' 0)")
+int ____localvar____1 = 0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 175636528 -> p 175636552 )
+(IntegerLiteral 0xa780030 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175638728 -> p 175638880 )
+(IfStmt 0xa7808c8
+  <<<NULL>>>
+  (ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+      (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+  (GotoStmt 0xa7814e0 '____label____20':0xa781490)
+  <<<NULL>>>)
+if (____localvar____1)
+    goto ____label____20;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175636608 -> p 175638728 )
+(ImplicitCastExpr 0xa780080 '_Bool' <IntegralToBoolean>
+  (ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+    (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175636592 -> p 175636608 )
+(ImplicitCastExpr 0xa780070 'int' <LValueToRValue>
+  (DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175636568 -> p 175636592 )
+(DeclRefExpr 0xa780058 'int' lvalue Var 0xa780000 '____localvar____1' 'int')
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175641824 -> p 175638728 )
+(GotoStmt 0xa7814e0 '____label____20':0xa781490)
+goto ____label____20;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175638848 -> p 175638880 )
+(IfStmt 0xa780940
+  <<<NULL>>>
+  (UnaryOperator 0xa780920 '_Bool' prefix '!'
+    (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+      (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+        (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+  (GotoStmt 0xa7814d0 '____label____19':0xa781450)
+  <<<NULL>>>)
+if (!____localvar____1)
+    goto ____label____19;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 175638816 -> p 175638848 )
+(UnaryOperator 0xa780920 '_Bool' prefix '!'
+  (ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+      (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))))
+!____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175638800 -> p 175638816 )
+(ImplicitCastExpr 0xa780910 '_Bool' <IntegralToBoolean>
+  (ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+    (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int')))
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175638784 -> p 175638800 )
+(ImplicitCastExpr 0xa780900 'int' <LValueToRValue>
+  (DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int'))
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175638756 -> p 175638784 )
+(DeclRefExpr 0xa7808e4 'int' lvalue Var 0xa780000 '____localvar____1' 'int')
+____localvar____1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175641808 -> p 175638848 )
+(GotoStmt 0xa7814d0 '____label____19':0xa781450)
+goto ____label____19;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641728 -> p 175641888 )
+(LabelStmt 0xa781480 '____label____19'
+  (IfStmt 0xa781500
+    <<<NULL>>>
+    (CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+    (GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+    <<<NULL>>>))
+____label____19:
+if (false)
+    goto ____label____17;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175641856 -> p 175641728 )
+(IfStmt 0xa781500
+  <<<NULL>>>
+  (CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+  (GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+  <<<NULL>>>)
+if (false)
+    goto ____label____17;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CXXBoolLiteralExpr ( 175638912 -> p 175641856 )
+(CXXBoolLiteralExpr 0xa780980 '_Bool' false)
+false;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175641840 -> p 175641856 )
+(GotoStmt 0xa7814f0 '____label____17':0xa7813d0)
+goto ____label____17;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641792 -> p 175641888 )
+(LabelStmt 0xa7814c0 '____label____20'
+  (NullStmt 0xa7814b0))
+____label____20:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175641776 -> p 175641792 )
+(NullStmt 0xa7814b0)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175639808 -> p 175639864 )
+(LabelStmt 0xa780d00 'LBL_FOR'
+  (LabelStmt 0xa781700 '____label____25'
+    (CompoundStmt 0xa781840
+      (DeclStmt 0xa780a90
+        0xa7809f0 "int ____localvar____2 =
+          (IntegerLiteral 0xa780a20 'int' 1)"
+        0xa780a50 "int ____localvar____3")
+      (LabelStmt 0xa781740 '____label____26'
+        (IfStmt 0xa781820
+          <<<NULL>>>
+          (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+            (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+              (BinaryOperator 0xa780ae0 'int' lvalue '='
+                (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+                (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+          (CompoundStmt 0xa781808
+            (CompoundStmt 0xa780ca0
+              (LabelStmt 0xa781570 '____label____21'
+                (CompoundStmt 0xa7816b0
+                  (DeclStmt 0xa780ba8
+                    0xa780b60 "int ____localvar____4 =
+                      (IntegerLiteral 0xa780b90 'int' 0)")
+                  (LabelStmt 0xa7815b0 '____label____22'
+                    (IfStmt 0xa781690
+                      <<<NULL>>>
+                      (BinaryOperator 0xa780c08 '_Bool' '!='
+                        (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                          (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                        (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                          (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+                      (CompoundStmt 0xa781678
+                        (CompoundStmt 0xa780c58
+                          (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+                        (LabelStmt 0xa7815f0 '____label____23'
+                          (CompoundStmt 0xa781660
+                            (UnaryOperator 0xa780c38 'int' postfix '++'
+                              (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                            (GotoStmt 0xa781650 '____label____22':0xa781580))))
+                      <<<NULL>>>))
+                  (LabelStmt 0xa781630 '____label____24'
+                    (NullStmt 0xa781620))))
+              (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+            (LabelStmt 0xa781780 '____label____27'
+              (CompoundStmt 0xa7817f0
+                (UnaryOperator 0xa780b30 'int' postfix '--'
+                  (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+                (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+          <<<NULL>>>))
+      (LabelStmt 0xa7817c0 '____label____28'
+        (NullStmt 0xa7817b0)))))
+LBL_FOR:
+____label____25:
+{
+    int ____localvar____2 = 1, ____localvar____3;
+  ____label____26:
+    if (____localvar____3 = ____localvar____2) {
+        {
+          ____label____21:
+            {
+                int ____localvar____4 = 0;
+              ____label____22:
+                if (____localvar____4 != ____localvar____2) {
+                    {
+                        goto ____label____23;
+                    }
+                  ____label____23:
+                    {
+                        ____localvar____4++;
+                        goto ____label____22;
+                    }
+                }
+              ____label____24:
+                ;
+            }
+            goto ____label____28;
+        }
+      ____label____27:
+        {
+            ____localvar____2--;
+            goto ____label____26;
+        }
+    }
+  ____label____28:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175642368 -> p 175639808 )
+(LabelStmt 0xa781700 '____label____25'
+  (CompoundStmt 0xa781840
+    (DeclStmt 0xa780a90
+      0xa7809f0 "int ____localvar____2 =
+        (IntegerLiteral 0xa780a20 'int' 1)"
+      0xa780a50 "int ____localvar____3")
+    (LabelStmt 0xa781740 '____label____26'
+      (IfStmt 0xa781820
+        <<<NULL>>>
+        (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+          (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+            (BinaryOperator 0xa780ae0 'int' lvalue '='
+              (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+              (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+                (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+        (CompoundStmt 0xa781808
+          (CompoundStmt 0xa780ca0
+            (LabelStmt 0xa781570 '____label____21'
+              (CompoundStmt 0xa7816b0
+                (DeclStmt 0xa780ba8
+                  0xa780b60 "int ____localvar____4 =
+                    (IntegerLiteral 0xa780b90 'int' 0)")
+                (LabelStmt 0xa7815b0 '____label____22'
+                  (IfStmt 0xa781690
+                    <<<NULL>>>
+                    (BinaryOperator 0xa780c08 '_Bool' '!='
+                      (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                        (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                      (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                        (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+                    (CompoundStmt 0xa781678
+                      (CompoundStmt 0xa780c58
+                        (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+                      (LabelStmt 0xa7815f0 '____label____23'
+                        (CompoundStmt 0xa781660
+                          (UnaryOperator 0xa780c38 'int' postfix '++'
+                            (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                          (GotoStmt 0xa781650 '____label____22':0xa781580))))
+                    <<<NULL>>>))
+                (LabelStmt 0xa781630 '____label____24'
+                  (NullStmt 0xa781620))))
+            (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+          (LabelStmt 0xa781780 '____label____27'
+            (CompoundStmt 0xa7817f0
+              (UnaryOperator 0xa780b30 'int' postfix '--'
+                (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+              (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+        <<<NULL>>>))
+    (LabelStmt 0xa7817c0 '____label____28'
+      (NullStmt 0xa7817b0))))
+____label____25:
+{
+    int ____localvar____2 = 1, ____localvar____3;
+  ____label____26:
+    if (____localvar____3 = ____localvar____2) {
+        {
+          ____label____21:
+            {
+                int ____localvar____4 = 0;
+              ____label____22:
+                if (____localvar____4 != ____localvar____2) {
+                    {
+                        goto ____label____23;
+                    }
+                  ____label____23:
+                    {
+                        ____localvar____4++;
+                        goto ____label____22;
+                    }
+                }
+              ____label____24:
+                ;
+            }
+            goto ____label____28;
+        }
+      ____label____27:
+        {
+            ____localvar____2--;
+            goto ____label____26;
+        }
+    }
+  ____label____28:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175642688 -> p 175642368 )
+(CompoundStmt 0xa781840
+  (DeclStmt 0xa780a90
+    0xa7809f0 "int ____localvar____2 =
+      (IntegerLiteral 0xa780a20 'int' 1)"
+    0xa780a50 "int ____localvar____3")
+  (LabelStmt 0xa781740 '____label____26'
+    (IfStmt 0xa781820
+      <<<NULL>>>
+      (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+        (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+          (BinaryOperator 0xa780ae0 'int' lvalue '='
+            (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+            (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+              (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+      (CompoundStmt 0xa781808
+        (CompoundStmt 0xa780ca0
+          (LabelStmt 0xa781570 '____label____21'
+            (CompoundStmt 0xa7816b0
+              (DeclStmt 0xa780ba8
+                0xa780b60 "int ____localvar____4 =
+                  (IntegerLiteral 0xa780b90 'int' 0)")
+              (LabelStmt 0xa7815b0 '____label____22'
+                (IfStmt 0xa781690
+                  <<<NULL>>>
+                  (BinaryOperator 0xa780c08 '_Bool' '!='
+                    (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                      (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                    (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                      (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+                  (CompoundStmt 0xa781678
+                    (CompoundStmt 0xa780c58
+                      (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+                    (LabelStmt 0xa7815f0 '____label____23'
+                      (CompoundStmt 0xa781660
+                        (UnaryOperator 0xa780c38 'int' postfix '++'
+                          (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                        (GotoStmt 0xa781650 '____label____22':0xa781580))))
+                  <<<NULL>>>))
+              (LabelStmt 0xa781630 '____label____24'
+                (NullStmt 0xa781620))))
+          (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+        (LabelStmt 0xa781780 '____label____27'
+          (CompoundStmt 0xa7817f0
+            (UnaryOperator 0xa780b30 'int' postfix '--'
+              (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+            (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+      <<<NULL>>>))
+  (LabelStmt 0xa7817c0 '____label____28'
+    (NullStmt 0xa7817b0)))
+{
+    int ____localvar____2 = 1, ____localvar____3;
+  ____label____26:
+    if (____localvar____3 = ____localvar____2) {
+        {
+          ____label____21:
+            {
+                int ____localvar____4 = 0;
+              ____label____22:
+                if (____localvar____4 != ____localvar____2) {
+                    {
+                        goto ____label____23;
+                    }
+                  ____label____23:
+                    {
+                        ____localvar____4++;
+                        goto ____label____22;
+                    }
+                }
+              ____label____24:
+                ;
+            }
+            goto ____label____28;
+        }
+      ____label____27:
+        {
+            ____localvar____2--;
+            goto ____label____26;
+        }
+    }
+  ____label____28:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 175639184 -> p 175642688 )
+(DeclStmt 0xa780a90
+  0xa7809f0 "int ____localvar____2 =
+    (IntegerLiteral 0xa780a20 'int' 1)"
+  0xa780a50 "int ____localvar____3")
+int ____localvar____2 = 1, ____localvar____3;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 175639072 -> p 175639184 )
+(IntegerLiteral 0xa780a20 'int' 1)
+1;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175642432 -> p 175642688 )
+(LabelStmt 0xa781740 '____label____26'
+  (IfStmt 0xa781820
+    <<<NULL>>>
+    (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+      (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+        (BinaryOperator 0xa780ae0 'int' lvalue '='
+          (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+          (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+            (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+    (CompoundStmt 0xa781808
+      (CompoundStmt 0xa780ca0
+        (LabelStmt 0xa781570 '____label____21'
+          (CompoundStmt 0xa7816b0
+            (DeclStmt 0xa780ba8
+              0xa780b60 "int ____localvar____4 =
+                (IntegerLiteral 0xa780b90 'int' 0)")
+            (LabelStmt 0xa7815b0 '____label____22'
+              (IfStmt 0xa781690
+                <<<NULL>>>
+                (BinaryOperator 0xa780c08 '_Bool' '!='
+                  (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                    (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                  (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                    (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+                (CompoundStmt 0xa781678
+                  (CompoundStmt 0xa780c58
+                    (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+                  (LabelStmt 0xa7815f0 '____label____23'
+                    (CompoundStmt 0xa781660
+                      (UnaryOperator 0xa780c38 'int' postfix '++'
+                        (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                      (GotoStmt 0xa781650 '____label____22':0xa781580))))
+                <<<NULL>>>))
+            (LabelStmt 0xa781630 '____label____24'
+              (NullStmt 0xa781620))))
+        (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+      (LabelStmt 0xa781780 '____label____27'
+        (CompoundStmt 0xa7817f0
+          (UnaryOperator 0xa780b30 'int' postfix '--'
+            (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+          (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+    <<<NULL>>>))
+____label____26:
+if (____localvar____3 = ____localvar____2) {
+    {
+      ____label____21:
+        {
+            int ____localvar____4 = 0;
+          ____label____22:
+            if (____localvar____4 != ____localvar____2) {
+                {
+                    goto ____label____23;
+                }
+              ____label____23:
+                {
+                    ____localvar____4++;
+                    goto ____label____22;
+                }
+            }
+          ____label____24:
+            ;
+        }
+        goto ____label____28;
+    }
+  ____label____27:
+    {
+        ____localvar____2--;
+        goto ____label____26;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175642656 -> p 175642432 )
+(IfStmt 0xa781820
+  <<<NULL>>>
+  (ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+    (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+      (BinaryOperator 0xa780ae0 'int' lvalue '='
+        (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+        (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+          (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+  (CompoundStmt 0xa781808
+    (CompoundStmt 0xa780ca0
+      (LabelStmt 0xa781570 '____label____21'
+        (CompoundStmt 0xa7816b0
+          (DeclStmt 0xa780ba8
+            0xa780b60 "int ____localvar____4 =
+              (IntegerLiteral 0xa780b90 'int' 0)")
+          (LabelStmt 0xa7815b0 '____label____22'
+            (IfStmt 0xa781690
+              <<<NULL>>>
+              (BinaryOperator 0xa780c08 '_Bool' '!='
+                (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                  (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+              (CompoundStmt 0xa781678
+                (CompoundStmt 0xa780c58
+                  (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+                (LabelStmt 0xa7815f0 '____label____23'
+                  (CompoundStmt 0xa781660
+                    (UnaryOperator 0xa780c38 'int' postfix '++'
+                      (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                    (GotoStmt 0xa781650 '____label____22':0xa781580))))
+              <<<NULL>>>))
+          (LabelStmt 0xa781630 '____label____24'
+            (NullStmt 0xa781620))))
+      (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+    (LabelStmt 0xa781780 '____label____27'
+      (CompoundStmt 0xa7817f0
+        (UnaryOperator 0xa780b30 'int' postfix '--'
+          (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+        (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+  <<<NULL>>>)
+if (____localvar____3 = ____localvar____2) {
+    {
+      ____label____21:
+        {
+            int ____localvar____4 = 0;
+          ____label____22:
+            if (____localvar____4 != ____localvar____2) {
+                {
+                    goto ____label____23;
+                }
+              ____label____23:
+                {
+                    ____localvar____4++;
+                    goto ____label____22;
+                }
+            }
+          ____label____24:
+            ;
+        }
+        goto ____label____28;
+    }
+  ____label____27:
+    {
+        ____localvar____2--;
+        goto ____label____26;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175639304 -> p 175642656 )
+(ImplicitCastExpr 0xa780b08 '_Bool' <IntegralToBoolean>
+  (ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+    (BinaryOperator 0xa780ae0 'int' lvalue '='
+      (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+      (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+        (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))))
+____localvar____3 = ____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175639288 -> p 175639304 )
+(ImplicitCastExpr 0xa780af8 'int' <LValueToRValue>
+  (BinaryOperator 0xa780ae0 'int' lvalue '='
+    (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+    (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+      (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))))
+____localvar____3 = ____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 175639264 -> p 175639288 )
+(BinaryOperator 0xa780ae0 'int' lvalue '='
+  (DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+  (ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+    (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+____localvar____3 = ____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175639200 -> p 175639264 )
+(DeclRefExpr 0xa780aa0 'int' lvalue Var 0xa780a50 '____localvar____3' 'int')
+____localvar____3;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175639248 -> p 175639264 )
+(ImplicitCastExpr 0xa780ad0 'int' <LValueToRValue>
+  (DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175639224 -> p 175639248 )
+(DeclRefExpr 0xa780ab8 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')
+____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175642632 -> p 175642656 )
+(CompoundStmt 0xa781808
+  (CompoundStmt 0xa780ca0
+    (LabelStmt 0xa781570 '____label____21'
+      (CompoundStmt 0xa7816b0
+        (DeclStmt 0xa780ba8
+          0xa780b60 "int ____localvar____4 =
+            (IntegerLiteral 0xa780b90 'int' 0)")
+        (LabelStmt 0xa7815b0 '____label____22'
+          (IfStmt 0xa781690
+            <<<NULL>>>
+            (BinaryOperator 0xa780c08 '_Bool' '!='
+              (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+                (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+              (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+                (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+            (CompoundStmt 0xa781678
+              (CompoundStmt 0xa780c58
+                (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+              (LabelStmt 0xa7815f0 '____label____23'
+                (CompoundStmt 0xa781660
+                  (UnaryOperator 0xa780c38 'int' postfix '++'
+                    (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                  (GotoStmt 0xa781650 '____label____22':0xa781580))))
+            <<<NULL>>>))
+        (LabelStmt 0xa781630 '____label____24'
+          (NullStmt 0xa781620))))
+    (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+  (LabelStmt 0xa781780 '____label____27'
+    (CompoundStmt 0xa7817f0
+      (UnaryOperator 0xa780b30 'int' postfix '--'
+        (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+      (GotoStmt 0xa7817e0 '____label____26':0xa781710))))
+{
+    {
+      ____label____21:
+        {
+            int ____localvar____4 = 0;
+          ____label____22:
+            if (____localvar____4 != ____localvar____2) {
+                {
+                    goto ____label____23;
+                }
+              ____label____23:
+                {
+                    ____localvar____4++;
+                    goto ____label____22;
+                }
+            }
+          ____label____24:
+            ;
+        }
+        goto ____label____28;
+    }
+  ____label____27:
+    {
+        ____localvar____2--;
+        goto ____label____26;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175639712 -> p 175642632 )
+(CompoundStmt 0xa780ca0
+  (LabelStmt 0xa781570 '____label____21'
+    (CompoundStmt 0xa7816b0
+      (DeclStmt 0xa780ba8
+        0xa780b60 "int ____localvar____4 =
+          (IntegerLiteral 0xa780b90 'int' 0)")
+      (LabelStmt 0xa7815b0 '____label____22'
+        (IfStmt 0xa781690
+          <<<NULL>>>
+          (BinaryOperator 0xa780c08 '_Bool' '!='
+            (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+              (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+            (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+              (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+          (CompoundStmt 0xa781678
+            (CompoundStmt 0xa780c58
+              (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+            (LabelStmt 0xa7815f0 '____label____23'
+              (CompoundStmt 0xa781660
+                (UnaryOperator 0xa780c38 'int' postfix '++'
+                  (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+                (GotoStmt 0xa781650 '____label____22':0xa781580))))
+          <<<NULL>>>))
+      (LabelStmt 0xa781630 '____label____24'
+        (NullStmt 0xa781620))))
+  (GotoStmt 0xa7817d0 '____label____28':0xa781790))
+{
+  ____label____21:
+    {
+        int ____localvar____4 = 0;
+      ____label____22:
+        if (____localvar____4 != ____localvar____2) {
+            {
+                goto ____label____23;
+            }
+          ____label____23:
+            {
+                ____localvar____4++;
+                goto ____label____22;
+            }
+        }
+      ____label____24:
+        ;
+    }
+    goto ____label____28;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175641968 -> p 175639712 )
+(LabelStmt 0xa781570 '____label____21'
+  (CompoundStmt 0xa7816b0
+    (DeclStmt 0xa780ba8
+      0xa780b60 "int ____localvar____4 =
+        (IntegerLiteral 0xa780b90 'int' 0)")
+    (LabelStmt 0xa7815b0 '____label____22'
+      (IfStmt 0xa781690
+        <<<NULL>>>
+        (BinaryOperator 0xa780c08 '_Bool' '!='
+          (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+            (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+          (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+            (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+        (CompoundStmt 0xa781678
+          (CompoundStmt 0xa780c58
+            (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+          (LabelStmt 0xa7815f0 '____label____23'
+            (CompoundStmt 0xa781660
+              (UnaryOperator 0xa780c38 'int' postfix '++'
+                (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+              (GotoStmt 0xa781650 '____label____22':0xa781580))))
+        <<<NULL>>>))
+    (LabelStmt 0xa781630 '____label____24'
+      (NullStmt 0xa781620))))
+____label____21:
+{
+    int ____localvar____4 = 0;
+  ____label____22:
+    if (____localvar____4 != ____localvar____2) {
+        {
+            goto ____label____23;
+        }
+      ____label____23:
+        {
+            ____localvar____4++;
+            goto ____label____22;
+        }
+    }
+  ____label____24:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175642288 -> p 175641968 )
+(CompoundStmt 0xa7816b0
+  (DeclStmt 0xa780ba8
+    0xa780b60 "int ____localvar____4 =
+      (IntegerLiteral 0xa780b90 'int' 0)")
+  (LabelStmt 0xa7815b0 '____label____22'
+    (IfStmt 0xa781690
+      <<<NULL>>>
+      (BinaryOperator 0xa780c08 '_Bool' '!='
+        (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+          (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+        (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+          (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+      (CompoundStmt 0xa781678
+        (CompoundStmt 0xa780c58
+          (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+        (LabelStmt 0xa7815f0 '____label____23'
+          (CompoundStmt 0xa781660
+            (UnaryOperator 0xa780c38 'int' postfix '++'
+              (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+            (GotoStmt 0xa781650 '____label____22':0xa781580))))
+      <<<NULL>>>))
+  (LabelStmt 0xa781630 '____label____24'
+    (NullStmt 0xa781620)))
+{
+    int ____localvar____4 = 0;
+  ____label____22:
+    if (____localvar____4 != ____localvar____2) {
+        {
+            goto ____label____23;
+        }
+      ____label____23:
+        {
+            ____localvar____4++;
+            goto ____label____22;
+        }
+    }
+  ____label____24:
+    ;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclStmt ( 175639464 -> p 175642288 )
+(DeclStmt 0xa780ba8
+  0xa780b60 "int ____localvar____4 =
+    (IntegerLiteral 0xa780b90 'int' 0)")
+int ____localvar____4 = 0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 175639440 -> p 175639464 )
+(IntegerLiteral 0xa780b90 'int' 0)
+0;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175642032 -> p 175642288 )
+(LabelStmt 0xa7815b0 '____label____22'
+  (IfStmt 0xa781690
+    <<<NULL>>>
+    (BinaryOperator 0xa780c08 '_Bool' '!='
+      (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+        (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+      (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+        (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+    (CompoundStmt 0xa781678
+      (CompoundStmt 0xa780c58
+        (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+      (LabelStmt 0xa7815f0 '____label____23'
+        (CompoundStmt 0xa781660
+          (UnaryOperator 0xa780c38 'int' postfix '++'
+            (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+          (GotoStmt 0xa781650 '____label____22':0xa781580))))
+    <<<NULL>>>))
+____label____22:
+if (____localvar____4 != ____localvar____2) {
+    {
+        goto ____label____23;
+    }
+  ____label____23:
+    {
+        ____localvar____4++;
+        goto ____label____22;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IfStmt ( 175642256 -> p 175642032 )
+(IfStmt 0xa781690
+  <<<NULL>>>
+  (BinaryOperator 0xa780c08 '_Bool' '!='
+    (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+      (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+    (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+      (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+  (CompoundStmt 0xa781678
+    (CompoundStmt 0xa780c58
+      (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+    (LabelStmt 0xa7815f0 '____label____23'
+      (CompoundStmt 0xa781660
+        (UnaryOperator 0xa780c38 'int' postfix '++'
+          (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+        (GotoStmt 0xa781650 '____label____22':0xa781580))))
+  <<<NULL>>>)
+if (____localvar____4 != ____localvar____2) {
+    {
+        goto ____label____23;
+    }
+  ____label____23:
+    {
+        ____localvar____4++;
+        goto ____label____22;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt BinaryOperator ( 175639560 -> p 175642256 )
+(BinaryOperator 0xa780c08 '_Bool' '!='
+  (ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+    (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+  (ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+    (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')))
+____localvar____4 != ____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175639528 -> p 175639560 )
+(ImplicitCastExpr 0xa780be8 'int' <LValueToRValue>
+  (DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+____localvar____4;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175639480 -> p 175639528 )
+(DeclRefExpr 0xa780bb8 'int' lvalue Var 0xa780b60 '____localvar____4' 'int')
+____localvar____4;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ImplicitCastExpr ( 175639544 -> p 175639560 )
+(ImplicitCastExpr 0xa780bf8 'int' <LValueToRValue>
+  (DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175639504 -> p 175639544 )
+(DeclRefExpr 0xa780bd0 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')
+____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175642232 -> p 175642256 )
+(CompoundStmt 0xa781678
+  (CompoundStmt 0xa780c58
+    (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+  (LabelStmt 0xa7815f0 '____label____23'
+    (CompoundStmt 0xa781660
+      (UnaryOperator 0xa780c38 'int' postfix '++'
+        (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+      (GotoStmt 0xa781650 '____label____22':0xa781580))))
+{
+    {
+        goto ____label____23;
+    }
+  ____label____23:
+    {
+        ____localvar____4++;
+        goto ____label____22;
+    }
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175639640 -> p 175642232 )
+(CompoundStmt 0xa780c58
+  (GotoStmt 0xa781640 '____label____23':0xa7815c0))
+{
+    goto ____label____23;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175642176 -> p 175639640 )
+(GotoStmt 0xa781640 '____label____23':0xa7815c0)
+goto ____label____23;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175642096 -> p 175642232 )
+(LabelStmt 0xa7815f0 '____label____23'
+  (CompoundStmt 0xa781660
+    (UnaryOperator 0xa780c38 'int' postfix '++'
+      (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+    (GotoStmt 0xa781650 '____label____22':0xa781580)))
+____label____23:
+{
+    ____localvar____4++;
+    goto ____label____22;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175642208 -> p 175642096 )
+(CompoundStmt 0xa781660
+  (UnaryOperator 0xa780c38 'int' postfix '++'
+    (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+  (GotoStmt 0xa781650 '____label____22':0xa781580))
+{
+    ____localvar____4++;
+    goto ____label____22;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 175639608 -> p 175642208 )
+(UnaryOperator 0xa780c38 'int' postfix '++'
+  (DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int'))
+____localvar____4++;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175639584 -> p 175639608 )
+(DeclRefExpr 0xa780c20 'int' lvalue Var 0xa780b60 '____localvar____4' 'int')
+____localvar____4;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175642192 -> p 175642208 )
+(GotoStmt 0xa781650 '____label____22':0xa781580)
+goto ____label____22;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175642160 -> p 175642288 )
+(LabelStmt 0xa781630 '____label____24'
+  (NullStmt 0xa781620))
+____label____24:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175642144 -> p 175642160 )
+(NullStmt 0xa781620)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175642576 -> p 175639712 )
+(GotoStmt 0xa7817d0 '____label____28':0xa781790)
+goto ____label____28;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175642496 -> p 175642632 )
+(LabelStmt 0xa781780 '____label____27'
+  (CompoundStmt 0xa7817f0
+    (UnaryOperator 0xa780b30 'int' postfix '--'
+      (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+    (GotoStmt 0xa7817e0 '____label____26':0xa781710)))
+____label____27:
+{
+    ____localvar____2--;
+    goto ____label____26;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt CompoundStmt ( 175642608 -> p 175642496 )
+(CompoundStmt 0xa7817f0
+  (UnaryOperator 0xa780b30 'int' postfix '--'
+    (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+  (GotoStmt 0xa7817e0 '____label____26':0xa781710))
+{
+    ____localvar____2--;
+    goto ____label____26;
+}
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt UnaryOperator ( 175639344 -> p 175642608 )
+(UnaryOperator 0xa780b30 'int' postfix '--'
+  (DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int'))
+____localvar____2--;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt DeclRefExpr ( 175639316 -> p 175639344 )
+(DeclRefExpr 0xa780b14 'int' lvalue Var 0xa7809f0 '____localvar____2' 'int')
+____localvar____2;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt GotoStmt ( 175642592 -> p 175642608 )
+(GotoStmt 0xa7817e0 '____label____26':0xa781710)
+goto ____label____26;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt LabelStmt ( 175642560 -> p 175642688 )
+(LabelStmt 0xa7817c0 '____label____28'
+  (NullStmt 0xa7817b0))
+____label____28:
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt NullStmt ( 175642544 -> p 175642560 )
+(NullStmt 0xa7817b0)
+;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt ReturnStmt ( 175639848 -> p 175639864 )
+(ReturnStmt 0xa780d28
+  (IntegerLiteral 0xa780d10 'int' 0))
+return 0;
+;
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 13] Stmt IntegerLiteral ( 175639824 -> p 175639848 )
+(IntegerLiteral 0xa780d10 'int' 0)
+0;
+[0;1;33m
+ [B28 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B27[0m
+[0;1;33m
+ [B1]
+[0m  ____label____28:
+   1: return 0;
+[0;34m   Preds [0m(2):[0;34m B3 B8[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B2]
+[0m  ____label____27:
+   1: ____localvar____2--
+[0;32m   T: goto ____label____26;
+
+[0m[0;35m   Succs [0m(1):[0;35m B8[0m
+[0;1;33m
+ [B3]
+[0m  ____label____24:
+[0;32m   T: goto ____label____28;
+
+[0m[0;34m   Preds [0m(1):[0;34m B6[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B4]
+[0m  ____label____23:
+   1: ____localvar____4++
+[0;32m   T: goto ____label____22;
+
+[0m[0;34m   Preds [0m(1):[0;34m B5[0m
+[0;35m   Succs [0m(1):[0;35m B6[0m
+[0;1;33m
+ [B5]
+[0m[0;32m   T: goto ____label____23;
+
+[0m[0;34m   Preds [0m(1):[0;34m B6[0m
+[0;35m   Succs [0m(1):[0;35m B4[0m
+[0;1;33m
+ [B6]
+[0m  ____label____22:
+   1: ____localvar____4 != ____localvar____2
+[0;32m   T: if [B6.1]
+[0m[0;34m   Preds [0m(2):[0;34m B7 B4[0m
+[0;35m   Succs [0m(2):[0;35m B5 B3[0m
+[0;1;33m
+ [B7]
+[0m  ____label____21:
+   1: int ____localvar____4 = 0;
+[0;34m   Preds [0m(1):[0;34m B8[0m
+[0;35m   Succs [0m(1):[0;35m B6[0m
+[0;1;33m
+ [B8]
+[0m  ____label____26:
+   1: ____localvar____3 = ____localvar____2 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: if [B8.1]
+[0m[0;34m   Preds [0m(2):[0;34m B9 B2[0m
+[0;35m   Succs [0m(2):[0;35m B7 B1[0m
+[0;1;33m
+ [B9]
+[0m  ____label____25:
+   1: int ____localvar____2 = 1;
+   2: int ____localvar____3;
+[0;34m   Preds [0m(1):[0;34m B10[0m
+[0;35m   Succs [0m(1):[0;35m B8[0m
+[0;1;33m
+ [B10]
+[0m  LBL_FOR:
+[0;34m   Preds [0m(1):[0;34m B11[0m
+[0;35m   Succs [0m(1):[0;35m B9[0m
+[0;1;33m
+ [B11]
+[0m  ____label____20:
+[0;34m   Preds [0m(2):[0;34m B13 B16[0m
+[0;35m   Succs [0m(1):[0;35m B10[0m
+[0;1;33m
+ [B12]
+[0m[0;32m   T: goto ____label____17;
+
+[0m[0;35m   Succs [0m(1):[0;35m B18[0m
+[0;1;33m
+ [B13]
+[0m  ____label____19:
+   1: false
+[0;32m   T: if [B13.1]
+[0m[0;34m   Preds [0m(2):[0;34m B14 B15[0m
+[0;35m   Succs [0m(2):[0;35m NULL B11[0m
+[0;1;33m
+ [B14]
+[0m[0;32m   T: goto ____label____19;
+
+[0m[0;34m   Preds [0m(1):[0;34m B15[0m
+[0;35m   Succs [0m(1):[0;35m B13[0m
+[0;1;33m
+ [B15]
+[0m   1: !____localvar____1
+[0;32m   T: if [B15.1]
+[0m[0;34m   Preds [0m(1):[0;34m B17[0m
+[0;35m   Succs [0m(2):[0;35m B14 B13[0m
+[0;1;33m
+ [B16]
+[0m[0;32m   T: goto ____label____20;
+
+[0m[0;34m   Preds [0m(1):[0;34m B17[0m
+[0;35m   Succs [0m(1):[0;35m B11[0m
+[0;1;33m
+ [B17]
+[0m  ____label____18:
+   1: int ____localvar____1 = 0;
+   2: ____localvar____1 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: if [B17.2]
+[0m[0;34m   Preds [0m(1):[0;34m B18[0m
+[0;35m   Succs [0m(2):[0;35m B16 B15[0m
+[0;1;33m
+ [B18]
+[0m  ____label____17:
+[0;34m   Preds [0m(2):[0;34m B19 B12[0m
+[0;35m   Succs [0m(1):[0;35m B17[0m
+[0;1;33m
+ [B19]
+[0m  LBL_DO:
+[0;34m   Preds [0m(1):[0;34m B20[0m
+[0;35m   Succs [0m(1):[0;35m B18[0m
+[0;1;33m
+ [B20]
+[0m  ____label____16:
+[0;34m   Preds [0m(1):[0;34m B26[0m
+[0;35m   Succs [0m(1):[0;35m B19[0m
+[0;1;33m
+ [B21]
+[0m  ____label____15:
+[0;32m   T: goto ____label____14;
+
+[0m[0;34m   Preds [0m(1):[0;34m B22[0m
+[0;35m   Succs [0m(1):[0;35m B26[0m
+[0;1;33m
+ [B22]
+[0m  ____label____13:
+[0;32m   T: goto ____label____15;
+
+[0m[0;34m   Preds [0m(2):[0;34m B24 B25[0m
+[0;35m   Succs [0m(1):[0;35m B21[0m
+[0;1;33m
+ [B23]
+[0m  ____label____12:
+[0;32m   T: goto ____label____11;
+
+[0m[0;35m   Succs [0m(1):[0;35m B25[0m
+[0;1;33m
+ [B24]
+[0m[0;32m   T: goto ____label____13;
+
+[0m[0;34m   Preds [0m(1):[0;34m B25[0m
+[0;35m   Succs [0m(1):[0;35m B22[0m
+[0;1;33m
+ [B25]
+[0m  ____label____11:
+   1: ____localvar____0 * 3 > 0
+[0;32m   T: if [B25.1]
+[0m[0;34m   Preds [0m(2):[0;34m B26 B23[0m
+[0;35m   Succs [0m(2):[0;35m B24 B22[0m
+[0;1;33m
+ [B26]
+[0m  ____label____14:
+   1: ____localvar____0 = 0 + 3 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: if [B26.1]
+[0m[0;34m   Preds [0m(2):[0;34m B27 B21[0m
+[0;35m   Succs [0m(2):[0;35m B25 B20[0m
+[0;1;33m
+ [B27]
+[0m  LBL_WHILE:
+   1: int ____localvar____0;
+[0;34m   Preds [0m(1):[0;34m B28[0m
+[0;35m   Succs [0m(1):[0;35m B26[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(1):[0;34m B1[0m
+
+Writing '/tmp/llvm_m2gjE2/CFG.dot'...  done. 
+[DEBUG][alg/SimplePrinter.cpp - line 24] alg finished.
+[DEBUG][ResourceManager.cpp - line 101] src _iteration.cpp not changed.
+[DEBUG][ResourceManager.cpp - line 139] Open desfile @_iteration.cpp
+done2

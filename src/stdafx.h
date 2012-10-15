@@ -1,13 +1,14 @@
 #ifndef _STDAFX_H_
 #define _STDAFX_H_
-
 #include <stdio.h>
+#include <assert.h>
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <set>
+#include <map>
 #include <libgen.h> // for basename(), dirname(), etc.
-#include <assert.h>
 
 #include "clang/AST/ASTConsumer.h"
 #include "clang/AST/RecursiveASTVisitor.h"
@@ -32,7 +33,7 @@
 #include "llvm/Support/Host.h"
 #include "llvm/Support/raw_ostream.h"
 
-//typedef std::vector<clang::DeclGroupRef> DeclGroupRefVec;
+typedef std::vector<clang::DeclGroupRef> DeclGroupRefVec;
 typedef uint32_t ErrCode;
 
 #define DEBUG

@@ -1,26 +1,72 @@
 #include <stdio.h>
 
+void simple() {
+	int x = 1;
+	switch(int y = x) {
+		case 1:
+			break;
+		case 2: 
+			{
+				break;
+			}
+		default:
+			break;
+	}
+}
+
+void assign_cond() {
+	int x = 1, y = 2;
+	switch(x = y) {
+		printf("%d\n", x);
+		case 1: ;
+	}
+
+	switch(x) {
+		default: 
+			x = 1;
+		case 1:
+			y = 2;
+			switch(y) {
+				case 2:
+					break;
+			}
+			y++;
+	}
+
+}
+
+
 int main() 
 {
+	assign_cond();
 	int x = 1, y = x*2;
 	int next = 0;
-	for(;;){
-		switch(int next = x*y) {
-			case 0:
-				next = 2;
-			case  2 ... 3:
-				break;
-			case 4:
-				y = y - 2;
-				next = 3;
-				break;
-			case 5:
-				;
-			default:
-				goto ____lbl____0;
-				break;
-		}
+
+	switch(int next = x*y) {
+		for(;;){}
+		case 0:
+LBL_IN_CASE:
+			next = 2;
+LBL_BEFORE_CASE:
+		case  2 ... 3:
+			break;
+			if(next == 3) {
+				for(;;){
+					case 6:
+						break;
+				}
+			}
+		case 4:
+			y = y - 2;
+			next = 3;
+			break;
+		case 5:
+			;
+		default:
+			goto LBL_BEFORE_CASE;
+LBL_BEFORE_BREAK:
+			break;
 	}
-____lbl____0:
+
 	return 0;
 }

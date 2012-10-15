@@ -1,4 +1,12 @@
 #include <stdio.h>
+#include <string>
+
+void init_array() {
+	int a[] = {1,2,};
+	bool b(2);
+	std::string c("y");
+	std::string d = "yy", e = c;
+}
 
 //static
 void init_static(int m) {

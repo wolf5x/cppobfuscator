@@ -1,9 +1,12 @@
 #ifndef OBFS_ALG_INITPARSECONSUMER_H
 #define OBFS_ALG_INITPARSECONSUMER_H
 
-#include "../stdafx.h"
-#include "../Typedef.h"
-//#include "SimplePrinterConsumer.h"
+#include "stdafx.h"
+#include "Typedef.h"
+#include "clang/AST/Decl.h"
+#include "clang/AST/DeclGroup.h"
+#include "clang/AST/ASTConsumer.h"
+#include "clang/Frontend/CompilerInstance.h"
 
 class InitParseConsumer : public clang::ASTConsumer {
 protected:

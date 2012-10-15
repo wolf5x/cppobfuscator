@@ -1,6 +1,9 @@
 #include "ResourceManager.h"
-using namespace std;
+#include <string>
+#include <set>
 using namespace clang;
+using std::string;
+using std::set;
 
 void 
 ResourceManager::init() {

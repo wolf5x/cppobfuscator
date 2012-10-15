@@ -2,9 +2,15 @@
 
 int main()
 {
-	int x = 1, y = 2;
-	for(int z = 0; int t = x; z++) {
-	};
+	int x = 1, y = 2, z;
+	switch(x){
+		//for(z = 0; z < 1 && z > -1; z++) {
+			//case 1:
+				for(;;) 
+					break;
+		//};
+
+	}
 	return 0;
 }
 

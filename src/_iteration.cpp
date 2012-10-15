@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+void nullbody() {
+	while(true){}
+	do{}while(true);
+	for(;;){}
+}
+
 int main() {
 LBL_WHILE:
 	int y;

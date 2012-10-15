@@ -2,9 +2,12 @@
 #define OBFS_HSPATH_H
 
 #include "stdafx.h"
+#include "clang/Basic/Version.h"
+#include <string>
+using std::string;
 
 #define LLVM_PREFIX "/usr/local"
-const std::string HS_PATHS[] = {
+const string HS_PATHS[] = {
 	LLVM_PREFIX "/lib/clang/" CLANG_VERSION_STRING "/include",
 	"/usr/local/include",
 	"/usr/include",
