@@ -10,7 +10,7 @@ void A<T>::func(T x) {
 		do{}while(0);
 	}
 }
-
+/*
 class B : public A<B>{
 public:
 
@@ -20,7 +20,10 @@ void gf() {
 		for(;;){}
 }
 	
+*/
 int main() {
+	A<int> a;
+	A<bool> b;
 	class LOCAL {
 		void func() {
 			int x = 0;
@@ -28,6 +31,7 @@ int main() {
 		}
 	};
 	LOCAL b;
+	/*
 	B b;
 	b.func(b);
 	class LOCAL{
@@ -56,5 +60,6 @@ int main() {
 		int y;
 	} anoy;
 
+	*/
 	return 0;
 }

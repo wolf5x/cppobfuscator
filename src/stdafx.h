@@ -7,7 +7,6 @@
 #include <vector>
 #include <string>
 #include <set>
-#include <map>
 #include <libgen.h> // for basename(), dirname(), etc.
 
 #include "clang/AST/ASTConsumer.h"

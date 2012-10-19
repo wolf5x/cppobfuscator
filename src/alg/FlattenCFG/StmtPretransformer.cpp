@@ -464,18 +464,3 @@ bool StmtPretransformer::updateChildrenInEdge(Stmt *S) {
 	return true;
 }
 
-bool StmtPretransformer::replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild) {
-	if(!Parent) {
-		DPRINT("Parnet NULL");
-		return true;
-	}
-	for(Stmt::child_iterator I = Parent->child_begin(), IEnd = Parent->child_end();
-			I != IEnd; ++I) {
-		if(*I == OldChild) {
-			//memory leak
-			*I = NewChild;
-			return true;
-		}
-	}
-	return false;
-}

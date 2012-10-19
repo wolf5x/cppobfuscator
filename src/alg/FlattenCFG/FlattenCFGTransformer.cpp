@@ -1,12 +1,19 @@
-#include "FlattenCFGTransformer.h"
-#include "VarRenamer.h"
-#include "FlattenCFGTransformer.h"
-#include "MoveLocalDeclToTop.h"
-#include "ASTTraverserPlus.h"
-using namespace std;
+#include "alg/FlattenCFG/FlattenCFGTransformer.h"
+#include "alg/FlattenCFG/VarRenamer.h"
+#include "alg/FlattenCFG/StmtPretransformer.h"
+#include "alg/FlattenCFG/LocalDeclMover.h"
+#include "llvm/ADT/OwningPtr.h"
 using namespace clang;
 
+using llvm::OwningPtr;
+
 bool FlattenCFGTransformer::execute() {
+	this->renamer = new VarRenamer(this->resMgr);
+	this->preTranser = new StmtPretransformer(this->resMgr);
+	OwningPtr<RefVarToPtrMap> refMap(new RefVarToPtrMap());
+	assert(refMap.get() && "reference variable map alloc failed");
+	this->dclMover = new LocalDeclMover(this->resMgr, refMap.get());
+
 	TranslationUnitDecl *decls = this->resMgr.getCompilerInstance().getASTContext().getTranslationUnitDecl();
 	for(TranslationUnitDecl::decl_iterator I = decls->decls_begin(), E = decls->decls_end();
 			I != E; ++I) {
@@ -22,6 +29,11 @@ bool FlattenCFGTransformer::execute() {
 			continue;
 		}
 	}
+
+	delete this->renamer;
+	delete this->preTranser;
+	delete this->dclMover;
+	refMap.reset();
 
 	return true;
 }
@@ -41,9 +53,9 @@ bool FlattenCFGTransformer::HandleAnyFunctionDecl(Decl *D){
 	assert(fd && "get FunctionDecl failed");
 
 	//TODO
-	renamer.HandleDecl(fd);
-	preTranser.HandleDecl(fd);
-	//toper.HandelDecl(fd);
+	this->renamer.HandleDecl(fd);
+	this->preTranser.HandleDecl(fd);
+	this->dclMover->HandelDecl(fd);
 
 	return true;
 }

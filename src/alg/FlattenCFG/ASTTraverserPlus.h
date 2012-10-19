@@ -1,7 +1,6 @@
 #ifndef OBFS_ALG_ASTTRAVERSERPLUS_H
 #define OBFS_ALG_ASTTRAVERSERPLUS_H
 
-#include "alg/Algorithm.h"
 #include "clang/AST/RecursiveASTVisitor.h"
 
 using namespace clang;
@@ -16,12 +15,12 @@ public:
 	bool TraverseDecl(Decl *D);
 
 	bool WalkUpFromStmt(Stmt *S) { return getDerived().VisitStmt(S); }
-    bool VisitStmt(Stmt *S) { return true; }
+	bool VisitStmt(Stmt *S) { return true; }
 	bool ExitStmt(Stmt *S){ return true; }
 
 
 	bool WalkUpFromDecl(Decl *D) { return getDerived().VisitDecl(D); }
-    bool VisitDecl(Decl *D) { return true; }
+	bool VisitDecl(Decl *D) { return true; }
 	bool ExitDecl(Decl *D){ return true; }
 };
 

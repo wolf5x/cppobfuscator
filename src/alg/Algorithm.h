@@ -116,7 +116,7 @@ protected:
 		//ExprResult dRes = S.BuildDeclRefExpr(dyn_cast<ValueDecl>(var), var->getType(), VK_LValue, SourceLocation());
 		//assert(!dRes.isInvalid());
 		//DeclRefExpr *dExpr = dyn_cast<DeclRefExpr>(dRes.get());
-		DeclRefExpr *dExpr = BuildLocalVarDeclRefExpr(var);
+		DeclRefExpr *dExpr = BuildVarDeclRefExpr(var);
 		DPRINT("--- DECLREF END ---");
 		//QualType Ty = var->getType();
 		ExprResult eRes = S.BuildBinOp(0, SourceLocation(), BO_Assign, dExpr, rExpr);
@@ -136,7 +136,7 @@ protected:
 	}
 
 	// build DeclRefExpr using a VarDecl
-	DeclRefExpr* BuildLocalVarDeclRefExpr(VarDecl *var) {
+	DeclRefExpr* BuildVarDeclRefExpr(VarDecl *var) {
 		ValueDecl *D = dyn_cast<ValueDecl>(var);
 		assert(D && "cast to ValueDecl failed");
 		QualType Ty = var->getType();
@@ -261,10 +261,10 @@ protected:
 
 	inline CompoundStmt* StVecToCompound(StmtPtrSmallVector *v){
 		//FIXME memory leak
-		//change NULL to NullStmt
-		for(int i = 0; i < v->size(); i++) {
+		//remove null
+		for(int i = v->size()-1; i >= 0; i--) {
 			if(v->operator[](i) == NULL) {
-				v->operator[](i) = this->AddNewNullStmt();
+				v->erase(v->begin() + i);
 			}
 		}
 		return new (this->compInst.getASTContext())
@@ -278,6 +278,22 @@ protected:
 		}
 		return new (this->compInst.getASTContext())
 			CompoundStmt(this->compInst.getASTContext(), (Stmt**)(&S), 1, SourceLocation(), SourceLocation());
+	}
+
+	bool replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild) {
+		if(!Parent) {
+			DPRINT("Parent NULL");
+			return true;
+		}
+		for(Stmt::child_iterator I = Parent->child_begin(), IEnd = Parent->child_end();
+				I != IEnd; ++I) {
+			if(*I == OldChild) {
+				//memory leak
+				*I = NewChild;
+				return true;
+			}
+		}
+		return false;
 	}
 
 	bool updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
