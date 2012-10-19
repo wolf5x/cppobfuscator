@@ -1,7 +1,9 @@
 #ifndef OBFS_ALG_ASTTRAVERSER_H
 #define OBFS_ALG_ASTTRAVERSER_H
 
-#include "../Algorithm.h"
+#include "clang/AST/RecursiveASTVisitor.h"
+#include "clang/AST/Stmt.h"
+#include "alg/Algorithm.h"
 using namespace clang;
 
 enum TraverseCode {
@@ -9,6 +11,11 @@ enum TraverseCode {
 	SKIP,
 	ABORT
 };
+
+#define TRY_CHILD(CALL_EXPR) \
+	do { TraverseCode code = getDerived().CALL_EXPR; \
+		if(code == ABORT) return ABORT; \
+	} while(0)
 
 //This class is a slim version of clang/ast/RecursiveASTVisitor.h
 //Added ExitFoo method which is called after traversed all the children,
@@ -41,6 +48,7 @@ TraverseCode ASTTraverser<Derived>::TraverseDecl(Decl *D) {
 		return GOON;
 	}
 
+	DPRINT("indecl %s %x", D->getDeclKindName(), (unsigned int)D);
 	TraverseCode code; 
 	//DEF_TRAVERSE_DECL(DECL, CODE)
 	code = WalkUpFromDecl(D);
@@ -49,7 +57,7 @@ TraverseCode ASTTraverser<Derived>::TraverseDecl(Decl *D) {
 	}
 	//CODE
 	Stmt *S = D->getBody();
-	code = TraverseStmt(S);
+	code = getDerived().TraverseStmt(S);
 	if(code != GOON) {
 		return code == SKIP ? GOON : ABORT;
 	}
@@ -64,7 +72,7 @@ TraverseCode ASTTraverser<Derived>::TraverseDecl(Decl *D) {
 			Child != ChildEnd; ++Child) {
 		//FIXME
 		//if(isa<Decl>(*Child)){
-			code = TraverseDecl(*Child);
+			code = getDerived().TraverseDecl(*Child);
 		//} else if(isa<Stmt>(*Child)){
 		//	code = TraverseStmt(dyn_cast<Stmt>(*Child));
 		//}
@@ -73,6 +81,7 @@ TraverseCode ASTTraverser<Derived>::TraverseDecl(Decl *D) {
 		}
 	}
 
+	DPRINT("exitingdecl %s %x", D->getDeclKindName(), (unsigned int)D);
 	return getDerived().ExitDecl(D);
 }
 
@@ -82,6 +91,7 @@ TraverseCode ASTTraverser<Derived>::TraverseStmt(Stmt *&S) {
 		return GOON;
 	}
 
+	DPRINT("instmt %s %x", S->getStmtClassName(), (unsigned int)S);
 	TraverseCode code;
 	
 	code = WalkUpFromStmt(S);
@@ -89,18 +99,29 @@ TraverseCode ASTTraverser<Derived>::TraverseStmt(Stmt *&S) {
 		return code == SKIP ? GOON : ABORT;
 	}
 	//CODE
-	;
+	switch (S->getStmtClass()) {
+		case Stmt::DeclStmtClass:
+			{
+				DeclStmt *ts = dyn_cast<DeclStmt>(S);
+				for(DeclStmt::decl_iterator I = ts->decl_begin(); I != ts->decl_end(); ++I) {
+					TRY_CHILD(TraverseDecl(*I));
+				}
+				return GOON;
+			}
+	};
 	for (Stmt::child_range range = S->children(); range; ++range) {
 		//FIXME
 		//if(isa<Decl>(*range)){
 		//	code = TraverseDecl(dyn_cast<Decl>(*range));
 		//} else if(isa<Stmt>(*range)){
-			code = TraverseStmt(*range);
+			code = getDerived().TraverseStmt(*range);
 		//}
 		if(code == ABORT) {
 			return code;
 		}
 	}
+
+	DPRINT("exitingstmt %s %x", S->getStmtClassName(), (unsigned int)S);
 
 	return getDerived().ExitStmt(S);
 }

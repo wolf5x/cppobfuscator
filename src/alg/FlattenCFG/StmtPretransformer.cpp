@@ -29,18 +29,21 @@ bool StmtPretransformer::HandleDecl(Decl *D) {
 	return true;
 }
 
-TraverseCode StmtPretransformer::VisitStmt(Stmt *&S) {
+bool StmtPretransformer::VisitStmt(Stmt *S) {
 	//the *&S may change during the transform, 
 	//so we need to record S
 	StmtPretransInfo *pInfo = new StmtPretransInfo(S, &S, NULL);
 	stmtStack.push_back(pInfo);
 	stmtMap[S] = pInfo;
+	if(!this->parMap->getParent(S)) {
+		this->parMap->addStmt(S);
+	}
 
 	DPRINT("push stmt %s %x %x %x", S->getStmtClassName(), (unsigned int)S, stmtStack.back(), stmtMap[S]);
-	return GOON;
+	return true;
 }
 
-TraverseCode StmtPretransformer::ExitStmt(Stmt *&S) {
+bool StmtPretransformer::ExitStmt(Stmt *S) {
 	//TODO if is atom, don't go deeper
 
 	//TODO
@@ -70,12 +73,14 @@ TraverseCode StmtPretransformer::ExitStmt(Stmt *&S) {
 				this->SwitchToIf(S);
 				break;
 			}
+		default:
+			return true;
 	}
 
-	return GOON;
+	return true;
 }
 
-bool StmtPretransformer::WhileToIf(Stmt *&S) {
+bool StmtPretransformer::WhileToIf(Stmt *S) {
 	//FIXME memory leak
 	DPRINT("while to if trans");
 	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
@@ -128,7 +133,7 @@ bool StmtPretransformer::WhileToIf(Stmt *&S) {
 	return true;
 }
 
-bool StmtPretransformer::DoToIf(Stmt *&S) {
+bool StmtPretransformer::DoToIf(Stmt *S) {
 	DPRINT("do to if trans");
 	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
 	DoStmt *DS = dyn_cast<DoStmt>(S);
@@ -173,7 +178,7 @@ bool StmtPretransformer::DoToIf(Stmt *&S) {
 	return true;
 }
 
-bool StmtPretransformer::ForToIf(Stmt *&S) {
+bool StmtPretransformer::ForToIf(Stmt *S) {
 	DPRINT("for to if trans");
 	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
 	ForStmt *FS = dyn_cast<ForStmt>(S);
@@ -242,7 +247,7 @@ bool StmtPretransformer::ForToIf(Stmt *&S) {
 
 //maybe has bug
 //need transform break->goto before case->label
-bool StmtPretransformer::SwitchToIf(Stmt *&S) {
+bool StmtPretransformer::SwitchToIf(Stmt *S) {
 	DPRINT("switch to if trans");
 	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
 	SwitchStmt *SS = dyn_cast<SwitchStmt>(S);
@@ -442,6 +447,7 @@ bool StmtPretransformer::InnerJumpToGoto(const Stmt *stRoot, LabelStmt *stLblCon
 
 bool StmtPretransformer::updateChildrenInEdge(Stmt *S) {
 	if(!S) {
+		DPRINT("Stmt NULL");
 		return true;
 	}
 	//FIXME: inefficient, replace with a new data structure
@@ -460,6 +466,7 @@ bool StmtPretransformer::updateChildrenInEdge(Stmt *S) {
 
 bool StmtPretransformer::replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild) {
 	if(!Parent) {
+		DPRINT("Parnet NULL");
 		return true;
 	}
 	for(Stmt::child_iterator I = Parent->child_begin(), IEnd = Parent->child_end();

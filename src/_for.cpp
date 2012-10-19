@@ -2,6 +2,7 @@
 
 int main()
 {
+	/*
 	int x = 1, y = 2, z;
 	switch(x){
 		//for(z = 0; z < 1 && z > -1; z++) {
@@ -11,6 +12,7 @@ int main()
 		//};
 
 	}
+	*/
 	return 0;
 }
 

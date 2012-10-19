@@ -9,9 +9,9 @@ bool VarRenamer::HandleDecl(Decl *D) {
 	return true;
 }
 
-TraverseCode VarRenamer::VisitDecl(Decl *&D) {
+bool VarRenamer::VisitDecl(Decl *&D) {
 	if(!D){
-		return GOON;
+		return true;
 	}
 
 	DPRINT("decl: %s", D->getDeclKindName());
@@ -47,7 +47,7 @@ TraverseCode VarRenamer::VisitDecl(Decl *&D) {
 		this->renameVarDecl(ECD);
 	} 
 	//TODO typedef rename
-	return GOON;
+	return true;
 }
 
 

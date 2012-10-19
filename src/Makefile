@@ -11,7 +11,8 @@ TAROBJ = $(TARGET).o
 SRCS = $(filter-out ./$(TARGET).cpp, $(foreach dir,$(SUBDIR),$(wildcard $(dir)/[^@_]*.cpp)))
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 
-CXXFLAGS = -g -c $(INCLUDE)
+DEBUGFLAG = -Wformat=0 -g
+CXXFLAGS = $(DEBUGFLAG) -c $(INCLUDE)
 
 #LLVM_LIBS = core mc
 #LLVM_CONFIG_COMMAND = $(LLVM_BIN_PATH)/llvm-config --cxxflags --ldflags \

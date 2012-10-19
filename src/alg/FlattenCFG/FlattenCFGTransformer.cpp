@@ -2,6 +2,7 @@
 #include "VarRenamer.h"
 #include "FlattenCFGTransformer.h"
 #include "MoveLocalDeclToTop.h"
+#include "ASTTraverserPlus.h"
 using namespace std;
 using namespace clang;
 

@@ -1,20 +1,15 @@
 #ifndef OBFS_ALG_STMTPRETRANSFORMER_H
 #define OBFS_ALG_STMTPRETRANSFORMER_H
 
-#include "llvm/ADT/OwningPtr.h"
-#include "llvm/ADT/IntrusiveRefCntPtr.h"
 #include "llvm/ADT/SmallVector.h"
 #include "clang/AST/ParentMap.h"
 #include "alg/Algorithm.h"
 #include "alg/FlattenCFG/ASTTraverser.h"
+#include "alg/FlattenCFG/ASTTraverserPlus.h"
 #include <map>
 using namespace clang;
 
-using llvm::RefCountedBase;
-using llvm::IntrusiveRefCntPtr;
-using llvm::OwningPtr;
 using llvm::SmallVector;
-using clang::ParentMap;
 using std::map;
 
 class StmtPretransInfo{
@@ -28,7 +23,7 @@ public:
 	Stmt *stNew; //new stmt to replace old one
 };
 
-class StmtPretransformer: public Algorithm, public ASTTraverser<StmtPretransformer>{
+class StmtPretransformer: public Algorithm, public ASTTraverserPlus<StmtPretransformer>{
 public:
 	typedef StmtPretransInfo *StmtPretransInfoPtrTy;
 	typedef SmallVector<StmtPretransInfoPtrTy, 32> StmtNodeSmallVector;
@@ -40,14 +35,14 @@ public:
 
 	bool HandleDecl(Decl *D);
 
-	TraverseCode VisitStmt(Stmt *&S);
-	TraverseCode ExitStmt(Stmt *&S);
+	bool VisitStmt(Stmt *S);
+	bool ExitStmt(Stmt *S);
 	
 protected:
-	bool WhileToIf(Stmt *&S);
-	bool DoToIf(Stmt *&S);
-	bool ForToIf(Stmt *&S);
-	bool SwitchToIf(Stmt *&S);
+	bool WhileToIf(Stmt *S);
+	bool DoToIf(Stmt *S);
+	bool ForToIf(Stmt *S);
+	bool SwitchToIf(Stmt *S);
 
 	bool InnerJumpToGoto(const Stmt *stRoot, LabelStmt *stLblContinue, LabelStmt *stLblBreak);
 

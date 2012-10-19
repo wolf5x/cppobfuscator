@@ -1,8 +1,8 @@
 #ifndef OBFS_ALG_VarRenamer_H
 #define OBFS_ALG_VarRenamer_H
 
-#include "../Algorithm.h"
-#include "ASTTraverser.h"
+#include "alg/Algorithm.h"
+#include "alg/FlattenCFG/ASTTraverserPlus.h"
 using namespace clang;
 
 class VarRenamer;
@@ -11,7 +11,7 @@ class VarRenamer;
 // local vars
 // enum members
 
-class VarRenamer: public Algorithm, public ASTTraverser<VarRenamer> {
+class VarRenamer: public Algorithm, public ASTTraverserPlus<VarRenamer> {
 public:
 	VarRenamer(ResourceManager &RM)
 		: Algorithm(RM)
@@ -20,7 +20,7 @@ public:
 	bool HandleDecl(Decl *D);
 
 	//bool VisitStmt(Stmt *&S);
-	TraverseCode VisitDecl(Decl *&D);
+	bool VisitDecl(Decl *&D);
 
 };
 
