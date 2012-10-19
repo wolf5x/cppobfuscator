@@ -5,7 +5,9 @@ using namespace clang;
 bool VarRenamer::HandleDecl(Decl *D) {
 	//only rename vars in function, so far
 	assert(isa<FunctionDecl>(D) && "not a function decl");
+	DPRINT("START VarRenamer");
 	this->TraverseDecl(D);
+	DPRINT("END VarRenamer");
 	return true;
 }
 

@@ -1,7 +1,7 @@
 #ifndef OBFS_TYPEDEF_H
 #define OBFS_TYPEDEF_H
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "clang/AST/DeclGroup.h"
 #include <vector>
 

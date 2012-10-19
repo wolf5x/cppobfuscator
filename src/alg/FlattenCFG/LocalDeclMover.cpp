@@ -3,6 +3,7 @@
 using namespace clang;
 
 bool LocalDeclMover::HandelDecl(Decl *D) {
+	DPRINT("START LocalDeclMover");
 	if(!D){
 		return true;
 	}
@@ -10,7 +11,7 @@ bool LocalDeclMover::HandelDecl(Decl *D) {
 
 	this->rootStack.clear();
 	this->topDeclStmts.clear();
-	this->parMap.reset(new ParentMap());
+	this->parMap.reset(new ParentMap(body));
 	assert(this->refMap && "ref var map should not be null");
 
 	this->TraverseDecl(D);
@@ -19,6 +20,7 @@ bool LocalDeclMover::HandelDecl(Decl *D) {
 	this->topDeclStmts.clear();
 	this->parMap.reset();
 
+	DPRINT("END LocalDeclMover");
 	return true;
 }
 
@@ -30,7 +32,7 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 	if(!this->parMap->hasParent(S)) {
 		this->parMap->addStmt(S);
 		this->rootStack.push_back(S);
-		this->topDeclStmts.push_back(StmtListVec());
+		this->topDeclStmts.push_back(StmtPtrSmallVector());
 	}
 
 	Sema &Sm = this->resMgr.getCompilerInstance().getSema();
@@ -51,27 +53,36 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 		case Stmt::IfStmtClass:
 			//cond var decl transform, to avoid dumpPretty bug
 			{
-				IS = dyn_cast<IfStmt>(S);
-				if(DeclStmt *stIfDcl = IS->getConditionVariableDeclStmt()) {
-					StmtPtrSmallVector *compBody = new StmtPtrSmallVector();
-					compBody->push_back(stIfDcl);
+				IfStmt *IS = dyn_cast<IfStmt>(S);
+				if(DeclStmt *stIfDcl = const_cast<DeclStmt*>(IS->getConditionVariableDeclStmt())) {
+					Stmt *Parent = this->parMap->getParent(IS);
+					assert(Parent && "IfStmt should have a parent");
 					Expr* stDclRef = this->BuildVarDeclRefExpr(IS->getConditionVariable());
 					Expr* newIfCond = this->BuildImpCastExprToType(stDclRef, Ctx.BoolTy, clang::CK_LValueToRValue);
 					IS->setCond(newIfCond);
-					this->parMap->addStmt(IS);
+
+					StmtPtrSmallVector *compBody = new StmtPtrSmallVector();
+					compBody->push_back(stIfDcl);
+					compBody->push_back(IS);
+					CompoundStmt *newStmt = StVecToCompound(compBody);
+					delete compBody;
+
+					this->replaceChild(Parent, IS, newStmt);
+					this->parMap->addStmt(Parent);
 				}
 			}
 			break;
 
 		case Stmt::DeclRefExprClass:
-			//
+			//TODO
+			break;
 
 		case Stmt::DeclStmtClass:
 			DeclStmt *DS = dyn_cast<DeclStmt>(S);
 			DeclGroupRef DG = DS->getDeclGroup();
 			Expr *stComma = NULL;
 			for(DeclGroupRef::iterator I = DG.begin(), IEnd = DG.end();
-					I != E; ++I) {
+					I != IEnd; ++I) {
 				Decl *D = *I;
 				if(VarDecl *VD = dyn_cast<VarDecl>(D)) {
 					if(VD->hasExternalStorage()) {
@@ -88,6 +99,7 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 				}
 
 			}
+			break;
 
 
 	}	
@@ -99,6 +111,10 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 
 
 bool LocalDeclMover::ExitStmt(Stmt *S) {
+	if(!S) {
+		return true;
+	}
+	return true;
 	// update with new stmtbody
 	if(this->rootStack.back() == S) {
 		if(!isa<CompoundStmt>(S)) {
@@ -106,10 +122,10 @@ bool LocalDeclMover::ExitStmt(Stmt *S) {
 			assert(false);
 		}
 		StmtPtrSmallVector &newBody = this->topDeclStmts.back();
-		if(bodyVec.size() > 0) {
+		if(newBody.size() > 0) {
 			newBody.insert(newBody.end(), S->child_begin(), S->child_end());
 			//FIXME: only compound
-			updateChildrenStmts(S, newBody); 
+			updateChildrenStmts(S, &newBody); 
 		}
 
 		this->topDeclStmts.pop_back();

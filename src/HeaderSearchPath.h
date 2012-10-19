@@ -1,7 +1,7 @@
 #ifndef OBFS_HSPATH_H
 #define OBFS_HSPATH_H
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "clang/Basic/Version.h"
 #include <string>
 using std::string;
@@ -13,7 +13,8 @@ const string HS_PATHS[] = {
 	"/usr/include",
 	"/usr/include/linux",
 	"/usr/include/c++/4.6",
-	"/usr/include/c++/4.6/i486-linux-gnu",
+	"/usr/include/c++/4.6/i686-linux-gnu",
 	"/usr/include/c++/4.6/backward",
+	"/usr/include/i386-linux-gnu/",
 };
 #endif

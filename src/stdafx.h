@@ -32,8 +32,6 @@
 #include "llvm/Support/Host.h"
 #include "llvm/Support/raw_ostream.h"
 
-typedef std::vector<clang::DeclGroupRef> DeclGroupRefVec;
-typedef uint32_t ErrCode;
 
 #define DEBUG
 #ifdef DEBUG

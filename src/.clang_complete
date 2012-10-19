@@ -1,10 +1,10 @@
 -I/usr/include/c++/4.6
 -I/usr/include/c++/4.6/i686-linux-gnu/.
 -I/usr/include/c++/4.6/backward
--I/usr/lib/gcc/i686-linux-gnu/4.6.1/include
--I/usr/local/include
--I/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed
+-I/usr/lib/gcc/i686-linux-gnu/4.6/include
+-I/usr/lib/gcc/i686-linux-gnu/4.6/include-fixed
 -I/usr/include/i386-linux-gnu
+-I/usr/local/include
 #-I/home/wolf5x/downloads/llvmbuild/llvm/include
 -I/usr/include
 -D_DEBUG -D__NO_CTYPE_INLINE

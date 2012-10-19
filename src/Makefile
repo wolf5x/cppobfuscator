@@ -2,8 +2,8 @@ CXX = g++
 CLANG = clang
 
 ROOT = .
-SUBDIR = . alg alg/FlattenCFG
-INCLUDE = $(addprefix -I,$(SUBDIR))
+SUBDIR = . res alg alg/FlattenCFG
+INCLUDE = $(addprefix -I,$(ROOT)) #$(SUBDIR)
 
 TARGET = obfs
 TAROBJ = $(TARGET).o
@@ -11,7 +11,7 @@ TAROBJ = $(TARGET).o
 SRCS = $(filter-out ./$(TARGET).cpp, $(foreach dir,$(SUBDIR),$(wildcard $(dir)/[^@_]*.cpp)))
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 
-DEBUGFLAG = -Wformat=0 -g
+DEBUGFLAG = -Wformat=0 -g -w -fno-rtti
 CXXFLAGS = $(DEBUGFLAG) -c $(INCLUDE)
 
 #LLVM_LIBS = core mc
@@ -65,13 +65,17 @@ pch: $(PCH).h
 #	$(CXX) ./$(PCH).h $(PCHFLAGS) -o ./$(PCH).h.pch
 
 $(TARGET): $(OBJS) $(TAROBJ) Makefile
-	$(CXX) $(TAROBJ) $(OBJS) -o $@ $(CLANGLIBS) $(LLVMLIBS) 
+	@echo Link $<
+	$(CXX) $(TAROBJ) $(OBJS) -o $@ $(CLANGLIBS) $(LLVMLIBS) $(LDFLAGS)
 
 $(OBJS): %.o:%.cpp %.h
+	@echo Build $<
 	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
 
 $(TAROBJ): %.o:%.cpp %.h
+	@echo Bulid $<
 	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
 
 clean:
+	@echo Clean
 	rm -rf $(TARGET) $(TAROBJ) $(OBJS) $(patsubst %.cpp,%.d,$(SRCS))

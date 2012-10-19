@@ -28,8 +28,8 @@ public:
 	};
 	virtual ~Resource() {}
 
-	virtual bool allocate(){ return true; }
-	virtual bool clear(){ return true; }
+	virtual void allocate(){ }
+	virtual void clear(){ }
 };
 
 class StmtParentMapResource: public Resource {
@@ -38,16 +38,19 @@ public:
 	StmtParentMapResource(Stmt *S) : Impl(0) { allocate(S); }
 	~StmtParentMapResource() { delete Impl; }
 	
+	void allocate() { 
+		allocate(0);
+	}
+
 	void allocate(Stmt *S) { 
-		if(S)
-			Impl = new ParentMap(S);
+		Impl = new ParentMap(S);
 	}
 
 	void clear() { delete Impl; }
 
 	void reset(Stmt *S = 0) {
 	   	clear(); 
-		allocate();
+		allocate(S);
    	}
 
 	void reset(ParentMap *PM) {
@@ -64,32 +67,34 @@ class ReferenceVarSetResource: public Resource {
 	void *Impl;
 
 public:
-	typedef DenseSet<VarDecl*> SetTy;
+	typedef DenseMap<VarDecl*, VarDecl*> MapTy;
 
 	ReferenceVarSetResource() : Impl(0) {}
 	~ReferenceVarSetResource() { clear(); }
 
-	bool allocate();
-	bool clear() { delete (SetTy*)Impl; }
+	void allocate();
+	void clear() { delete (MapTy*)Impl; }
 	
 	bool isReferenceVar(VarDecl *D);
 	VarDecl *getNewPointerVar(VarDecl *D);
 };
 
 class StmtTreeRootMapResource: public Resource {
-	void *Impl;
-	static void buildMap(MapTy &M, Stmt *Root);
-
 public:
 	typedef DenseMap<Stmt*, Stmt*> MapTy;
 	StmtTreeRootMapResource() : Impl(0) {}
 	~StmtTreeRootMapResource() { clear(); }
 
-	bool allocate();
-	bool clear() { delete (MapTy*)Impl; }
+	void allocate();
+	void clear() { delete (MapTy*)Impl; }
 
 	Stmt *getRoot(Stmt *S);
 	bool addStmt(Stmt *S);
+
+private:
+	void *Impl;
+	static void buildMap(MapTy &M, Stmt *Root);
+
 };
 
 class AtomStmtNodeSetResource: public Resource {
@@ -100,8 +105,8 @@ public:
 	AtomStmtNodeSetResource() : Impl(0) {}
 	~AtomStmtNodeSetResource() { clear(); }
 
-	bool allocate();
-	bool clear() { delete (SetTy*)Impl; }
+	void allocate();
+	void clear() { delete (SetTy*)Impl; }
 
 	bool isAtomRoot(Stmt *S);
 };

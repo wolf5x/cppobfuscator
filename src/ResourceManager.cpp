@@ -1,12 +1,23 @@
 #include "ResourceManager.h"
+
+#include "clang/AST/ASTContext.h"
+#include "clang/AST/Stmt.h"
+#include "clang/Basic/Diagnostic.h"
+#include "clang/Basic/FileManager.h"
+#include "clang/Basic/SourceManager.h"
+#include "clang/Basic/TargetInfo.h"
+#include "clang/Basic/TargetOptions.h"
+#include "clang/Frontend/CompilerInstance.h"
+#include "clang/Lex/Preprocessor.h"
+#include "clang/Parse/ParseAST.h"
 #include <string>
 #include <set>
 using namespace clang;
 using std::string;
 using std::set;
 
-void 
-ResourceManager::init() {
+
+void ResourceManager::init() {
 	decls.clear();
 
 	compInst.reset(new CompilerInstance());
@@ -51,8 +62,7 @@ ResourceManager::init() {
 	rw->setSourceMgr(srcMgr, compInst->getLangOpts());
 }
 
-bool 
-ResourceManager::initParseAST(string srcFileFullName) {
+bool ResourceManager::initParseAST(string srcFileFullName) {
 	FileManager &fileMgr = compInst->getFileManager();
 	SourceManager &srcMgr = compInst->getSourceManager();
 	const FileEntry *fileIn = fileMgr.getFile(srcFileFullName);
@@ -70,8 +80,7 @@ ResourceManager::initParseAST(string srcFileFullName) {
 	return true;
 }
 
-void 
-ResourceManager::rewriteToFile(string desFileFullName) {
+void ResourceManager::rewriteToFile(string desFileFullName) {
 	SourceManager &srcMgr = compInst->getSourceManager();
 	set<FileID> q;
 	TranslationUnitDecl *decls = compInst->getASTContext().getTranslationUnitDecl();
@@ -103,8 +112,7 @@ ResourceManager::rewriteToFile(string desFileFullName) {
 	}
 }
 
-bool 
-ResourceManager::prettyPrint(llvm::raw_ostream &out) {
+bool ResourceManager::prettyPrint(llvm::raw_ostream &out) {
 	PrintingPolicy policy = compInst->getASTContext().getPrintingPolicy();
 	NullStmt *nullSt = new (compInst->getASTContext()) NullStmt(SourceLocation());
 	SourceManager &srcMgr = compInst->getSourceManager();

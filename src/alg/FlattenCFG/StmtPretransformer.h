@@ -48,7 +48,6 @@ protected:
 
 	//update stmtMap.pInEdge of children of S
 	bool updateChildrenInEdge(Stmt *S);
-	bool replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild);
 		
 	StmtNodeSmallVector stmtStack; //point to the Stmt* which points to a child 
 	StmtNodeMap stmtMap; 

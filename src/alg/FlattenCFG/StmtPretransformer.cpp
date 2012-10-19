@@ -4,6 +4,7 @@ using namespace clang;
 using std::map;
 
 bool StmtPretransformer::HandleDecl(Decl *D) {
+	DPRINT("START StmtPretransformer");
 	assert(isa<FunctionDecl>(D) && "not function decl");
 
 	if(!D->hasBody()){
@@ -25,6 +26,7 @@ bool StmtPretransformer::HandleDecl(Decl *D) {
 	}
 	delete this->parMap;
 	this->parMap = NULL;
+	DPRINT("END StmtPretransformer");
 
 	return true;
 }
@@ -122,7 +124,7 @@ bool StmtPretransformer::WhileToIf(Stmt *S) {
 
 	//change orignal WhileStmt to the lblBegin
 	Stmt *Parent = this->parMap->getParent(S);
-	this->replaceChild(Parent, S, lblBegin);
+	replaceChild(Parent, S, lblBegin);
 	this->parMap->addStmt(S);
 	//S = lblBegin;
 
@@ -170,7 +172,7 @@ bool StmtPretransformer::DoToIf(Stmt *S) {
 	lblBegin->setSubStmt(this->StVecToCompound(lblBeginBody));
 	
 	//change orignal DoStmt to the lblBegin
-	this->replaceChild(this->parMap->getParent(S), S, lblBegin);
+	replaceChild(this->parMap->getParent(S), S, lblBegin);
 	this->parMap->addStmt(S);
 
 	delete lblBeginBody;
@@ -235,7 +237,7 @@ bool StmtPretransformer::ForToIf(Stmt *S) {
 	//this->updateChildrenInEdge(stLblForBody);
 
 	//modify old ForStmt
-	this->replaceChild(this->parMap->getParent(S), S, lblFor);
+	replaceChild(this->parMap->getParent(S), S, lblFor);
 	this->parMap->addStmt(S);
 
 	delete lblContinueBody;
@@ -304,8 +306,8 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 			Expr *expL = stCase->getLHS();
 			Expr *expR = stCase->getRHS();
 			Expr *expIfCond = expR ? 
-				BuildRangeCondExpr(BuildLocalVarDeclRefExpr(VD), expL, expR)
-				: BuildEqualCondExpr(BuildLocalVarDeclRefExpr(VD), expL);
+				BuildRangeCondExpr(BuildVarDeclRefExpr(VD), expL, expR)
+				: BuildEqualCondExpr(BuildVarDeclRefExpr(VD), expL);
 
 			//goto LABEL_CASE
 			GotoStmt *stGoto = AddNewGoto(stLblCase);
@@ -396,7 +398,7 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 	//this->updateChildrenInEdge(stLblSwitchBody);
 	//modify parent ptr
 	//S = stLblSwitch;
-	this->replaceChild(this->parMap->getParent(S), S, stLblSwitch);
+	replaceChild(this->parMap->getParent(S), S, stLblSwitch);
 	this->parMap->addStmt(S);
 
 	DPRINT("done");
@@ -426,13 +428,13 @@ bool StmtPretransformer::InnerJumpToGoto(const Stmt *stRoot, LabelStmt *stLblCon
 		if(isa<ContinueStmt>(Child)) {
 			if(stLblContinue) {
 				GotoStmt *jumpToLblContinue = this->AddNewGoto(stLblContinue);
-				this->replaceChild(Parent, Child, jumpToLblContinue);
+				replaceChild(Parent, Child, jumpToLblContinue);
 				//*pChild = jumpToLblContinue; //FIXME: memory leak
 			}
 		} else if(isa<BreakStmt>(Child)) {
 			if(stLblBreak) {
 				GotoStmt *jumpToLblEnd = this->AddNewGoto(stLblBreak);
-				this->replaceChild(Parent, Child, jumpToLblEnd);
+				replaceChild(Parent, Child, jumpToLblEnd);
 				//*pChild = jumpToLblEnd; //FIXME: memory leak
 			}
 		}

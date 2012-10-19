@@ -10,7 +10,7 @@ using llvm::OwningPtr;
 bool FlattenCFGTransformer::execute() {
 	this->renamer = new VarRenamer(this->resMgr);
 	this->preTranser = new StmtPretransformer(this->resMgr);
-	OwningPtr<RefVarToPtrMap> refMap(new RefVarToPtrMap());
+	OwningPtr<RefVarToPtrMap> refMap(new RefVarToPtrMap(0));
 	assert(refMap.get() && "reference variable map alloc failed");
 	this->dclMover = new LocalDeclMover(this->resMgr, refMap.get());
 
@@ -47,14 +47,14 @@ bool FlattenCFGTransformer::HandleAnyFunctionDecl(Decl *D){
 	} else if(FunctionDecl *td = dyn_cast<FunctionDecl>(D)) { // function, c++ method
 		fd = td;
 	} else {
-		DPRINT("unknown FunctionDecl type");
+		DPRINT("unknown FunctionDecl type: %s %x", D->getDeclKindName(),(unsigned int)D);
 		return false;
 	}
 	assert(fd && "get FunctionDecl failed");
 
 	//TODO
-	this->renamer.HandleDecl(fd);
-	this->preTranser.HandleDecl(fd);
+	this->renamer->HandleDecl(fd);
+	this->preTranser->HandleDecl(fd);
 	this->dclMover->HandelDecl(fd);
 
 	return true;

@@ -2,15 +2,22 @@
 #define OBFS_RESOURCEMANAGER_H
 
 #include "stdafx.h"
-#include <string>
 #include "HeaderSearchPath.h"
 #include "Typedef.h"
 #include "alg/InitParseConsumer.h"
 
+#include "clang/Frontend/CompilerInstance.h"
 #include "clang/Rewrite/Rewriter.h"
-#include "llvm/Support/Host.h"
 
-using namespace clang;
+#include "llvm/ADT/OwningPtr.h"
+#include "llvm/Support/Host.h"
+#include "llvm/Support/raw_ostream.h"
+
+#include <string>
+
+using clang::CompilerInstance;
+using clang::Rewriter;
+using llvm::OwningPtr;
 using std::string;
 
 class ResourceManager {
