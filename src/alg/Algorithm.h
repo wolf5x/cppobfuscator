@@ -90,7 +90,7 @@ protected:
 	UnaryOperator* BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP);
 
 	// create stmt: "lExpr = rExpr"
-	BinaryOperator* BuildAssignExpr(VarDecl *VD, Expr* ER);
+	Expr* BuildAssignExpr(VarDecl *VD, Expr* ER);
 
 	BinaryOperator* BuildCommaExpr(Expr *EL, Expr *ER);
 
@@ -110,7 +110,7 @@ protected:
 	CXXConstructExpr* BuildTempObjectConstuctExpr(QualType Ty, Expr *E);
 
 	//build EL == ER
-	BinaryOperator* BuildEqualCondExpr(Expr *EL, Expr *ER);
+	Expr* BuildEqualCondExpr(Expr *EL, Expr *ER);
 
 	//build EL <= EV && EV <= ER
 	BinaryOperator* BuildRangeCondExpr(Expr *EV, Expr *EL, Expr *EH);

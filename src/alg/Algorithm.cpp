@@ -93,15 +93,13 @@ UnaryOperator* Algorithm::BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind O
 	return dyn_cast<UnaryOperator>(ER.get());
 }
 
-BinaryOperator* Algorithm::BuildAssignExpr(VarDecl *var, Expr* rExpr) {
-	DPRINT("--- ASSIGN EXPR BEGIN ---");
+Expr* Algorithm::BuildAssignExpr(VarDecl *var, Expr* rExpr) {
 	Sema &S = this->resMgr.getCompilerInstance().getSema();
 	DeclRefExpr *dExpr = BuildVarDeclRefExpr(var);
-	DPRINT("--- DECLREF END ---");
+	assert(dExpr != NULL);
 	ExprResult eRes = S.BuildBinOp(0, SourceLocation(), BO_Assign, dExpr, rExpr);
-	assert(!eRes.isInvalid());
-	DPRINT("--- ASSIGN EXPR END ---");
-	return dyn_cast<BinaryOperator>(eRes.get());	
+	assert(!eRes.isInvalid() && eRes.get());
+	return eRes.get();	
 }
 
 BinaryOperator* Algorithm::BuildCommaExpr(Expr *lExpr, Expr *rExpr) {
@@ -160,11 +158,11 @@ CXXConstructExpr* Algorithm::BuildTempObjectConstuctExpr(QualType Ty, Expr *expr
 	return dyn_cast<CXXConstructExpr>(res.get());
 }
 
-BinaryOperator* Algorithm::BuildEqualCondExpr(Expr *EL, Expr *ER) {
+Expr* Algorithm::BuildEqualCondExpr(Expr *EL, Expr *ER) {
 	Sema &S = this->resMgr.getCompilerInstance().getSema();
 	ExprResult eRes = S.BuildBinOp(0, SourceLocation(), clang::BO_EQ, EL, ER);
 	assert(!eRes.isInvalid());
-	return dyn_cast<BinaryOperator>(eRes.get());
+	return eRes.get();
 }
 
 BinaryOperator* Algorithm::BuildRangeCondExpr(Expr *EV, Expr *EL, Expr *EH) {
