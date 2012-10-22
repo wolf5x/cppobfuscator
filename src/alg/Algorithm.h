@@ -102,8 +102,8 @@ protected:
 
 	ImplicitCastExpr* BuildImpCastExprToType(Expr *E, QualType Ty, CastKind CK);
 
-	// build vardecl which will be placed at the begnning of a function body
-	DeclStmt* BuildVarDeclStmt(VarDecl *VD);
+	// Build var/tag decl which will be placed at the begnning of a function body
+	DeclStmt* BuildDeclStmt(Decl *D);
 
 	// build ObjectType(Expr)
 	// is used to make expr: "ObjectType xx = ObjectType(Expr)"

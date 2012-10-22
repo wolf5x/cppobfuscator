@@ -40,9 +40,15 @@ protected:
 	bool ExtractIfCondVarDecl(IfStmt *S);
 	
 	bool WorkOnDeclStmt(DeclStmt *S);
-	//only return CompoundStmt or Expr
+	
+	// Only returns CompoundStmt or Expr or NULL.
 	Stmt* WorkOnAVarDecl(VarDecl *D);
+
+	// The caller must ensure the incoming D is not global
 	bool WorkOnATagDecl(TagDecl *D);
+
+	Stmt* BuildArrayInitListAssignStmt(VarDecl *D, InitListExpr *E);
+
 	ParenExpr* RefExprToPtrExpr(DeclRefExpr *E);
 	VarDecl* RefToPtrType(VarDecl *D);
 

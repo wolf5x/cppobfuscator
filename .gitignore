@@ -17,6 +17,7 @@
 
 # Executable Target File
 obfs
+a.out
 
 # Swap file of vim 
 *.swp

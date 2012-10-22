@@ -2,6 +2,16 @@
 #include <string>
 using namespace std;
 
+void init_class() {
+	string empty;
+	string x = "xxx";
+	string y = string("yyy");
+	y = empty;
+	y = string("xxx");
+	string z = string();
+	z = (string)("xxx");
+}
+
 void init_array() {
 	int a[] = {1,2,};
 	bool b(2);
@@ -11,6 +21,7 @@ void init_array() {
 	string f;
 }
 
+/*
 //static
 void init_static(int m) {
 	int n = 2;
@@ -19,6 +30,7 @@ void init_static(int m) {
 		printf("%d\n", ++s);
 	}
 }
+*/
 
 int main()
 {
@@ -28,8 +40,8 @@ int main()
    	POINT po = pxx;
 	printf("%d,%d,%d\n", po.x, po.y, po.z);
 
-	init_static(1);
-	init_static(-10);
+//	init_static(1);
+//	init_static(-10);
 
 	
 	return 0;

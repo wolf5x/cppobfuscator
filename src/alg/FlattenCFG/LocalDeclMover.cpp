@@ -259,17 +259,33 @@ Stmt* LocalDeclMover::WorkOnAVarDecl(VarDecl *D) {
 	
 	//if has InitList, construct assign expr
 	if(newInit) {
+#ifdef DEBUG
+		newInit->dump();
+#endif
 		if(realTy->isArrayType()) { //ArrayType
 			DPRINT("ArrayType");
 			//FIXME: implement
+			assert(isa<InitListExpr>(newInit) && "Array's init list should be a list");
+			retAssign = this->BuildArrayInitListAssignStmt(newVD, dyn_cast<InitListExpr>(newInit));
 		} else {
+			if(!Ty.isPODType(Ctx)) {
+				//FIXME
+				//if(isa<CXXConstructExpr>(newInit) && dyn_cast<CXXConstructExpr>(newInit)->getNumArgs() == 0) {
+				//if expr's type is the same as var, don't add cast (newInit->getType())
+					DPRINT("construct(void)");
+					newInit = this->BuildTempObjectConstuctExpr(Ty, newInit);
+				//}
+			}
 			retAssign = this->BuildAssignExpr(newVD, newInit);
+			assert(retAssign);
+			DPRINT("retAssign");
+			retAssign->dump();
 		}
 	}
 
 	assert(!this->topDeclStmts.empty() && "topDeclStmts vec null, maybe no root stmt detected?");
 	StmtPtrSmallVector &topDs = this->topDeclStmts.back();
-	Stmt *stNewDcl = this->BuildVarDeclStmt(newVD);
+	Stmt *stNewDcl = this->BuildDeclStmt(newVD);
 	assert(stNewDcl != NULL && "build new declstmt failed");
 	topDs.push_back(stNewDcl);
 
@@ -280,7 +296,20 @@ Stmt* LocalDeclMover::WorkOnAVarDecl(VarDecl *D) {
 
 bool LocalDeclMover::WorkOnATagDecl(TagDecl *D) {
 	//FIXME: implement
+	// Caller ensures the incoming D is not a global decl, so no need to test here
+	DPRINT("Handle TagDecl %x | Ctx %x -> p %x", (unsigned int)D, (unsigned int)D->getDeclContext(), (unsigned int)D->getDeclContext()->getParent());
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+	StmtPtrSmallVector &topDs = this->topDeclStmts.back();
+	Stmt *stNewDcl = this->BuildDeclStmt(D);
+	topDs.push_back(stNewDcl);
 	return true;
+}
+
+
+Stmt* LocalDeclMover::BuildArrayInitListAssignStmt(VarDecl *D, InitListExpr *E) {
+
+
+	return NULL;
 }
 
 

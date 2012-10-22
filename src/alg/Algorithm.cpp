@@ -134,6 +134,7 @@ DeclRefExpr* Algorithm::BuildVarDeclRefExpr(VarDecl *var) {
 	return e;
 }
 
+
 ImplicitCastExpr* Algorithm::BuildImpCastExprToType(Expr *E, QualType Ty, CastKind CK) {
 	Sema &S = this->resMgr.getCompilerInstance().getSema();
 	ExprResult eRes = S.ImpCastExprToType(E, Ty, CK);
@@ -141,9 +142,9 @@ ImplicitCastExpr* Algorithm::BuildImpCastExprToType(Expr *E, QualType Ty, CastKi
 	return dyn_cast<ImplicitCastExpr>(eRes.get());
 }
 
-DeclStmt* Algorithm::BuildVarDeclStmt(VarDecl *VD) {
+DeclStmt* Algorithm::BuildDeclStmt(Decl *D) {
 	return new (resMgr.getCompilerInstance().getASTContext())
-		DeclStmt(DeclGroupRef(VD), SourceLocation(), SourceLocation());
+		DeclStmt(DeclGroupRef(D), SourceLocation(), SourceLocation());
 }
 
 CXXConstructExpr* Algorithm::BuildTempObjectConstuctExpr(QualType Ty, Expr *expr) {
@@ -283,7 +284,7 @@ DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC = NULL, Expr *initLi
 	//FIXME: decl context 
 	VD->setInit(initList);
 
-	return BuildVarDeclStmt(VD);
+	return BuildDeclStmt(VD);
 }
 
 //Create a new int var
