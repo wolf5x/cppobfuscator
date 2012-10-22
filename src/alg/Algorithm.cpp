@@ -86,6 +86,13 @@ IdentifierInfo& Algorithm::getUniqueLabelName() {
 	return getUniqueIdentifier(lbl, counter);
 }
 
+UnaryOperator* Algorithm::BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP) {
+	Sema &S = this->resMgr.getCompilerInstance().getSema();
+	ExprResult ER = S.BuildUnaryOp(0, SourceLocation(), OP, E);
+	assert(!ER.isInvalid());
+	return dyn_cast<UnaryOperator>(ER.get());
+}
+
 BinaryOperator* Algorithm::BuildAssignExpr(VarDecl *var, Expr* rExpr) {
 	DPRINT("--- ASSIGN EXPR BEGIN ---");
 	Sema &S = this->resMgr.getCompilerInstance().getSema();
@@ -104,6 +111,12 @@ BinaryOperator* Algorithm::BuildCommaExpr(Expr *lExpr, Expr *rExpr) {
 	assert(!eRes.isInvalid());
 	DPRINT("Comma END");
 	return dyn_cast<BinaryOperator>(eRes.get());
+}
+
+ParenExpr* Algorithm::BuildParenExpr(Expr *E) {
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+	return new (Ctx)
+		ParenExpr(SourceLocation(), SourceLocation(), E);
 }
 
 DeclRefExpr* Algorithm::BuildVarDeclRefExpr(VarDecl *var) {
@@ -190,8 +203,74 @@ CXXBoolLiteralExpr* Algorithm::BuildCXXBoolLiteralExpr(bool val) {
 		CXXBoolLiteralExpr(val, Ctx.BoolTy, SourceLocation());
 }
 
+CompoundStmt* Algorithm::StVecToCompound(StmtPtrSmallVector *v){
+	//FIXME memory leak
+	//remove null
+	/*
+	for(int i = v->size()-1; i >= 0; i--) {
+		if(v->operator[](i) == NULL) {
+			v->erase(v->begin() + i);
+		}
+	}
+	*/
+	return new (this->compInst.getASTContext())
+		CompoundStmt(this->compInst.getASTContext(), &v->front(), v->size(), SourceLocation(), SourceLocation());
+}
 
+CompoundStmt* Algorithm::StmtToCompound(Stmt* S) {
+	//FIXME memory leak
+	if(isa<CompoundStmt>(S)){
+		return dyn_cast<CompoundStmt>(S);
+	}
+	return new (this->compInst.getASTContext())
+		CompoundStmt(this->compInst.getASTContext(), (Stmt**)(&S), 1, SourceLocation(), SourceLocation());
+}
 
+bool Algorithm::replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild) {
+	if(!Parent) {
+		DPRINT("Parent NULL");
+		return true;
+	}
+	for(Stmt::child_iterator I = Parent->child_begin(), IEnd = Parent->child_end();
+			I != IEnd; ++I) {
+		if(*I == OldChild) {
+			//memory leak
+			*I = NewChild;
+			return true;
+		}
+	}
+	return false;
+}
+
+bool Algorithm::updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
+	ASTContext &Ctx = this->compInst.getASTContext();
+	switch (fparent->getStmtClass()) {
+		case Stmt::CompoundStmtClass:
+			dyn_cast<CompoundStmt>(fparent)->setStmts(Ctx, reinterpret_cast<Stmt**>(&fpv->front()), fpv->size());
+			break;
+		case Stmt::ForStmtClass:
+			{
+				Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
+				dyn_cast<ForStmt>(fparent)->setBody(st);
+				break;
+			}
+		case Stmt::DoStmtClass: 
+			{
+				Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
+				dyn_cast<DoStmt>(fparent)->setBody(st);
+				break;
+			}
+		case Stmt::WhileStmtClass:
+			{
+				Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
+				dyn_cast<WhileStmt>(fparent)->setBody(st);
+				break;
+			}
+		default:
+			return false;
+	}
+	return true;
+}
 
 //create a new BuiltinType var
 DeclStmt* Algorithm::CreateVar(QualType Ty, Expr *initList = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {

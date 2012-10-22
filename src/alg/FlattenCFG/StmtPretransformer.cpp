@@ -352,7 +352,7 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 			--I) {
 		//Child is the orignal child, not nessessarily equal to *pChild
 		StmtPretransInfo *node = this->stmtStack[I];
-		Stmt *Child = node->stOrig, **pChild = node->pInEdge, *Replace = node->stNew;
+		Stmt *Child = node->stOrig, **pChild = node->pInEdge, *Replace = node->stNew, *Parent = this->parMap->getParent(Child);
 		
 		//preserve ContinueStmt
 		if(isa<ContinueStmt>(Child)) {
@@ -364,7 +364,8 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 		if(isa<BreakStmt>(Child)) {
 			DPRINT("break reached");
 			GotoStmt *jumpToLblBreak = this->AddNewGoto(stLblBreak);
-			*pChild = jumpToLblBreak; //FIXME memory leak 
+			//*pChild = jumpToLblBreak; //FIXME memory leak 
+			replaceChild(Parent, Child, jumpToLblBreak);
 			DPRINT("break end");
 		} else if(isa<SwitchCase>(Child)) {
 			DPRINT("SwitchCase reached %x", Child);
@@ -372,7 +373,8 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 			SwitchCase *swCas = dyn_cast<SwitchCase>(Child);
 			LabelStmt *lblSt = dyn_cast<LabelStmt>(Replace);
 			lblSt->setSubStmt(swCas->getSubStmt());
-			*pChild = Replace; //FIXME memory leak
+			//*pChild = Replace; //FIXME memory leak
+			replaceChild(Parent, Child, Replace);
 			DPRINT("switchCase ended");
 		}
 

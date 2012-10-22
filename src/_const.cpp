@@ -4,11 +4,10 @@ using namespace std;
 
 //const array
 void const_initlist() {
-	//const char *p[] = { "a", "b" };
-	char *p[] = { const_cast<char*>("a"), const_cast<char*>("b") };
-	struct CS{ char *p[2]; };
-	const CS Y{ const_cast<char*>("c"), const_cast<char*>("d") };
-	puts(Y.p[0]);
+	const char *p[] = { "a", "b" };
+	const char *aa = "xx";
+	char* const bb = "yy";
+	//char *p[] = { const_cast<char*>("a"), const_cast<char*>("b") };
 }
 
 
@@ -30,7 +29,7 @@ int main()
 	//const returned by STL
 	string str;
 	char *pstr = (char*)str.c_str();
-	const string cstr;
+	const string cstr = "xxxxxx";
 	pstr = (char*)cstr.c_str();
 	string *qstr = (string*)&func();
 

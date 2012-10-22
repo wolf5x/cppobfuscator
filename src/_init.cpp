@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <string>
+using namespace std;
 
 void init_array() {
 	int a[] = {1,2,};
 	bool b(2);
 	std::string c("y");
-	std::string d = "yy", e = c;
+	std::string d = "yy";
+	string e = c;
+	string f;
 }
 
 //static
@@ -21,8 +24,8 @@ int main()
 {
 	struct POINT{
 		int x, y, z;
-	};
-   	POINT po{1,2};
+	}pxx;
+   	POINT po = pxx;
 	printf("%d,%d,%d\n", po.x, po.y, po.z);
 
 	init_static(1);

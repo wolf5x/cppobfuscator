@@ -66,16 +66,16 @@ pch: $(PCH).h
 
 $(TARGET): $(OBJS) $(TAROBJ) Makefile
 	@echo Link $<
-	$(CXX) $(TAROBJ) $(OBJS) -o $@ $(CLANGLIBS) $(LLVMLIBS) $(LDFLAGS)
+	@$(CXX) $(TAROBJ) $(OBJS) -o $@ $(CLANGLIBS) $(LLVMLIBS) $(LDFLAGS)
 
 $(OBJS): %.o:%.cpp %.h
 	@echo Build $<
-	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
+	@$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
 
 $(TAROBJ): %.o:%.cpp %.h
 	@echo Bulid $<
-	$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
+	@$(CXX) $< $(CXXFLAGS) -o $@ $(LLVMFLAGS)
 
 clean:
 	@echo Clean
-	rm -rf $(TARGET) $(TAROBJ) $(OBJS) $(patsubst %.cpp,%.d,$(SRCS))
+	@rm -rf $(TARGET) $(TAROBJ) $(OBJS) $(patsubst %.cpp,%.d,$(SRCS))

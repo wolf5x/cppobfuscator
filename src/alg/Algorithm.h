@@ -66,7 +66,7 @@ protected:
 	ResourceManager &resMgr;
 	CompilerInstance &compInst;
 
-	StmtPtrSmallVector* ICCopy(Stmt* s);
+	StmtPtrSmallVector* ICCopy(Stmt* S);
 
 	NullStmt* AddNewNullStmt();
 
@@ -86,13 +86,19 @@ protected:
 
 	IdentifierInfo &getUniqueLabelName();
 
-	// create stmt: "lExpr = rExpr"
-	BinaryOperator* BuildAssignExpr(VarDecl *var, Expr* rExpr);
+	// create "uop E"
+	UnaryOperator* BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP);
 
-	BinaryOperator* BuildCommaExpr(Expr *lExpr, Expr *rExpr);
+	// create stmt: "lExpr = rExpr"
+	BinaryOperator* BuildAssignExpr(VarDecl *VD, Expr* ER);
+
+	BinaryOperator* BuildCommaExpr(Expr *EL, Expr *ER);
+
+	// create "(E)"
+	ParenExpr* BuildParenExpr(Expr *E);
 
 	// build DeclRefExpr using a VarDecl
-	DeclRefExpr* BuildVarDeclRefExpr(VarDecl *var);
+	DeclRefExpr* BuildVarDeclRefExpr(VarDecl *VD);
 
 	ImplicitCastExpr* BuildImpCastExprToType(Expr *E, QualType Ty, CastKind CK);
 
@@ -101,7 +107,7 @@ protected:
 
 	// build ObjectType(Expr)
 	// is used to make expr: "ObjectType xx = ObjectType(Expr)"
-	CXXConstructExpr* BuildTempObjectConstuctExpr(QualType Ty, Expr *expr);
+	CXXConstructExpr* BuildTempObjectConstuctExpr(QualType Ty, Expr *E);
 
 	//build EL == ER
 	BinaryOperator* BuildEqualCondExpr(Expr *EL, Expr *ER);
@@ -111,9 +117,20 @@ protected:
 	
 	IdentifierInfo& getUniqueIdentifier(string sname, int &ccnt);
 
-	IntegerLiteral* CrLiteralX(int x);
+	IntegerLiteral* CrLiteralX(int X);
 
-	CXXBoolLiteralExpr* BuildCXXBoolLiteralExpr(bool val);
+	CXXBoolLiteralExpr* BuildCXXBoolLiteralExpr(bool Val);
+
+	//const_cast<Ty>(E)
+	CXXConstCastExpr* BuildCXXConstCastExpr(Expr *E, QualType Ty) {
+		Sema &Sm = this->resMgr.getCompilerInstance().getSema();
+		//FIXME: TypeSourceInfo usage?
+		TypeSourceInfo *DI = dyn_cast<LocInfoType>(Ty)->getTypeSourceInfo();
+		ExprResult ER = Sm.BuildCXXNamedCast(SourceLocation(), tok::kw_const_cast, 
+				DI, E, SourceLocation(), SourceLocation());
+		assert(!ER.isInvalid());
+		return dyn_cast<CXXConstCastExpr>(ER.get());
+	}
 
 	//create a new BuiltinType var
 	DeclStmt* CreateVar(QualType Ty, Expr *initList, clang::StorageClass SC);
@@ -124,72 +141,13 @@ protected:
 	//create a new bool var
 	DeclStmt* CreateBoolVar(Expr *initVal, clang::StorageClass SC);
 
-	inline CompoundStmt* StVecToCompound(StmtPtrSmallVector *v){
-		//FIXME memory leak
-		//remove null
-		for(int i = v->size()-1; i >= 0; i--) {
-			if(v->operator[](i) == NULL) {
-				v->erase(v->begin() + i);
-			}
-		}
-		return new (this->compInst.getASTContext())
-			CompoundStmt(this->compInst.getASTContext(), &v->front(), v->size(), SourceLocation(), SourceLocation());
-	}
+	CompoundStmt* StVecToCompound(StmtPtrSmallVector *v);
 
-	inline CompoundStmt* StmtToCompound(Stmt* S) {
-		//FIXME memory leak
-		if(isa<CompoundStmt>(S)){
-			return dyn_cast<CompoundStmt>(S);
-		}
-		return new (this->compInst.getASTContext())
-			CompoundStmt(this->compInst.getASTContext(), (Stmt**)(&S), 1, SourceLocation(), SourceLocation());
-	}
+	CompoundStmt* StmtToCompound(Stmt* S);
 
-	bool replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild) {
-		if(!Parent) {
-			DPRINT("Parent NULL");
-			return true;
-		}
-		for(Stmt::child_iterator I = Parent->child_begin(), IEnd = Parent->child_end();
-				I != IEnd; ++I) {
-			if(*I == OldChild) {
-				//memory leak
-				*I = NewChild;
-				return true;
-			}
-		}
-		return false;
-	}
+	bool replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild);
 
-	bool updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
-		ASTContext &Ctx = this->compInst.getASTContext();
-		switch (fparent->getStmtClass()) {
-			case Stmt::CompoundStmtClass:
-				dyn_cast<CompoundStmt>(fparent)->setStmts(Ctx, reinterpret_cast<Stmt**>(&fpv->front()), fpv->size());
-				break;
-			case Stmt::ForStmtClass:
-				{
-					Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
-					dyn_cast<ForStmt>(fparent)->setBody(st);
-					break;
-				}
-			case Stmt::DoStmtClass: 
-				{
-					Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
-					dyn_cast<DoStmt>(fparent)->setBody(st);
-					break;
-				}
-			case Stmt::WhileStmtClass:
-				{
-					Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
-					dyn_cast<WhileStmt>(fparent)->setBody(st);
-					break;
-				}
-			default:
-				return false;
-		}
-		return true;
-	}
+	bool updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv);
 };
 
 #endif

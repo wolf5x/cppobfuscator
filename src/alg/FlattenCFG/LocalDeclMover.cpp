@@ -35,10 +35,12 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 		this->topDeclStmts.push_back(StmtPtrSmallVector());
 	}
 
-	Sema &Sm = this->resMgr.getCompilerInstance().getSema();
-	ASTContext &Ctx = Sm.getASTContext();
+	//Sema &Sm = this->resMgr.getCompilerInstance().getSema();
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
 	DPRINT("Stmt %s ( %x -> p %x )", S->getStmtClassName(), (unsigned int)S, (unsigned int)(this->parMap->getParent(S)));
+#ifdef DEBUG
 	S->dump(), S->dumpPretty(Ctx);
+#endif
 
 	switch(S->getStmtClass()) {
 		case Stmt::NoStmtClass:
@@ -52,29 +54,21 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 
 		case Stmt::IfStmtClass:
 			//cond var decl transform, to avoid dumpPretty bug
-			{
-				IfStmt *IS = dyn_cast<IfStmt>(S);
-				if(DeclStmt *stIfDcl = const_cast<DeclStmt*>(IS->getConditionVariableDeclStmt())) {
-					Stmt *Parent = this->parMap->getParent(IS);
-					assert(Parent && "IfStmt should have a parent");
-					Expr* stDclRef = this->BuildVarDeclRefExpr(IS->getConditionVariable());
-					Expr* newIfCond = this->BuildImpCastExprToType(stDclRef, Ctx.BoolTy, clang::CK_LValueToRValue);
-					IS->setCond(newIfCond);
-
-					StmtPtrSmallVector *compBody = new StmtPtrSmallVector();
-					compBody->push_back(stIfDcl);
-					compBody->push_back(IS);
-					CompoundStmt *newStmt = StVecToCompound(compBody);
-					delete compBody;
-
-					this->replaceChild(Parent, IS, newStmt);
-					this->parMap->addStmt(Parent);
-				}
-			}
+			this->ExtractIfCondVarDecl(dyn_cast<IfStmt>(S));
 			break;
 
 		case Stmt::DeclRefExprClass:
-			//TODO
+			{
+				// only transform LocaVarDecl ref to ptr type
+				DeclRefExpr *E = dyn_cast<DeclRefExpr>(S);
+				VarDecl *VD = dyn_cast_or_null<VarDecl>(E->getDecl());
+				if(VD && VD->isLocalVarDecl() && 
+						VD->getType()->isReferenceType()) {
+					DPRINT("DeclRefExpr of VarDecl met");
+					this->replaceChild(this->parMap->getParent(S), S,
+							this->RefExprToPtrExpr(E));
+				}
+			}
 			break;
 
 		case Stmt::DeclStmtClass:
@@ -85,17 +79,10 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 					I != IEnd; ++I) {
 				Decl *D = *I;
 				if(VarDecl *VD = dyn_cast<VarDecl>(D)) {
-					if(VD->hasExternalStorage()) {
-						DPRINT("extern skipped");
-						continue;
-					}
-					QualType Ty = VD->getType();
-					QualType realTy = Ty.getDesugaredType(Ctx);
-
-					if(realTy.isConstQualified()) {
-						//const
-					}
+					this->WorkOnVarDecl(VD);
 				} else if(TagDecl *TD = dyn_cast<TagDecl>(D)) {
+				} else {
+					DPRINT("unhandled declstmt: %s %x", D->getDeclKindName(), (unsigned int)D);
 				}
 
 			}
@@ -114,6 +101,7 @@ bool LocalDeclMover::ExitStmt(Stmt *S) {
 	if(!S) {
 		return true;
 	}
+	//FIXME: debug only
 	return true;
 	// update with new stmtbody
 	if(this->rootStack.back() == S) {
@@ -134,3 +122,131 @@ bool LocalDeclMover::ExitStmt(Stmt *S) {
 	return true;
 }
 
+bool LocalDeclMover::ExtractIfCondVarDecl(IfStmt *S) {
+	if(!S) {
+		return false;
+	}
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+	if(DeclStmt *stIfDcl = const_cast<DeclStmt*>(S->getConditionVariableDeclStmt())) {
+		Stmt *Parent = this->parMap->getParent(S);
+		assert(Parent && "IfStmt should have a parent");
+		Expr* stDclRef = this->BuildVarDeclRefExpr(S->getConditionVariable());
+		Expr* newIfCond = this->BuildImpCastExprToType(stDclRef, Ctx.BoolTy, clang::CK_LValueToRValue);
+		S->setCond(newIfCond);
+
+		StmtPtrSmallVector *compBody = new StmtPtrSmallVector();
+		compBody->push_back(stIfDcl);
+		compBody->push_back(S);
+		CompoundStmt *newStmt = StVecToCompound(compBody);
+		delete compBody;
+
+		this->replaceChild(Parent, S, newStmt);
+		this->parMap->addStmt(Parent);
+	}
+	return true;
+}
+
+bool LocalDeclMover::WorkOnVarDecl(VarDecl *D) {
+	DPRINT("Handle VarDecl");
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+	//anoyomous
+	if(!D->getIdentifier()) {
+		DPRINT("anoyomous var");
+		return true;
+	}
+	//not local var
+	if(!D->isLocalVarDecl() && !isa<ParmVarDecl>(D)) {
+		DPRINT("not local or parmVar");
+		return true;
+	}
+	//extern
+	if(D->hasExternalStorage()) {
+		DPRINT("extern skipped");
+		return true;
+	}
+	//static, not supported.
+	if(D->isStaticLocal()) {
+		assert(false && "static local variable not supported yet.");
+		return false;
+	}
+	QualType Ty = D->getType();
+	QualType realTy = Ty.getDesugaredType(Ctx);
+	DPRINT("QualType ");
+#ifdef DEBUG
+	realTy->dump();
+#endif
+
+	//remove const qualifier
+	if(realTy.isConstQualified()) {
+		DPRINT("const-qualified");
+		realTy.removeLocalConst();
+		D->setType(realTy);
+	}
+
+	Expr *IE = D->getInit();
+
+	//reference type, only transform LocalVarDecl
+	if(realTy->isReferenceType() && D->isLocalVarDecl()) {
+	}
+
+	//ArrayType
+	//TODO
+	if(realTy->isArrayType()) {
+
+		DPRINT("ArrayType");
+	} else {
+	}
+	return true;
+}
+
+bool LocalDeclMover::WorkOnTagDecl(TagDecl *D) {
+	//FIXME: implement
+	return true;
+}
+
+
+ParenExpr* LocalDeclMover::RefExprToPtrExpr(DeclRefExpr *E) {
+	assert(E && "DeclRefExpr cannot be NULL");
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+	VarDecl *DRef = dyn_cast_or_null<VarDecl>(E->getDecl());
+	assert(DRef && "decl refered to is NULL or not VarDecl");
+
+	VarDecl *DPtr = this->RefToPtrType(DRef);
+
+	DeclRefExpr *newDclRef = this->BuildVarDeclRefExpr(DPtr);
+	newDclRef->dump();
+
+	Expr* DE = this->BuildUnaryOperator(newDclRef, clang::UO_Deref);
+
+	ParenExpr *PE = new (Ctx)
+		ParenExpr(SourceLocation(), SourceLocation(), DE);
+#ifdef DEBUG
+	PE->dump();
+#endif
+
+	return PE;
+}
+
+VarDecl* LocalDeclMover::RefToPtrType(VarDecl *D) {
+	assert(D && "VarDecl cannot be NULL");
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+	QualType QT = D->getType().getDesugaredType(Ctx);
+	assert(QT->isReferenceType() && "not a reference type");
+
+	RefVarToPtrMap::iterator I = refMap->find(D);
+	if(I != refMap->end()) {
+		return I->second;
+	}
+	//FIXME: need to remove 'reference'
+	//getPointeeType()
+	QualType PT = Ctx.getPointerType(QT->getPointeeType());
+	DeclStmt *dclP = this->CreateVar(PT, NULL, clang::SC_Auto);
+	VarDecl *Ptr = dyn_cast<VarDecl>(dclP->getSingleDecl());
+
+#ifdef DEBUG
+	Ptr->dump();
+#endif
+
+	refMap->operator[](D) = Ptr;
+	return Ptr;
+}

@@ -1,4 +1,3 @@
-//FIXME: This algorithm should applies to the whole source code project, 
 //not only a TopLevelDecl
 #ifndef OBFS_ALG_FLATTENCFG_LOCALDECLMOVER_H
 #define OBFS_ALG_FLATTENCFG_LOCALDECLMOVER_H
@@ -37,6 +36,12 @@ protected:
 
 	OwningPtr<ParentMap> parMap;
 	RefVarToPtrMap *refMap;
+
+	bool ExtractIfCondVarDecl(IfStmt *S);
+	bool WorkOnVarDecl(VarDecl *D);
+	bool WorkOnTagDecl(TagDecl *D);
+	ParenExpr* RefExprToPtrExpr(DeclRefExpr *E);
+	VarDecl* RefToPtrType(VarDecl *D);
 
 	bool addBeginningDeclStmt(VarDecl *D);
 public:

@@ -39,8 +39,6 @@
 		fprintf(stderr, "[DEBUG][%s - line %d] ", __FILE__, __LINE__); \
 		fprintf(stderr, fmt, ## __VA_ARGS__); \
 		fprintf(stderr, "\n");
-#else
-	#define DPRINT(fmt, ...)
 #endif
 
 #endif
