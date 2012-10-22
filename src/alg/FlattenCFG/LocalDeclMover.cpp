@@ -184,15 +184,28 @@ bool LocalDeclMover::WorkOnVarDecl(VarDecl *D) {
 	}
 
 	Expr *IE = D->getInit();
+	VarDecl *newVD = NULL;
+	Expr *newInit = NULL;
 
 	//reference type, only transform LocalVarDecl
-	if(realTy->isReferenceType() && D->isLocalVarDecl()) {
+	if(realTy->isReferenceType()) {
+		if(D->isLocalVarDecl()){ 
+			newVD = this->RefToPtrType(D);
+			if(IE) {
+				newInit = this->BuildUnaryOperator(
+						this->BuildParenExpr(IE),
+						clang::UO_AddrOf);
+			}
+		} else {
+			DPRINT("reference type not LocalVar");
+			return true;
+		}
+	} else {
+		newVD = D;
+		newInit = D->getInit();
 	}
-
-	//ArrayType
-	//TODO
-	if(realTy->isArrayType()) {
-
+	
+	if(realTy->isArrayType()) { //ArrayType
 		DPRINT("ArrayType");
 	} else {
 	}

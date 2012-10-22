@@ -10,6 +10,8 @@ void func(int *&x) {
 void ref_in_expr(int *x) {
 	int *&p = x;
 	*p = (*x+*(p+1)) - p[-1];
+
+	int **pp = &p;
 }
 
 int main() {
