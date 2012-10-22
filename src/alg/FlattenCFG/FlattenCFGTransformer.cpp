@@ -17,15 +17,16 @@ bool FlattenCFGTransformer::execute() {
 	TranslationUnitDecl *decls = this->resMgr.getCompilerInstance().getASTContext().getTranslationUnitDecl();
 	for(TranslationUnitDecl::decl_iterator I = decls->decls_begin(), E = decls->decls_end();
 			I != E; ++I) {
-		Decl *d = *I;
+		Decl *D = *I;
+		DPRINT("TUDecl %s %x | Ctx %x -> p %x", D->getDeclKindName(), (unsigned int)D, (unsigned int)D->getDeclContext(), (unsigned int)decls);
 
-		if(this->compInst.getSourceManager().isInSystemHeader(d->getLocation())){
+		if(D->getLocation().isValid() && this->compInst.getSourceManager().isInSystemHeader(D->getLocation())){
 			continue;
 		}
 
-		if(HandleAnyFunctionDecl(d)) {
+		if(HandleAnyFunctionDecl(D)) {
 			continue;
-		} else if(HandleAnyClassDecl(d)) {
+		} else if(HandleAnyClassDecl(D)) {
 			continue;
 		}
 	}
@@ -56,6 +57,9 @@ bool FlattenCFGTransformer::HandleAnyFunctionDecl(Decl *D){
 	this->renamer->HandleDecl(fd);
 	this->preTranser->HandleDecl(fd);
 	this->dclMover->HandelDecl(fd);
+	//FIXME: ref in init expr not visited because the RecursiveASTVisitor do not
+	//detects AST's "ref to ptr" change
+	//this->dclMover->HandelDecl(fd);
 
 	return true;
 }

@@ -206,13 +206,11 @@ CXXBoolLiteralExpr* Algorithm::BuildCXXBoolLiteralExpr(bool val) {
 CompoundStmt* Algorithm::StVecToCompound(StmtPtrSmallVector *v){
 	//FIXME memory leak
 	//remove null
-	/*
 	for(int i = v->size()-1; i >= 0; i--) {
 		if(v->operator[](i) == NULL) {
 			v->erase(v->begin() + i);
 		}
 	}
-	*/
 	return new (this->compInst.getASTContext())
 		CompoundStmt(this->compInst.getASTContext(), &v->front(), v->size(), SourceLocation(), SourceLocation());
 }
@@ -273,7 +271,8 @@ bool Algorithm::updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
 }
 
 //create a new BuiltinType var
-DeclStmt* Algorithm::CreateVar(QualType Ty, Expr *initList = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
+//FIXME:DC is not used. Created var's isLocalVarDecl() unavailable
+DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC = NULL, Expr *initList = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
 	ASTContext &Ctx = resMgr.getCompilerInstance().getSema().getASTContext();
 	//add ImpCast if needed
 	if(initList) {
@@ -283,18 +282,19 @@ DeclStmt* Algorithm::CreateVar(QualType Ty, Expr *initList = NULL, VarDecl::Stor
 			SourceLocation(), SourceLocation(), 
 			&getUniqueVarName(), Ty, NULL, 
 			SC, (SC == clang::SC_Auto ? clang::SC_None : SC));
+	//FIXME: decl context 
 	VD->setInit(initList);
 
 	return BuildVarDeclStmt(VD);
 }
 
 //Create a new int var
-DeclStmt* Algorithm::CreateIntVar(Expr *initVal = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
-	return CreateVar(resMgr.getCompilerInstance().getSema().getASTContext().IntTy, initVal, SC);
+DeclStmt* Algorithm::CreateIntVar(Expr *initVal = NULL, DeclContext *DC = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
+	return CreateVar(resMgr.getCompilerInstance().getSema().getASTContext().IntTy, DC, initVal, SC);
 }
 
 //create a new bool var
-DeclStmt* Algorithm::CreateBoolVar(Expr *initVal = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
-	return CreateVar(resMgr.getCompilerInstance().getSema().getASTContext().BoolTy, initVal, SC);
+DeclStmt* Algorithm::CreateBoolVar(Expr *initVal = NULL, DeclContext *DC = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
+	return CreateVar(resMgr.getCompilerInstance().getSema().getASTContext().BoolTy, DC, initVal, SC);
 }
 

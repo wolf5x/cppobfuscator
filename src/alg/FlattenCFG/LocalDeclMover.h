@@ -38,8 +38,11 @@ protected:
 	RefVarToPtrMap *refMap;
 
 	bool ExtractIfCondVarDecl(IfStmt *S);
-	bool WorkOnVarDecl(VarDecl *D);
-	bool WorkOnTagDecl(TagDecl *D);
+	
+	bool WorkOnDeclStmt(DeclStmt *S);
+	//only return CompoundStmt or Expr
+	Stmt* WorkOnAVarDecl(VarDecl *D);
+	bool WorkOnATagDecl(TagDecl *D);
 	ParenExpr* RefExprToPtrExpr(DeclRefExpr *E);
 	VarDecl* RefToPtrType(VarDecl *D);
 

@@ -262,7 +262,7 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 	if(!SS->getConditionVariable()) {
 		DPRINT("create cond var");
 		Expr *exprCond = SS->getCond();
-		DeclStmt *dclSt = CreateIntVar(exprCond, clang::SC_Auto);
+		DeclStmt *dclSt = CreateIntVar(exprCond, NULL, clang::SC_Auto);
 		VarDecl *varDcl = dyn_cast<VarDecl>(dclSt->getSingleDecl());
 		SS->setConditionVariable(Ctx, varDcl);
 		SS->setCond(BuildImpCastExprToType(exprCond, varDcl->getType(), clang::CK_LValueToRValue));

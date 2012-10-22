@@ -13,7 +13,8 @@ const string HS_PATHS[] = {
 	"/usr/include",
 	"/usr/include/linux",
 	"/usr/include/c++/4.6",
-	"/usr/include/c++/4.6/i686-linux-gnu",
+	"/usr/include/c++/4.6/i686-linux-gnu", // linux of my laptop
+	"/usr/include/c++/4.6/i486-linux-gnu", // linux of eb
 	"/usr/include/c++/4.6/backward",
 	"/usr/include/i386-linux-gnu/",
 };
