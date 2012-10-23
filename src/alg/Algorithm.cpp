@@ -147,16 +147,20 @@ DeclStmt* Algorithm::BuildDeclStmt(Decl *D) {
 		DeclStmt(DeclGroupRef(D), SourceLocation(), SourceLocation());
 }
 
-CXXConstructExpr* Algorithm::BuildTempObjectConstuctExpr(QualType Ty, Expr *expr) {
-	assert(expr && "init expr should not be null");
+Expr* Algorithm::BuildTempObjectConstuctExpr(QualType Ty, Expr *expr) {
 	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
 	TypeSourceInfo *TInfo = Ctx.CreateTypeSourceInfo(Ty);
 
 	Sema &S = this->resMgr.getCompilerInstance().getSema();
-	//FIXME:don't use Sema because it depends on valid SourceLocation
-	ExprResult res = S.BuildCXXTypeConstructExpr(TInfo, SourceLocation().getLocWithOffset(1), MultiExprArg(&expr, 1), SourceLocation().getLocWithOffset(1));
+	//FIXME There is a hack here.
+	//Sema::BuildCXXTypeConstructExpr will use SourceLocation().isInvalid() to determine
+	//whether this is a InitList Construction
+	ExprResult res = S.BuildCXXTypeConstructExpr(TInfo, 
+			SourceLocation().getLocWithOffset(1),
+			expr ? MultiExprArg(&expr, 1) : MultiExprArg(), 
+			SourceLocation().getLocWithOffset(1));
 	assert(!res.isInvalid());
-	return dyn_cast<CXXConstructExpr>(res.get());
+	return res.get();
 }
 
 Expr* Algorithm::BuildEqualCondExpr(Expr *EL, Expr *ER) {
@@ -223,6 +227,29 @@ CompoundStmt* Algorithm::StmtToCompound(Stmt* S) {
 		CompoundStmt(this->compInst.getASTContext(), (Stmt**)(&S), 1, SourceLocation(), SourceLocation());
 }
 
+
+StmtPtrSmallVector* Algorithm::RemoveNullStmtInVector(StmtPtrSmallVector *V) {
+	int pNew = 0;
+	for(int pOld = 0, pEnd = V->size(); 
+			pOld < pEnd; ++pOld) {
+		Stmt *T = V->operator[](pOld);
+		if(T && !isa<NullStmt>(T)) {
+			V->operator[](pNew++) = T;
+		}
+	}
+	V->resize(pNew);
+	return V;
+}
+
+CompoundStmt* Algorithm::RemoveNullChildren(CompoundStmt *S) {
+	StmtPtrSmallVector *newBody = ICCopy(S);
+	RemoveNullStmtInVector(newBody);
+	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
+	S->setStmts(Ctx, &newBody->front(), newBody->size());
+	delete newBody;
+	return S;
+}
+
 bool Algorithm::replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild) {
 	if(!Parent) {
 		DPRINT("Parent NULL");
@@ -243,20 +270,24 @@ bool Algorithm::updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
 	ASTContext &Ctx = this->compInst.getASTContext();
 	switch (fparent->getStmtClass()) {
 		case Stmt::CompoundStmtClass:
-			dyn_cast<CompoundStmt>(fparent)->setStmts(Ctx, reinterpret_cast<Stmt**>(&fpv->front()), fpv->size());
+			{
+				CompoundStmt *st = dyn_cast<CompoundStmt>(fparent);
+				//RemoveNullStmtInVector(fpv);	
+				st->setStmts(Ctx, &fpv->front(), fpv->size());
+			}
 			break;
 		case Stmt::ForStmtClass:
 			{
 				Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
 				dyn_cast<ForStmt>(fparent)->setBody(st);
-				break;
 			}
+			break;
 		case Stmt::DoStmtClass: 
 			{
 				Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
 				dyn_cast<DoStmt>(fparent)->setBody(st);
-				break;
 			}
+			break;
 		case Stmt::WhileStmtClass:
 			{
 				Stmt *st = fpv->size()>0 ? (fpv->front()) : (Stmt*)(new (Ctx) NullStmt(SourceLocation()));
@@ -273,11 +304,14 @@ bool Algorithm::updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
 //FIXME:DC is not used. Created var's isLocalVarDecl() unavailable
 DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC = NULL, Expr *initList = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
 	ASTContext &Ctx = resMgr.getCompilerInstance().getSema().getASTContext();
+	if(DC == NULL) {
+		DC = Ctx.getTranslationUnitDecl();
+	}
 	//add ImpCast if needed
 	if(initList) {
 		initList = BuildImpCastExprToType(initList, Ty, clang::CK_LValueToRValue);
 	}
-	VarDecl *VD = VarDecl::Create(Ctx, Ctx.getTranslationUnitDecl(), 
+	VarDecl *VD = VarDecl::Create(Ctx, DC,
 			SourceLocation(), SourceLocation(), 
 			&getUniqueVarName(), Ty, NULL, 
 			SC, (SC == clang::SC_Auto ? clang::SC_None : SC));

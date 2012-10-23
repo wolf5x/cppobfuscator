@@ -105,9 +105,11 @@ protected:
 	// Build var/tag decl which will be placed at the begnning of a function body
 	DeclStmt* BuildDeclStmt(Decl *D);
 
-	// build ObjectType(Expr)
-	// is used to make expr: "ObjectType xx = ObjectType(Expr)"
-	CXXConstructExpr* BuildTempObjectConstuctExpr(QualType Ty, Expr *E);
+	// Build ObjectType(Expr)
+	// This is used to make expr: "ObjectType xx = ObjectType(Expr)"
+	// E can be NULL, when "ObjctType xx = ObjectType()"
+	// Ty must be a desugaredType
+	Expr* BuildTempObjectConstuctExpr(QualType Ty, Expr *E);
 
 	//build EL == ER
 	Expr* BuildEqualCondExpr(Expr *EL, Expr *ER);
@@ -141,13 +143,24 @@ protected:
 	//create a new bool var
 	DeclStmt* CreateBoolVar(Expr *initVal, DeclContext *DC, clang::StorageClass SC);
 
+	//auto remove NULL(not NullStmt)
 	CompoundStmt* StVecToCompound(StmtPtrSmallVector *v);
 
 	CompoundStmt* StmtToCompound(Stmt* S);
 
+	//remove NULL and NullStmt in V
+	//if succeeded, return V
+	StmtPtrSmallVector* RemoveNullStmtInVector(StmtPtrSmallVector *V);
+
+	//remove NULL and NullStmt children of S
+	//if succeeded, return S
+	CompoundStmt*  RemoveNullChildren(CompoundStmt *S);
+
 	bool replaceChild(Stmt *Parent, Stmt *OldChild, Stmt *NewChild);
 
+	// Will NOT automatically remove NULL or NullStmt in fpv
 	bool updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv);
+
 };
 
 #endif

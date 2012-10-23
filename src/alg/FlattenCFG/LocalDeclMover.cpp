@@ -97,21 +97,18 @@ bool LocalDeclMover::ExitStmt(Stmt *S) {
 		this->WorkOnDeclStmt(DS);
 	}
 
-
 	// update with new stmtbody
 	if(this->rootStack.back() == S) {
-		/*
-		if(!isa<CompoundStmt>(S)) {
-			DPRINT("unexpected stmt type %s %x", S->getStmtClassName(), (unsigned int)S);
-			assert(false);
-		}
-		*/
 		StmtPtrSmallVector &newBody = this->topDeclStmts.back();
 		DPRINT("root stmt type %s %x | children size %d", S->getStmtClassName(), (unsigned int)S, newBody.size());
 		if(newBody.size() > 0) {
+			if(!isa<CompoundStmt>(S)) {
+				DPRINT("unexpected stmt type %s %x", S->getStmtClassName(), (unsigned int)S);
+				assert(false);
+			}
 			newBody.insert(newBody.end(), S->child_begin(), S->child_end());
 			//FIXME: only compound
-			updateChildrenStmts(S, &newBody); 
+			updateChildrenStmts(S, RemoveNullStmtInVector(&newBody)); 
 		}
 
 		this->topDeclStmts.pop_back();
@@ -264,17 +261,23 @@ Stmt* LocalDeclMover::WorkOnAVarDecl(VarDecl *D) {
 #endif
 		if(realTy->isArrayType()) { //ArrayType
 			DPRINT("ArrayType");
-			//FIXME: implement
 			assert(isa<InitListExpr>(newInit) && "Array's init list should be a list");
 			retAssign = this->BuildArrayInitListAssignStmt(newVD, dyn_cast<InitListExpr>(newInit));
 		} else {
-			if(!Ty.isPODType(Ctx)) {
-				//FIXME
-				//if(isa<CXXConstructExpr>(newInit) && dyn_cast<CXXConstructExpr>(newInit)->getNumArgs() == 0) {
+			DPRINT("Expr type: lhs %x, rhs %x", 
+					realTy.getTypePtr(), newInit->getType().getDesugaredType(Ctx).getTypePtr());
+			//add explicit type cast "Type()" for struct or class
+			//FIXME: any more cases?
+			if(realTy->isStructureOrClassType()) {
+				//FIXME: any more cases?
+				if(isa<CXXConstructExpr>(newInit) && dyn_cast<CXXConstructExpr>(newInit)->getNumArgs() == 0) {
 				//if expr's type is the same as var, don't add cast (newInit->getType())
 					DPRINT("construct(void)");
-					newInit = this->BuildTempObjectConstuctExpr(Ty, newInit);
-				//}
+					newInit = this->BuildTempObjectConstuctExpr(realTy, NULL);
+				} else {
+					DPRINT("construct(not void)");
+					newInit = this->BuildTempObjectConstuctExpr(realTy, newInit);
+				}
 			}
 			retAssign = this->BuildAssignExpr(newVD, newInit);
 			assert(retAssign);
@@ -347,8 +350,8 @@ VarDecl* LocalDeclMover::RefToPtrType(VarDecl *D) {
 	}
 	//FIXME: need to remove 'reference'
 	//getPointeeType()
-	QualType PT = Ctx.getPointerType(QT->getPointeeType());
-	DeclStmt *dclP = this->CreateVar(PT, NULL, NULL, clang::SC_Auto);
+	QualType PT = Ctx.getPointerType(QT->getPointeeType()).getDesugaredType(Ctx);
+	DeclStmt *dclP = this->CreateVar(PT, D->getDeclContext(), NULL, clang::SC_Auto);
 	VarDecl *Ptr = dyn_cast<VarDecl>(dclP->getSingleDecl());
 
 #ifdef DEBUG
