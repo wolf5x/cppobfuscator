@@ -93,13 +93,17 @@ UnaryOperator* Algorithm::BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind O
 	return dyn_cast<UnaryOperator>(ER.get());
 }
 
-Expr* Algorithm::BuildAssignExpr(VarDecl *var, Expr* rExpr) {
-	Sema &S = this->resMgr.getCompilerInstance().getSema();
-	DeclRefExpr *dExpr = BuildVarDeclRefExpr(var);
-	assert(dExpr != NULL);
-	ExprResult eRes = S.BuildBinOp(0, SourceLocation(), BO_Assign, dExpr, rExpr);
+Expr* Algorithm::BuildCommonAssignExpr(Expr *LHS, Expr *RHS) {
+	Sema &Actions = this->resMgr.getCompilerInstance().getSema();
+	ExprResult eRes = Actions.BuildBinOp(0, SourceLocation(), BO_Assign, LHS, RHS);
 	assert(!eRes.isInvalid() && eRes.get());
 	return eRes.get();	
+}
+
+Expr* Algorithm::BuildVarAssignExpr(VarDecl *var, Expr* rExpr) {
+	DeclRefExpr *dExpr = BuildVarDeclRefExpr(var);
+	assert(dExpr != NULL);
+	return this->BuildCommonAssignExpr(dExpr, rExpr);
 }
 
 BinaryOperator* Algorithm::BuildCommaExpr(Expr *lExpr, Expr *rExpr) {
@@ -181,6 +185,30 @@ BinaryOperator* Algorithm::BuildRangeCondExpr(Expr *EV, Expr *EL, Expr *EH) {
 	return dyn_cast<BinaryOperator>(eRes.get());
 }
 
+Expr* Algorithm::BuildArraySubscriptExpr(Expr *Base, Expr **IdxList, unsigned int IdxNum) {
+	//FIXME implement
+	Sema &Actions = resMgr.getCompilerInstance().getSema();
+	clang::ExprResult LHS(Base);
+
+	for(unsigned int I = 0; I < IdxNum; ++I) {
+		//if (CheckProhibitedCXX11Attribute())
+		// 	return ExprError();
+		DPRINT("Build sub expr idx = %d", I);
+		assert(IdxList[I] && "idx expr cannot be null");
+		ExprResult Idx(IdxList[I]);	
+		if(!LHS.isInvalid() && !Idx.isInvalid()) {
+			LHS = Actions.ActOnArraySubscriptExpr(0, LHS.get(), SourceLocation(), Idx.get(), SourceLocation());
+		} else {
+			DPRINT("Build sub expr failed at %d", I);
+			LHS = ExprResult(true);
+			break;
+		}
+	}
+
+	assert(!LHS.isInvalid());
+	return LHS.get();
+}
+
 IdentifierInfo& Algorithm::getUniqueIdentifier(string sname, int &ccnt) {
 	IdentifierTable &idTable = this->compInst.getPreprocessor().getIdentifierTable();
 	int csz = idTable.size();
@@ -194,7 +222,7 @@ IdentifierInfo& Algorithm::getUniqueIdentifier(string sname, int &ccnt) {
 	}
 }
 
-IntegerLiteral* Algorithm::CrLiteralX(int x) {
+IntegerLiteral* Algorithm::CreateIntegerLiteralX(int x) {
 	ASTContext &Ctx = resMgr.getCompilerInstance().getSema().getASTContext();
 	return new (Ctx)
 		IntegerLiteral(Ctx, llvm::APInt(32,x), Ctx.IntTy, SourceLocation());
@@ -215,7 +243,7 @@ CompoundStmt* Algorithm::StVecToCompound(StmtPtrSmallVector *v){
 		}
 	}
 	return new (this->compInst.getASTContext())
-		CompoundStmt(this->compInst.getASTContext(), &v->front(), v->size(), SourceLocation(), SourceLocation());
+		CompoundStmt(this->compInst.getASTContext(), &(*v->begin()), v->size(), SourceLocation(), SourceLocation());
 }
 
 CompoundStmt* Algorithm::StmtToCompound(Stmt* S) {
@@ -245,7 +273,7 @@ CompoundStmt* Algorithm::RemoveNullChildren(CompoundStmt *S) {
 	StmtPtrSmallVector *newBody = ICCopy(S);
 	RemoveNullStmtInVector(newBody);
 	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
-	S->setStmts(Ctx, &newBody->front(), newBody->size());
+	S->setStmts(Ctx, &(*newBody->begin()), newBody->size());
 	delete newBody;
 	return S;
 }
@@ -273,7 +301,7 @@ bool Algorithm::updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
 			{
 				CompoundStmt *st = dyn_cast<CompoundStmt>(fparent);
 				//RemoveNullStmtInVector(fpv);	
-				st->setStmts(Ctx, &fpv->front(), fpv->size());
+				st->setStmts(Ctx, &(*fpv->begin()), fpv->size());
 			}
 			break;
 		case Stmt::ForStmtClass:

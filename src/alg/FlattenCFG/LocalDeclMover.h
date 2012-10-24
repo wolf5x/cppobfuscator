@@ -37,6 +37,14 @@ protected:
 	OwningPtr<ParentMap> parMap;
 	RefVarToPtrMap *refMap;
 
+	// create "LHS = RHS" or "LHS = LHSType(RHS)"
+	// automatically detect whether casting is needed.
+	Expr* BuildAssignExprWithTypeCast(Expr *LHS, Expr *RHS);
+	// create "D = RHS" or "D = DType(RHS)"
+	Expr* BuildAssignExprWithTypeCast(VarDecl *D, Expr *RHS);
+
+	//extract vardecl in ifcond to avoid dumpPretty bug:
+	//if(T t=x){..}  to   T t=x; if(t){..}
 	bool ExtractIfCondVarDecl(IfStmt *S);
 	
 	bool WorkOnDeclStmt(DeclStmt *S);
@@ -47,7 +55,13 @@ protected:
 	// The caller must ensure the incoming D is not global
 	bool WorkOnATagDecl(TagDecl *D);
 
-	Stmt* BuildArrayInitListAssignStmt(VarDecl *D, InitListExpr *E);
+	Stmt* CreateArrayInitListAssignStmt(VarDecl *D, InitListExpr *E);
+	
+	// recursively visit an InitListExpr E (if it is)
+	// build all assign op expr and store them in vRes
+	// vIdx is for storing idx exprs during the DFS.
+	// FIXME should be ExprPtrSmallVector
+	bool DFSInitListExpr(Expr* E, DeclRefExpr *R, StmtPtrSmallVector *vIdx, StmtPtrSmallVector *vRes);
 
 	ParenExpr* RefExprToPtrExpr(DeclRefExpr *E);
 	VarDecl* RefToPtrType(VarDecl *D);

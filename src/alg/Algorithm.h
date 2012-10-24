@@ -94,7 +94,10 @@ protected:
 	UnaryOperator* BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP);
 
 	// create stmt: "lExpr = rExpr"
-	Expr* BuildAssignExpr(VarDecl *VD, Expr* ER);
+	Expr* BuildVarAssignExpr(VarDecl *VD, Expr* ER);
+
+	// create "LHS = RHS"
+	Expr* BuildCommonAssignExpr(Expr* LHS, Expr* RHS);
 
 	BinaryOperator* BuildCommaExpr(Expr *EL, Expr *ER);
 
@@ -120,10 +123,13 @@ protected:
 
 	//build EL <= EV && EV <= ER
 	BinaryOperator* BuildRangeCondExpr(Expr *EV, Expr *EL, Expr *EH);
+
+	// Build "Base[idx1][idx2]...[idxN]"
+	Expr* BuildArraySubscriptExpr(Expr* Base, Expr **IdxList, unsigned int IdxNum);
 	
 	IdentifierInfo& getUniqueIdentifier(string sname, int &ccnt);
 
-	IntegerLiteral* CrLiteralX(int X);
+	IntegerLiteral* CreateIntegerLiteralX(int X);
 
 	CXXBoolLiteralExpr* BuildCXXBoolLiteralExpr(bool Val);
 

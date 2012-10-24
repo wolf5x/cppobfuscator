@@ -85,11 +85,7 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 				//this->WorkOnDeclStmt(dyn_cast<DeclStmt>(S));
 			}
 			break;
-
-
 	}	
-
-
 
 	return true;
 }
@@ -123,6 +119,33 @@ bool LocalDeclMover::ExitStmt(Stmt *S) {
 		this->rootStack.pop_back();
 	}
 	return true;
+}
+
+Expr* LocalDeclMover::BuildAssignExprWithTypeCast(Expr *LHS, Expr *RHS) {
+	assert(LHS && "left-hand stmt shouldn't be null");
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+	QualType realTy = LHS->getType().getDesugaredType(Ctx);
+	//add explicit type cast "Type()" for struct or class
+	//FIXME: any more cases?
+	if(realTy->isStructureOrClassType()) {
+		//FIXME: any more cases?
+		if(!RHS || 
+				isa<CXXConstructExpr>(RHS) && dyn_cast<CXXConstructExpr>(RHS)->getNumArgs() == 0) {
+		//if expr's type is the same as var, don't add cast (newInit->getType())
+			DPRINT("construct(void)");
+			RHS = BuildTempObjectConstuctExpr(realTy, NULL);
+		} else {
+			DPRINT("construct(not void)");
+			RHS = BuildTempObjectConstuctExpr(realTy, RHS);
+		}
+	}
+
+	assert(RHS);
+	return BuildCommonAssignExpr(LHS, RHS);
+}
+
+Expr* LocalDeclMover::BuildAssignExprWithTypeCast(VarDecl *D, Expr *RHS) {
+	return this->BuildAssignExprWithTypeCast(BuildVarDeclRefExpr(D), RHS);
 }
 
 bool LocalDeclMover::ExtractIfCondVarDecl(IfStmt *S) {
@@ -268,25 +291,16 @@ Stmt* LocalDeclMover::WorkOnAVarDecl(VarDecl *D) {
 #endif
 		if(realTy->isArrayType()) { //ArrayType
 			DPRINT("ArrayType");
+			// go down to reach the underlying InitListExpr
+			while(ExprWithCleanups *cleanup = dyn_cast<ExprWithCleanups>(newInit)) {
+				newInit = cleanup->getSubExpr();
+			}
 			assert(isa<InitListExpr>(newInit) && "Array's init list should be a list");
-			retAssign = this->BuildArrayInitListAssignStmt(newVD, dyn_cast<InitListExpr>(newInit));
+			retAssign = this->CreateArrayInitListAssignStmt(newVD, dyn_cast<InitListExpr>(newInit));
 		} else {
 			DPRINT("Expr type: lhs %x, rhs %x", 
 					realTy.getTypePtr(), newInit->getType().getDesugaredType(Ctx).getTypePtr());
-			//add explicit type cast "Type()" for struct or class
-			//FIXME: any more cases?
-			if(realTy->isStructureOrClassType()) {
-				//FIXME: any more cases?
-				if(isa<CXXConstructExpr>(newInit) && dyn_cast<CXXConstructExpr>(newInit)->getNumArgs() == 0) {
-				//if expr's type is the same as var, don't add cast (newInit->getType())
-					DPRINT("construct(void)");
-					newInit = this->BuildTempObjectConstuctExpr(realTy, NULL);
-				} else {
-					DPRINT("construct(not void)");
-					newInit = this->BuildTempObjectConstuctExpr(realTy, newInit);
-				}
-			}
-			retAssign = this->BuildAssignExpr(newVD, newInit);
+			retAssign = this->BuildAssignExprWithTypeCast(newVD, newInit);
 			assert(retAssign);
 			DPRINT("retAssign");
 			retAssign->dump();
@@ -315,11 +329,47 @@ bool LocalDeclMover::WorkOnATagDecl(TagDecl *D) {
 	return true;
 }
 
+Stmt* LocalDeclMover::CreateArrayInitListAssignStmt(VarDecl *D, InitListExpr *E) {
+	//FIXME implement
+	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
+	QualType Ty = D->getType().getDesugaredType(Ctx);
+	assert(Ty->isArrayType() && "incoming VarDecl should be ArrayType");
 
-Stmt* LocalDeclMover::BuildArrayInitListAssignStmt(VarDecl *D, InitListExpr *E) {
+	DeclRefExpr *R = BuildVarDeclRefExpr(D);
+	StmtPtrSmallVector vecAssign, vecIdx;
+	this->DFSInitListExpr(E, R, &vecIdx, &vecAssign);
 
+	return StVecToCompound(&vecAssign);
+}
 
-	return NULL;
+bool LocalDeclMover::DFSInitListExpr(Expr *E, DeclRefExpr *R, StmtPtrSmallVector *vIdx, StmtPtrSmallVector *vRes) {
+	//FIXME implement
+	if(!E) {
+		return true;
+	}
+	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
+	if(InitListExpr *IL = dyn_cast<InitListExpr>(E)) {
+		for(unsigned i = 0, iend = IL->getNumInits();
+				i != iend; ++i) {
+			Expr *init = IL->getInit(i);
+			vIdx->push_back(CreateIntegerLiteralX(i));
+			DFSInitListExpr(init, R, vIdx, vRes);
+			Ctx.Deallocate(vIdx->pop_back_val());
+		}
+
+		return true;
+	} else {
+		ExprResult eRes = BuildArraySubscriptExpr(R, (Expr**)&(*vIdx->begin()), vIdx->size());
+		assert(!eRes.isInvalid());
+
+		Expr* assign = this->BuildAssignExprWithTypeCast(eRes.get(), E);
+
+		vRes->push_back(assign);
+		return true;
+	}
+
+	assert(false);
+	return false;
 }
 
 
