@@ -259,10 +259,13 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 	LabelStmt *stLblSwitch = AddNewLabel(NULL); //to be filled
 
 	//if no ConditionalVariable, create one
+	// switch(a){...}  to   int t=(a); switch(t){..}
 	if(!SS->getConditionVariable()) {
 		DPRINT("create cond var");
 		Expr *exprCond = SS->getCond();
-		DeclStmt *dclSt = CreateIntVar(exprCond, NULL, clang::SC_Auto);
+		DeclStmt *dclSt = CreateIntVar(
+				BuildParenExpr(exprCond), 
+				NULL, clang::SC_Auto);
 		VarDecl *varDcl = dyn_cast<VarDecl>(dclSt->getSingleDecl());
 		SS->setConditionVariable(Ctx, varDcl);
 		SS->setCond(BuildImpCastExprToType(exprCond, varDcl->getType(), clang::CK_LValueToRValue));
