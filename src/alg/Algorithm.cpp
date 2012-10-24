@@ -331,3 +331,14 @@ DeclStmt* Algorithm::CreateBoolVar(Expr *initVal = NULL, DeclContext *DC = NULL,
 	return CreateVar(resMgr.getCompilerInstance().getSema().getASTContext().BoolTy, DC, initVal, SC);
 }
 
+Stmt* Algorithm::NullChildStmt(Stmt *Parent) {
+	switch(Parent->getStmtClass()) {
+		case Stmt::CompoundStmtClass:
+		case Stmt::LabelStmtClass:
+			return new(resMgr.getCompilerInstance().getASTContext()) NullStmt(SourceLocation());
+
+		default:
+			return NULL;
+	}
+}
+

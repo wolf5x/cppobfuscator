@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string>
 using namespace std;
+void init_nop() {}
+/*
 void init_class() {
 	string s;
 	s = string();
@@ -13,16 +15,16 @@ void init_class() {
 	string z = string();
 	z = (string)("xxx");
 }
-/*
+*/
+
 void init_array() {
 	bool b(2);
 	std::string c("y");
+	int a[] = {1,2,};
 	std::string d = "yy";
 	string e = c;
 	std::string f;
-//	int a[] = {1,2,};
 }
-*/
 
 /*
 //static

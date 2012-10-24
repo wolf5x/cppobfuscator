@@ -9,9 +9,12 @@ bool LocalDeclMover::HandelDecl(Decl *D) {
 	}
 	Stmt *body = D->getBody();
 
+
 	this->rootStack.clear();
 	this->topDeclStmts.clear();
-	this->parMap.reset(new ParentMap(body));
+
+	Stmt *vRoot = AddNewNullStmt();
+	this->parMap.reset(new ParentMap(vRoot));
 	assert(this->refMap && "ref var map should not be null");
 
 	this->TraverseDecl(D);
@@ -19,6 +22,8 @@ bool LocalDeclMover::HandelDecl(Decl *D) {
 	this->rootStack.clear();
 	this->topDeclStmts.clear();
 	this->parMap.reset();
+
+	DeallocateStmt(vRoot);
 
 	DPRINT("END LocalDeclMover");
 	return true;
@@ -28,11 +33,14 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 	if(!S) {
 		return true;
 	}
-	// add root stmt
+	// add root stmt for:
+	// CompoundStmt
 	if(!this->parMap->hasParent(S)) {
 		this->parMap->addStmt(S);
-		this->rootStack.push_back(S);
-		this->topDeclStmts.push_back(StmtPtrSmallVector());
+		if(isa<CompoundStmt>(S)) {
+			this->rootStack.push_back(S);
+			this->topDeclStmts.push_back(StmtPtrSmallVector());
+		}
 	}
 
 	//Sema &Sm = this->resMgr.getCompilerInstance().getSema();
@@ -164,11 +172,11 @@ bool LocalDeclMover::WorkOnDeclStmt(DeclStmt *DS) {
 				} else if(Expr *exprVarAssign = dyn_cast<Expr>(stAssign)) {
 					if(curPos == vecAssign.end()){
 						vecAssign.push_back(stAssign);
-						curPos = vecAssign.end();
 					} else {
 						assert(isa<Expr>(*curPos) && "Last stmt is not a expr");
 						*curPos = this->BuildCommaExpr(dyn_cast<Expr>(*curPos), exprVarAssign);
 					}
+					curPos = vecAssign.end()-1;
 				} else {
 					DPRINT("return type error");
 				}
@@ -181,10 +189,9 @@ bool LocalDeclMover::WorkOnDeclStmt(DeclStmt *DS) {
 	}
 
 	Stmt *Parent = parMap->getParent(DS);
-	Stmt *assignBlock = vecAssign.size() > 1 ? this->StVecToCompound(&vecAssign)
+	Stmt *assignBlock = vecAssign.size() > 1 ? this->StVecToCompound(RemoveNullStmtInVector(&vecAssign))
 		: vecAssign.size() == 1 ? vecAssign.back()
-		: isa<CompoundStmt>(Parent) ? new (Ctx) NullStmt(SourceLocation())
-		: NULL;
+		: NullChildStmt(Parent);
 	// remove orignal DeclStmt with new assignment code block on the AST
 	this->replaceChild(Parent, DS, assignBlock);
 	this->parMap->addStmt(assignBlock);

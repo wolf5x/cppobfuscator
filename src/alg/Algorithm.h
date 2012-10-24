@@ -74,6 +74,10 @@ protected:
 
 	GotoStmt* AddNewGoto(LabelStmt *lblDes);
 
+	bool DeallocateStmt(Stmt *S) {
+		resMgr.getCompilerInstance().getASTContext().Deallocate(S);
+	}
+
 	bool renameVarDecl(NamedDecl *D);
 
 	bool renameTagDecl(NamedDecl *D);
@@ -160,6 +164,8 @@ protected:
 
 	// Will NOT automatically remove NULL or NullStmt in fpv
 	bool updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv);
+
+	Stmt* NullChildStmt(Stmt *Parent);
 
 };
 
