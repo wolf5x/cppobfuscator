@@ -19,7 +19,7 @@ void init_class() {
 
 void init_array() {
 	bool b(2);
-	std::string c("y");
+	std::string c("y"), c1, c2[] = {}, c3(c);
 	int a[] = {1,2,};
 	std::string d = "yy";
 	string e = c;
