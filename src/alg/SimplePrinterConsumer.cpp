@@ -39,13 +39,16 @@ SimplePrinterConsumer::HandleTopLevelDecl(DeclGroupRef D) {
 		   I = D.begin(), E = D.end();
 		   I != E; ++I) {
 		Decl *dd = *I;
+
+		DPRINT("PrintingPolicy: %d %d %d %d %d", policy.SuppressSpecifiers, policy.SuppressScope, policy.SuppressTag, policy.SuppressUnwrittenScope, policy.SuppressSpecifiers);
 		
 		dd->print(out, policy);
 		nullSt->printPretty(out, NULL, policy);
 		if(dd->hasBody()) {
 			Stmt *ss = dd->getBody();
 			// Print Stmts
-			StmtPrinter(compInst, dd->getBody()).TraverseDecl(dd);
+			//dd->dump();
+			//StmtPrinter(compInst, dd->getBody()).TraverseDecl(dd);
 
 			// CFG
 			CFG::BuildOptions buildOPts;

@@ -113,6 +113,7 @@ void ResourceManager::rewriteToFile(string desFileFullName) {
 }
 
 bool ResourceManager::prettyPrint(llvm::raw_ostream &out) {
+	ASTContext &Ctx = compInst->getASTContext();
 	PrintingPolicy policy = compInst->getASTContext().getPrintingPolicy();
 	NullStmt *nullSt = new (compInst->getASTContext()) NullStmt(SourceLocation());
 	SourceManager &srcMgr = compInst->getSourceManager();
@@ -128,11 +129,11 @@ bool ResourceManager::prettyPrint(llvm::raw_ostream &out) {
 	//	for(DeclGroupRef::iterator 
 	//		   I = decls[i].begin(), E = decls[i].end();
 	//		   I != E; ++I) {
-		Decl *d = *I;
-		if(srcMgr.isInSystemHeader(d->getLocation())) {
+		Decl *D = *I;
+		if(srcMgr.isInSystemHeader(D->getLocation())) {
 			continue;
 		}
-		FileID thisFileID = srcMgr.getFileID(d->getLocation());
+		FileID thisFileID = srcMgr.getFileID(D->getLocation());
 		if(thisFileID != lastFileID) {
 			if(fout) {
 				fout.get()->close();
@@ -140,14 +141,24 @@ bool ResourceManager::prettyPrint(llvm::raw_ostream &out) {
 			}
 			string thisFileName = srcMgr.getFileEntryForID(thisFileID)->getName(); //FIXME: implemented as getFilename in clang3.2+
 			thisFileName.insert(thisFileName.find_last_of("/\\")+1, "@");
-			unsigned flags = createdFileID.find(thisFileID) != createdFileID.end() ? llvm::raw_fd_ostream::F_Append : 0;
+			unsigned flags = /*createdFileID.find(thisFileID) != createdFileID.end() ? */llvm::raw_fd_ostream::F_Append /*: 0*/;
 			fout.reset(new llvm::raw_fd_ostream(thisFileName.c_str(), errInfo, flags));
 			lastFileID = thisFileID;
 			createdFileID.insert(thisFileID);
 			DPRINT("Open desfile %s", thisFileName.c_str());
 		}
-		(*I)->print(*fout.get(), policy);
-		nullSt->printPretty(*fout.get(), NULL, policy);
+		/*
+		if(FunctionDecl *TD = dyn_cast<FunctionDecl>(D)) {
+			(*fout.get()) << TD->getQualifiedNameAsString(policy);
+			TD->getBody()->printPretty(*fout.get(), 0, policy);
+		} else if(FunctionTemplateDecl *TD = dyn_cast<FunctionTemplateDecl>(D)) {
+			(*fout.get()) << TD->getQualifiedNameAsString();
+			TD->getTemplatedDecl()->getBody()->printPretty(*fout.get(), 0, policy);
+		} else {
+		*/
+			D->print(*fout.get(), policy);
+			nullSt->printPretty(*fout.get(), NULL, policy);
+		//}
 	//	}
 	}
 	if(fout){

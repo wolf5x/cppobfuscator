@@ -14,6 +14,7 @@
 #include "llvm/Support/raw_ostream.h"
 
 #include <string>
+#include <vector>
 
 using clang::CompilerInstance;
 using clang::Rewriter;
@@ -30,6 +31,11 @@ public:
 	void init();
 
 	bool initParseAST(string srcMainFile);
+
+	inline string getRewriteFileName(string srcFileName) {
+		srcFileName.insert(srcFileName.find_last_of("/\\")+1, "@");
+		return srcFileName;
+	}
 
 	void rewriteToFile(string desMainFile);
 

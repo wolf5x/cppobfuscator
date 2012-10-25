@@ -26,10 +26,10 @@ public:
 		StrategyManager &SM = *staMgr.get();
 		SM.execute(srcFile);
 		RM.rewriteToFile(desFile);
-		string errInfo;
-		llvm::raw_fd_ostream fout(string("@"+srcFile).c_str(), errInfo);
-		RM.prettyPrint(fout);
-		fout.close();
+		//string errInfo;
+		//llvm::raw_fd_ostream fout(string("@"+srcFile).c_str(), errInfo);
+		//RM.prettyPrint(fout);
+		//fout.close();
 		return true;
 	}
 };
