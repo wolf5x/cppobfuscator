@@ -2,6 +2,7 @@
 #include "alg/FlattenCFG/VarRenamer.h"
 #include "alg/FlattenCFG/StmtPretransformer.h"
 #include "alg/FlattenCFG/LocalDeclMover.h"
+#include "alg/FlattenCFG/CFGFlattener.h"
 #include "llvm/ADT/OwningPtr.h"
 using namespace clang;
 
@@ -13,6 +14,7 @@ bool FlattenCFGTransformer::execute() {
 	OwningPtr<RefVarToPtrMap> refMap(new RefVarToPtrMap(0));
 	assert(refMap.get() && "reference variable map alloc failed");
 	this->dclMover = new LocalDeclMover(this->resMgr, refMap.get());
+	this->flat = new CFGFlattener(this->resMgr);
 
 	TranslationUnitDecl *decls = this->resMgr.getCompilerInstance().getASTContext().getTranslationUnitDecl();
 	for(TranslationUnitDecl::decl_iterator I = decls->decls_begin(), E = decls->decls_end();
@@ -34,6 +36,7 @@ bool FlattenCFGTransformer::execute() {
 	delete this->renamer;
 	delete this->preTranser;
 	delete this->dclMover;
+	delete this->flat;
 	refMap.reset();
 
 	return true;
@@ -60,6 +63,7 @@ bool FlattenCFGTransformer::HandleAnyFunctionDecl(Decl *D){
 	//FIXME: ref in init expr not visited because the RecursiveASTVisitor do not
 	//detects AST's "ref to ptr" change
 	//this->dclMover->HandelDecl(fd);
+	this->flat->HandleDecl(fd);
 
 	return true;
 }

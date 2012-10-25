@@ -5,6 +5,7 @@
 #include "alg/FlattenCFG/VarRenamer.h"
 #include "alg/FlattenCFG/StmtPretransformer.h"
 #include "alg/FlattenCFG/LocalDeclMover.h"
+#include "alg/FlattenCFG/CFGFlattener.h"
 using namespace clang;
 
 class FlattenCFGTransformer;
@@ -21,6 +22,7 @@ protected:
 	VarRenamer *renamer;
 	StmtPretransformer *preTranser;
 	LocalDeclMover *dclMover;
+	CFGFlattener *flat;
 
 	bool HandleTopLevelDecl(DeclGroupRef D);
 	bool HandleAnyFunctionDecl(Decl *D);

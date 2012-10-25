@@ -21,7 +21,11 @@ using clang::Rewriter;
 using llvm::OwningPtr;
 using std::string;
 
+class GlobalConfig;
+class ResourceManager;
+
 class ResourceManager {
+protected:
 	OwningPtr<CompilerInstance> compInst;
 	OwningPtr<Rewriter> rw;
 	
