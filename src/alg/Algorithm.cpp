@@ -86,11 +86,18 @@ IdentifierInfo& Algorithm::getUniqueLabelName() {
 	return getUniqueIdentifier(lbl, counter);
 }
 
-UnaryOperator* Algorithm::BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP) {
+Expr* Algorithm::BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP) {
 	Sema &S = this->resMgr.getCompilerInstance().getSema();
 	ExprResult ER = S.BuildUnaryOp(0, SourceLocation(), OP, E);
 	assert(!ER.isInvalid());
 	return dyn_cast<UnaryOperator>(ER.get());
+}
+
+Expr* Algorithm::BuildBinaryOperator(Expr *LHS, Expr *RHS, clang::BinaryOperatorKind OP) {
+	Sema &Actions = resMgr.getCompilerInstance().getSema();
+	ExprResult eRes = Actions.BuildBinOp(NULL, SourceLocation(), OP, LHS, RHS);
+	assert(!eRes.isInvalid() && eRes.get());
+	return eRes.get();
 }
 
 Expr* Algorithm::BuildCommonAssignExpr(Expr *LHS, Expr *RHS) {
@@ -331,20 +338,25 @@ bool Algorithm::updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
 //create a new BuiltinType var
 //FIXME:DC is not used. Created var's isLocalVarDecl() unavailable
 DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC = NULL, Expr *initList = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
-	ASTContext &Ctx = resMgr.getCompilerInstance().getSema().getASTContext();
+	Sema &Actions = resMgr.getCompilerInstance().getSema();
+	ASTContext &Ctx = Actions.getASTContext();
 	if(DC == NULL) {
 		DC = Ctx.getTranslationUnitDecl();
 	}
 	//add ImpCast if needed
-	if(initList) {
-		initList = BuildImpCastExprToType(initList, Ty, clang::CK_LValueToRValue);
-	}
+	//Use Sema::AddInitializerToDecl instead
+	//if(initList) {
+	//	initList = BuildImpCastExprToType(initList, Ty, clang::CK_LValueToRValue);
+	//}
 	VarDecl *VD = VarDecl::Create(Ctx, DC,
 			SourceLocation(), SourceLocation(), 
 			&getUniqueVarName(), Ty, NULL, 
 			SC, (SC == clang::SC_Auto ? clang::SC_None : SC));
 	//FIXME: decl context 
-	VD->setInit(initList);
+	//VD->setInit(initList);
+	if(initList) {
+		Actions.AddInitializerToDecl(VD, initList, false, true);
+	}
 
 	return BuildDeclStmt(VD);
 }

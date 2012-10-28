@@ -11,6 +11,7 @@ int main(int argc, char **argv) {
 	cout << "done1" << endl;
 	obfs.doit(argv[1]);
 	cout << "done2" << endl;
+	
 	return 0;
 }
 

@@ -1,15 +1,33 @@
 #include <string>
+int multi_exit() {
+	int a = 0;
+	if(a){
+		return 1;
+	} else if(a==0) {
+		return 2;
+	} else {
+		return 3;
+	}
+
+	return 3;
+}
 int main(){
 	int a = 0;
-LBL0:
+}
+
+void empty() {}
+
+void swi() {
+	int a ;
 	switch(a) {
+		case 0:
+			return;
 		case 1:
-			{
-				std::string a = string("b");
-			}
 			break;
-		case 2 ... 3: 
-			goto LBL0;
+		case 2:
+			return;
+		default:
+			break;
 	}
-	return 0;
+	return ;
 }

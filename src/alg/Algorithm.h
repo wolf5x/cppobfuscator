@@ -90,8 +90,11 @@ protected:
 
 	IdentifierInfo &getUniqueLabelName();
 
-	// create "uop E"
-	UnaryOperator* BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP);
+	// create "op(E)"
+	Expr* BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP);
+
+	// create "LHS op RHS"
+	Expr* BuildBinaryOperator(Expr *LHS, Expr *RHS, clang::BinaryOperatorKind OP);
 
 	// create stmt: "lExpr = rExpr"
 	Expr* BuildVarAssignExpr(VarDecl *VD, Expr* ER);
