@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+/*
 void simple() {
 	int x = 1;
 	switch(int y = x) {
@@ -34,10 +34,26 @@ void assign_cond() {
 	}
 
 }
+*/
 
-
+int g = 1;
 int main() 
 {
+	switch(g) {
+		case '1' :
+			{
+				break;
+			}
+		case '2':
+			{
+				break;
+			}
+		case '3':
+			{
+				break;
+			}
+	}
+	/*
 	assign_cond();
 	int x = 1, y = x*2;
 	int next = 0;
@@ -68,5 +84,6 @@ LBL_BEFORE_BREAK:
 			break;
 	}
 
+	*/
 	return 0;
 }

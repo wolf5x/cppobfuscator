@@ -67,6 +67,7 @@ protected:
 
 	// New control flow graph type. Each node is a "Case" after transformed.
 	class GraphInfo {
+		CFGFlattener &flattener;
 	public:
 		CFG* BindedCFG;
 
@@ -78,7 +79,7 @@ protected:
 
 		unsigned NumBlockIDs;
 
-		GraphInfo(CFG *G = NULL) {
+		GraphInfo(CFGFlattener &F, CFG *G = NULL):flattener(F) {
 			if(G != NULL) {
 				rebind(G);
 			}
@@ -124,7 +125,8 @@ protected:
 
 public:
 	CFGFlattener(ResourceManager &RM) 
-		: Algorithm(RM)
+		: Algorithm(RM), 
+		newgraph(*this)
 	{}
 
 	bool HandleDecl(Decl *D);

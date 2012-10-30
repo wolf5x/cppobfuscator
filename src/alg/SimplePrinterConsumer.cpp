@@ -51,9 +51,9 @@ SimplePrinterConsumer::HandleTopLevelDecl(DeclGroupRef D) {
 			//StmtPrinter(compInst, dd->getBody()).TraverseDecl(dd);
 
 			// CFG
-			CFG::BuildOptions buildOPts;
+			
 			OwningPtr<CFG> cfg;
-			cfg.reset(CFG::buildCFG((const Decl*)dd, (Stmt*)(dd->getBody()), &compInst->getASTContext(), buildOPts));
+			cfg.reset(CFG::buildCFG((const Decl*)dd, (Stmt*)(dd->getBody()), &compInst->getASTContext(), CFG::BuildOptions()));
 			assert(cfg.get() != NULL && "build CFG failed.");
 			cfg->dump(compInst->getLangOpts(), true);
 			cfg->viewCFG(compInst->getLangOpts());

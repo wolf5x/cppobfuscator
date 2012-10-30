@@ -7,9 +7,9 @@ void init_class() {
 	string s;
 	s = string();
 	s = string("xx");
-	string empty = string();
+	std::string empty = string();
 	string x = "xxx";
-	string y = string("yyy");
+	std::string y = std::string("yyy");
 	y = string();
 	y = string("xxx");
 	string z = string();
