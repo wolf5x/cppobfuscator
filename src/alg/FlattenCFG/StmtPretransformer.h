@@ -37,6 +37,9 @@ public:
 
 	bool VisitStmt(Stmt *S);
 	bool ExitStmt(Stmt *S);
+
+	bool VisitDecl(Decl *D);
+	bool ExitDecl(Decl *D);
 	
 protected:
 	bool WhileToIf(Stmt *S);
@@ -50,6 +53,7 @@ protected:
 	bool updateChildrenInEdge(Stmt *S);
 		
 	StmtNodeSmallVector stmtStack; //point to the Stmt* which points to a child 
+	DeclPtrSmallVector declStack; // point to the neariest enclosing Decl
 	StmtNodeMap stmtMap; 
 	ParentMap *parMap;
 	

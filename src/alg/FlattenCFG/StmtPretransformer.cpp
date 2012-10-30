@@ -16,6 +16,7 @@ bool StmtPretransformer::HandleDecl(Decl *D) {
 	this->stmtStack.clear();
 	this->stmtMap.clear();
 	this->parMap = new ParentMap(D->getBody());
+	this->declStack.clear();
 
 	this->TraverseDecl(D);
 
@@ -26,8 +27,20 @@ bool StmtPretransformer::HandleDecl(Decl *D) {
 	}
 	delete this->parMap;
 	this->parMap = NULL;
+	this->declStack.clear();
 	DPRINT("END StmtPretransformer");
 
+	return true;
+}
+
+
+bool StmtPretransformer::VisitDecl(Decl *D) {
+	declStack.push_back(D);
+	return true;
+}
+
+bool StmtPretransformer::ExitDecl(Decl *D) {
+	declStack.pop_back();
 	return true;
 }
 
@@ -265,7 +278,8 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 		Expr *exprCond = SS->getCond();
 		DeclStmt *dclSt = CreateIntVar(
 				BuildParenExpr(exprCond), 
-				NULL, clang::SC_Auto);
+				(!declStack.empty()) ? declStack.back()->getDeclContext() : NULL, 
+				clang::SC_Auto);
 		VarDecl *varDcl = dyn_cast<VarDecl>(dclSt->getSingleDecl());
 		SS->setConditionVariable(Ctx, varDcl);
 		SS->setCond(BuildImpCastExprToType(exprCond, varDcl->getType(), clang::CK_LValueToRValue));
