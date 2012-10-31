@@ -39,9 +39,11 @@ void assign_cond() {
 int g = 1;
 int main() 
 {
+	int a = 0;
 	switch(g) {
 		case '1' :
 			{
+				int b = 1;
 				break;
 			}
 		case '2':

@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-	cout << "a" << "b" << "c";
 	int x;
-	cin >> x >> x >> x;
+	if(cin >> x) {}
+	if(cin){}
 	return 0;
 }
