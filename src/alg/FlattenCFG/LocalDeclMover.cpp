@@ -1,5 +1,4 @@
 #include "alg/FlattenCFG/LocalDeclMover.h"
-
 using namespace clang;
 
 bool LocalDeclMover::HandelDecl(Decl *D) {
@@ -8,7 +7,6 @@ bool LocalDeclMover::HandelDecl(Decl *D) {
 		return true;
 	}
 	Stmt *body = D->getBody();
-
 
 	this->rootStack.clear();
 	this->topDeclStmts.clear();
@@ -60,6 +58,7 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 			DPRINT("skip atom");
 			return true;
 
+			//FIXME move to StmtPretransformer
 		case Stmt::IfStmtClass:
 			//cond var decl transform, to avoid dumpPretty bug
 			this->ExtractIfCondVarDecl(dyn_cast<IfStmt>(S));
@@ -69,12 +68,13 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 			{
 				// only transform LocaVarDecl ref to ptr type
 				DeclRefExpr *E = dyn_cast<DeclRefExpr>(S);
-				VarDecl *VD = dyn_cast_or_null<VarDecl>(E->getDecl());
-				if(VD && VD->isLocalVarDecl() && 
+				if(VarDecl *VD = dyn_cast_or_null<VarDecl>(E->getDecl())) {
+					if(VD->isLocalVarDecl() && 
 						VD->getType()->isReferenceType()) {
-					DPRINT("DeclRefExpr of VarDecl met");
+					DPRINT("DeclRefExpr of LocalVarDecl met");
 					this->replaceChild(this->parMap->getParent(S), S,
 							this->RefExprToPtrExpr(E));
+					}
 				}
 			}
 			break;
@@ -223,7 +223,10 @@ bool LocalDeclMover::WorkOnDeclStmt(DeclStmt *DS) {
 }
 
 Stmt* LocalDeclMover::WorkOnAVarDecl(VarDecl *D) {
-	DPRINT("Handle VarDecl %x | Ctx %x -> p %x", (unsigned int)D, (unsigned int)D->getDeclContext(), (unsigned int)D->getDeclContext()->getParent());
+	DPRINT("Handle VarDecl %s %x | Ctx %x(%s) -> p %x", 
+			D->getNameAsString().c_str(), (unsigned int)D, 
+			(unsigned int)D->getDeclContext(), D->getDeclContext()->getDeclKindName(),
+		   	(unsigned int)D->getDeclContext()->getParent());
 	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
 	//anoyomous
 	if(!D->getIdentifier()) {
@@ -231,10 +234,11 @@ Stmt* LocalDeclMover::WorkOnAVarDecl(VarDecl *D) {
 		return NULL;
 	}
 	//not local var
-	if(!D->isLocalVarDecl() && !isa<ParmVarDecl>(D)) {
-		DPRINT("not local or parmVar");
-		return NULL;
-	}
+	//FIXME var created by Algorithm::CreateVar() can't pass the test
+//	if(!D->isLocalVarDecl()) {
+//		DPRINT("not local or parmVar");
+//		return NULL;
+//	}
 	//extern
 	if(D->hasExternalStorage()) {
 		DPRINT("extern skipped");
@@ -408,7 +412,7 @@ VarDecl* LocalDeclMover::RefToPtrType(VarDecl *D) {
 	//FIXME: need to remove 'reference'
 	//getPointeeType()
 	QualType PT = Ctx.getPointerType(QT->getPointeeType()).getDesugaredType(Ctx);
-	DeclStmt *dclP = this->CreateVar(PT, D->getDeclContext(), NULL, clang::SC_Auto);
+	DeclStmt *dclP = this->CreateVar(PT, D->getDeclContext());
 	VarDecl *Ptr = dyn_cast<VarDecl>(dclP->getSingleDecl());
 
 #ifdef DEBUG

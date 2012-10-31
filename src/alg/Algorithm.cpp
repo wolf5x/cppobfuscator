@@ -337,7 +337,7 @@ bool Algorithm::updateChildrenStmts(Stmt* fparent, StmtPtrSmallVector *fpv) {
 
 //create a new BuiltinType var
 //FIXME:DC is not used. Created var's isLocalVarDecl() unavailable
-DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC = NULL, Expr *initList = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
+DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC, Expr *initList, VarDecl::StorageClass SC) {
 	Sema &Actions = resMgr.getCompilerInstance().getSema();
 	ASTContext &Ctx = Actions.getASTContext();
 	if(DC == NULL) {
@@ -351,7 +351,7 @@ DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC = NULL, Expr *initLi
 	VarDecl *VD = VarDecl::Create(Ctx, DC,
 			SourceLocation(), SourceLocation(), 
 			&getUniqueVarName(), Ty, NULL, 
-			SC, (SC == clang::SC_Auto ? clang::SC_None : SC));
+			SC, SC);
 	//FIXME: decl context 
 	//VD->setInit(initList);
 	if(initList) {
@@ -362,12 +362,12 @@ DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC = NULL, Expr *initLi
 }
 
 //Create a new int var
-DeclStmt* Algorithm::CreateIntVar(Expr *initVal = NULL, DeclContext *DC = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
+DeclStmt* Algorithm::CreateIntVar(DeclContext *DC, Expr *initVal, VarDecl::StorageClass SC) {
 	return CreateVar(resMgr.getCompilerInstance().getSema().getASTContext().IntTy, DC, initVal, SC);
 }
 
 //create a new bool var
-DeclStmt* Algorithm::CreateBoolVar(Expr *initVal = NULL, DeclContext *DC = NULL, VarDecl::StorageClass SC = clang::SC_Auto) {
+DeclStmt* Algorithm::CreateBoolVar(DeclContext *DC, Expr *initVal, VarDecl::StorageClass SC) {
 	return CreateVar(resMgr.getCompilerInstance().getSema().getASTContext().BoolTy, DC, initVal, SC);
 }
 

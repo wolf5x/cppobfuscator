@@ -1,7 +1,6 @@
 #include "alg/FlattenCFG/StmtPretransformer.h"
-#include <map>
+#include "llvm/ADT/DenseMap.h"
 using namespace clang;
-using std::map;
 
 bool StmtPretransformer::HandleDecl(Decl *D) {
 	DPRINT("START StmtPretransformer");
@@ -35,12 +34,18 @@ bool StmtPretransformer::HandleDecl(Decl *D) {
 
 
 bool StmtPretransformer::VisitDecl(Decl *D) {
-	declStack.push_back(D);
+	DPRINT("visitDecl %x(%s) Ctx %x", (unsigned)D, D->getDeclKindName(), (unsigned)D->getDeclContext());
+	if(isa<FunctionDecl>(D)) {
+		declStack.push_back(D);
+	}
 	return true;
 }
 
 bool StmtPretransformer::ExitDecl(Decl *D) {
-	declStack.pop_back();
+	DPRINT("exitDecl");
+	if(isa<FunctionDecl>(D)) {
+		declStack.pop_back();
+	}
 	return true;
 }
 
@@ -86,6 +91,19 @@ bool StmtPretransformer::ExitStmt(Stmt *S) {
 		case Stmt::SwitchStmtClass:
 			{
 				this->SwitchToIf(S);
+				break;
+			}
+		// add paren to child
+		case Stmt::MemberExprClass:
+			{
+				if(MemberExpr *ME = dyn_cast<MemberExpr>(S)) {
+					if(Expr *Base = ME->getBase()) {
+						DPRINT("add paran to MemberExpr");
+						Expr *PE = BuildParenExpr(Base);
+						ME->setBase(PE);
+						parMap->addStmt(ME);
+					}
+				}
 				break;
 			}
 		default:
@@ -275,11 +293,11 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 	// switch(a){...}  to   int t=(a); switch(t){..}
 	if(!SS->getConditionVariable()) {
 		DPRINT("create cond var");
+		Decl *D = declStack.back();
 		Expr *exprCond = SS->getCond();
 		DeclStmt *dclSt = CreateIntVar(
-				BuildParenExpr(exprCond), 
-				(!declStack.empty()) ? declStack.back()->getDeclContext() : NULL, 
-				clang::SC_Auto);
+				(!declStack.empty()) ? declStack.back()->getDeclContext() : NULL,
+				BuildParenExpr(exprCond));
 		VarDecl *varDcl = dyn_cast<VarDecl>(dclSt->getSingleDecl());
 		SS->setConditionVariable(Ctx, varDcl);
 		SS->setCond(BuildImpCastExprToType(exprCond, varDcl->getType(), clang::CK_LValueToRValue));

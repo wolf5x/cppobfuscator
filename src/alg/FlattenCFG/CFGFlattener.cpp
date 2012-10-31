@@ -142,8 +142,7 @@ bool CFGFlattener::HandleDecl(Decl *D) {
 	int SwiVarEntryValue = newgraph.EntryNode->Succs[0]->NodeID;
 	int SwiVarExitValue = newgraph.ExitNode->NodeID;
 
-	DeclStmt *stSwiVarDcl = CreateIntVar(CreateIntegerLiteralX(SwiVarEntryValue), 
-			D->getDeclContext(), clang::SC_Auto);
+	DeclStmt *stSwiVarDcl = CreateIntVar(D->getDeclContext(), CreateIntegerLiteralX(SwiVarEntryValue));
 	VarDecl *SwiVarDcl = dyn_cast<VarDecl>(stSwiVarDcl->getSingleDecl());
 	newBody->push_back(stSwiVarDcl);
 	// while stmt body be filled later

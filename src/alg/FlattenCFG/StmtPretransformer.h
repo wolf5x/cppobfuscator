@@ -2,6 +2,7 @@
 #define OBFS_ALG_STMTPRETRANSFORMER_H
 
 #include "llvm/ADT/SmallVector.h"
+#include "llvm/ADT/DenseMap.h"
 #include "clang/AST/ParentMap.h"
 #include "alg/Algorithm.h"
 #include "alg/FlattenCFG/ASTTraverser.h"
@@ -10,7 +11,7 @@
 using namespace clang;
 
 using llvm::SmallVector;
-using std::map;
+using llvm::DenseMap;
 
 class StmtPretransInfo{
 public:
@@ -27,7 +28,7 @@ class StmtPretransformer: public Algorithm, public ASTTraverserPlus<StmtPretrans
 public:
 	typedef StmtPretransInfo *StmtPretransInfoPtrTy;
 	typedef SmallVector<StmtPretransInfoPtrTy, 32> StmtNodeSmallVector;
-	typedef map<Stmt*, StmtPretransInfoPtrTy> StmtNodeMap;
+	typedef DenseMap<Stmt*, StmtPretransInfoPtrTy> StmtNodeMap;
 
 	StmtPretransformer(ResourceManager &RM) 
 		: Algorithm(RM)

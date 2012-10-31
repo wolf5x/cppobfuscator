@@ -60,9 +60,6 @@ bool FlattenCFGTransformer::HandleAnyFunctionDecl(Decl *D){
 	this->renamer->HandleDecl(fd);
 	this->preTranser->HandleDecl(fd);
 	this->dclMover->HandelDecl(fd);
-	//FIXME: ref in init expr not visited because the RecursiveASTVisitor do not
-	//detects AST's "ref to ptr" change
-	//this->dclMover->HandelDecl(fd);
 	this->flat->HandleDecl(fd);
 
 	return true;

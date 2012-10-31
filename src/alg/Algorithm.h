@@ -148,13 +148,13 @@ protected:
 	}
 
 	//create a new BuiltinType var
-	DeclStmt* CreateVar(QualType Ty, DeclContext *DC, Expr *initList, clang::StorageClass SC);
+	DeclStmt* CreateVar(QualType Ty, DeclContext *DC = NULL, Expr *initList = NULL, clang::StorageClass SC = clang::SC_None);
 	//
 	//Create a new int var
-	DeclStmt* CreateIntVar(Expr *initVal, DeclContext *DC, clang::StorageClass SC);
+	DeclStmt* CreateIntVar(DeclContext *DC = NULL, Expr *initVal = NULL, clang::StorageClass SC = clang::SC_None);
 
 	//create a new bool var
-	DeclStmt* CreateBoolVar(Expr *initVal, DeclContext *DC, clang::StorageClass SC);
+	DeclStmt* CreateBoolVar(DeclContext *DC = NULL, Expr *initVal = NULL, clang::StorageClass SC = clang::SC_None);
 
 	//auto remove NULL(not NullStmt)
 	CompoundStmt* StVecToCompound(StmtPtrSmallVector *v);
