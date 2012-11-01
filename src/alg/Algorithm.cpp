@@ -4,11 +4,14 @@ using namespace clang;
 using std::string;
 
 int32_t Algorithm::instCounter = 0;
+int Algorithm::NamedCounter = 0;
+int Algorithm::VarCounter = 0;
+int Algorithm::TagCounter = 0;
+int Algorithm::LabelCounter = 0;
 
 bool Algorithm::execute() {
 	return true;
 }
-
 
 StmtPtrSmallVector* Algorithm::ICCopy(Stmt* s) {
 	//FIXME memory leak
@@ -49,6 +52,19 @@ GotoStmt* Algorithm::AddNewGoto(LabelStmt *lblDes) {
 		GotoStmt(lblDes->getDecl(), SourceLocation(), SourceLocation());
 }
 
+IdentifierInfo& Algorithm::getUniqueIdentifier(string sname, int &ccnt) {
+	IdentifierTable &idTable = this->compInst.getPreprocessor().getIdentifierTable();
+	int csz = idTable.size();
+	char lbl[128];
+	while(true) {
+		sprintf(lbl, "%s%d", sname.c_str(), ccnt++);
+		IdentifierInfo& info = idTable.get(string(lbl));
+		if(csz < idTable.size()) {
+			return info;
+		}
+	}
+}
+
 bool Algorithm::renameVarDecl(NamedDecl *D) {
 	D->setDeclName(DeclarationName(&getUniqueVarName()));
 	return true;
@@ -60,30 +76,26 @@ bool Algorithm::renameTagDecl(NamedDecl *D) {
 }
 
 bool Algorithm::renameNamedDecl(NamedDecl *D) {
-	static int counter = 0;
 	string lbl("____nameddecl____");
-	IdentifierInfo &info = getUniqueIdentifier(lbl, counter);
+	IdentifierInfo &info = getUniqueIdentifier(lbl, NamedCounter);
 	D->setDeclName(DeclarationName(&info));
 	return true;
 }
 
 IdentifierInfo& Algorithm::getUniqueVarName() {
-	static int counter = 0;
 	const string lbl("____localvar____");
-	return getUniqueIdentifier(lbl, counter);
+	return getUniqueIdentifier(lbl, VarCounter);
 }
 
 
 IdentifierInfo& Algorithm::getUniqueTagName() {
-	static int counter = 0;
 	const string lbl("____localtag____");
-	return getUniqueIdentifier(lbl, counter);
+	return getUniqueIdentifier(lbl, TagCounter);
 }
 
 IdentifierInfo& Algorithm::getUniqueLabelName() {
-	static int counter = 0;
 	const string lbl("____label____");
-	return getUniqueIdentifier(lbl, counter);
+	return getUniqueIdentifier(lbl, LabelCounter);
 }
 
 Expr* Algorithm::BuildUnaryOperator(Expr *E, clang::UnaryOperatorKind OP) {
@@ -214,19 +226,6 @@ Expr* Algorithm::BuildArraySubscriptExpr(Expr *Base, Expr **IdxList, unsigned in
 
 	assert(!LHS.isInvalid());
 	return LHS.get();
-}
-
-IdentifierInfo& Algorithm::getUniqueIdentifier(string sname, int &ccnt) {
-	IdentifierTable &idTable = this->compInst.getPreprocessor().getIdentifierTable();
-	int csz = idTable.size();
-	char lbl[128];
-	while(true) {
-		sprintf(lbl, "%s%d", sname.c_str(), ccnt++);
-		IdentifierInfo& info = idTable.get(string(lbl));
-		if(csz < idTable.size()) {
-			return info;
-		}
-	}
 }
 
 IntegerLiteral* Algorithm::CreateIntegerLiteralX(int x) {

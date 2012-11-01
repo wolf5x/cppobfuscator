@@ -296,7 +296,7 @@ bool StmtPretransformer::SwitchToIf(Stmt *S) {
 		Decl *D = declStack.back();
 		Expr *exprCond = SS->getCond();
 		DeclStmt *dclSt = CreateIntVar(
-				(!declStack.empty()) ? declStack.back()->getDeclContext() : NULL,
+				NULL,
 				BuildParenExpr(exprCond));
 		VarDecl *varDcl = dyn_cast<VarDecl>(dclSt->getSingleDecl());
 		SS->setConditionVariable(Ctx, varDcl);

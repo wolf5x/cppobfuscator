@@ -42,7 +42,6 @@ bool FlattenCFGTransformer::execute() {
 	return true;
 }
 
-
 bool FlattenCFGTransformer::HandleAnyFunctionDecl(Decl *D){
 	DPRINT("enter FuncDecl");
 	FunctionDecl *fd = NULL;
@@ -57,10 +56,15 @@ bool FlattenCFGTransformer::HandleAnyFunctionDecl(Decl *D){
 	assert(fd && "get FunctionDecl failed");
 
 	//TODO
+	Stmt *oldBody = fd->getBody();
 	this->renamer->HandleDecl(fd);
 	this->preTranser->HandleDecl(fd);
 	this->dclMover->HandelDecl(fd);
 	this->flat->HandleDecl(fd);
+
+	// refresh RewriteBuffer
+	Rewriter &rw = resMgr.getRewriter();
+	rw.ReplaceStmt(oldBody, fd->getBody());
 
 	return true;
 }

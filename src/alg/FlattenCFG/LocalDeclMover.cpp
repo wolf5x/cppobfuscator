@@ -6,6 +6,7 @@ bool LocalDeclMover::HandelDecl(Decl *D) {
 	if(!D){
 		return true;
 	}
+	D->dump();
 	Stmt *body = D->getBody();
 
 	this->rootStack.clear();
@@ -24,6 +25,7 @@ bool LocalDeclMover::HandelDecl(Decl *D) {
 	DeallocateStmt(vRoot);
 
 	DPRINT("END LocalDeclMover");
+	D->dump();
 	return true;
 }
 

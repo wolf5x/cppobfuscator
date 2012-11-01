@@ -66,6 +66,11 @@ protected:
 	ResourceManager &resMgr;
 	CompilerInstance &compInst;
 
+	static int NamedCounter;
+	static int VarCounter;
+	static int TagCounter;
+	static int LabelCounter;
+
 	StmtPtrSmallVector* ICCopy(Stmt* S);
 
 	NullStmt* AddNewNullStmt();

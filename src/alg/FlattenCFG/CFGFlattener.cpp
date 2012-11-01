@@ -110,9 +110,17 @@ public:
 
 bool CFGFlattener::HandleDecl(Decl *D) {
 	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
-	if(!D->hasBody()) {
+	FunctionDecl *FD = dyn_cast<FunctionDecl>(D);
+	if(!FD) {
+		DPRINT("pass non-function decl");
 		return true;
 	}
+	if(!FD->isThisDeclarationADefinition()) {
+		DPRINT("pass non-definitition of functionDecl");
+		return true;
+	}
+	DPRINT("decl before flatten");
+	D->dump();
 	Stmt *S = D->getBody();
 	this->cfgraph.reset(CFG::buildCFG(D, D->getBody(), 
 			&Ctx, CFG::BuildOptions()));
@@ -129,6 +137,8 @@ bool CFGFlattener::HandleDecl(Decl *D) {
 
 	// Do flattening
 	CompoundStmt *CS = dyn_cast<CompoundStmt>(S);
+	DPRINT("CompoundStmt before flatten");
+	CS->dumpPretty(Ctx);
 	StmtPtrSmallVector *newBody = new StmtPtrSmallVector();
 	// Add DeclStmt
 	for(CompoundStmt::body_iterator I = CS->body_begin(), IEnd = CS->body_end(); 
@@ -136,13 +146,15 @@ bool CFGFlattener::HandleDecl(Decl *D) {
 		Stmt *T = *I;
 		if(isa<DeclStmt>(T)) {
 			newBody->push_back(T);
+			DPRINT("DeclStmt at the beginning met.");
+			T->dump();
 		} 
 	}
 
 	int SwiVarEntryValue = newgraph.EntryNode->Succs[0]->NodeID;
 	int SwiVarExitValue = newgraph.ExitNode->NodeID;
 
-	DeclStmt *stSwiVarDcl = CreateIntVar(D->getDeclContext(), CreateIntegerLiteralX(SwiVarEntryValue));
+	DeclStmt *stSwiVarDcl = CreateIntVar(NULL, CreateIntegerLiteralX(SwiVarEntryValue));
 	VarDecl *SwiVarDcl = dyn_cast<VarDecl>(stSwiVarDcl->getSingleDecl());
 	newBody->push_back(stSwiVarDcl);
 	// while stmt body be filled later
@@ -178,6 +190,8 @@ bool CFGFlattener::HandleDecl(Decl *D) {
 	DPRINT("New function body created.");
 	CS->dumpPretty(Ctx);
 	
+	DPRINT("decl after flatten");
+	D->dump();
 	return true;
 }
 
