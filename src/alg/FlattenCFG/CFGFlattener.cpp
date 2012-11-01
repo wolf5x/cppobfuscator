@@ -126,7 +126,8 @@ bool CFGFlattener::HandleDecl(Decl *D) {
 			&Ctx, CFG::BuildOptions()));
 	assert(cfgraph.get());
 	DPRINT("cfg before flattening");
-	cfgraph.get()->dump(Ctx.getLangOpts(), true);
+	cfgraph.get()->dump(Ctx.getLangOpts(), false);
+	cfgraph.get()->viewCFG(Ctx.getLangOpts());
 
 	newgraph.rebind(cfgraph.get());
 
