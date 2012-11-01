@@ -10,11 +10,12 @@
 #include "clang/Frontend/CompilerInstance.h"
 #include "clang/Lex/Preprocessor.h"
 #include "clang/Parse/ParseAST.h"
+#include "llvm/ADT/DenseSet.h"
 #include <string>
 #include <set>
 using namespace clang;
 using std::string;
-using std::set;
+using llvm::DenseSet;
 
 
 void ResourceManager::init() {
@@ -80,27 +81,29 @@ bool ResourceManager::initParseAST(string srcFileFullName) {
 	return true;
 }
 
-void ResourceManager::rewriteToFile(string desFileFullName) {
+void ResourceManager::rewriteToFile() {
 	SourceManager &srcMgr = compInst->getSourceManager();
-	set<FileID> q;
+	DenseSet<FileID> q;
 	TranslationUnitDecl *decls = compInst->getASTContext().getTranslationUnitDecl();
 	for(TranslationUnitDecl::decl_iterator I = decls->decls_begin(), E = decls->decls_end();
 			I != E; ++I) {
-		Decl *d = *I;
-		if(srcMgr.isInSystemHeader(d->getLocation())) {
+		Decl *D = *I;
+		if(srcMgr.isInSystemHeader(D->getLocation())) {
 			continue;
 		}
-		FileID thisFileID = srcMgr.getFileID(d->getLocation());
+		FileID thisFileID = srcMgr.getFileID(D->getLocation());
 		q.insert(thisFileID);
 	}
 	const RewriteBuffer *rwBuf = NULL;
 	string errInfo;
-	for(set<FileID>::iterator
-			I = q.begin(), E = q.end();
-			I != E; ++I){
+	for(DenseSet<FileID>::iterator
+			I = q.begin(), IEend = q.end();
+			I != IEend; ++I){
 		rwBuf = rw->getRewriteBufferFor(srcMgr.getMainFileID());
 		FileID thisFileID = *I;
 		string thisFileName = srcMgr.getFileEntryForID(thisFileID)->getName(); //FIXME: implemented as getFilename in clang3.2+
+		//FIXME Should output to a seperate dest dir set in the config option
+		thisFileName.insert(thisFileName.find_last_of("/\\")+1, "_._");
 		if(rwBuf != NULL) {
 			llvm::raw_fd_ostream fos(thisFileName.c_str(), errInfo);
 			fos << string(rwBuf->begin(), rwBuf->end());
@@ -118,7 +121,7 @@ bool ResourceManager::prettyPrint(llvm::raw_ostream &out) {
 	NullStmt *nullSt = new (compInst->getASTContext()) NullStmt(SourceLocation());
 	SourceManager &srcMgr = compInst->getSourceManager();
 
-	set<FileID> createdFileID;
+	DenseSet<FileID> createdFileID;
 	FileID lastFileID;
 	OwningPtr<llvm::raw_fd_ostream> fout;
 	string errInfo = "";

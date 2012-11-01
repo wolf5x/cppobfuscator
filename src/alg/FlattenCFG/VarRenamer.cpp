@@ -1,4 +1,5 @@
 #include "VarRenamer.h"
+#include "clang/Rewrite/Rewriter.h"
 using namespace std;
 using namespace clang;
 
@@ -18,6 +19,7 @@ bool VarRenamer::VisitDecl(Decl *&D) {
 
 	DPRINT("decl: %s", D->getDeclKindName());
 
+	Rewriter &rw = resMgr.getRewriter();
 	if(VarDecl *VD = dyn_cast<VarDecl>(D)) {
 		DPRINT(" ---- name = %s | type = %s | desugared type = %s | const = %d | extern = %d | POD = %d",
 				VD->getQualifiedNameAsString().c_str(),
@@ -36,6 +38,11 @@ bool VarRenamer::VisitDecl(Decl *&D) {
 		if((VD->isLocalVarDecl() || isa<ParmVarDecl>(VD))
 				&& !VD->hasExternalStorage()) { 
 			this->renameVarDecl(VD);
+			//If is not in function body, then do rewrite here
+			//FIXME rewrite should be done later in a specialized class
+			if(isa<ParmVarDecl>(VD)) {
+				rw.ReplaceText(SourceRange(VD->getLocation()), VD->getName());
+			}
 		}
 	} else if(isa<TagDecl>(D)) { //class/union/struct/enum
 		TagDecl *TD = dyn_cast<TagDecl>(D);

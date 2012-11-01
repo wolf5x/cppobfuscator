@@ -41,7 +41,7 @@ public:
 		return srcFileName;
 	}
 
-	void rewriteToFile(string desMainFile);
+	void rewriteToFile();
 
 	bool prettyPrint(llvm::raw_ostream &out);
 

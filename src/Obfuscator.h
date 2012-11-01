@@ -20,12 +20,11 @@ public:
 	}
 	
 	bool doit(string srcFile) {
-		string desFile = "@" + srcFile;
 		ResourceManager &RM = *resMgr.get();
 		RM.init();
 		StrategyManager &SM = *staMgr.get();
 		SM.execute(srcFile);
-		RM.rewriteToFile(desFile);
+		RM.rewriteToFile();
 		string errInfo;
 		llvm::raw_fd_ostream fout(string("@"+srcFile).c_str(), errInfo);
 		RM.prettyPrint(fout);
