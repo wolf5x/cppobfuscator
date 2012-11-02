@@ -1,112 +1,10 @@
 #include "clang/Analysis/CFG.h"
 #include "clang/AST/ASTContext.h"
+#include "alg/FlattenCFG/ASTTraverserPlus.h"
 #include "alg/FlattenCFG/CFGFlattener.h"
 #include "llvm/ADT/DenseMap.h"
 
 using namespace clang;
-
-// Reimplement of StmtPrinterHelper in CFG.cpp
-class GraphStmtPrinterHelper : public PrinterHelper  {
-  typedef llvm::DenseMap<const Stmt*,std::pair<unsigned,unsigned> > StmtMapTy;
-  typedef llvm::DenseMap<const Decl*,std::pair<unsigned,unsigned> > DeclMapTy;
-  StmtMapTy StmtMap;
-  DeclMapTy DeclMap;
-  signed currentBlock;
-  unsigned currentStmt;
-  const LangOptions &LangOpts;
-public:
-
-  GraphStmtPrinterHelper(const CFG* cfg, const LangOptions &LO)
-    : currentBlock(0), currentStmt(0), LangOpts(LO)
-  {
-	  OwningPtr<ParentMap> parMap;
-    for (CFG::const_iterator I = cfg->begin(), E = cfg->end(); I != E; ++I ) {
-      unsigned j = (*I)->size();
-	  parMap.reset();
-	  // Reverse iterate. The last appearence of a Stmt in a CFGBlock is the real
-	  // whole stmt. Drop the others appear before.
-	  // This won't count the Termenator's reference to a Stmt before it.
-      for (CFGBlock::const_reverse_iterator BI = (*I)->rbegin(), BEnd = (*I)->rend() ;
-           BI != BEnd; ++BI, --j ) {        
-        if (const CFGStmt *SE = BI->getAs<CFGStmt>()) {
-          Stmt *stmt= const_cast<Stmt*>(SE->getStmt());
-          std::pair<unsigned, unsigned> P((*I)->getBlockID(), j);
-		  // FIXME very very very slow ugly way
-		  if(!parMap.get()) {
-			  parMap.reset(new ParentMap(stmt));
-		  } else if(!parMap->getParent(stmt)) {
-			  parMap->addStmt(stmt);
-		  } else {
-		  // parent exists in the same CFGBlock
-			  P.first = P.second = -1;
-		  }
-          StmtMap[stmt] = P;
-
-          switch (stmt->getStmtClass()) {
-            case Stmt::DeclStmtClass:
-                DeclMap[cast<DeclStmt>(stmt)->getSingleDecl()] = P;
-                break;
-            case Stmt::IfStmtClass: {
-              const VarDecl *var = cast<IfStmt>(stmt)->getConditionVariable();
-              if (var)
-                DeclMap[var] = P;
-              break;
-            }
-            case Stmt::ForStmtClass: {
-              const VarDecl *var = cast<ForStmt>(stmt)->getConditionVariable();
-              if (var)
-                DeclMap[var] = P;
-              break;
-            }
-            case Stmt::WhileStmtClass: {
-              const VarDecl *var =
-                cast<WhileStmt>(stmt)->getConditionVariable();
-              if (var)
-                DeclMap[var] = P;
-              break;
-            }
-            case Stmt::SwitchStmtClass: {
-              const VarDecl *var =
-                cast<SwitchStmt>(stmt)->getConditionVariable();
-              if (var)
-                DeclMap[var] = P;
-              break;
-            }
-            case Stmt::CXXCatchStmtClass: {
-              const VarDecl *var =
-                cast<CXXCatchStmt>(stmt)->getExceptionDecl();
-              if (var)
-                DeclMap[var] = P;
-              break;
-            }
-            default:
-              break;
-          } // end switch stmt->getStmtClass()...
-        } // end if const CFGStmt*...
-      } // end for CFGBlock.const_iterator...
-		assert(j == 0 && "size incorrect");
-    } // end for CFG.const_iterator...
-  } // end GraphStmtPrinterHelper
-
-  virtual ~GraphStmtPrinterHelper() {}
-
-  const LangOptions &getLangOpts() const { return LangOpts; }
-  void setBlockID(signed i) { currentBlock = i; }
-  void setStmtID(unsigned i) { currentStmt = i; }
-
-  virtual bool handledStmt(Stmt *S, llvm::raw_ostream &OS = llvm::nulls()) {
-    StmtMapTy::iterator I = StmtMap.find(S);
-
-    if (I == StmtMap.end())
-      return false;
-
-    if (currentBlock >= 0 && I->second.first == (unsigned) currentBlock
-                          && I->second.second == currentStmt) {
-      return false;
-    }
-    return true;
-  }
-}; // end class GraphStmtPrinterHelper
 
 bool CFGFlattener::HandleDecl(Decl *D) {
 	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
@@ -129,7 +27,7 @@ bool CFGFlattener::HandleDecl(Decl *D) {
 	cfgraph.get()->dump(Ctx.getLangOpts(), false);
 	cfgraph.get()->viewCFG(Ctx.getLangOpts());
 
-	newgraph.rebind(cfgraph.get());
+	newgraph.rebind(cfgraph.get(), S);
 
 	if(!isa<CompoundStmt>(S)) {
 		DPRINT("Not a CompoundStmt %x", (unsigned)S);
@@ -306,6 +204,13 @@ bool CFGFlattener::JoinBlocks(CFGBlock *Parent, CFGBlock *Child) {
 
 CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::VarDecl *VD) {
 	DPRINT("create case for node %d %x", N->NodeID, (unsigned)N->BindedCFGBlock);
+	GraphInfo *G = N->getParent();
+	assert(G && "GraphNode not correctly binded to a Graph");
+	if(G->isTransparentNode(N)) {
+		DPRINT("Transparent Node skipped");
+		return NULL;
+	}
+
 	ASTContext &Ctx = resMgr.getCompilerInstance().getASTContext();
 	CaseStmt *stCase = new (Ctx) 
 		CaseStmt(CreateIntegerLiteralX(N->NodeID), NULL,
@@ -321,7 +226,15 @@ CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::Va
 		caseBody.push_back(LS);
 	}
 		
-	Stmt* stTermCond = N->BindedCFGBlock->getTerminatorCondition();
+	// Go through TransparentSucc
+	for(unsigned i = 0; i != N->Succs.size(); i++) {
+		N->Succs[i] = G->getAndUpdateTransparentSucc(N->Succs[i]);
+	}
+
+	// Fill the case body with CFGStmts
+	CFGBlock *BB = N->BindedCFGBlock;
+	Stmt* stTerm = BB->getTerminator().getStmt();
+	Stmt* stTermCond = BB->getTerminatorCondition();
 	stTermCond->dumpPretty(Ctx);
 	for(unsigned i = 0; i != N->MergedCFGElements.size(); ++i) {
 		CFGElement *elem = N->MergedCFGElements[i];
@@ -339,30 +252,50 @@ CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::Va
 				// if-else terminator
 				DPRINT("terminator cond stmt met.");
 				T->dumpPretty(Ctx);
-				assert(N->Succs.size() == 2 && "Conditional Terminator should be if-else and has exactly 2 succs.");
-				// Build IfStmt
-				IfStmt *stIf = new (Ctx)
-					IfStmt(Ctx, SourceLocation(), NULL, dyn_cast<Expr>(T), NULL);
+				switch(stTerm->getStmtClass()) {
+					default:
+						{
+							DPRINT("unsupported CFGStmt %s %x", stTerm->getStmtClassName(), (unsigned)stTerm);
+							stTerm->dump();
+							assert(false && "unsupported Stmt");
+						}
+					case Stmt::IfStmtClass:
+						{
+							assert(N->Succs.size() == 2 && "Conditional Terminator should be if-else and has exactly 2 succs.");
+							// Build IfStmt
+							IfStmt *stIf = new (Ctx)
+								IfStmt(Ctx, SourceLocation(), NULL, dyn_cast<Expr>(T), NULL);
 
-				StmtPtrSmallVector thenBody, elseBody;
-				thenBody.push_back(BuildVarAssignExpr(VD, CreateIntegerLiteralX(N->Succs[0]->NodeID)));
-				elseBody.push_back(BuildVarAssignExpr(VD, CreateIntegerLiteralX(N->Succs[1]->NodeID)));
+							StmtPtrSmallVector thenBody, elseBody;
+							Stmt *stThen = N->Succs[0] ? (Stmt*)BuildVarAssignExpr(VD, CreateIntegerLiteralX(N->Succs[0]->NodeID)) : AddNewNullStmt();
+							Stmt *stElse = N->Succs[1] ? (Stmt*)BuildVarAssignExpr(VD, CreateIntegerLiteralX(N->Succs[1]->NodeID)) : AddNewNullStmt();
+							thenBody.push_back(stThen);
+							elseBody.push_back(stElse);
 
-				stIf->setThen(StVecToCompound(&thenBody));
-				stIf->setElse(StVecToCompound(&elseBody));
+							stIf->setThen(StVecToCompound(&thenBody));
+							stIf->setElse(StVecToCompound(&elseBody));
 
-				caseBody.push_back(stIf);
-				stIf->dump();
+							caseBody.push_back(stIf);
+							stIf->dump();
+							break;
+						}
+					case Stmt::IndirectGotoStmtClass:
+						{
+							IndirectGotoStmt *IGS = dyn_cast<IndirectGotoStmt>(stTerm);
+							caseBody.push_back(IGS);
+							break;
+						}
+				}
 			} else {
 				// normal stmt
 				caseBody.push_back(T);
 			}
 		}
 	}
-	// no if-else, set direct jump value
-	if(stTermCond == NULL) {
-		if(N->Succs.size()) {
-			caseBody.push_back(BuildVarAssignExpr(VD, CreateIntegerLiteralX(N->Succs[0]->NodeID)));
+	// no terminator or terminator is a handled stmt. 
+	if(stTermCond == NULL || N->getParent()->Helper->handledStmt(stTermCond)) {
+		if(GraphNodeInfo *succ = N->getFirstSucc()) {
+			caseBody.push_back(BuildVarAssignExpr(VD, CreateIntegerLiteralX(succ->NodeID)));
 		}
 	}
 	// add break 
@@ -377,11 +310,12 @@ CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::Va
 }
 
 
-bool CFGFlattener::GraphInfo::rebind(CFG *G) {
+bool CFGFlattener::GraphInfo::rebind(CFG *G, Stmt *Root) {
 	clear();
 	if(!G) 
 		return true;
 	
+	cfgRoot = Root;
 	NumBlockIDs = 0;
 	Nodes.resize(G->size());
 	BlkIDMap.clear();
@@ -394,17 +328,15 @@ bool CFGFlattener::GraphInfo::rebind(CFG *G) {
 		CFGBlock *B = *I;
 		GraphNodeInfo &N = Nodes[NumBlockIDs];
 		N.clear();
-		N.Parent = this;
-		N.BindedCFGBlock = B;
-		N.NodeID = NumBlockIDs;
-		N.TransparentSucc = &N;
+		N.setHeaderInfo(this, B, NumBlockIDs, &N);
 		BlkIDMap[B] = NumBlockIDs;
 	}
 	// fill CFGBlock's info to corresponding GraphNode
 	ASTContext &Ctx = flattener.resMgr.getCompilerInstance().getASTContext();
 	const LangOptions &LO = Ctx.getLangOpts();
-	// use GraphStmtPrinterHelper to decide the duplicate stmts and ignore them.
-	GraphStmtPrinterHelper Helper(G, LO);
+	// Decide the duplicate stmts and ignore them.
+	Helper.reset(new GraphStmtHandleHelper(G, Root, LO));
+
 	for(unsigned i = 0; i < NumBlockIDs; ++i) {
 		GraphNodeInfo &N = Nodes[i];
 		CFGBlock *B = N.BindedCFGBlock;
@@ -425,9 +357,9 @@ bool CFGFlattener::GraphInfo::rebind(CFG *G) {
 			if(const CFGStmt *CS = I->getAs<CFGStmt>()) {
 				Stmt *T = const_cast<Stmt*>(CS->getStmt());
 				// only add the last copy of the same Stmt
-				Helper.setBlockID(B->getBlockID());
-				Helper.setStmtID(StmtID);
-				if(!Helper.handledStmt(T)) {
+				Helper->setBlockID(B->getBlockID());
+				Helper->setStmtID(StmtID);
+				if(!Helper->handledStmt(T)) {
 					N.MergedCFGElements.push_back(&(*I));
 				} else {
 					DPRINT("pass handledStmt [B%d.%d]", B->getBlockID(), StmtID);
@@ -449,14 +381,29 @@ bool CFGFlattener::GraphInfo::rebind(CFG *G) {
 	return true;
 }
 
-bool CFGFlattener::GraphInfo::RemoveTransparentNodes() {
-	//FIXME implement
-	return true;
+bool CFGFlattener::GraphInfo::isTransparentNode(GraphNodeInfo *N) {
+	//FIXME test
+	if(NULL == N) {
+		return false;
+	}
+	if(N->MergedCFGBlockLabel) {
+		return false;
+	}
+	return N->MergedCFGElements.size() == 0;
 }
 
-bool CFGFlattener::GraphInfo::DoMerge() {
-	//FIXME implement
-	return true;
+// Disjoint Sets Union
+CFGFlattener::GraphNodeInfo* CFGFlattener::GraphInfo::getAndUpdateTransparentSucc(GraphNodeInfo* N) {
+	if(N == NULL) {
+		return NULL;
+	}
+	if(N->TransparentSucc != N) {
+		return N->TransparentSucc = getAndUpdateTransparentSucc(N->TransparentSucc);
+	} else if(isTransparentNode(N)) {
+		return N->TransparentSucc = (N->Succs.size() > 0 ? N->Succs[0] : NULL);
+	} else {
+		return N;
+	}
 }
 
 
