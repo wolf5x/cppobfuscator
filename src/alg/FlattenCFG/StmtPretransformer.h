@@ -43,6 +43,10 @@ public:
 	bool ExitDecl(Decl *D);
 	
 protected:
+	//extract vardecl in ifcond to avoid dumpPretty bug:
+	//if(T t=x){..}  to   T t=x; if(t){..}
+	bool ExtractIfCondVarDecl(IfStmt *S);
+	
 	bool WhileToIf(Stmt *S);
 	bool DoToIf(Stmt *S);
 	bool ForToIf(Stmt *S);

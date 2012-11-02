@@ -71,8 +71,11 @@ bool StmtPretransformer::ExitStmt(Stmt *S) {
 	S->dump();
 	S->dumpPretty(resMgr.getCompilerInstance().getASTContext());
 	switch (S->getStmtClass()) {
-		case Stmt::NoStmtClass: 
-			break;
+		case Stmt::IfStmtClass:
+			{
+				ExtractIfCondVarDecl(dyn_cast<IfStmt>(S));
+				break;
+			}
 		case Stmt::WhileStmtClass:
 			{
 				this->WhileToIf(S);
@@ -113,6 +116,31 @@ bool StmtPretransformer::ExitStmt(Stmt *S) {
 	return true;
 }
 
+bool StmtPretransformer::ExtractIfCondVarDecl(IfStmt *S) {
+	if(!S) {
+		return false;
+	}
+	ASTContext &Ctx = this->resMgr.getCompilerInstance().getASTContext();
+	if(DeclStmt *stIfDcl = const_cast<DeclStmt*>(S->getConditionVariableDeclStmt())) {
+		Stmt *Parent = this->parMap->getParent(S);
+		assert(Parent && "IfStmt should have a parent");
+		Expr* stDclRef = this->BuildVarDeclRefExpr(S->getConditionVariable());
+		Expr* newIfCond = this->BuildImpCastExprToType(stDclRef, Ctx.BoolTy, clang::CK_LValueToRValue);
+		S->setConditionVariable(Ctx, NULL);
+		S->setCond(newIfCond);
+
+		StmtPtrSmallVector *compBody = new StmtPtrSmallVector();
+		compBody->push_back(stIfDcl);
+		compBody->push_back(S);
+		CompoundStmt *newStmt = StVecToCompound(compBody);
+		delete compBody;
+
+		this->replaceChild(Parent, S, newStmt);
+		this->parMap->addStmt(Parent);
+	}
+	return true;
+}
+
 bool StmtPretransformer::WhileToIf(Stmt *S) {
 	//FIXME memory leak
 	DPRINT("while to if trans");
@@ -133,6 +161,7 @@ bool StmtPretransformer::WhileToIf(Stmt *S) {
 
 	//new IfStmt
 	VarDecl *varDcl = whileSt->getConditionVariable();
+	DeclStmt *oldDclSt = const_cast<DeclStmt*>(whileSt->getConditionVariableDeclStmt());
 	Expr *condSt = whileSt->getCond();
 	Stmt *wBody = whileSt->getBody();
 	StmtPtrSmallVector *newIfBody = new StmtPtrSmallVector();
@@ -141,12 +170,15 @@ bool StmtPretransformer::WhileToIf(Stmt *S) {
 	newIfBody->push_back(lblContinue);
 	Stmt *stNewIfBody = this->StVecToCompound(newIfBody);
 	IfStmt *ifSt = new (Ctx) 
-		IfStmt(Ctx, SourceLocation(), varDcl, condSt, stNewIfBody);
+		IfStmt(Ctx, SourceLocation(), NULL, condSt, stNewIfBody);
 	//this->updateChildrenInEdge(ifSt);
 	//this->updateChildrenInEdge(stNewIfBody);
 
 	//bind substmt to LABEL_BEGIN
 	StmtPtrSmallVector *lblBeginBody = new StmtPtrSmallVector();
+	if(oldDclSt) {
+		lblBeginBody->push_back(oldDclSt);
+	}
 	lblBeginBody->push_back(ifSt);
 	lblBeginBody->push_back(lblEnd);
 	Stmt *stLblBeginBody = this->StVecToCompound(lblBeginBody);
@@ -249,14 +281,20 @@ bool StmtPretransformer::ForToIf(Stmt *S) {
 		oldForCond = this->BuildCXXBoolLiteralExpr(true);
 	}
 	VarDecl *oldVarDcl = FS->getConditionVariable();
+	DeclStmt *oldDclSt = const_cast<DeclStmt*>(FS->getConditionVariableDeclStmt());
 	Stmt *stNewIfBody = this->StVecToCompound(newIfBody);
 	IfStmt *newIfSt = new (Ctx)
-		IfStmt(Ctx, SourceLocation(), oldVarDcl, oldForCond, this->StmtToCompound(stNewIfBody));
+		IfStmt(Ctx, SourceLocation(), NULL, oldForCond, this->StmtToCompound(stNewIfBody));
 	//this->updateChildrenInEdge(newIfSt);
 	//this->updateChildrenInEdge(stNewIfBody);
 
 	//fill LABEL_BEGIN
-	lblBegin->setSubStmt(newIfSt);
+	StmtPtrSmallVector lblBeginBody;
+	if(oldDclSt) {
+		lblBeginBody.push_back(oldDclSt);
+	}
+	lblBeginBody.push_back(newIfSt);
+	lblBegin->setSubStmt(StVecToCompound(&lblBeginBody));
 	
 	//fill LABEL_FOR
 	StmtPtrSmallVector *lblForBody = new StmtPtrSmallVector(); //

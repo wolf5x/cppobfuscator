@@ -61,10 +61,10 @@ bool LocalDeclMover::VisitStmt(Stmt *S) {
 			return true;
 
 			//FIXME move to StmtPretransformer
-		case Stmt::IfStmtClass:
-			//cond var decl transform, to avoid dumpPretty bug
-			this->ExtractIfCondVarDecl(dyn_cast<IfStmt>(S));
-			break;
+//		case Stmt::IfStmtClass:
+//			//cond var decl transform, to avoid dumpPretty bug
+//			this->ExtractIfCondVarDecl(dyn_cast<IfStmt>(S));
+//			break;
 
 		case Stmt::DeclRefExprClass:
 			{
@@ -158,9 +158,7 @@ bool LocalDeclMover::ExtractIfCondVarDecl(IfStmt *S) {
 	if(DeclStmt *stIfDcl = const_cast<DeclStmt*>(S->getConditionVariableDeclStmt())) {
 		Stmt *Parent = this->parMap->getParent(S);
 		assert(Parent && "IfStmt should have a parent");
-		Expr* stDclRef = this->BuildVarDeclRefExpr(S->getConditionVariable());
-		Expr* newIfCond = this->BuildImpCastExprToType(stDclRef, Ctx.BoolTy, clang::CK_LValueToRValue);
-		S->setCond(newIfCond);
+		S->setConditionVariable(Ctx, NULL);
 
 		StmtPtrSmallVector *compBody = new StmtPtrSmallVector();
 		compBody->push_back(stIfDcl);
