@@ -99,8 +99,8 @@ void ResourceManager::rewriteToFile() {
 	for(DenseSet<FileID>::iterator
 			I = q.begin(), IEend = q.end();
 			I != IEend; ++I){
-		rwBuf = rw->getRewriteBufferFor(srcMgr.getMainFileID());
 		FileID thisFileID = *I;
+		rwBuf = rw->getRewriteBufferFor(thisFileID);
 		string thisFileName = srcMgr.getFileEntryForID(thisFileID)->getName(); //FIXME: implemented as getFilename in clang3.2+
 		//FIXME Should output to a seperate dest dir set in the config option
 		thisFileName.insert(thisFileName.find_last_of("/\\")+1, "_._");
