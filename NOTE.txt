@@ -1,2 +1,0 @@
-预编译stdafx.h；
-编写Makefile；

@@ -1,18 +1,12 @@
 #include <stdio.h>
 
-int main()
+int main(int argc, char **argv)
 {
-	/*
-	int x = 1, y = 2, z;
-	switch(x){
-		//for(z = 0; z < 1 && z > -1; z++) {
-			//case 1:
-				for(;;) 
-					break;
-		//};
-
+	if(argc) {
+		int b[8] = {1,2,3,4,5,6,0,0};
+		for(int i = 0; i < 10; i++){}
+		for(int i = 1; i < argc; --i){}
 	}
-	*/
 	return 0;
 }
 
