@@ -33,6 +33,7 @@ void ResourceManager::init() {
 				clang::frontend::CXXSystem,
 				true, false, false);
 	}
+	
 
 	compInvo.setLangDefaults(
 			IK_CXX, 
