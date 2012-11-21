@@ -1,8 +1,8 @@
 #include "obfs.h"
 #include "stdafx.h"
 #include "Obfuscator.h"
+#include <iostream>
 using namespace std;
-using namespace clang;
 
 int main(int argc, char **argv) {
 	assert(argc == 2 && "No input file is specified.");

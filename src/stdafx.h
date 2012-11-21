@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <assert.h>
 
+/*
 #include <iostream>
 #include <vector>
 #include <string>
@@ -31,7 +32,7 @@
 #include "clang/Analysis/CFG.h"
 #include "llvm/Support/Host.h"
 #include "llvm/Support/raw_ostream.h"
-
+*/
 
 #define DEBUG
 #ifdef DEBUG

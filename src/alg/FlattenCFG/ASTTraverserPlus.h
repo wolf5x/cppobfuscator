@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "clang/AST/RecursiveASTVisitor.h"
 #include "clang/Basic/SourceManager.h"
+#include "llvm/Support/raw_ostream.h"
 using namespace clang;
 
 template<typename Derived>
@@ -34,7 +35,7 @@ bool ASTTraverserPlus<Derived>::TraverseStmt(Stmt *S) {
 	if(!S) {
 		return true;
 	}
-	DPRINT("enter stmt %x (%s)", (unsigned int)S, S->getStmtClassName());
+	DPRINT("enter stmt %x (%s) | range ", (unsigned int)S, S->getStmtClassName());
 	RecursiveASTVisitor<ThisType>::TraverseStmt(S);
 	DPRINT("exit stmt %x (%s)", (unsigned int)S, S->getStmtClassName());
 	getDerived().ExitStmt(S);

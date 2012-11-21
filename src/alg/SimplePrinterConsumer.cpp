@@ -1,4 +1,7 @@
 #include "SimplePrinterConsumer.h"
+#include "clang/AST/RecursiveASTVisitor.h"
+#include "clang/AST/ParentMap.h"
+#include "clang/Analysis/CFG.h"
 using namespace clang;
 
 class StmtPrinter : public RecursiveASTVisitor<StmtPrinter> {

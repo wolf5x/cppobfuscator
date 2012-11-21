@@ -4,7 +4,6 @@
 
 #include "alg/Algorithm.h"
 #include "alg/FlattenCFG/ASTTraverserPlus.h"
-#include "res/Resource.h"
 #include "ResourceManager.h"
 #include "clang/AST/ParentMap.h"
 #include "llvm/ADT/DenseMap.h"
