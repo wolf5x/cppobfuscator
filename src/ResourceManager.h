@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "HeaderSearchPath.h"
 #include "Typedef.h"
+#include "res/OptionTable.h"
 #include "alg/InitParseConsumer.h"
 
 #include "clang/Frontend/CompilerInstance.h"
@@ -15,6 +16,7 @@
 
 #include <string>
 #include <vector>
+#include <sys/stat.h> // for mkdir
 
 using clang::CompilerInstance;
 using clang::Rewriter;
@@ -28,13 +30,14 @@ class ResourceManager {
 protected:
 	OwningPtr<CompilerInstance> compInst;
 	OwningPtr<Rewriter> rw;
+	OwningPtr<OptionTable> optTable;
 	
 	DeclGroupRefVec decls; 
 	
 public:
-	void init();
+	void init(int argc, char** argv);
 
-	bool initParseAST(string srcMainFile);
+	bool initParseAST();
 
 	inline string getRewriteFileName(string srcFileName) {
 		srcFileName.insert(srcFileName.find_last_of("/\\")+1, "@");
@@ -53,6 +56,10 @@ public:
 		return *rw.get();
 	}
 
+	OptionTable& getOptionTable() {
+		return *optTable.get();
+	}
+
 	DeclGroupRefVec& getDeclGroupRefVec() {
 		return decls;
 	}
@@ -60,6 +67,8 @@ public:
 	//TODO TopLevelDeclGroup is in DeclContext::decls_begin()~decls_end()
 	DeclGroupRef& updateAndGetDeclGroupRef();
 	DeclGroupRef& getDeclGroupRef();
+
+	int mkdirRecursively(const char *pathname, mode_t mode = 0);
 	
 };
 

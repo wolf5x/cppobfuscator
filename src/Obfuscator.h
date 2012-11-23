@@ -19,16 +19,16 @@ public:
 		staMgr.reset(new StrategyManager(*resMgr.get()));
 	}
 	
-	bool doit(string srcFile) {
+	bool doit(int argc, char** argv) {
 		ResourceManager &RM = *resMgr.get();
-		RM.init();
+		RM.init(argc, argv);
 		StrategyManager &SM = *staMgr.get();
-		SM.execute(srcFile);
+		SM.execute();
 		RM.rewriteToFile();
-		string errInfo;
-		llvm::raw_fd_ostream fout(string("@"+srcFile).c_str(), errInfo);
-		RM.prettyPrint(fout);
-		fout.close();
+		//string errInfo;
+		//llvm::raw_fd_ostream fout(string("@"+srcFile).c_str(), errInfo);
+		//RM.prettyPrint(fout);
+		//fout.close();
 		return true;
 	}
 };

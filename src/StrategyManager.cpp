@@ -5,18 +5,8 @@ using namespace std;
 using namespace clang;
 
 ErrCode
-StrategyManager::execute(string srcMainFile) {
-	resMgr.init();
-	resMgr.initParseAST(srcMainFile);
-	/*
-	for(int i = 0; i < AlgorithmPoolSize; i++) {
-		DPRINT("alg %d\n", i);
-		Algorithm *alg = AlgorithmPool[i];
-		DPRINT("alg:%x\n", (unsigned int)&alg);
-		bool flag = alg->execute(resMgr, resMgr.getDeclGroupRefVec());
-		DPRINT("res: %d\n", flag);
-	}
-	*/
+StrategyManager::execute() {
+	resMgr.initParseAST();
 	FlattenCFGTransformer(resMgr).execute();
 	SimplePrinter(resMgr).execute();
 	

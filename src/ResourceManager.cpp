@@ -1,5 +1,5 @@
 #include "ResourceManager.h"
-
+#include "res/OptionTable.h"
 #include "clang/AST/ASTContext.h"
 #include "clang/AST/Stmt.h"
 #include "clang/Basic/Diagnostic.h"
@@ -13,13 +13,18 @@
 #include "llvm/ADT/DenseSet.h"
 #include <string>
 #include <set>
+#include <sys/stat.h> // for mkdir
 using namespace clang;
 using std::string;
 using llvm::DenseSet;
 
-
-void ResourceManager::init() {
+void ResourceManager::init(int argc, char** argv) {
 	decls.clear();
+	compInst.reset();
+	rw.reset();
+	optTable.reset();
+
+	optTable.reset(new OptionTable(argc, argv));
 
 	compInst.reset(new CompilerInstance());
 	CompilerInvocation &compInvo = compInst->getInvocation();
@@ -34,7 +39,6 @@ void ResourceManager::init() {
 				true, false, false);
 	}
 	
-
 	compInvo.setLangDefaults(
 			IK_CXX, 
 			LangStandard::lang_cxx98);
@@ -64,7 +68,9 @@ void ResourceManager::init() {
 	rw->setSourceMgr(srcMgr, compInst->getLangOpts());
 }
 
-bool ResourceManager::initParseAST(string srcFileFullName) {
+bool ResourceManager::initParseAST() {
+	assert(optTable->getOption(options::Argument).size() == 1 && "No src file specified.");
+	string srcFileFullName = optTable->getOption(options::Argument).front();
 	FileManager &fileMgr = compInst->getFileManager();
 	SourceManager &srcMgr = compInst->getSourceManager();
 	const FileEntry *fileIn = fileMgr.getFile(srcFileFullName);
@@ -97,14 +103,26 @@ void ResourceManager::rewriteToFile() {
 	}
 	const RewriteBuffer *rwBuf = NULL;
 	string errInfo;
+	OptionTable::OptValueListTy& baseOutDir = optTable->getOption(options::OPT_Directory);
 	for(DenseSet<FileID>::iterator
 			I = q.begin(), IEend = q.end();
 			I != IEend; ++I){
 		FileID thisFileID = *I;
 		rwBuf = rw->getRewriteBufferFor(thisFileID);
 		string thisFileName = srcMgr.getFileEntryForID(thisFileID)->getName(); //FIXME: implemented as getFilename in clang3.2+
-		//FIXME Should output to a seperate dest dir set in the config option
-		thisFileName.insert(thisFileName.find_last_of("/\\")+1, "_._");
+		int filenamePos = thisFileName.find_last_of("/\\")+1;
+		string pathName = thisFileName.substr(0, filenamePos);
+		string fileName = thisFileName.substr(filenamePos, thisFileName.length());
+		// FIXME: Should output to a seperate dest dir set in the config option
+		if(baseOutDir.empty()) {
+			// no output dir specified
+			thisFileName = pathName + "_._" + fileName;
+		} else {
+			// FIXME: base dir not trimed
+			pathName = baseOutDir.front() + "/" + pathName;
+			this->mkdirRecursively(pathName.c_str());
+			thisFileName = pathName + fileName;
+		}
 		if(rwBuf != NULL) {
 			llvm::raw_fd_ostream fos(thisFileName.c_str(), errInfo);
 			fos << string(rwBuf->begin(), rwBuf->end());
@@ -170,5 +188,25 @@ bool ResourceManager::prettyPrint(llvm::raw_ostream &out) {
 	}
 	
 	return true;
+}
+
+// FIXME: Path seperator
+int ResourceManager::mkdirRecursively(const char* pathname, mode_t mode) {
+	if(mode == 0) {
+		// Directory default mode: 755
+		mode = S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH;
+	}
+	string pathstr(pathname);
+	int lastSep = -1, nowSep;
+	while((nowSep = pathstr.find_first_of("/\\", lastSep+1)) != -1) {
+		if(nowSep - lastSep > 1) {
+			string tmp = pathstr.substr(0, nowSep);
+			int err = mkdir(tmp.c_str(), mode);
+			DPRINT("Create path [%s]: [%d]", tmp.c_str(), err);
+		}
+		lastSep = nowSep;
+	}
+
+	return 0;
 }
 
