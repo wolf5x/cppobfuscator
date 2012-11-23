@@ -1,6 +1,7 @@
 #include "StrategyManager.h"
 #include "alg/Algorithm.h"
-#include "alg/AlgorithmPool.h"
+#include "alg/FlattenCFG/FlattenCFGTransformer.h"
+#include "alg/SimplePrinter.h"
 using namespace std;
 using namespace clang;
 

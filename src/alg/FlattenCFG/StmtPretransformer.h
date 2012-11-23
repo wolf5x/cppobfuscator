@@ -5,7 +5,6 @@
 #include "llvm/ADT/DenseMap.h"
 #include "clang/AST/ParentMap.h"
 #include "alg/Algorithm.h"
-#include "alg/FlattenCFG/ASTTraverser.h"
 #include "alg/FlattenCFG/ASTTraverserPlus.h"
 #include <map>
 using namespace clang;
