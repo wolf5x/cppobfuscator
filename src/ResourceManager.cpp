@@ -36,20 +36,23 @@ void ResourceManager::init(int argc, char** argv) {
 	for(int i = 0, l = sizeof(HS_PATHS)/sizeof(string*); i < l; i++) {
 		hsOpts.AddPath(HS_PATHS[i],
 				clang::frontend::CXXSystem,
-				true, false, false);
+				//true, false, false); 
+                // FIXME what's the change in new version?
+                false, false);
 	}
 	
 	compInvo.setLangDefaults(
+			compInst->getLangOpts(),
 			IK_CXX, 
 			LangStandard::lang_cxx98);
 
-	compInst->createDiagnostics(0, 0);
+	compInst->createDiagnostics(NULL, false);
 
 	TargetOptions tarOpts;
 	tarOpts.Triple = llvm::sys::getDefaultTargetTriple();
 	TargetInfo *tarInfo = TargetInfo::CreateTargetInfo( //FIXME: memory leak
 			compInst->getDiagnostics(), 
-			tarOpts);
+			&tarOpts);
 	compInst->setTarget(tarInfo);
 
 	compInst->createFileManager();
@@ -95,7 +98,8 @@ void ResourceManager::rewriteToFile() {
 	for(TranslationUnitDecl::decl_iterator I = decls->decls_begin(), E = decls->decls_end();
 			I != E; ++I) {
 		Decl *D = *I;
-		if(srcMgr.isInSystemHeader(D->getLocation())) {
+		SourceLocation Loc = D->getLocation();
+		if(Loc.isInvalid() || srcMgr.isInSystemHeader(Loc)) {
 			continue;
 		}
 		FileID thisFileID = srcMgr.getFileID(D->getLocation());
@@ -152,7 +156,8 @@ bool ResourceManager::prettyPrint(llvm::raw_ostream &out) {
 	//		   I = decls[i].begin(), E = decls[i].end();
 	//		   I != E; ++I) {
 		Decl *D = *I;
-		if(srcMgr.isInSystemHeader(D->getLocation())) {
+		SourceLocation Loc = D->getLocation();
+		if(Loc.isInvalid() || srcMgr.isInSystemHeader(Loc)) {
 			continue;
 		}
 		FileID thisFileID = srcMgr.getFileID(D->getLocation());

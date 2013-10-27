@@ -249,7 +249,7 @@ CompoundStmt* Algorithm::StVecToCompound(StmtPtrSmallVector *v){
 		}
 	}
 	return new (this->compInst.getASTContext())
-		CompoundStmt(this->compInst.getASTContext(), &(*v->begin()), v->size(), SourceLocation(), SourceLocation());
+		CompoundStmt(this->compInst.getASTContext(), llvm::makeArrayRef(v->begin(), v->end()), SourceLocation(), SourceLocation());
 }
 
 CompoundStmt* Algorithm::StmtToCompound(Stmt* S) {
@@ -258,7 +258,7 @@ CompoundStmt* Algorithm::StmtToCompound(Stmt* S) {
 		return dyn_cast<CompoundStmt>(S);
 	}
 	return new (this->compInst.getASTContext())
-		CompoundStmt(this->compInst.getASTContext(), (Stmt**)(&S), 1, SourceLocation(), SourceLocation());
+		CompoundStmt(this->compInst.getASTContext(), llvm::makeArrayRef(S), SourceLocation(), SourceLocation());
 }
 
 
@@ -350,7 +350,7 @@ DeclStmt* Algorithm::CreateVar(QualType Ty, DeclContext *DC, Expr *initList, Var
 	VarDecl *VD = VarDecl::Create(Ctx, DC,
 			SourceLocation(), SourceLocation(), 
 			&getUniqueVarName(), Ty, NULL, 
-			SC, SC);
+			SC);
 	//FIXME: decl context 
 	//VD->setInit(initList);
 	if(initList) {

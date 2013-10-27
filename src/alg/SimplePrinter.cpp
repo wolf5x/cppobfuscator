@@ -16,7 +16,9 @@ SimplePrinter::execute() {
 	for(TranslationUnitDecl::decl_iterator I = tud->decls_begin(), E = tud->decls_end();
 			I != E; ++I){
 		//consumer.HandleTopLevelDecl(*I);
-		if(compInst.getSourceManager().isInSystemHeader((*I)->getLocation())) {
+		SourceLocation Loc = (*I)->getLocation();
+		if(Loc.isInvalid() ||
+				compInst.getSourceManager().isInSystemHeader(Loc)) {
 			continue; 
 		}
 		consumer.HandleTopLevelDecl(DeclGroupRef(*I));

@@ -21,8 +21,10 @@ bool FlattenCFGTransformer::execute() {
 			I != E; ++I) {
 		Decl *D = *I;
 		DPRINT("TUDecl %s %x | Ctx %x -> p %x", D->getDeclKindName(), (unsigned int)D, (unsigned int)D->getDeclContext(), (unsigned int)decls);
+		SourceLocation Loc = D->getLocation();
 
-		if(this->compInst.getSourceManager().isInSystemHeader(D->getLocation())){
+		if(Loc.isInvalid() 
+				|| this->compInst.getSourceManager().isInSystemHeader(Loc)){
 			continue;
 		}
 

@@ -65,7 +65,7 @@ public:
 			unsigned j = 1;
 			for (CFGBlock::const_iterator BI = (*I)->begin(), BEnd = (*I)->end() ;
 					BI != BEnd; ++BI, ++j ) {        
-				if (const CFGStmt *SE = BI->getAs<CFGStmt>()) {
+				if (const CFGStmt *SE = BI->getAs<CFGStmt>().getPointer()) {
 					Stmt *stmt= const_cast<Stmt*>(SE->getStmt());
 					std::pair<unsigned, unsigned> P((*I)->getBlockID(), j);
 					StmtMap[stmt] = P;

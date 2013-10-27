@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "ResourceManager.h"
 
+#include "clang/AST/ASTContext.h"
 #include "clang/AST/Expr.h"
 #include "clang/AST/Stmt.h"
 #include "clang/AST/Type.h"
@@ -37,6 +38,7 @@ using clang::IdentifierInfo;
 using clang::QualType;
 using clang::CastKind;
 using clang::SourceLocation;
+using clang::ASTContext;
 using llvm::SmallVector;
 using std::string;
 

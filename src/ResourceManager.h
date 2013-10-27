@@ -8,7 +8,7 @@
 #include "alg/InitParseConsumer.h"
 
 #include "clang/Frontend/CompilerInstance.h"
-#include "clang/Rewrite/Rewriter.h"
+#include "clang/Rewrite/Core/Rewriter.h"
 
 #include "llvm/ADT/OwningPtr.h"
 #include "llvm/Support/Host.h"
@@ -35,7 +35,9 @@ protected:
 	DeclGroupRefVec decls; 
 	
 public:
-	void init(int argc, char** argv);
+	ResourceManager(){}
+
+	void init(int argc, char **argv);
 
 	bool initParseAST();
 

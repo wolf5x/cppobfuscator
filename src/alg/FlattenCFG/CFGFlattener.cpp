@@ -177,19 +177,21 @@ bool CFGFlattener::JoinBlocks(CFGBlock *Parent, CFGBlock *Child) {
 		for(CFGBlock::iterator I = Child->begin(), IEnd = Child->end(); 
 				I != IEnd; ++I) {
 			CFGElement &E = *I;
-			if (const CFGStmt *CS = E.getAs<CFGStmt>()) {
+			if (const CFGStmt *CS = E.getAs<CFGStmt>().getPointer()) {
 				Parent->appendStmt(const_cast<Stmt*>(CS->getStmt()), C);
-			} else if (const CFGInitializer *IE = E.getAs<CFGInitializer>()) {
+			} else if (const CFGInitializer *IE = E.getAs<CFGInitializer>().getPointer()) {
 				Parent->appendInitializer(IE->getInitializer(), C);
-			} else if (const CFGAutomaticObjDtor *DE = E.getAs<CFGAutomaticObjDtor>()){
+			} else if (const CFGAutomaticObjDtor *DE = E.getAs<CFGAutomaticObjDtor>().getPointer()){
 				Parent->appendAutomaticObjDtor(const_cast<VarDecl*>(DE->getVarDecl()), const_cast<Stmt*>(DE->getTriggerStmt()), C);
-			} else if (const CFGBaseDtor *BE = E.getAs<CFGBaseDtor>()) {
+			} else if (const CFGBaseDtor *BE = E.getAs<CFGBaseDtor>().getPointer()) {
 				Parent->appendBaseDtor(BE->getBaseSpecifier(), C);
-			} else if (const CFGMemberDtor *ME = E.getAs<CFGMemberDtor>()) {
+			} else if (const CFGMemberDtor *ME = E.getAs<CFGMemberDtor>().getPointer()) {
 				Parent->appendMemberDtor(const_cast<FieldDecl*>(ME->getFieldDecl()), C);
-			} else if (const CFGTemporaryDtor *TE = E.getAs<CFGTemporaryDtor>()) {
+			} else if (const CFGTemporaryDtor *TE = E.getAs<CFGTemporaryDtor>().getPointer()) {
 				Parent->appendTemporaryDtor(const_cast<CXXBindTemporaryExpr*>(TE->getBindTemporaryExpr()), C);
-			}
+			} else {
+                // FIXME: unhandled new type
+            }
 		}
 	} else if(isa<LabelStmt>(Label) || isa<SwitchCase>(Label)) {
 		Parent->appendStmt(Label, C);
@@ -239,7 +241,7 @@ CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::Va
 	for(unsigned i = 0; i != N->MergedCFGElements.size(); ++i) {
 		CFGElement *elem = N->MergedCFGElements[i];
 		DPRINT("add stmt #%d", i);
-		if(const CFGStmt *CS = elem->getAs<CFGStmt>()) {
+		if(const CFGStmt *CS = elem->getAs<CFGStmt>().getPointer()) {
 			Stmt *T = const_cast<Stmt*>(CS->getStmt());
 			//FIXME if the block has DeclStmt, then it must be the decls at the funtion's beginning.
 			// This may be wrong. 
@@ -247,17 +249,18 @@ CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::Va
 			if(isa<DeclStmt>(T)) {
 				continue;
 			}
+			T->dumpPretty(Ctx);
 			if(T == stTermCond) {
 				//FIXME now only support if-else, but may be others such as switch
 				// if-else terminator
 				DPRINT("terminator cond stmt met.");
-				T->dumpPretty(Ctx);
 				switch(stTerm->getStmtClass()) {
 					default:
+						// FIXME Bad case: int a, b; if(a && (b%2 ==1 )) {}
 						{
-							DPRINT("unsupported CFGStmt %s %x", stTerm->getStmtClassName(), (unsigned)stTerm);
+							DPRINT("[FIXME]unsupported CFGStmt %s %x", stTerm->getStmtClassName(), (unsigned)stTerm);
 							stTerm->dump();
-							assert(false && "unsupported Stmt");
+							break;
 						}
 					case Stmt::IfStmtClass:
 						{
@@ -354,7 +357,7 @@ bool CFGFlattener::GraphInfo::rebind(CFG *G, Stmt *Root) {
 		unsigned StmtID = 1;
 		for(CFGBlock::iterator I = B->begin(), IEnd = B->end(); 
 				I != IEnd; ++I, ++StmtID) {
-			if(const CFGStmt *CS = I->getAs<CFGStmt>()) {
+			if(const CFGStmt *CS = I->getAs<CFGStmt>().getPointer()) {
 				Stmt *T = const_cast<Stmt*>(CS->getStmt());
 				// only add the last copy of the same Stmt
 				Helper->setBlockID(B->getBlockID());

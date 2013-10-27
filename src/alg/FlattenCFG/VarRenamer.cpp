@@ -1,5 +1,5 @@
 #include "VarRenamer.h"
-#include "clang/Rewrite/Rewriter.h"
+#include "clang/Rewrite/Core/Rewriter.h"
 using namespace std;
 using namespace clang;
 
