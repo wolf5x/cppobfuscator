@@ -32,3 +32,8 @@ a.out
 # test file
 @*
 _X*
+
+# config file for vim auto-complete plugins
+.ycm_extra_conf.pyc
+.ycm_extra_conf.py
+.clang_complete

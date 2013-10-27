@@ -4,7 +4,7 @@ int parm_fun(int par1, int par2 = 0) {
 
 int pow() {
 	int a = 0;
-	pow();
+	//pow();
 	a += pow();
 	{
 		int b = 1;

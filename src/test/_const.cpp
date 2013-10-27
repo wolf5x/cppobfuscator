@@ -41,7 +41,8 @@ int main()
 
 	char *p = const_cast<char*>(&("haha")[0]);
 	const char *q = &("haha")[0];
-	char xx[] = "hoho";
+    // FIXME const char array is not a init list??
+	char xx[];// = "hoho";
 	char *px = xx;
 	px = &xx[0];
 	return 0;
