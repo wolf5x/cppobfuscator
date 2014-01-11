@@ -37,6 +37,15 @@ protected:
 public:
 	ResourceManager(){}
 
+    ~ResourceManager() {
+        rw.reset();
+        DPRINT("rw reset.");
+        optTable.reset();
+        DPRINT("optTable reset.");
+        compInst.reset();
+        DPRINT("compInst reset.");
+    }
+
 	void init(int argc, char **argv);
 
 	bool initParseAST();

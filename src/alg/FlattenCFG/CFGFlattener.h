@@ -34,7 +34,10 @@ class GraphStmtHandleHelper {
 			: stMap(M), currentRoot(NULL)
 		{}
 
-		void UpdateMap(Stmt *S) { TraverseStmt(S); }
+		void UpdateMap(Stmt *S) { 
+            currentRoot = NULL;
+            TraverseStmt(S);
+        }
 
 		bool VisitStmt(Stmt *S) {
 			if(stMap.find(S) != stMap.end()) {
@@ -61,11 +64,14 @@ public:
 	  : currentBlock(0), currentStmt(0), rootStmt(Root), LangOpts(LO)
 	{
 		StmtMap.clear();
+        // Iterate over all CFGBlocks
 		for (CFG::const_iterator I = cfg->begin(), E = cfg->end(); I != E; ++I ) {
 			unsigned j = 1;
+            // Iterate over all Stmts in a CFGBlock
 			for (CFGBlock::const_iterator BI = (*I)->begin(), BEnd = (*I)->end() ;
 					BI != BEnd; ++BI, ++j ) {        
 				if (const CFGStmt *SE = BI->getAs<CFGStmt>().getPointer()) {
+                    // Remember that 'stmt' is the jth stmt of block I
 					Stmt *stmt= const_cast<Stmt*>(SE->getStmt());
 					std::pair<unsigned, unsigned> P((*I)->getBlockID(), j);
 					StmtMap[stmt] = P;
@@ -88,6 +94,14 @@ public:
 			return false;
 		return true;
 	}
+
+    std::pair<signed, signed> getRootStmtID(Stmt *S) {
+		StmtMapTy::iterator I = StmtMap.find(S);
+        if (I == StmtMap.end())
+            return std::make_pair(-1,-1);
+        else 
+            return I->second;
+    }
 }; // end class GraphStmtPrinterHelper
 
 

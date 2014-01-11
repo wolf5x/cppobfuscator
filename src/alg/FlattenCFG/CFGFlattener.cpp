@@ -143,6 +143,7 @@ bool CFGFlattener::isTransparentBlock(CFGBlock *B) {
 	if(!B) {
 		return false;
 	}
+    // this is Entry Block or Exit Block
 	if(B == &B->getParent()->getEntry() || B == &B->getParent()->getExit()) {
 		return false;
 	}
@@ -191,6 +192,7 @@ bool CFGFlattener::JoinBlocks(CFGBlock *Parent, CFGBlock *Child) {
 				Parent->appendTemporaryDtor(const_cast<CXXBindTemporaryExpr*>(TE->getBindTemporaryExpr()), C);
 			} else {
                 // FIXME: unhandled new type
+                assert(false && "Unhandled CFGElement type");
             }
 		}
 	} else if(isa<LabelStmt>(Label) || isa<SwitchCase>(Label)) {
@@ -251,9 +253,8 @@ CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::Va
 			}
 			T->dumpPretty(Ctx);
 			if(T == stTermCond) {
-				//FIXME now only support if-else, but may be others such as switch
-				// if-else terminator
-				DPRINT("terminator cond stmt met.");
+				//FIXME now only support if-else, but may be others such as switch, && ||
+				DPRINT("terminator cond stmt met: %s", stTerm->getStmtClassName());
 				switch(stTerm->getStmtClass()) {
 					default:
 						// FIXME Bad case: int a, b; if(a && (b%2 ==1 )) {}
@@ -262,7 +263,7 @@ CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::Va
 							stTerm->dump();
 							break;
 						}
-					case Stmt::IfStmtClass:
+					case Stmt::IfStmtClass: // if-else terminator
 						{
 							assert(N->Succs.size() == 2 && "Conditional Terminator should be if-else and has exactly 2 succs.");
 							// Build IfStmt
@@ -282,6 +283,29 @@ CaseStmt* CFGFlattener::CreateCaseStmt(CFGFlattener::GraphNodeInfo *N, clang::Va
 							stIf->dump();
 							break;
 						}
+                    case Stmt::BinaryOperatorClass: // && || 
+                        {
+                            DPRINT("Terminated by BinaryOperator:");
+                            BinaryOperator *BO = dyn_cast<BinaryOperator>(stTerm);
+                            BO->getLHS()->dump();
+                            BO->getRHS()->dump();
+                            DPRINT("Built IfStmt:");
+                            // Build IfStmt
+                            IfStmt *stIf = new (Ctx)
+                                IfStmt(Ctx, SourceLocation(), NULL, dyn_cast<Expr>(BO->getLHS()), NULL);
+                            StmtPtrSmallVector thenBody, elseBody;
+							Stmt *stThen = N->Succs[0] ? (Stmt*)BuildVarAssignExpr(VD, CreateIntegerLiteralX(N->Succs[0]->NodeID)) : AddNewNullStmt();
+							Stmt *stElse = N->Succs[1] ? (Stmt*)BuildVarAssignExpr(VD, CreateIntegerLiteralX(N->Succs[1]->NodeID)) : AddNewNullStmt();
+							thenBody.push_back(stThen);
+							elseBody.push_back(stElse);
+
+							stIf->setThen(StVecToCompound(&thenBody));
+							stIf->setElse(StVecToCompound(&elseBody));
+
+							caseBody.push_back(stIf);
+                            stIf->dump();
+                            break;
+                        }
 					case Stmt::IndirectGotoStmtClass:
 						{
 							IndirectGotoStmt *IGS = dyn_cast<IndirectGotoStmt>(stTerm);
@@ -365,7 +389,10 @@ bool CFGFlattener::GraphInfo::rebind(CFG *G, Stmt *Root) {
 				if(!Helper->handledStmt(T)) {
 					N.MergedCFGElements.push_back(&(*I));
 				} else {
-					DPRINT("pass handledStmt [B%d.%d]", B->getBlockID(), StmtID);
+                    std::pair<signed, signed> rootStmtID = Helper->getRootStmtID(T);
+					DPRINT("Pass handledStmt [B%d.%d], Root is [B%d.%d]", 
+                            B->getBlockID(), StmtID,
+                            rootStmtID.first, rootStmtID.second);
 				}
 			}
 		}
@@ -385,14 +412,15 @@ bool CFGFlattener::GraphInfo::rebind(CFG *G, Stmt *Root) {
 }
 
 bool CFGFlattener::GraphInfo::isTransparentNode(GraphNodeInfo *N) {
-	//FIXME test
 	if(NULL == N) {
 		return false;
 	}
 	if(N->MergedCFGBlockLabel) {
 		return false;
 	}
-	return N->MergedCFGElements.size() == 0;
+    // FIXME debug
+    //return false;
+	return N->MergedCFGElements.size() == 0 && (!N->MergedCFGTerminator);
 }
 
 // Disjoint Sets Union
