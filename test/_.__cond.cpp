@@ -44,7 +44,7 @@ int main() {
     int ____localvar____7;
     int ____localvar____8 = 4;
     while (____localvar____8 != 0)
-        switch (int ____localvar____8 = 4) {
+        switch (int ____localvar____8 = 4) { // should be ____localvar____8
           case 1:
             {
                 ____localvar____7 = (____localvar____6) ? 1 : 0;

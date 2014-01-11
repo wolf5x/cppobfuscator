@@ -15,6 +15,9 @@
 *.la
 *.a
 
+# Complied Dependencies files
+*.d
+
 # Executable Target File
 obfs
 a.out

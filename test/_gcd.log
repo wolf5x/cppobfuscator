@@ -1,0 +1,1970 @@
+done1
+[DEBUG][res/OptionTable.cpp - line 8] argc = 2
+[DEBUG][res/OptionTable.cpp - line 38] non-option argvs caught: [_gcd.cpp]
+ignoring nonexistent directory "/usr/include/c++/4.6/i486-linux-gnu"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.3/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i686-linux-gnu
+ /usr/include/c++/4.6/backward
+ /usr/include/i386-linux-gnu
+End of search list.
+[DEBUG][alg/InitParseConsumer.h - line 30] +decl, size = 1
+[DEBUG][alg/InitParseConsumer.h - line 30] +decl, size = 2
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 23] TUDecl Typedef a17a9d0 | Ctx a17a6f4 -> p a17a6e0
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 23] TUDecl Function a17aad0 | Ctx a17a6f4 -> p a17a6e0
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 48] enter FuncDecl
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 9] START VarRenamer
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aad0 (Function)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Function
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aa10 (ParmVar)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: ParmVar
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = x | type = double | desugared type = double | const = 0 | extern = 0 | POD = 1
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aa10 (ParmVar)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aa50 (ParmVar)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: ParmVar
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = n | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aa50 (ParmVar)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af38 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17abc8 (IfStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab78 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab68 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab38 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab38 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab68 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab50 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab50 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab78 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17abb8 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aba8 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab90 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab90 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aba8 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17abb8 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17abc8 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad50 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17ac00 (Var)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = y | type = double | desugared type = double | const = 0 | extern = 0 | POD = 1
+fast_pow(____localvar____0, ____localvar____1 / 2)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad18 (CallExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad08 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acd8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acd8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad08 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad40 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac64 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac64 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad40 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acc0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acb0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac7c (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac7c (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acb0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac98 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac98 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acc0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad18 (CallExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17ac00 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad50 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af18 (IfStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17add0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad90 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad60 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad60 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad90 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad78 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad78 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17adb8 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17adb8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17add0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae50 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae38 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae18 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ade8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ade8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae18 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae28 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae00 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae00 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae28 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae38 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae50 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af08 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aef0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae90 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae60 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae60 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae90 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aea0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae78 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae78 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aea0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aee0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aec8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aec8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aee0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aef0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af08 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af18 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af38 (CompoundStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aad0 (Function)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 11] END VarRenamer
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 6] START StmtPretransformer
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aad0 (Function)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl a17aad0(Function) Ctx a17a6f4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aa10 (ParmVar)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl a17aa10(ParmVar) Ctx a17aaf4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aa10 (ParmVar)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aa50 (ParmVar)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl a17aa50(ParmVar) Ctx a17aaf4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aa50 (ParmVar)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af38 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt CompoundStmt a17af38 a18e638 a18e638
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17abc8 (IfStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IfStmt a17abc8 a171440 a171440
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab78 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator a17ab78 a15c4d8 a15c4d8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab68 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17ab68 a15c4e8 a15c4e8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab38 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17ab38 a15c078 a15c078
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab38 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab68 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+`-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab50 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral a17ab50 a15c088 a15c088
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab50 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0xa17ab50 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab78 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0xa17ab78 '_Bool' '=='
+|-ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+| `-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+`-IntegerLiteral 0xa17ab50 'int' 0
+____localvar____1 == 0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17abb8 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ReturnStmt a17abb8 a190a50 a190a50
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aba8 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17aba8 a175308 a175308
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab90 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral a17ab90 a175318 a175318
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab90 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0xa17ab90 'int' 1
+1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aba8 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+`-IntegerLiteral 0xa17ab90 'int' 1
+1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17abb8 (ReturnStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ReturnStmt, start transform
+ReturnStmt 0xa17abb8
+`-ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+  `-IntegerLiteral 0xa17ab90 'int' 1
+return 1;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17abc8 (IfStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IfStmt, start transform
+IfStmt 0xa17abc8
+|-<<<NULL>>>
+|-BinaryOperator 0xa17ab78 '_Bool' '=='
+| |-ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+| | `-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| `-IntegerLiteral 0xa17ab50 'int' 0
+|-ReturnStmt 0xa17abb8
+| `-ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+|   `-IntegerLiteral 0xa17ab90 'int' 1
+`-<<<NULL>>>
+if (____localvar____1 == 0)
+    return 1;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad50 (DeclStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclStmt a17ad50 a175328 a175328
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17ac00 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl a17ac00(Var) Ctx a17aaf4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad18 (CallExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt CallExpr a17ad18 a15c448 a15c448
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad08 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17ad08 a15c458 a15c458
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acd8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17acd8 a15c468 a15c468
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acd8 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+fast_pow[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad08 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+`-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+fast_pow[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad40 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17ad40 a18d4e0 a18d4e0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac64 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17ac64 a18d4f0 a18d4f0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac64 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad40 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acc0 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator a17acc0 a18d500 a18d500
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acb0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17acb0 a15c660 a15c660
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac7c (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17ac7c a15c670 a15c670
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac7c (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acb0 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+`-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac98 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral a17ac98 a15c680 a15c680
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac98 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0xa17ac98 'int' 2
+2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acc0 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0xa17acc0 'int' '/'
+|-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+| `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+`-IntegerLiteral 0xa17ac98 'int' 2
+____localvar____1 / 2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad18 (CallExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt CallExpr, start transform
+CallExpr 0xa17ad18 'double'
+|-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+| `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+|-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+| `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+`-BinaryOperator 0xa17acc0 'int' '/'
+  |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+  | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  `-IntegerLiteral 0xa17ac98 'int' 2
+fast_pow(____localvar____0, ____localvar____1 / 2)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17ac00 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad50 (DeclStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclStmt, start transform
+DeclStmt 0xa17ad50
+`-VarDecl 0xa17ac00 ____localvar____2 'double'
+  `-CallExpr 0xa17ad18 'double'
+    |-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+    | `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+    |-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+    | `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+    `-BinaryOperator 0xa17acc0 'int' '/'
+      |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+      | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+      `-IntegerLiteral 0xa17ac98 'int' 2
+double ____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2);
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af18 (IfStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IfStmt a17af18 a15c0a8 a15c0a8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17add0 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator a17add0 a15c0b8 a15c0b8
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator a17ada0 a15c690 a15c690
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad90 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17ad90 a15c6a0 a15c6a0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad60 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17ad60 a15c6b0 a15c6b0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad60 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad90 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+`-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad78 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral a17ad78 a15c6c0 a15c6c0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad78 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0xa17ad78 'int' 2
+2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17adb8 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral a17adb8 a18bf98 a18bf98
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17adb8 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0xa17adb8 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17add0 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0xa17add0 '_Bool' '=='
+|-BinaryOperator 0xa17ada0 'int' '%'
+| |-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+| | `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| `-IntegerLiteral 0xa17ad78 'int' 2
+`-IntegerLiteral 0xa17adb8 'int' 0
+____localvar____1 % 2 == 0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae50 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ReturnStmt a17ae50 a18bfa8 a18bfa8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae38 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator a17ae38 a18bfb8 a18bfb8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae18 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17ae18 a18bfc8 a18bfc8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ade8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17ade8 a18bfd8 a18bfd8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ade8 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae18 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae28 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17ae28 a18bfe8 a18bfe8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae00 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17ae00 a18bff8 a18bff8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae00 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae28 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae38 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0xa17ae38 'double' '*'
+|-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+| `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+`-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+  `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2 * ____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae50 (ReturnStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ReturnStmt, start transform
+ReturnStmt 0xa17ae50
+`-BinaryOperator 0xa17ae38 'double' '*'
+  |-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+  | `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  `-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+    `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+return ____localvar____2 * ____localvar____2;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af08 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ReturnStmt a17af08 a1907a0 a1907a0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aef0 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator a17aef0 a1907b0 a1907b0
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator a17aeb0 a1907c0 a1907c0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae90 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17ae90 a1907d0 a1907d0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae60 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17ae60 a1907e0 a1907e0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae60 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae90 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aea0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17aea0 a1907f0 a1907f0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae78 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17ae78 a190800 a190800
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae78 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aea0 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aee0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17aee0 a190810 a190810
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aec8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17aec8 a15bf78 a15bf78
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aec8 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aee0 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aef0 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0xa17aef0 'double' '*'
+|-BinaryOperator 0xa17aeb0 'double' '*'
+| |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+| | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+| `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+|   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+`-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+  `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____2 * ____localvar____2 * ____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af08 (ReturnStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ReturnStmt, start transform
+ReturnStmt 0xa17af08
+`-BinaryOperator 0xa17aef0 'double' '*'
+  |-BinaryOperator 0xa17aeb0 'double' '*'
+  | |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+  | | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  | `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+  |   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  `-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+    `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+return ____localvar____2 * ____localvar____2 * ____localvar____0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af18 (IfStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IfStmt, start transform
+IfStmt 0xa17af18
+|-<<<NULL>>>
+|-BinaryOperator 0xa17add0 '_Bool' '=='
+| |-BinaryOperator 0xa17ada0 'int' '%'
+| | |-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| | `-IntegerLiteral 0xa17ad78 'int' 2
+| `-IntegerLiteral 0xa17adb8 'int' 0
+|-ReturnStmt 0xa17ae50
+| `-BinaryOperator 0xa17ae38 'double' '*'
+|   |-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+|   | `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+|   `-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+|     `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+`-ReturnStmt 0xa17af08
+  `-BinaryOperator 0xa17aef0 'double' '*'
+    |-BinaryOperator 0xa17aeb0 'double' '*'
+    | |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+    | | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    | `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    `-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+      `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+if (____localvar____1 % 2 == 0)
+    return ____localvar____2 * ____localvar____2;
+else
+    return ____localvar____2 * ____localvar____2 * ____localvar____0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af38 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt CompoundStmt, start transform
+CompoundStmt 0xa17af38
+|-IfStmt 0xa17abc8
+| |-<<<NULL>>>
+| |-BinaryOperator 0xa17ab78 '_Bool' '=='
+| | |-ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| | `-IntegerLiteral 0xa17ab50 'int' 0
+| |-ReturnStmt 0xa17abb8
+| | `-ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+| |   `-IntegerLiteral 0xa17ab90 'int' 1
+| `-<<<NULL>>>
+|-DeclStmt 0xa17ad50
+| `-VarDecl 0xa17ac00 ____localvar____2 'double'
+|   `-CallExpr 0xa17ad18 'double'
+|     |-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+|     |-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+|     | `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+|     `-BinaryOperator 0xa17acc0 'int' '/'
+|       |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+|       `-IntegerLiteral 0xa17ac98 'int' 2
+`-IfStmt 0xa17af18
+  |-<<<NULL>>>
+  |-BinaryOperator 0xa17add0 '_Bool' '=='
+  | |-BinaryOperator 0xa17ada0 'int' '%'
+  | | |-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  | | `-IntegerLiteral 0xa17ad78 'int' 2
+  | `-IntegerLiteral 0xa17adb8 'int' 0
+  |-ReturnStmt 0xa17ae50
+  | `-BinaryOperator 0xa17ae38 'double' '*'
+  |   |-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+  |   | `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  |   `-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+  |     `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  `-ReturnStmt 0xa17af08
+    `-BinaryOperator 0xa17aef0 'double' '*'
+      |-BinaryOperator 0xa17aeb0 'double' '*'
+      | |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+      | | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+      | `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+      |   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+      `-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+        `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+{
+    if (____localvar____1 == 0)
+        return 1;
+    double ____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2);
+    if (____localvar____1 % 2 == 0)
+        return ____localvar____2 * ____localvar____2;
+    else
+        return ____localvar____2 * ____localvar____2 * ____localvar____0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aad0 (Function)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 30] END StmtPretransformer
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 5] START LocalDeclMover
+FunctionDecl 0xa17aad0 <_gcd.cpp:1:1, line:9:1> fast_pow 'double (double, int)'
+|-ParmVarDecl 0xa17aa10 <line:1:17, col:24> ____localvar____0 'double'
+|-ParmVarDecl 0xa17aa50 <col:27, col:31> ____localvar____1 'int'
+`-CompoundStmt 0xa17af38 <col:34, line:9:1>
+  |-IfStmt 0xa17abc8 <line:2:5, line:3:16>
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0xa17ab78 <line:2:9, col:14> '_Bool' '=='
+  | | |-ImplicitCastExpr 0xa17ab68 <col:9> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0xa17ab38 <col:9> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  | | `-IntegerLiteral 0xa17ab50 <col:14> 'int' 0
+  | |-ReturnStmt 0xa17abb8 <line:3:9, col:16>
+  | | `-ImplicitCastExpr 0xa17aba8 <col:16> 'double' <IntegralToFloating>
+  | |   `-IntegerLiteral 0xa17ab90 <col:16> 'int' 1
+  | `-<<<NULL>>>
+  |-DeclStmt 0xa17ad50 <line:4:5, col:32>
+  | `-VarDecl 0xa17ac00 <col:5, col:31> ____localvar____2 'double'
+  |   `-CallExpr 0xa17ad18 <col:16, col:31> 'double'
+  |     |-ImplicitCastExpr 0xa17ad08 <col:16> 'double (*)(double, int)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0xa17acd8 <col:16> 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  |     |-ImplicitCastExpr 0xa17ad40 <col:25> 'double' <LValueToRValue>
+  |     | `-DeclRefExpr 0xa17ac64 <col:25> 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+  |     `-BinaryOperator 0xa17acc0 <col:28, col:30> 'int' '/'
+  |       |-ImplicitCastExpr 0xa17acb0 <col:28> 'int' <LValueToRValue>
+  |       | `-DeclRefExpr 0xa17ac7c <col:28> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  |       `-IntegerLiteral 0xa17ac98 <col:30> 'int' 2
+  `-IfStmt 0xa17af18 <line:5:5, line:8:20>
+    |-<<<NULL>>>
+    |-BinaryOperator 0xa17add0 <line:5:9, col:16> '_Bool' '=='
+    | |-BinaryOperator 0xa17ada0 <col:9, col:11> 'int' '%'
+    | | |-ImplicitCastExpr 0xa17ad90 <col:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0xa17ad60 <col:9> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+    | | `-IntegerLiteral 0xa17ad78 <col:11> 'int' 2
+    | `-IntegerLiteral 0xa17adb8 <col:16> 'int' 0
+    |-ReturnStmt 0xa17ae50 <line:6:9, col:18>
+    | `-BinaryOperator 0xa17ae38 <col:16, col:18> 'double' '*'
+    |   |-ImplicitCastExpr 0xa17ae18 <col:16> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0xa17ade8 <col:16> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    |   `-ImplicitCastExpr 0xa17ae28 <col:18> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0xa17ae00 <col:18> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    `-ReturnStmt 0xa17af08 <line:8:9, col:20>
+      `-BinaryOperator 0xa17aef0 <col:16, col:20> 'double' '*'
+        |-BinaryOperator 0xa17aeb0 <col:16, col:18> 'double' '*'
+        | |-ImplicitCastExpr 0xa17ae90 <col:16> 'double' <LValueToRValue>
+        | | `-DeclRefExpr 0xa17ae60 <col:16> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        | `-ImplicitCastExpr 0xa17aea0 <col:18> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0xa17ae78 <col:18> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        `-ImplicitCastExpr 0xa17aee0 <col:20> 'double' <LValueToRValue>
+          `-DeclRefExpr 0xa17aec8 <col:20> 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aad0 (Function)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aa10 (ParmVar)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aa10 (ParmVar)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17aa50 (ParmVar)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aa50 (ParmVar)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af38 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt CompoundStmt ( a17af38 -> p 0 )
+CompoundStmt 0xa17af38
+|-IfStmt 0xa17abc8
+| |-<<<NULL>>>
+| |-BinaryOperator 0xa17ab78 '_Bool' '=='
+| | |-ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| | `-IntegerLiteral 0xa17ab50 'int' 0
+| |-ReturnStmt 0xa17abb8
+| | `-ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+| |   `-IntegerLiteral 0xa17ab90 'int' 1
+| `-<<<NULL>>>
+|-DeclStmt 0xa17ad50
+| `-VarDecl 0xa17ac00 ____localvar____2 'double'
+|   `-CallExpr 0xa17ad18 'double'
+|     |-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+|     |-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+|     | `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+|     `-BinaryOperator 0xa17acc0 'int' '/'
+|       |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+|       `-IntegerLiteral 0xa17ac98 'int' 2
+`-IfStmt 0xa17af18
+  |-<<<NULL>>>
+  |-BinaryOperator 0xa17add0 '_Bool' '=='
+  | |-BinaryOperator 0xa17ada0 'int' '%'
+  | | |-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  | | `-IntegerLiteral 0xa17ad78 'int' 2
+  | `-IntegerLiteral 0xa17adb8 'int' 0
+  |-ReturnStmt 0xa17ae50
+  | `-BinaryOperator 0xa17ae38 'double' '*'
+  |   |-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+  |   | `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  |   `-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+  |     `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  `-ReturnStmt 0xa17af08
+    `-BinaryOperator 0xa17aef0 'double' '*'
+      |-BinaryOperator 0xa17aeb0 'double' '*'
+      | |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+      | | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+      | `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+      |   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+      `-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+        `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+{
+    if (____localvar____1 == 0)
+        return 1;
+    double ____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2);
+    if (____localvar____1 % 2 == 0)
+        return ____localvar____2 * ____localvar____2;
+    else
+        return ____localvar____2 * ____localvar____2 * ____localvar____0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17abc8 (IfStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IfStmt ( a17abc8 -> p a17af38 )
+IfStmt 0xa17abc8
+|-<<<NULL>>>
+|-BinaryOperator 0xa17ab78 '_Bool' '=='
+| |-ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+| | `-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| `-IntegerLiteral 0xa17ab50 'int' 0
+|-ReturnStmt 0xa17abb8
+| `-ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+|   `-IntegerLiteral 0xa17ab90 'int' 1
+`-<<<NULL>>>
+if (____localvar____1 == 0)
+    return 1;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab78 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( a17ab78 -> p a17abc8 )
+BinaryOperator 0xa17ab78 '_Bool' '=='
+|-ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+| `-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+`-IntegerLiteral 0xa17ab50 'int' 0
+____localvar____1 == 0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab68 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17ab68 -> p a17ab78 )
+ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+`-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab38 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17ab38 -> p a17ab68 )
+DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab38 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab68 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab50 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( a17ab50 -> p a17ab78 )
+IntegerLiteral 0xa17ab50 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab50 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab78 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17abb8 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ReturnStmt ( a17abb8 -> p a17abc8 )
+ReturnStmt 0xa17abb8
+`-ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+  `-IntegerLiteral 0xa17ab90 'int' 1
+return 1;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aba8 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17aba8 -> p a17abb8 )
+ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+`-IntegerLiteral 0xa17ab90 'int' 1
+1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab90 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( a17ab90 -> p a17aba8 )
+IntegerLiteral 0xa17ab90 'int' 1
+1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab90 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aba8 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17abb8 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17abc8 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad50 (DeclStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclStmt ( a17ad50 -> p a17af38 )
+DeclStmt 0xa17ad50
+`-VarDecl 0xa17ac00 ____localvar____2 'double'
+  `-CallExpr 0xa17ad18 'double'
+    |-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+    | `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+    |-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+    | `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+    `-BinaryOperator 0xa17acc0 'int' '/'
+      |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+      | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+      `-IntegerLiteral 0xa17ac98 'int' 2
+double ____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2);
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17ac00 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad18 (CallExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt CallExpr ( a17ad18 -> p a17ad50 )
+CallExpr 0xa17ad18 'double'
+|-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+| `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+|-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+| `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+`-BinaryOperator 0xa17acc0 'int' '/'
+  |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+  | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  `-IntegerLiteral 0xa17ac98 'int' 2
+fast_pow(____localvar____0, ____localvar____1 / 2)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad08 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17ad08 -> p a17ad18 )
+ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+`-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+fast_pow[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acd8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17acd8 -> p a17ad08 )
+DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+fast_pow[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acd8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad08 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad40 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17ad40 -> p a17ad18 )
+ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac64 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17ac64 -> p a17ad40 )
+DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac64 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad40 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acc0 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( a17acc0 -> p a17ad18 )
+BinaryOperator 0xa17acc0 'int' '/'
+|-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+| `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+`-IntegerLiteral 0xa17ac98 'int' 2
+____localvar____1 / 2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acb0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17acb0 -> p a17acc0 )
+ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+`-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac7c (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17ac7c -> p a17acb0 )
+DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac7c (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acb0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac98 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( a17ac98 -> p a17acc0 )
+IntegerLiteral 0xa17ac98 'int' 2
+2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac98 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acc0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad18 (CallExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17ac00 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad50 (DeclStmt)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 177] WorkOnDeclStmt
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 229] Handle VarDecl ____localvar____2 a17ac00 | Ctx a17aaf4(Function) -> p a17a6f4
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 254] QualType 
+double identifier
+CallExpr 0xa17ad18 'double'
+|-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+| `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+|-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+| `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+`-BinaryOperator 0xa17acc0 'int' '/'
+  |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+  | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  `-IntegerLiteral 0xa17ac98 'int' 2
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 306] Expr type: lhs a17a7f0, rhs a17a7f0
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 309] retAssign
+BinaryOperator 0xa17b138 'double' lvalue '='
+|-DeclRefExpr 0xa17b11c 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+`-CallExpr 0xa17ad18 'double'
+  |-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+  | `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  |-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+  | `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+  `-BinaryOperator 0xa17acc0 'int' '/'
+    |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+    | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+    `-IntegerLiteral 0xa17ac98 'int' 2
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af18 (IfStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IfStmt ( a17af18 -> p a17af38 )
+IfStmt 0xa17af18
+|-<<<NULL>>>
+|-BinaryOperator 0xa17add0 '_Bool' '=='
+| |-BinaryOperator 0xa17ada0 'int' '%'
+| | |-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| | `-IntegerLiteral 0xa17ad78 'int' 2
+| `-IntegerLiteral 0xa17adb8 'int' 0
+|-ReturnStmt 0xa17ae50
+| `-BinaryOperator 0xa17ae38 'double' '*'
+|   |-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+|   | `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+|   `-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+|     `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+`-ReturnStmt 0xa17af08
+  `-BinaryOperator 0xa17aef0 'double' '*'
+    |-BinaryOperator 0xa17aeb0 'double' '*'
+    | |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+    | | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    | `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    `-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+      `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+if (____localvar____1 % 2 == 0)
+    return ____localvar____2 * ____localvar____2;
+else
+    return ____localvar____2 * ____localvar____2 * ____localvar____0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17add0 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( a17add0 -> p a17af18 )
+BinaryOperator 0xa17add0 '_Bool' '=='
+|-BinaryOperator 0xa17ada0 'int' '%'
+| |-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+| | `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| `-IntegerLiteral 0xa17ad78 'int' 2
+`-IntegerLiteral 0xa17adb8 'int' 0
+____localvar____1 % 2 == 0[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( a17ada0 -> p a17add0 )
+BinaryOperator 0xa17ada0 'int' '%'
+|-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+| `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+`-IntegerLiteral 0xa17ad78 'int' 2
+____localvar____1 % 2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad90 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17ad90 -> p a17ada0 )
+ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+`-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad60 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17ad60 -> p a17ad90 )
+DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad60 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad90 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad78 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( a17ad78 -> p a17ada0 )
+IntegerLiteral 0xa17ad78 'int' 2
+2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad78 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17adb8 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( a17adb8 -> p a17add0 )
+IntegerLiteral 0xa17adb8 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17adb8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17add0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae50 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ReturnStmt ( a17ae50 -> p a17af18 )
+ReturnStmt 0xa17ae50
+`-BinaryOperator 0xa17ae38 'double' '*'
+  |-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+  | `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  `-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+    `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+return ____localvar____2 * ____localvar____2;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae38 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( a17ae38 -> p a17ae50 )
+BinaryOperator 0xa17ae38 'double' '*'
+|-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+| `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+`-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+  `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2 * ____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae18 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17ae18 -> p a17ae38 )
+ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ade8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17ade8 -> p a17ae18 )
+DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ade8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae18 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae28 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17ae28 -> p a17ae38 )
+ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae00 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17ae00 -> p a17ae28 )
+DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae00 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae28 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae38 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae50 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af08 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ReturnStmt ( a17af08 -> p a17af18 )
+ReturnStmt 0xa17af08
+`-BinaryOperator 0xa17aef0 'double' '*'
+  |-BinaryOperator 0xa17aeb0 'double' '*'
+  | |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+  | | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  | `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+  |   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  `-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+    `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+return ____localvar____2 * ____localvar____2 * ____localvar____0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aef0 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( a17aef0 -> p a17af08 )
+BinaryOperator 0xa17aef0 'double' '*'
+|-BinaryOperator 0xa17aeb0 'double' '*'
+| |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+| | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+| `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+|   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+`-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+  `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____2 * ____localvar____2 * ____localvar____0[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( a17aeb0 -> p a17aef0 )
+BinaryOperator 0xa17aeb0 'double' '*'
+|-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+| `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+`-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+  `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2 * ____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae90 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17ae90 -> p a17aeb0 )
+ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae60 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17ae60 -> p a17ae90 )
+DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae60 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae90 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aea0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17aea0 -> p a17aeb0 )
+ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae78 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17ae78 -> p a17aea0 )
+DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae78 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aea0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aee0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17aee0 -> p a17aef0 )
+ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+`-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aec8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17aec8 -> p a17aee0 )
+DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aec8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aee0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aef0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af08 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af18 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af38 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 109] root stmt type CompoundStmt a17af38 | children size 1
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17aad0 (Function)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 27] END LocalDeclMover
+FunctionDecl 0xa17aad0 <_gcd.cpp:1:1, line:9:1> fast_pow 'double (double, int)'
+|-ParmVarDecl 0xa17aa10 <line:1:17, col:24> ____localvar____0 'double'
+|-ParmVarDecl 0xa17aa50 <col:27, col:31> ____localvar____1 'int'
+`-CompoundStmt 0xa17af38 <col:34, line:9:1>
+  |-DeclStmt 0xa17b150 <<invalid sloc>>
+  | `-VarDecl 0xa17ac00 <line:4:5, col:12> ____localvar____2 'double'
+  |-IfStmt 0xa17abc8 <line:2:5, line:3:16>
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0xa17ab78 <line:2:9, col:14> '_Bool' '=='
+  | | |-ImplicitCastExpr 0xa17ab68 <col:9> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0xa17ab38 <col:9> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  | | `-IntegerLiteral 0xa17ab50 <col:14> 'int' 0
+  | |-ReturnStmt 0xa17abb8 <line:3:9, col:16>
+  | | `-ImplicitCastExpr 0xa17aba8 <col:16> 'double' <IntegralToFloating>
+  | |   `-IntegerLiteral 0xa17ab90 <col:16> 'int' 1
+  | `-<<<NULL>>>
+  |-BinaryOperator 0xa17b138 <<invalid sloc>, line:4:31> 'double' lvalue '='
+  | |-DeclRefExpr 0xa17b11c <<invalid sloc>> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  | `-CallExpr 0xa17ad18 <col:16, col:31> 'double'
+  |   |-ImplicitCastExpr 0xa17ad08 <col:16> 'double (*)(double, int)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0xa17acd8 <col:16> 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  |   |-ImplicitCastExpr 0xa17ad40 <col:25> 'double' <LValueToRValue>
+  |   | `-DeclRefExpr 0xa17ac64 <col:25> 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+  |   `-BinaryOperator 0xa17acc0 <col:28, col:30> 'int' '/'
+  |     |-ImplicitCastExpr 0xa17acb0 <col:28> 'int' <LValueToRValue>
+  |     | `-DeclRefExpr 0xa17ac7c <col:28> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  |     `-IntegerLiteral 0xa17ac98 <col:30> 'int' 2
+  `-IfStmt 0xa17af18 <line:5:5, line:8:20>
+    |-<<<NULL>>>
+    |-BinaryOperator 0xa17add0 <line:5:9, col:16> '_Bool' '=='
+    | |-BinaryOperator 0xa17ada0 <col:9, col:11> 'int' '%'
+    | | |-ImplicitCastExpr 0xa17ad90 <col:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0xa17ad60 <col:9> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+    | | `-IntegerLiteral 0xa17ad78 <col:11> 'int' 2
+    | `-IntegerLiteral 0xa17adb8 <col:16> 'int' 0
+    |-ReturnStmt 0xa17ae50 <line:6:9, col:18>
+    | `-BinaryOperator 0xa17ae38 <col:16, col:18> 'double' '*'
+    |   |-ImplicitCastExpr 0xa17ae18 <col:16> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0xa17ade8 <col:16> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    |   `-ImplicitCastExpr 0xa17ae28 <col:18> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0xa17ae00 <col:18> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    `-ReturnStmt 0xa17af08 <line:8:9, col:20>
+      `-BinaryOperator 0xa17aef0 <col:16, col:20> 'double' '*'
+        |-BinaryOperator 0xa17aeb0 <col:16, col:18> 'double' '*'
+        | |-ImplicitCastExpr 0xa17ae90 <col:16> 'double' <LValueToRValue>
+        | | `-DeclRefExpr 0xa17ae60 <col:16> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        | `-ImplicitCastExpr 0xa17aea0 <col:18> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0xa17ae78 <col:18> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        `-ImplicitCastExpr 0xa17aee0 <col:20> 'double' <LValueToRValue>
+          `-DeclRefExpr 0xa17aec8 <col:20> 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 20] decl before flatten
+FunctionDecl 0xa17aad0 <_gcd.cpp:1:1, line:9:1> fast_pow 'double (double, int)'
+|-ParmVarDecl 0xa17aa10 <line:1:17, col:24> ____localvar____0 'double'
+|-ParmVarDecl 0xa17aa50 <col:27, col:31> ____localvar____1 'int'
+`-CompoundStmt 0xa17af38 <col:34, line:9:1>
+  |-DeclStmt 0xa17b150 <<invalid sloc>>
+  | `-VarDecl 0xa17ac00 <line:4:5, col:12> ____localvar____2 'double'
+  |-IfStmt 0xa17abc8 <line:2:5, line:3:16>
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0xa17ab78 <line:2:9, col:14> '_Bool' '=='
+  | | |-ImplicitCastExpr 0xa17ab68 <col:9> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0xa17ab38 <col:9> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  | | `-IntegerLiteral 0xa17ab50 <col:14> 'int' 0
+  | |-ReturnStmt 0xa17abb8 <line:3:9, col:16>
+  | | `-ImplicitCastExpr 0xa17aba8 <col:16> 'double' <IntegralToFloating>
+  | |   `-IntegerLiteral 0xa17ab90 <col:16> 'int' 1
+  | `-<<<NULL>>>
+  |-BinaryOperator 0xa17b138 <<invalid sloc>, line:4:31> 'double' lvalue '='
+  | |-DeclRefExpr 0xa17b11c <<invalid sloc>> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  | `-CallExpr 0xa17ad18 <col:16, col:31> 'double'
+  |   |-ImplicitCastExpr 0xa17ad08 <col:16> 'double (*)(double, int)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0xa17acd8 <col:16> 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  |   |-ImplicitCastExpr 0xa17ad40 <col:25> 'double' <LValueToRValue>
+  |   | `-DeclRefExpr 0xa17ac64 <col:25> 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+  |   `-BinaryOperator 0xa17acc0 <col:28, col:30> 'int' '/'
+  |     |-ImplicitCastExpr 0xa17acb0 <col:28> 'int' <LValueToRValue>
+  |     | `-DeclRefExpr 0xa17ac7c <col:28> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  |     `-IntegerLiteral 0xa17ac98 <col:30> 'int' 2
+  `-IfStmt 0xa17af18 <line:5:5, line:8:20>
+    |-<<<NULL>>>
+    |-BinaryOperator 0xa17add0 <line:5:9, col:16> '_Bool' '=='
+    | |-BinaryOperator 0xa17ada0 <col:9, col:11> 'int' '%'
+    | | |-ImplicitCastExpr 0xa17ad90 <col:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0xa17ad60 <col:9> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+    | | `-IntegerLiteral 0xa17ad78 <col:11> 'int' 2
+    | `-IntegerLiteral 0xa17adb8 <col:16> 'int' 0
+    |-ReturnStmt 0xa17ae50 <line:6:9, col:18>
+    | `-BinaryOperator 0xa17ae38 <col:16, col:18> 'double' '*'
+    |   |-ImplicitCastExpr 0xa17ae18 <col:16> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0xa17ade8 <col:16> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    |   `-ImplicitCastExpr 0xa17ae28 <col:18> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0xa17ae00 <col:18> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+    `-ReturnStmt 0xa17af08 <line:8:9, col:20>
+      `-BinaryOperator 0xa17aef0 <col:16, col:20> 'double' '*'
+        |-BinaryOperator 0xa17aeb0 <col:16, col:18> 'double' '*'
+        | |-ImplicitCastExpr 0xa17ae90 <col:16> 'double' <LValueToRValue>
+        | | `-DeclRefExpr 0xa17ae60 <col:16> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        | `-ImplicitCastExpr 0xa17aea0 <col:18> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0xa17ae78 <col:18> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        `-ImplicitCastExpr 0xa17aee0 <col:20> 'double' <LValueToRValue>
+          `-DeclRefExpr 0xa17aec8 <col:20> 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 26] cfg before flattening
+
+ [B6 (ENTRY)]
+   Succs (1): B5
+
+ [B1]
+   1: return ____localvar____2 * ____localvar____2 * ____localvar____0;
+   Preds (1): B3
+   Succs (1): B0
+
+ [B2]
+   1: return ____localvar____2 * ____localvar____2;
+   Preds (1): B3
+   Succs (1): B0
+
+ [B3]
+   1: fast_pow(____localvar____0, ____localvar____1 / 2)
+   2: ____localvar____2 = [B3.1]
+   3: ____localvar____1 % 2 == 0
+   T: if [B3.3]
+   Preds (1): B5
+   Succs (2): B2 B1
+
+ [B4]
+   1: return 1;
+   Preds (1): B5
+   Succs (1): B0
+
+ [B5]
+   1: double ____localvar____2;
+   2: ____localvar____1 == 0
+   T: if [B5.2]
+   Preds (1): B6
+   Succs (2): B4 B3
+
+ [B0 (EXIT)]
+   Preds (3): B1 B2 B4
+
+Writing '/tmp/llvm_eDNukO/CFG.dot'...  done. 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af38 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b150 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17ac00 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17ac00 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b150 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17abc8 (IfStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab78 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab68 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab38 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab38 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab68 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab50 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab50 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab78 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17abb8 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aba8 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ab90 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ab90 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aba8 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17abb8 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17abc8 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b138 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b11c (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b11c (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad18 (CallExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad08 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acd8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acd8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad08 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad40 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac64 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac64 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad40 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acc0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17acb0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac7c (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac7c (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acb0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ac98 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ac98 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17acc0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad18 (CallExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b138 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af18 (IfStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17add0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad90 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad60 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad60 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad90 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ad78 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ad78 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17adb8 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17adb8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17add0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae50 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae38 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae18 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ade8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ade8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae18 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae28 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae00 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae00 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae28 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae38 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae50 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17af08 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aef0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae90 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae60 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae60 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae90 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aea0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17ae78 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17ae78 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aea0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aee0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17aec8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aec8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aee0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17aef0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af08 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af18 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17af38 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 1 -> 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 2 -> 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 395] Pass handledStmt [B3.1], Root is [B3.2]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 3 -> 2
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 3 -> 1
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 4 -> 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 5 -> 4
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 5 -> 3
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 6 -> 5
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 39] CompoundStmt before flatten
+{
+    double ____localvar____2;
+    if (____localvar____1 == 0)
+        return 1;
+    ____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2);
+    if (____localvar____1 % 2 == 0)
+        return ____localvar____2 * ____localvar____2;
+    else
+        return ____localvar____2 * ____localvar____2 * ____localvar____0;
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 48] DeclStmt at the beginning met.
+DeclStmt 0xa17b150
+`-VarDecl 0xa17ac00 ____localvar____2 'double'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 210] create case for node 1 a19f854
+<NULL>[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #0
+return ____localvar____2 * ____localvar____2 * ____localvar____0;
+CaseStmt 0xa17b2a0
+|-IntegerLiteral 0xa17b288 'int' 1
+|-<<<NULL>>>
+`-CompoundStmt 0xa17b2c8
+  |-ReturnStmt 0xa17af08
+  | `-BinaryOperator 0xa17aef0 'double' '*'
+  |   |-BinaryOperator 0xa17aeb0 'double' '*'
+  |   | |-ImplicitCastExpr 0xa17ae90 'double' <LValueToRValue>
+  |   | | `-DeclRefExpr 0xa17ae60 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  |   | `-ImplicitCastExpr 0xa17aea0 'double' <LValueToRValue>
+  |   |   `-DeclRefExpr 0xa17ae78 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  |   `-ImplicitCastExpr 0xa17aee0 'double' <LValueToRValue>
+  |     `-DeclRefExpr 0xa17aec8 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+  `-BreakStmt 0xa17b2c0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 210] create case for node 2 a19f8b8
+<NULL>[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #0
+return ____localvar____2 * ____localvar____2;
+CaseStmt 0xa17b2f8
+|-IntegerLiteral 0xa17b2e0 'int' 2
+|-<<<NULL>>>
+`-CompoundStmt 0xa17b320
+  |-ReturnStmt 0xa17ae50
+  | `-BinaryOperator 0xa17ae38 'double' '*'
+  |   |-ImplicitCastExpr 0xa17ae18 'double' <LValueToRValue>
+  |   | `-DeclRefExpr 0xa17ade8 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  |   `-ImplicitCastExpr 0xa17ae28 'double' <LValueToRValue>
+  |     `-DeclRefExpr 0xa17ae00 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  `-BreakStmt 0xa17b318
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 210] create case for node 3 a19f924
+____localvar____1 % 2 == 0[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #0
+____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2)[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #1
+____localvar____1 % 2 == 0[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 257] terminator cond stmt met: IfStmt
+IfStmt 0xa17b370
+|-<<<NULL>>>
+|-BinaryOperator 0xa17add0 '_Bool' '=='
+| |-BinaryOperator 0xa17ada0 'int' '%'
+| | |-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| | `-IntegerLiteral 0xa17ad78 'int' 2
+| `-IntegerLiteral 0xa17adb8 'int' 0
+|-CompoundStmt 0xa17b420
+| `-BinaryOperator 0xa17b3c0 'int' lvalue '='
+|   |-DeclRefExpr 0xa17b3a8 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+|   `-IntegerLiteral 0xa17b390 'int' 2
+`-CompoundStmt 0xa17b438
+  `-BinaryOperator 0xa17b408 'int' lvalue '='
+    |-DeclRefExpr 0xa17b3f0 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+    `-IntegerLiteral 0xa17b3d8 'int' 1
+CaseStmt 0xa17b350
+|-IntegerLiteral 0xa17b338 'int' 3
+|-<<<NULL>>>
+`-CompoundStmt 0xa17b4a0
+  |-BinaryOperator 0xa17b138 'double' lvalue '='
+  | |-DeclRefExpr 0xa17b11c 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+  | `-CallExpr 0xa17ad18 'double'
+  |   |-ImplicitCastExpr 0xa17ad08 'double (*)(double, int)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0xa17acd8 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  |   |-ImplicitCastExpr 0xa17ad40 'double' <LValueToRValue>
+  |   | `-DeclRefExpr 0xa17ac64 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+  |   `-BinaryOperator 0xa17acc0 'int' '/'
+  |     |-ImplicitCastExpr 0xa17acb0 'int' <LValueToRValue>
+  |     | `-DeclRefExpr 0xa17ac7c 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  |     `-IntegerLiteral 0xa17ac98 'int' 2
+  |-IfStmt 0xa17b370
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0xa17add0 '_Bool' '=='
+  | | |-BinaryOperator 0xa17ada0 'int' '%'
+  | | | |-ImplicitCastExpr 0xa17ad90 'int' <LValueToRValue>
+  | | | | `-DeclRefExpr 0xa17ad60 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  | | | `-IntegerLiteral 0xa17ad78 'int' 2
+  | | `-IntegerLiteral 0xa17adb8 'int' 0
+  | |-CompoundStmt 0xa17b420
+  | | `-BinaryOperator 0xa17b3c0 'int' lvalue '='
+  | |   |-DeclRefExpr 0xa17b3a8 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+  | |   `-IntegerLiteral 0xa17b390 'int' 2
+  | `-CompoundStmt 0xa17b438
+  |   `-BinaryOperator 0xa17b408 'int' lvalue '='
+  |     |-DeclRefExpr 0xa17b3f0 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+  |     `-IntegerLiteral 0xa17b3d8 'int' 1
+  |-BinaryOperator 0xa17b480 'int' lvalue '='
+  | |-DeclRefExpr 0xa17b468 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+  | `-IntegerLiteral 0xa17b450 'int' 2
+  `-BreakStmt 0xa17b498
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 210] create case for node 4 a19f990
+<NULL>[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #0
+return 1;
+CaseStmt 0xa17b4d8
+|-IntegerLiteral 0xa17b4c0 'int' 4
+|-<<<NULL>>>
+`-CompoundStmt 0xa17b500
+  |-ReturnStmt 0xa17abb8
+  | `-ImplicitCastExpr 0xa17aba8 'double' <IntegralToFloating>
+  |   `-IntegerLiteral 0xa17ab90 'int' 1
+  `-BreakStmt 0xa17b4f8
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 210] create case for node 5 a19fa04
+____localvar____1 == 0[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #1
+____localvar____1 == 0[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 257] terminator cond stmt met: IfStmt
+IfStmt 0xa17b550
+|-<<<NULL>>>
+|-BinaryOperator 0xa17ab78 '_Bool' '=='
+| |-ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+| | `-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+| `-IntegerLiteral 0xa17ab50 'int' 0
+|-CompoundStmt 0xa1a0b68
+| `-BinaryOperator 0xa1a0b08 'int' lvalue '='
+|   |-DeclRefExpr 0xa1a0af0 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+|   `-IntegerLiteral 0xa1a0ad8 'int' 4
+`-CompoundStmt 0xa1a0b80
+  `-BinaryOperator 0xa1a0b50 'int' lvalue '='
+    |-DeclRefExpr 0xa1a0b38 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+    `-IntegerLiteral 0xa1a0b20 'int' 3
+CaseStmt 0xa17b530
+|-IntegerLiteral 0xa17b518 'int' 5
+|-<<<NULL>>>
+`-CompoundStmt 0xa1a0ba0
+  |-IfStmt 0xa17b550
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0xa17ab78 '_Bool' '=='
+  | | |-ImplicitCastExpr 0xa17ab68 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0xa17ab38 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+  | | `-IntegerLiteral 0xa17ab50 'int' 0
+  | |-CompoundStmt 0xa1a0b68
+  | | `-BinaryOperator 0xa1a0b08 'int' lvalue '='
+  | |   |-DeclRefExpr 0xa1a0af0 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+  | |   `-IntegerLiteral 0xa1a0ad8 'int' 4
+  | `-CompoundStmt 0xa1a0b80
+  |   `-BinaryOperator 0xa1a0b50 'int' lvalue '='
+  |     |-DeclRefExpr 0xa1a0b38 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+  |     `-IntegerLiteral 0xa1a0b20 'int' 3
+  `-BreakStmt 0xa1a0b98
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 85] New switch body create
+switch (int ____localvar____3 = 5) {
+  case 1:
+    {
+        return ____localvar____2 * ____localvar____2 * ____localvar____0;
+        break;
+    }
+  case 2:
+    {
+        return ____localvar____2 * ____localvar____2;
+        break;
+    }
+  case 3:
+    {
+        ____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2);
+        if (____localvar____1 % 2 == 0) {
+            ____localvar____3 = 2;
+        } else {
+            ____localvar____3 = 1;
+        }
+        ____localvar____3 = 2;
+        break;
+    }
+  case 4:
+    {
+        return 1;
+        break;
+    }
+  case 5:
+    {
+        if (____localvar____1 == 0) {
+            ____localvar____3 = 4;
+        } else {
+            ____localvar____3 = 3;
+        }
+        break;
+    }
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 89] New function body created.
+{
+    double ____localvar____2;
+    int ____localvar____3 = 5;
+    while (____localvar____3 != 0)
+        switch (int ____localvar____3 = 5) {
+          case 1:
+            {
+                return ____localvar____2 * ____localvar____2 * ____localvar____0;
+                break;
+            }
+          case 2:
+            {
+                return ____localvar____2 * ____localvar____2;
+                break;
+            }
+          case 3:
+            {
+                ____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2);
+                if (____localvar____1 % 2 == 0) {
+                    ____localvar____3 = 2;
+                } else {
+                    ____localvar____3 = 1;
+                }
+                ____localvar____3 = 2;
+                break;
+            }
+          case 4:
+            {
+                return 1;
+                break;
+            }
+          case 5:
+            {
+                if (____localvar____1 == 0) {
+                    ____localvar____3 = 4;
+                } else {
+                    ____localvar____3 = 3;
+                }
+                break;
+            }
+        }
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 92] decl after flatten
+FunctionDecl 0xa17aad0 <_gcd.cpp:1:1, line:9:1> fast_pow 'double (double, int)'
+|-ParmVarDecl 0xa17aa10 <line:1:17, col:24> ____localvar____0 'double'
+|-ParmVarDecl 0xa17aa50 <col:27, col:31> ____localvar____1 'int'
+`-CompoundStmt 0xa17af38 <col:34, line:9:1>
+  |-DeclStmt 0xa17b150 <<invalid sloc>>
+  | `-VarDecl 0xa17ac00 <line:4:5, col:12> ____localvar____2 'double'
+  |-DeclStmt 0xa17b1c0 <<invalid sloc>>
+  | `-VarDecl 0xa17b190 <<invalid sloc>> ____localvar____3 'int'
+  |   `-IntegerLiteral 0xa17b170 <<invalid sloc>> 'int' 5
+  `-WhileStmt 0xa17b228 <<invalid sloc>>
+    |-<<<NULL>>>
+    |-BinaryOperator 0xa17b210 <<invalid sloc>> '_Bool' '!='
+    | |-ImplicitCastExpr 0xa17b200 <<invalid sloc>> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0xa17b1e8 <<invalid sloc>> 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+    | `-IntegerLiteral 0xa17b1d0 <<invalid sloc>> 'int' 0
+    `-SwitchStmt 0xa17b258 <<invalid sloc>>
+      |-DeclStmt 0xa17b278 <<invalid sloc>>
+      | `-VarDecl 0xa17b190 <<invalid sloc>> ____localvar____3 'int'
+      |   `-IntegerLiteral 0xa17b170 <<invalid sloc>> 'int' 5
+      |-DeclRefExpr 0xa17b23c <<invalid sloc>> 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+      `-CompoundStmt 0xa1a0bb8 <<invalid sloc>>
+        |-CaseStmt 0xa17b2a0 <<invalid sloc>>
+        | |-IntegerLiteral 0xa17b288 <<invalid sloc>> 'int' 1
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0xa17b2c8 <<invalid sloc>>
+        |   |-ReturnStmt 0xa17af08 <line:8:9, col:20>
+        |   | `-BinaryOperator 0xa17aef0 <col:16, col:20> 'double' '*'
+        |   |   |-BinaryOperator 0xa17aeb0 <col:16, col:18> 'double' '*'
+        |   |   | |-ImplicitCastExpr 0xa17ae90 <col:16> 'double' <LValueToRValue>
+        |   |   | | `-DeclRefExpr 0xa17ae60 <col:16> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        |   |   | `-ImplicitCastExpr 0xa17aea0 <col:18> 'double' <LValueToRValue>
+        |   |   |   `-DeclRefExpr 0xa17ae78 <col:18> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        |   |   `-ImplicitCastExpr 0xa17aee0 <col:20> 'double' <LValueToRValue>
+        |   |     `-DeclRefExpr 0xa17aec8 <col:20> 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+        |   `-BreakStmt 0xa17b2c0 <<invalid sloc>>
+        |-CaseStmt 0xa17b2f8 <<invalid sloc>>
+        | |-IntegerLiteral 0xa17b2e0 <<invalid sloc>> 'int' 2
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0xa17b320 <<invalid sloc>>
+        |   |-ReturnStmt 0xa17ae50 <line:6:9, col:18>
+        |   | `-BinaryOperator 0xa17ae38 <col:16, col:18> 'double' '*'
+        |   |   |-ImplicitCastExpr 0xa17ae18 <col:16> 'double' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0xa17ade8 <col:16> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        |   |   `-ImplicitCastExpr 0xa17ae28 <col:18> 'double' <LValueToRValue>
+        |   |     `-DeclRefExpr 0xa17ae00 <col:18> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        |   `-BreakStmt 0xa17b318 <<invalid sloc>>
+        |-CaseStmt 0xa17b350 <<invalid sloc>>
+        | |-IntegerLiteral 0xa17b338 <<invalid sloc>> 'int' 3
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0xa17b4a0 <<invalid sloc>>
+        |   |-BinaryOperator 0xa17b138 <<invalid sloc>, line:4:31> 'double' lvalue '='
+        |   | |-DeclRefExpr 0xa17b11c <<invalid sloc>> 'double' lvalue Var 0xa17ac00 '____localvar____2' 'double'
+        |   | `-CallExpr 0xa17ad18 <col:16, col:31> 'double'
+        |   |   |-ImplicitCastExpr 0xa17ad08 <col:16> 'double (*)(double, int)' <FunctionToPointerDecay>
+        |   |   | `-DeclRefExpr 0xa17acd8 <col:16> 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+        |   |   |-ImplicitCastExpr 0xa17ad40 <col:25> 'double' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0xa17ac64 <col:25> 'double' lvalue ParmVar 0xa17aa10 '____localvar____0' 'double'
+        |   |   `-BinaryOperator 0xa17acc0 <col:28, col:30> 'int' '/'
+        |   |     |-ImplicitCastExpr 0xa17acb0 <col:28> 'int' <LValueToRValue>
+        |   |     | `-DeclRefExpr 0xa17ac7c <col:28> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+        |   |     `-IntegerLiteral 0xa17ac98 <col:30> 'int' 2
+        |   |-IfStmt 0xa17b370 <<invalid sloc>>
+        |   | |-<<<NULL>>>
+        |   | |-BinaryOperator 0xa17add0 <line:5:9, col:16> '_Bool' '=='
+        |   | | |-BinaryOperator 0xa17ada0 <col:9, col:11> 'int' '%'
+        |   | | | |-ImplicitCastExpr 0xa17ad90 <col:9> 'int' <LValueToRValue>
+        |   | | | | `-DeclRefExpr 0xa17ad60 <col:9> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+        |   | | | `-IntegerLiteral 0xa17ad78 <col:11> 'int' 2
+        |   | | `-IntegerLiteral 0xa17adb8 <col:16> 'int' 0
+        |   | |-CompoundStmt 0xa17b420 <<invalid sloc>>
+        |   | | `-BinaryOperator 0xa17b3c0 <<invalid sloc>> 'int' lvalue '='
+        |   | |   |-DeclRefExpr 0xa17b3a8 <<invalid sloc>> 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+        |   | |   `-IntegerLiteral 0xa17b390 <<invalid sloc>> 'int' 2
+        |   | `-CompoundStmt 0xa17b438 <<invalid sloc>>
+        |   |   `-BinaryOperator 0xa17b408 <<invalid sloc>> 'int' lvalue '='
+        |   |     |-DeclRefExpr 0xa17b3f0 <<invalid sloc>> 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+        |   |     `-IntegerLiteral 0xa17b3d8 <<invalid sloc>> 'int' 1
+        |   |-BinaryOperator 0xa17b480 <<invalid sloc>> 'int' lvalue '='
+        |   | |-DeclRefExpr 0xa17b468 <<invalid sloc>> 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+        |   | `-IntegerLiteral 0xa17b450 <<invalid sloc>> 'int' 2
+        |   `-BreakStmt 0xa17b498 <<invalid sloc>>
+        |-CaseStmt 0xa17b4d8 <<invalid sloc>>
+        | |-IntegerLiteral 0xa17b4c0 <<invalid sloc>> 'int' 4
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0xa17b500 <<invalid sloc>>
+        |   |-ReturnStmt 0xa17abb8 <line:3:9, col:16>
+        |   | `-ImplicitCastExpr 0xa17aba8 <col:16> 'double' <IntegralToFloating>
+        |   |   `-IntegerLiteral 0xa17ab90 <col:16> 'int' 1
+        |   `-BreakStmt 0xa17b4f8 <<invalid sloc>>
+        `-CaseStmt 0xa17b530 <<invalid sloc>>
+          |-IntegerLiteral 0xa17b518 <<invalid sloc>> 'int' 5
+          |-<<<NULL>>>
+          `-CompoundStmt 0xa1a0ba0 <<invalid sloc>>
+            |-IfStmt 0xa17b550 <<invalid sloc>>
+            | |-<<<NULL>>>
+            | |-BinaryOperator 0xa17ab78 <line:2:9, col:14> '_Bool' '=='
+            | | |-ImplicitCastExpr 0xa17ab68 <col:9> 'int' <LValueToRValue>
+            | | | `-DeclRefExpr 0xa17ab38 <col:9> 'int' lvalue ParmVar 0xa17aa50 '____localvar____1' 'int'
+            | | `-IntegerLiteral 0xa17ab50 <col:14> 'int' 0
+            | |-CompoundStmt 0xa1a0b68 <<invalid sloc>>
+            | | `-BinaryOperator 0xa1a0b08 <<invalid sloc>> 'int' lvalue '='
+            | |   |-DeclRefExpr 0xa1a0af0 <<invalid sloc>> 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+            | |   `-IntegerLiteral 0xa1a0ad8 <<invalid sloc>> 'int' 4
+            | `-CompoundStmt 0xa1a0b80 <<invalid sloc>>
+            |   `-BinaryOperator 0xa1a0b50 <<invalid sloc>> 'int' lvalue '='
+            |     |-DeclRefExpr 0xa1a0b38 <<invalid sloc>> 'int' lvalue Var 0xa17b190 '____localvar____3' 'int'
+            |     `-IntegerLiteral 0xa1a0b20 <<invalid sloc>> 'int' 3
+            `-BreakStmt 0xa1a0b98 <<invalid sloc>>
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 23] TUDecl Function a17afa0 | Ctx a17a6f4 -> p a17a6e0
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 48] enter FuncDecl
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 9] START VarRenamer
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17afa0 (Function)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Function
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0f8 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0a8 (CallExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b098 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b080 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b080 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b098 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b050 (FloatingLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b050 (FloatingLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b068 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b068 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0a8 (CallExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0e8 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0d0 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0d0 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0e8 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0f8 (CompoundStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17afa0 (Function)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 11] END VarRenamer
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 6] START StmtPretransformer
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17afa0 (Function)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl a17afa0(Function) Ctx a17a6f4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0f8 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt CompoundStmt a17b0f8 a176670 a176670
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0a8 (CallExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt CallExpr a17b0a8 a18e638 a18e638
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b098 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr a17b098 a15c0a8 a15c0a8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b080 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr a17b080 a15c0b8 a15c0b8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b080 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+fast_pow[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b098 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0xa17b098 'double (*)(double, int)' <FunctionToPointerDecay>
+`-DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+fast_pow[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b050 (FloatingLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt FloatingLiteral a17b050 a15c470 a15c470
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b050 (FloatingLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt FloatingLiteral, start transform
+FloatingLiteral 0xa17b050 'double' 2.500000e+00
+2.5[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b068 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral a17b068 a15c078 a15c078
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b068 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0xa17b068 'int' 50
+50[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0a8 (CallExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt CallExpr, start transform
+CallExpr 0xa17b0a8 'double'
+|-ImplicitCastExpr 0xa17b098 'double (*)(double, int)' <FunctionToPointerDecay>
+| `-DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+|-FloatingLiteral 0xa17b050 'double' 2.500000e+00
+`-IntegerLiteral 0xa17b068 'int' 50
+fast_pow(2.5, 50)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0e8 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ReturnStmt a17b0e8 a15c088 a15c088
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0d0 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral a17b0d0 a18bfb0 a18bfb0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0d0 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0xa17b0d0 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0e8 (ReturnStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ReturnStmt, start transform
+ReturnStmt 0xa17b0e8
+`-IntegerLiteral 0xa17b0d0 'int' 0
+return 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0f8 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt CompoundStmt, start transform
+CompoundStmt 0xa17b0f8
+|-CallExpr 0xa17b0a8 'double'
+| |-ImplicitCastExpr 0xa17b098 'double (*)(double, int)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+| |-FloatingLiteral 0xa17b050 'double' 2.500000e+00
+| `-IntegerLiteral 0xa17b068 'int' 50
+`-ReturnStmt 0xa17b0e8
+  `-IntegerLiteral 0xa17b0d0 'int' 0
+{
+    fast_pow(2.5, 50);
+    return 0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17afa0 (Function)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 30] END StmtPretransformer
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 5] START LocalDeclMover
+FunctionDecl 0xa17afa0 <_gcd.cpp:11:1, line:14:1> main 'int (void)'
+`-CompoundStmt 0xa17b0f8 <line:11:12, line:14:1>
+  |-CallExpr 0xa17b0a8 <line:12:5, col:21> 'double'
+  | |-ImplicitCastExpr 0xa17b098 <col:5> 'double (*)(double, int)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0xa17b080 <col:5> 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  | |-FloatingLiteral 0xa17b050 <col:14> 'double' 2.500000e+00
+  | `-IntegerLiteral 0xa17b068 <col:19> 'int' 50
+  `-ReturnStmt 0xa17b0e8 <line:13:5, col:12>
+    `-IntegerLiteral 0xa17b0d0 <col:12> 'int' 0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl a17afa0 (Function)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0f8 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt CompoundStmt ( a17b0f8 -> p 0 )
+CompoundStmt 0xa17b0f8
+|-CallExpr 0xa17b0a8 'double'
+| |-ImplicitCastExpr 0xa17b098 'double (*)(double, int)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+| |-FloatingLiteral 0xa17b050 'double' 2.500000e+00
+| `-IntegerLiteral 0xa17b068 'int' 50
+`-ReturnStmt 0xa17b0e8
+  `-IntegerLiteral 0xa17b0d0 'int' 0
+{
+    fast_pow(2.5, 50);
+    return 0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0a8 (CallExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt CallExpr ( a17b0a8 -> p a17b0f8 )
+CallExpr 0xa17b0a8 'double'
+|-ImplicitCastExpr 0xa17b098 'double (*)(double, int)' <FunctionToPointerDecay>
+| `-DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+|-FloatingLiteral 0xa17b050 'double' 2.500000e+00
+`-IntegerLiteral 0xa17b068 'int' 50
+fast_pow(2.5, 50)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b098 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( a17b098 -> p a17b0a8 )
+ImplicitCastExpr 0xa17b098 'double (*)(double, int)' <FunctionToPointerDecay>
+`-DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+fast_pow[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b080 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( a17b080 -> p a17b098 )
+DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+fast_pow[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b080 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b098 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b050 (FloatingLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt FloatingLiteral ( a17b050 -> p a17b0a8 )
+FloatingLiteral 0xa17b050 'double' 2.500000e+00
+2.5[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b050 (FloatingLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b068 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( a17b068 -> p a17b0a8 )
+IntegerLiteral 0xa17b068 'int' 50
+50[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b068 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0a8 (CallExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0e8 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ReturnStmt ( a17b0e8 -> p a17b0f8 )
+ReturnStmt 0xa17b0e8
+`-IntegerLiteral 0xa17b0d0 'int' 0
+return 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0d0 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( a17b0d0 -> p a17b0e8 )
+IntegerLiteral 0xa17b0d0 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0d0 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0e8 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0f8 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 109] root stmt type CompoundStmt a17b0f8 | children size 0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl a17afa0 (Function)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 27] END LocalDeclMover
+FunctionDecl 0xa17afa0 <_gcd.cpp:11:1, line:14:1> main 'int (void)'
+`-CompoundStmt 0xa17b0f8 <line:11:12, line:14:1>
+  |-CallExpr 0xa17b0a8 <line:12:5, col:21> 'double'
+  | |-ImplicitCastExpr 0xa17b098 <col:5> 'double (*)(double, int)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0xa17b080 <col:5> 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  | |-FloatingLiteral 0xa17b050 <col:14> 'double' 2.500000e+00
+  | `-IntegerLiteral 0xa17b068 <col:19> 'int' 50
+  `-ReturnStmt 0xa17b0e8 <line:13:5, col:12>
+    `-IntegerLiteral 0xa17b0d0 <col:12> 'int' 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 20] decl before flatten
+FunctionDecl 0xa17afa0 <_gcd.cpp:11:1, line:14:1> main 'int (void)'
+`-CompoundStmt 0xa17b0f8 <line:11:12, line:14:1>
+  |-CallExpr 0xa17b0a8 <line:12:5, col:21> 'double'
+  | |-ImplicitCastExpr 0xa17b098 <col:5> 'double (*)(double, int)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0xa17b080 <col:5> 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  | |-FloatingLiteral 0xa17b050 <col:14> 'double' 2.500000e+00
+  | `-IntegerLiteral 0xa17b068 <col:19> 'int' 50
+  `-ReturnStmt 0xa17b0e8 <line:13:5, col:12>
+    `-IntegerLiteral 0xa17b0d0 <col:12> 'int' 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 26] cfg before flattening
+
+ [B2 (ENTRY)]
+   Succs (1): B1
+
+ [B1]
+   1: fast_pow(2.5, 50)
+   2: return 0;
+   Preds (1): B2
+   Succs (1): B0
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+Writing '/tmp/llvm_CxZGtb/CFG.dot'...  done. 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0f8 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0a8 (CallExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b098 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b080 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b080 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b098 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b050 (FloatingLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b050 (FloatingLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b068 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b068 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0a8 (CallExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0e8 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt a17b0d0 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0d0 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0e8 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt a17b0f8 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 1 -> 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 404] edge 2 -> 1
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 39] CompoundStmt before flatten
+{
+    fast_pow(2.5, 50);
+    return 0;
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 210] create case for node 1 a1a1b6c
+<NULL>[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #0
+fast_pow(2.5, 50)[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 245] add stmt #1
+return 0;
+CaseStmt 0xa1a0d30
+|-IntegerLiteral 0xa1a0d18 'int' 1
+|-<<<NULL>>>
+`-CompoundStmt 0xa1a0d58
+  |-CallExpr 0xa17b0a8 'double'
+  | |-ImplicitCastExpr 0xa17b098 'double (*)(double, int)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0xa17b080 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+  | |-FloatingLiteral 0xa17b050 'double' 2.500000e+00
+  | `-IntegerLiteral 0xa17b068 'int' 50
+  |-ReturnStmt 0xa17b0e8
+  | `-IntegerLiteral 0xa17b0d0 'int' 0
+  `-BreakStmt 0xa1a0d50
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 85] New switch body create
+switch (int ____localvar____4 = 1) {
+  case 1:
+    {
+        fast_pow(2.5, 50);
+        return 0;
+        break;
+    }
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 89] New function body created.
+{
+    int ____localvar____4 = 1;
+    while (____localvar____4 != 0)
+        switch (int ____localvar____4 = 1) {
+          case 1:
+            {
+                fast_pow(2.5, 50);
+                return 0;
+                break;
+            }
+        }
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 92] decl after flatten
+FunctionDecl 0xa17afa0 <_gcd.cpp:11:1, line:14:1> main 'int (void)'
+`-CompoundStmt 0xa17b0f8 <line:11:12, line:14:1>
+  |-DeclStmt 0xa1a0c50 <<invalid sloc>>
+  | `-VarDecl 0xa1a0c20 <<invalid sloc>> ____localvar____4 'int'
+  |   `-IntegerLiteral 0xa1a0c00 <<invalid sloc>> 'int' 1
+  `-WhileStmt 0xa1a0cb8 <<invalid sloc>>
+    |-<<<NULL>>>
+    |-BinaryOperator 0xa1a0ca0 <<invalid sloc>> '_Bool' '!='
+    | |-ImplicitCastExpr 0xa1a0c90 <<invalid sloc>> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0xa1a0c78 <<invalid sloc>> 'int' lvalue Var 0xa1a0c20 '____localvar____4' 'int'
+    | `-IntegerLiteral 0xa1a0c60 <<invalid sloc>> 'int' 0
+    `-SwitchStmt 0xa1a0ce8 <<invalid sloc>>
+      |-DeclStmt 0xa1a0d08 <<invalid sloc>>
+      | `-VarDecl 0xa1a0c20 <<invalid sloc>> ____localvar____4 'int'
+      |   `-IntegerLiteral 0xa1a0c00 <<invalid sloc>> 'int' 1
+      |-DeclRefExpr 0xa1a0ccc <<invalid sloc>> 'int' lvalue Var 0xa1a0c20 '____localvar____4' 'int'
+      `-CompoundStmt 0xa1a0d78 <<invalid sloc>>
+        `-CaseStmt 0xa1a0d30 <<invalid sloc>>
+          |-IntegerLiteral 0xa1a0d18 <<invalid sloc>> 'int' 1
+          |-<<<NULL>>>
+          `-CompoundStmt 0xa1a0d58 <<invalid sloc>>
+            |-CallExpr 0xa17b0a8 <line:12:5, col:21> 'double'
+            | |-ImplicitCastExpr 0xa17b098 <col:5> 'double (*)(double, int)' <FunctionToPointerDecay>
+            | | `-DeclRefExpr 0xa17b080 <col:5> 'double (double, int)' lvalue Function 0xa17aad0 'fast_pow' 'double (double, int)'
+            | |-FloatingLiteral 0xa17b050 <col:14> 'double' 2.500000e+00
+            | `-IntegerLiteral 0xa17b068 <col:19> 'int' 50
+            |-ReturnStmt 0xa17b0e8 <line:13:5, col:12>
+            | `-IntegerLiteral 0xa17b0d0 <col:12> 'int' 0
+            `-BreakStmt 0xa1a0d50 <<invalid sloc>>
+[DEBUG][alg/SimplePrinter.cpp - line 7] alg started.
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 47] PrintingPolicy: 0 0 0 0 0
+double fast_pow(double ____localvar____0, int ____localvar____1) {
+    double ____localvar____2;
+    int ____localvar____3 = 5;
+    while (____localvar____3 != 0)
+        switch (int ____localvar____3 = 5) {
+          case 1:
+            {
+                return ____localvar____2 * ____localvar____2 * ____localvar____0;
+                break;
+            }
+          case 2:
+            {
+                return ____localvar____2 * ____localvar____2;
+                break;
+            }
+          case 3:
+            {
+                ____localvar____2 = fast_pow(____localvar____0, ____localvar____1 / 2);
+                if (____localvar____1 % 2 == 0) {
+                    ____localvar____3 = 2;
+                } else {
+                    ____localvar____3 = 1;
+                }
+                ____localvar____3 = 2;
+                break;
+            }
+          case 4:
+            {
+                return 1;
+                break;
+            }
+          case 5:
+            {
+                if (____localvar____1 == 0) {
+                    ____localvar____3 = 4;
+                } else {
+                    ____localvar____3 = 3;
+                }
+                break;
+            }
+        }
+}
+
+;
+[0;1;33m
+ [B19 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B18[0m
+[0;1;33m
+ [B1]
+[0m[0;34m   Preds [0m(6):[0;34m B3 B7 B9 B13 B15 B2[0m
+[0;35m   Succs [0m(1):[0;35m B17[0m
+[0;1;33m
+ [B2]
+[0m   1: 5
+   2: int ____localvar____3 = 5;
+   3: ____localvar____3
+[0;32m   T: switch [B2.3]
+[0m[0;34m   Preds [0m(1):[0;34m B17[0m
+[0;35m   Succs [0m(6):[0;35m B6 B8 B12 B14 B16 B1[0m
+[0;1;33m
+ [B3]
+[0m[0;32m   T: break;
+
+[0m[0;34m   Preds [0m(2):[0;34m B4 B5[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B4]
+[0m   1: ____localvar____3 = 3
+[0;34m   Preds [0m(1):[0;34m B6[0m
+[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B5]
+[0m   1: ____localvar____3 = 4
+[0;34m   Preds [0m(1):[0;34m B6[0m
+[0;35m   Succs [0m(1):[0;35m B3[0m
+[0;1;33m
+ [B6]
+[0m  case 5:
+   1: ____localvar____1 == 0
+[0;32m   T: if [B6.1]
+[0m[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(2):[0;35m B5 B4[0m
+[0;1;33m
+ [B7]
+[0m[0;32m   T: break;
+
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B8]
+[0m  case 4:
+   1: return 1;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B9]
+[0m   1: ____localvar____3 = 2
+[0;32m   T: break;
+
+[0m[0;34m   Preds [0m(2):[0;34m B10 B11[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B10]
+[0m   1: ____localvar____3 = 1
+[0;34m   Preds [0m(1):[0;34m B12[0m
+[0;35m   Succs [0m(1):[0;35m B9[0m
+[0;1;33m
+ [B11]
+[0m   1: ____localvar____3 = 2
+[0;34m   Preds [0m(1):[0;34m B12[0m
+[0;35m   Succs [0m(1):[0;35m B9[0m
+[0;1;33m
+ [B12]
+[0m  case 3:
+   1: fast_pow(____localvar____0, ____localvar____1 / 2)
+   2: ____localvar____2 = [B12.1]
+   3: ____localvar____1 % 2 == 0
+[0;32m   T: if [B12.3]
+[0m[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(2):[0;35m B11 B10[0m
+[0;1;33m
+ [B13]
+[0m[0;32m   T: break;
+
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B14]
+[0m  case 2:
+   1: return ____localvar____2 * ____localvar____2;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B15]
+[0m[0;32m   T: break;
+
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B16]
+[0m  case 1:
+   1: return ____localvar____2 * ____localvar____2 * ____localvar____0;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B17]
+[0m   1: ____localvar____3 != 0
+[0;32m   T: while [B17.1]
+[0m[0;34m   Preds [0m(2):[0;34m B1 B18[0m
+[0;35m   Succs [0m(2):[0;35m B2 B0[0m
+[0;1;33m
+ [B18]
+[0m   1: double ____localvar____2;
+   2: int ____localvar____3 = 5;
+[0;34m   Preds [0m(1):[0;34m B19[0m
+[0;35m   Succs [0m(1):[0;35m B17[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(4):[0;34m B8 B14 B16 B17[0m
+
+Writing '/tmp/llvm_Jhf1Dy/CFG.dot'...  done. 
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 47] PrintingPolicy: 0 0 0 0 0
+int main() {
+    int ____localvar____4 = 1;
+    while (____localvar____4 != 0)
+        switch (int ____localvar____4 = 1) {
+          case 1:
+            {
+                fast_pow(2.5, 50);
+                return 0;
+                break;
+            }
+        }
+}
+
+;
+[0;1;33m
+ [B7 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B6[0m
+[0;1;33m
+ [B1]
+[0m[0;34m   Preds [0m(2):[0;34m B3 B2[0m
+[0;35m   Succs [0m(1):[0;35m B5[0m
+[0;1;33m
+ [B2]
+[0m   1: 1
+   2: int ____localvar____4 = 1;
+   3: ____localvar____4
+[0;32m   T: switch [B2.3]
+[0m[0;34m   Preds [0m(1):[0;34m B5[0m
+[0;35m   Succs [0m(2):[0;35m B4 B1[0m
+[0;1;33m
+ [B3]
+[0m[0;32m   T: break;
+
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B4]
+[0m  case 1:
+   1: fast_pow(2.5, 50)
+   2: return 0;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B5]
+[0m   1: ____localvar____4 != 0
+[0;32m   T: while [B5.1]
+[0m[0;34m   Preds [0m(2):[0;34m B1 B6[0m
+[0;35m   Succs [0m(2):[0;35m B2 B0[0m
+[0;1;33m
+ [B6]
+[0m   1: int ____localvar____4 = 1;
+[0;34m   Preds [0m(1):[0;34m B7[0m
+[0;35m   Succs [0m(1):[0;35m B5[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(2):[0;34m B4 B5[0m
+
+Writing '/tmp/llvm_1KkxOV/CFG.dot'...  done. 
+[DEBUG][alg/SimplePrinter.cpp - line 26] alg finished.
+[DEBUG][ResourceManager.cpp - line 134] src _.__gcd.cpp rewrited.
+done2

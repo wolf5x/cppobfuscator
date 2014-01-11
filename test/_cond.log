@@ -1,0 +1,2674 @@
+done1
+[DEBUG][res/OptionTable.cpp - line 8] argc = 2
+[DEBUG][res/OptionTable.cpp - line 38] non-option argvs caught: [_cond.cpp]
+ignoring nonexistent directory "/usr/include/c++/4.6/i486-linux-gnu"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/clang/3.3/include
+ /usr/local/include
+ /usr/include
+ /usr/include/linux
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/i686-linux-gnu
+ /usr/include/c++/4.6/backward
+ /usr/include/i386-linux-gnu
+End of search list.
+_cond.cpp:6:6: warning: expression result unused
+        if( c,d,a || (b||e) || (c && d) || (~b)) {
+            ^
+_cond.cpp:6:8: warning: expression result unused
+        if( c,d,a || (b||e) || (c && d) || (~b)) {
+              ^
+_cond.cpp:7:10: warning: expression result unused
+                e = a, b, c;
+                       ^
+_cond.cpp:7:13: warning: expression result unused
+                e = a, b, c;
+                          ^
+[DEBUG][alg/InitParseConsumer.h - line 30] +decl, size = 1
+[DEBUG][alg/InitParseConsumer.h - line 30] +decl, size = 2
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 23] TUDecl Typedef 96ab9d0 | Ctx 96ab6f4 -> p 96ab6e0
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 23] TUDecl LinkageSpec 96aba00 | Ctx 96ab6f4 -> p 96ab6e0
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 23] TUDecl Function 97087b0 | Ctx 96ab6f4 -> p 96ab6e0
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 48] enter FuncDecl
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 9] START VarRenamer
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97087b0 (Function)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Function
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709560 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708968 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708820 (Var)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = a | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708820 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708860 (Var)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = b | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708860 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97088a0 (Var)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = c | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97088a0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97088e0 (Var)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = d | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97088e0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708920 (Var)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = e | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708920 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708968 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cf8 (IfStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708be8 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708978 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708978 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708990 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708990 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a88 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a78 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089c0 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089c0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a78 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a88 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a60 (ParenExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a48 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a18 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a08 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089d8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089d8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a08 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a18 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a38 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a28 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089f0 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089f0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a28 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a38 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a48 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a60 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b38 (ParenExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b20 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708af0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ae0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ab0 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ab0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ae0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708af0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b10 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b00 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ac8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ac8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b00 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b10 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b20 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b38 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708bc0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ba8 (ParenExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b90 (UnaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b80 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b68 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b68 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b80 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b90 (UnaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ba8 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708bc0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708be8 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ce0 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ca0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c00 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c00 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c30 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c18 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c18 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c30 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c58 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c58 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c88 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c88 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ca0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cd0 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cb8 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cb8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cd0 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ce0 (CompoundStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cf8 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709550 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709538 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709538 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709550 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709560 (CompoundStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97087b0 (Function)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 11] END VarRenamer
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 6] START StmtPretransformer
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97087b0 (Function)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 97087b0(Function) Ctx 96ab6f4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709560 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt CompoundStmt 9709560 96a7670 96a7670
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708968 (DeclStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclStmt 9708968 96bf618 96bf618
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708820 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 9708820(Var) Ctx 97087d4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708820 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708860 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 9708860(Var) Ctx 97087d4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708860 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97088a0 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 97088a0(Var) Ctx 97087d4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97088a0 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97088e0 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 97088e0(Var) Ctx 97087d4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97088e0 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708920 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 9708920(Var) Ctx 97087d4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708920 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708968 (DeclStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclStmt, start transform
+DeclStmt 0x9708968
+|-VarDecl 0x9708820 ____localvar____0 'int'
+|-VarDecl 0x9708860 ____localvar____1 'int'
+|-VarDecl 0x97088a0 ____localvar____2 'int'
+|-VarDecl 0x97088e0 ____localvar____3 'int'
+`-VarDecl 0x9708920 ____localvar____4 'int'
+int ____localvar____0, ____localvar____1, ____localvar____2, ____localvar____3, ____localvar____4;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cf8 (IfStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IfStmt 9708cf8 96d5380 96d5380
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708be8 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708be8 96d5390 96d5390
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 97089a8 968d4d8 968d4d8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708978 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708978 968d4e8 968d4e8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708978 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708990 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708990 968d078 968d078
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708990 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____3[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708bd0 968d088 968d088
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708b50 968d0a8 968d0a8
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708a98 968d0b8 968d0b8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a88 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708a88 96d8218 96d8218
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a78 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708a78 96d8228 96d8228
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089c0 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 97089c0 968da70 968da70
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089c0 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a78 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+`-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a88 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+  `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a60 (ParenExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ParenExpr 9708a60 968da80 968da80
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a48 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708a48 968da90 968da90
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a18 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708a18 96e62e8 96e62e8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a08 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708a08 96e62f8 96e62f8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089d8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 97089d8 96e6308 96e6308
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089d8 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a08 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+`-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a18 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+  `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a38 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708a38 96dd2c0 96dd2c0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a28 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708a28 96dd2d0 96dd2d0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089f0 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 97089f0 96dd2e0 96dd2e0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089f0 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a28 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+`-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a38 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+  `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a48 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0x9708a48 '_Bool' '||'
+|-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+| `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+`-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+  `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+    `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____1 || ____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a60 (ParenExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ParenExpr, start transform
+ParenExpr 0x9708a60 '_Bool'
+`-BinaryOperator 0x9708a48 '_Bool' '||'
+  |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+  | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+  |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+    `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+      `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+(____localvar____1 || ____localvar____4)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b38 (ParenExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ParenExpr 9708b38 96dd2f0 96dd2f0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b20 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708b20 96dd300 96dd300
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708af0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708af0 96bd098 96bd098
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ae0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708ae0 96bd0a8 96bd0a8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ab0 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708ab0 96bd0b8 96bd0b8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ab0 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ae0 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+`-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708af0 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+  `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b10 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708b10 96bd0c8 96bd0c8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b00 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708b00 96bd0d8 96bd0d8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ac8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708ac8 968d420 968d420
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ac8 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b00 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+`-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b10 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+  `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b20 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0x9708b20 '_Bool' '&&'
+|-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+| `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+`-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+  `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+    `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____2 && ____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b38 (ParenExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ParenExpr, start transform
+ParenExpr 0x9708b38 '_Bool'
+`-BinaryOperator 0x9708b20 '_Bool' '&&'
+  |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+  | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+  |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+    `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+      `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+(____localvar____2 && ____localvar____3)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708bc0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708bc0 968d430 968d430
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ba8 (ParenExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ParenExpr 9708ba8 968d440 968d440
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b90 (UnaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt UnaryOperator 9708b90 968d450 968d450
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b80 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708b80 968d460 968d460
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b68 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708b68 968d470 968d470
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b68 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b80 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+`-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b90 (UnaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt UnaryOperator, start transform
+UnaryOperator 0x9708b90 'int' prefix '~'
+`-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+  `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+~____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ba8 (ParenExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ParenExpr, start transform
+ParenExpr 0x9708ba8 'int'
+`-UnaryOperator 0x9708b90 'int' prefix '~'
+  `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+    `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+(~____localvar____1)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708bc0 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+`-ParenExpr 0x9708ba8 'int'
+  `-UnaryOperator 0x9708b90 'int' prefix '~'
+    `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+      `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+(~____localvar____1)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708be8 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0x9708be8 '_Bool' ','
+|-BinaryOperator 0x97089a8 'int' lvalue ','
+| |-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| `-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+`-BinaryOperator 0x9708bd0 '_Bool' '||'
+  |-BinaryOperator 0x9708b50 '_Bool' '||'
+  | |-BinaryOperator 0x9708a98 '_Bool' '||'
+  | | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+  | | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+  | | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | | `-ParenExpr 0x9708a60 '_Bool'
+  | |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+  | |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+  | |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+  | |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+  | |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+  | |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | `-ParenExpr 0x9708b38 '_Bool'
+  |   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+  |     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+  |     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+  |     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  |     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+  |       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+  |         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  `-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+    `-ParenExpr 0x9708ba8 'int'
+      `-UnaryOperator 0x9708b90 'int' prefix '~'
+        `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+          `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ce0 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt CompoundStmt 9708ce0 968d660 968d660
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ca0 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708ca0 968d670 968d670
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708c70 968d680 968d680
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt BinaryOperator 9708c40 968d690 968d690
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c00 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708c00 968d6a0 968d6a0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c00 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c30 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9708c30 968d6b0 968d6b0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c18 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708c18 968d6c0 968d6c0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c18 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c30 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+`-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c58 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708c58 968cf78 968cf78
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c58 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c88 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 9708c88 968cf88 968cf88
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c88 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ca0 (BinaryOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt BinaryOperator, start transform
+BinaryOperator 0x9708ca0 'int' lvalue ','
+|-BinaryOperator 0x9708c70 'int' lvalue ','
+| |-BinaryOperator 0x9708c40 'int' lvalue '='
+| | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+| |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+`-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cd0 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ReturnStmt 9708cd0 968cf98 968cf98
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cb8 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral 9708cb8 968cfa8 968cfa8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cb8 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0x9708cb8 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cd0 (ReturnStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ReturnStmt, start transform
+ReturnStmt 0x9708cd0
+`-IntegerLiteral 0x9708cb8 'int' 0
+return 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ce0 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt CompoundStmt, start transform
+CompoundStmt 0x9708ce0
+|-BinaryOperator 0x9708ca0 'int' lvalue ','
+| |-BinaryOperator 0x9708c70 'int' lvalue ','
+| | |-BinaryOperator 0x9708c40 'int' lvalue '='
+| | | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| | | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| | `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| `-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+`-ReturnStmt 0x9708cd0
+  `-IntegerLiteral 0x9708cb8 'int' 0
+{
+    ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+    return 0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cf8 (IfStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IfStmt, start transform
+IfStmt 0x9708cf8
+|-<<<NULL>>>
+|-BinaryOperator 0x9708be8 '_Bool' ','
+| |-BinaryOperator 0x97089a8 'int' lvalue ','
+| | |-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| | `-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+| `-BinaryOperator 0x9708bd0 '_Bool' '||'
+|   |-BinaryOperator 0x9708b50 '_Bool' '||'
+|   | |-BinaryOperator 0x9708a98 '_Bool' '||'
+|   | | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+|   | | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+|   | | `-ParenExpr 0x9708a60 '_Bool'
+|   | |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+|   | |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+|   | |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+|   | |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+|   | |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+|   | `-ParenExpr 0x9708b38 '_Bool'
+|   |   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+|   |     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+|   |     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+|   |     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+|   |       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+|   `-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+|     `-ParenExpr 0x9708ba8 'int'
+|       `-UnaryOperator 0x9708b90 'int' prefix '~'
+|         `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+|-CompoundStmt 0x9708ce0
+| |-BinaryOperator 0x9708ca0 'int' lvalue ','
+| | |-BinaryOperator 0x9708c70 'int' lvalue ','
+| | | |-BinaryOperator 0x9708c40 'int' lvalue '='
+| | | | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| | | | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| | | `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| | `-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| `-ReturnStmt 0x9708cd0
+|   `-IntegerLiteral 0x9708cb8 'int' 0
+`-<<<NULL>>>
+if (____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)) {
+    ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+    return 0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709550 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ReturnStmt 9709550 968cfb8 968cfb8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709538 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral 9709538 968cfc8 968cfc8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709538 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0x9709538 'int' 2
+2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709550 (ReturnStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ReturnStmt, start transform
+ReturnStmt 0x9709550
+`-IntegerLiteral 0x9709538 'int' 2
+return 2;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709560 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt CompoundStmt, start transform
+CompoundStmt 0x9709560
+|-DeclStmt 0x9708968
+| |-VarDecl 0x9708820 ____localvar____0 'int'
+| |-VarDecl 0x9708860 ____localvar____1 'int'
+| |-VarDecl 0x97088a0 ____localvar____2 'int'
+| |-VarDecl 0x97088e0 ____localvar____3 'int'
+| `-VarDecl 0x9708920 ____localvar____4 'int'
+|-IfStmt 0x9708cf8
+| |-<<<NULL>>>
+| |-BinaryOperator 0x9708be8 '_Bool' ','
+| | |-BinaryOperator 0x97089a8 'int' lvalue ','
+| | | |-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| | | `-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+| | `-BinaryOperator 0x9708bd0 '_Bool' '||'
+| |   |-BinaryOperator 0x9708b50 '_Bool' '||'
+| |   | |-BinaryOperator 0x9708a98 '_Bool' '||'
+| |   | | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+| |   | | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+| |   | | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| |   | | `-ParenExpr 0x9708a60 '_Bool'
+| |   | |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+| |   | |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+| |   | |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+| |   | |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| |   | |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+| |   | |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+| |   | |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| |   | `-ParenExpr 0x9708b38 '_Bool'
+| |   |   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+| |   |     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+| |   |     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+| |   |     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| |   |     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+| |   |       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+| |   |         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+| |   `-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+| |     `-ParenExpr 0x9708ba8 'int'
+| |       `-UnaryOperator 0x9708b90 'int' prefix '~'
+| |         `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+| |           `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| |-CompoundStmt 0x9708ce0
+| | |-BinaryOperator 0x9708ca0 'int' lvalue ','
+| | | |-BinaryOperator 0x9708c70 'int' lvalue ','
+| | | | |-BinaryOperator 0x9708c40 'int' lvalue '='
+| | | | | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| | | | | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+| | | | |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| | | | `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| | | `-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| | `-ReturnStmt 0x9708cd0
+| |   `-IntegerLiteral 0x9708cb8 'int' 0
+| `-<<<NULL>>>
+`-ReturnStmt 0x9709550
+  `-IntegerLiteral 0x9709538 'int' 2
+{
+    int ____localvar____0, ____localvar____1, ____localvar____2, ____localvar____3, ____localvar____4;
+    if (____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)) {
+        ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+        return 0;
+    }
+    return 2;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97087b0 (Function)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 30] END StmtPretransformer
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 5] START LocalDeclMover
+FunctionDecl 0x97087b0 <_cond.cpp:3:1, line:11:1> ifif 'int (void)'
+`-CompoundStmt 0x9709560 <line:3:12, line:11:1>
+  |-DeclStmt 0x9708968 <line:4:2, col:19>
+  | |-VarDecl 0x9708820 <col:2, col:6> ____localvar____0 'int'
+  | |-VarDecl 0x9708860 <col:2, col:9> ____localvar____1 'int'
+  | |-VarDecl 0x97088a0 <col:2, col:12> ____localvar____2 'int'
+  | |-VarDecl 0x97088e0 <col:2, col:15> ____localvar____3 'int'
+  | `-VarDecl 0x9708920 <col:2, col:18> ____localvar____4 'int'
+  |-IfStmt 0x9708cf8 <line:6:2, line:9:2>
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x9708be8 <line:6:6, col:40> '_Bool' ','
+  | | |-BinaryOperator 0x97089a8 <col:6, col:8> 'int' lvalue ','
+  | | | |-DeclRefExpr 0x9708978 <col:6> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | | | `-DeclRefExpr 0x9708990 <col:8> 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  | | `-BinaryOperator 0x9708bd0 <col:10, col:40> '_Bool' '||'
+  | |   |-BinaryOperator 0x9708b50 <col:10, col:32> '_Bool' '||'
+  | |   | |-BinaryOperator 0x9708a98 <col:10, col:20> '_Bool' '||'
+  | |   | | |-ImplicitCastExpr 0x9708a88 <col:10> '_Bool' <IntegralToBoolean>
+  | |   | | | `-ImplicitCastExpr 0x9708a78 <col:10> 'int' <LValueToRValue>
+  | |   | | |   `-DeclRefExpr 0x97089c0 <col:10> 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | |   | | `-ParenExpr 0x9708a60 <col:15, col:20> '_Bool'
+  | |   | |   `-BinaryOperator 0x9708a48 <col:16, col:19> '_Bool' '||'
+  | |   | |     |-ImplicitCastExpr 0x9708a18 <col:16> '_Bool' <IntegralToBoolean>
+  | |   | |     | `-ImplicitCastExpr 0x9708a08 <col:16> 'int' <LValueToRValue>
+  | |   | |     |   `-DeclRefExpr 0x97089d8 <col:16> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |   | |     `-ImplicitCastExpr 0x9708a38 <col:19> '_Bool' <IntegralToBoolean>
+  | |   | |       `-ImplicitCastExpr 0x9708a28 <col:19> 'int' <LValueToRValue>
+  | |   | |         `-DeclRefExpr 0x97089f0 <col:19> 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | |   | `-ParenExpr 0x9708b38 <col:25, col:32> '_Bool'
+  | |   |   `-BinaryOperator 0x9708b20 <col:26, col:31> '_Bool' '&&'
+  | |   |     |-ImplicitCastExpr 0x9708af0 <col:26> '_Bool' <IntegralToBoolean>
+  | |   |     | `-ImplicitCastExpr 0x9708ae0 <col:26> 'int' <LValueToRValue>
+  | |   |     |   `-DeclRefExpr 0x9708ab0 <col:26> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | |   |     `-ImplicitCastExpr 0x9708b10 <col:31> '_Bool' <IntegralToBoolean>
+  | |   |       `-ImplicitCastExpr 0x9708b00 <col:31> 'int' <LValueToRValue>
+  | |   |         `-DeclRefExpr 0x9708ac8 <col:31> 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  | |   `-ImplicitCastExpr 0x9708bc0 <col:37, col:40> '_Bool' <IntegralToBoolean>
+  | |     `-ParenExpr 0x9708ba8 <col:37, col:40> 'int'
+  | |       `-UnaryOperator 0x9708b90 <col:38, col:39> 'int' prefix '~'
+  | |         `-ImplicitCastExpr 0x9708b80 <col:39> 'int' <LValueToRValue>
+  | |           `-DeclRefExpr 0x9708b68 <col:39> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |-CompoundStmt 0x9708ce0 <col:43, line:9:2>
+  | | |-BinaryOperator 0x9708ca0 <line:7:3, col:13> 'int' lvalue ','
+  | | | |-BinaryOperator 0x9708c70 <col:3, col:10> 'int' lvalue ','
+  | | | | |-BinaryOperator 0x9708c40 <col:3, col:7> 'int' lvalue '='
+  | | | | | |-DeclRefExpr 0x9708c00 <col:3> 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | | | | | `-ImplicitCastExpr 0x9708c30 <col:7> 'int' <LValueToRValue>
+  | | | | |   `-DeclRefExpr 0x9708c18 <col:7> 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | | | | `-DeclRefExpr 0x9708c58 <col:10> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | | | `-DeclRefExpr 0x9708c88 <col:13> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | | `-ReturnStmt 0x9708cd0 <line:8:3, col:10>
+  | |   `-IntegerLiteral 0x9708cb8 <col:10> 'int' 0
+  | `-<<<NULL>>>
+  `-ReturnStmt 0x9709550 <line:10:2, col:9>
+    `-IntegerLiteral 0x9709538 <col:9> 'int' 2
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97087b0 (Function)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709560 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt CompoundStmt ( 9709560 -> p 0 )
+CompoundStmt 0x9709560
+|-DeclStmt 0x9708968
+| |-VarDecl 0x9708820 ____localvar____0 'int'
+| |-VarDecl 0x9708860 ____localvar____1 'int'
+| |-VarDecl 0x97088a0 ____localvar____2 'int'
+| |-VarDecl 0x97088e0 ____localvar____3 'int'
+| `-VarDecl 0x9708920 ____localvar____4 'int'
+|-IfStmt 0x9708cf8
+| |-<<<NULL>>>
+| |-BinaryOperator 0x9708be8 '_Bool' ','
+| | |-BinaryOperator 0x97089a8 'int' lvalue ','
+| | | |-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| | | `-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+| | `-BinaryOperator 0x9708bd0 '_Bool' '||'
+| |   |-BinaryOperator 0x9708b50 '_Bool' '||'
+| |   | |-BinaryOperator 0x9708a98 '_Bool' '||'
+| |   | | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+| |   | | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+| |   | | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| |   | | `-ParenExpr 0x9708a60 '_Bool'
+| |   | |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+| |   | |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+| |   | |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+| |   | |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| |   | |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+| |   | |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+| |   | |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| |   | `-ParenExpr 0x9708b38 '_Bool'
+| |   |   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+| |   |     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+| |   |     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+| |   |     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| |   |     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+| |   |       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+| |   |         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+| |   `-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+| |     `-ParenExpr 0x9708ba8 'int'
+| |       `-UnaryOperator 0x9708b90 'int' prefix '~'
+| |         `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+| |           `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| |-CompoundStmt 0x9708ce0
+| | |-BinaryOperator 0x9708ca0 'int' lvalue ','
+| | | |-BinaryOperator 0x9708c70 'int' lvalue ','
+| | | | |-BinaryOperator 0x9708c40 'int' lvalue '='
+| | | | | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| | | | | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+| | | | |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| | | | `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| | | `-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| | `-ReturnStmt 0x9708cd0
+| |   `-IntegerLiteral 0x9708cb8 'int' 0
+| `-<<<NULL>>>
+`-ReturnStmt 0x9709550
+  `-IntegerLiteral 0x9709538 'int' 2
+{
+    int ____localvar____0, ____localvar____1, ____localvar____2, ____localvar____3, ____localvar____4;
+    if (____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)) {
+        ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+        return 0;
+    }
+    return 2;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708968 (DeclStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclStmt ( 9708968 -> p 9709560 )
+DeclStmt 0x9708968
+|-VarDecl 0x9708820 ____localvar____0 'int'
+|-VarDecl 0x9708860 ____localvar____1 'int'
+|-VarDecl 0x97088a0 ____localvar____2 'int'
+|-VarDecl 0x97088e0 ____localvar____3 'int'
+`-VarDecl 0x9708920 ____localvar____4 'int'
+int ____localvar____0, ____localvar____1, ____localvar____2, ____localvar____3, ____localvar____4;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708820 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708820 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708860 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708860 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97088a0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97088a0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97088e0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97088e0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708920 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708920 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708968 (DeclStmt)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 177] WorkOnDeclStmt
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 229] Handle VarDecl ____localvar____0 9708820 | Ctx 97087d4(Function) -> p 96ab6f4
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 254] QualType 
+int identifier
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 229] Handle VarDecl ____localvar____1 9708860 | Ctx 97087d4(Function) -> p 96ab6f4
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 254] QualType 
+int identifier
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 229] Handle VarDecl ____localvar____2 97088a0 | Ctx 97087d4(Function) -> p 96ab6f4
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 254] QualType 
+int identifier
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 229] Handle VarDecl ____localvar____3 97088e0 | Ctx 97087d4(Function) -> p 96ab6f4
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 254] QualType 
+int identifier
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 229] Handle VarDecl ____localvar____4 9708920 | Ctx 97087d4(Function) -> p 96ab6f4
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 254] QualType 
+int identifier
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cf8 (IfStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IfStmt ( 9708cf8 -> p 9709560 )
+IfStmt 0x9708cf8
+|-<<<NULL>>>
+|-BinaryOperator 0x9708be8 '_Bool' ','
+| |-BinaryOperator 0x97089a8 'int' lvalue ','
+| | |-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| | `-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+| `-BinaryOperator 0x9708bd0 '_Bool' '||'
+|   |-BinaryOperator 0x9708b50 '_Bool' '||'
+|   | |-BinaryOperator 0x9708a98 '_Bool' '||'
+|   | | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+|   | | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+|   | | `-ParenExpr 0x9708a60 '_Bool'
+|   | |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+|   | |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+|   | |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+|   | |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+|   | |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+|   | `-ParenExpr 0x9708b38 '_Bool'
+|   |   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+|   |     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+|   |     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+|   |     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+|   |       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+|   `-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+|     `-ParenExpr 0x9708ba8 'int'
+|       `-UnaryOperator 0x9708b90 'int' prefix '~'
+|         `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+|-CompoundStmt 0x9708ce0
+| |-BinaryOperator 0x9708ca0 'int' lvalue ','
+| | |-BinaryOperator 0x9708c70 'int' lvalue ','
+| | | |-BinaryOperator 0x9708c40 'int' lvalue '='
+| | | | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| | | | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| | | `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| | `-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| `-ReturnStmt 0x9708cd0
+|   `-IntegerLiteral 0x9708cb8 'int' 0
+`-<<<NULL>>>
+if (____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)) {
+    ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+    return 0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708be8 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708be8 -> p 9708cf8 )
+BinaryOperator 0x9708be8 '_Bool' ','
+|-BinaryOperator 0x97089a8 'int' lvalue ','
+| |-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| `-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+`-BinaryOperator 0x9708bd0 '_Bool' '||'
+  |-BinaryOperator 0x9708b50 '_Bool' '||'
+  | |-BinaryOperator 0x9708a98 '_Bool' '||'
+  | | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+  | | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+  | | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | | `-ParenExpr 0x9708a60 '_Bool'
+  | |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+  | |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+  | |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+  | |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+  | |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+  | |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | `-ParenExpr 0x9708b38 '_Bool'
+  |   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+  |     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+  |     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+  |     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  |     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+  |       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+  |         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  `-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+    `-ParenExpr 0x9708ba8 'int'
+      `-UnaryOperator 0x9708b90 'int' prefix '~'
+        `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+          `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 97089a8 -> p 9708be8 )
+BinaryOperator 0x97089a8 'int' lvalue ','
+|-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+`-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____2 , ____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708978 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708978 -> p 97089a8 )
+DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708978 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708990 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708990 -> p 97089a8 )
+DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708990 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708bd0 -> p 9708be8 )
+BinaryOperator 0x9708bd0 '_Bool' '||'
+|-BinaryOperator 0x9708b50 '_Bool' '||'
+| |-BinaryOperator 0x9708a98 '_Bool' '||'
+| | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+| | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| | `-ParenExpr 0x9708a60 '_Bool'
+| |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+| |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+| |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+| |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| `-ParenExpr 0x9708b38 '_Bool'
+|   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+|     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+|     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+|     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+|       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+`-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+  `-ParenExpr 0x9708ba8 'int'
+    `-UnaryOperator 0x9708b90 'int' prefix '~'
+      `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+        `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708b50 -> p 9708bd0 )
+BinaryOperator 0x9708b50 '_Bool' '||'
+|-BinaryOperator 0x9708a98 '_Bool' '||'
+| |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+| | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+| |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| `-ParenExpr 0x9708a60 '_Bool'
+|   `-BinaryOperator 0x9708a48 '_Bool' '||'
+|     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+|     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+|     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+|       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+`-ParenExpr 0x9708b38 '_Bool'
+  `-BinaryOperator 0x9708b20 '_Bool' '&&'
+    |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+    | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+    `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+      `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+        `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3)[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708a98 -> p 9708b50 )
+BinaryOperator 0x9708a98 '_Bool' '||'
+|-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+| `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+`-ParenExpr 0x9708a60 '_Bool'
+  `-BinaryOperator 0x9708a48 '_Bool' '||'
+    |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+    | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+    `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+      `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+        `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____0 || (____localvar____1 || ____localvar____4)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a88 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708a88 -> p 9708a98 )
+ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+  `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a78 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708a78 -> p 9708a88 )
+ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+`-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089c0 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 97089c0 -> p 9708a78 )
+DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089c0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a78 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a88 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a60 (ParenExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ParenExpr ( 9708a60 -> p 9708a98 )
+ParenExpr 0x9708a60 '_Bool'
+`-BinaryOperator 0x9708a48 '_Bool' '||'
+  |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+  | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+  |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+    `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+      `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+(____localvar____1 || ____localvar____4)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a48 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708a48 -> p 9708a60 )
+BinaryOperator 0x9708a48 '_Bool' '||'
+|-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+| `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+`-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+  `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+    `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____1 || ____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a18 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708a18 -> p 9708a48 )
+ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+  `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a08 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708a08 -> p 9708a18 )
+ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+`-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089d8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 97089d8 -> p 9708a08 )
+DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089d8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a08 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a18 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a38 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708a38 -> p 9708a48 )
+ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+  `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a28 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708a28 -> p 9708a38 )
+ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+`-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089f0 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 97089f0 -> p 9708a28 )
+DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089f0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a28 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a38 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a48 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a60 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b38 (ParenExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ParenExpr ( 9708b38 -> p 9708b50 )
+ParenExpr 0x9708b38 '_Bool'
+`-BinaryOperator 0x9708b20 '_Bool' '&&'
+  |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+  | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+  |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+    `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+      `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+(____localvar____2 && ____localvar____3)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b20 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708b20 -> p 9708b38 )
+BinaryOperator 0x9708b20 '_Bool' '&&'
+|-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+| `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+`-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+  `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+    `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____2 && ____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708af0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708af0 -> p 9708b20 )
+ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+  `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ae0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708ae0 -> p 9708af0 )
+ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+`-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ab0 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708ab0 -> p 9708ae0 )
+DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ab0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ae0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708af0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b10 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708b10 -> p 9708b20 )
+ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+  `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b00 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708b00 -> p 9708b10 )
+ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+`-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ac8 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708ac8 -> p 9708b00 )
+DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+____localvar____3[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ac8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b00 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b10 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b20 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b38 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708bc0 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708bc0 -> p 9708bd0 )
+ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+`-ParenExpr 0x9708ba8 'int'
+  `-UnaryOperator 0x9708b90 'int' prefix '~'
+    `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+      `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+(~____localvar____1)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ba8 (ParenExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ParenExpr ( 9708ba8 -> p 9708bc0 )
+ParenExpr 0x9708ba8 'int'
+`-UnaryOperator 0x9708b90 'int' prefix '~'
+  `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+    `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+(~____localvar____1)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b90 (UnaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt UnaryOperator ( 9708b90 -> p 9708ba8 )
+UnaryOperator 0x9708b90 'int' prefix '~'
+`-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+  `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+~____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b80 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708b80 -> p 9708b90 )
+ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+`-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b68 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708b68 -> p 9708b80 )
+DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b68 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b80 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b90 (UnaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ba8 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708bc0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708be8 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ce0 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt CompoundStmt ( 9708ce0 -> p 9708cf8 )
+CompoundStmt 0x9708ce0
+|-BinaryOperator 0x9708ca0 'int' lvalue ','
+| |-BinaryOperator 0x9708c70 'int' lvalue ','
+| | |-BinaryOperator 0x9708c40 'int' lvalue '='
+| | | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| | | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| | `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+| `-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+`-ReturnStmt 0x9708cd0
+  `-IntegerLiteral 0x9708cb8 'int' 0
+{
+    ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+    return 0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ca0 (BinaryOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708ca0 -> p 9708ce0 )
+BinaryOperator 0x9708ca0 'int' lvalue ','
+|-BinaryOperator 0x9708c70 'int' lvalue ','
+| |-BinaryOperator 0x9708c40 'int' lvalue '='
+| | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+| |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+| `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+`-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708c70 -> p 9708ca0 )
+BinaryOperator 0x9708c70 'int' lvalue ','
+|-BinaryOperator 0x9708c40 'int' lvalue '='
+| |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+| `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+`-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____4 = ____localvar____0 , ____localvar____1[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt BinaryOperator ( 9708c40 -> p 9708c70 )
+BinaryOperator 0x9708c40 'int' lvalue '='
+|-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+`-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+  `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____4 = ____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c00 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708c00 -> p 9708c40 )
+DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+____localvar____4[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c00 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c30 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9708c30 -> p 9708c40 )
+ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+`-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c18 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708c18 -> p 9708c30 )
+DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+____localvar____0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c18 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c30 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c58 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708c58 -> p 9708c70 )
+DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+____localvar____1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c58 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c88 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 9708c88 -> p 9708ca0 )
+DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+____localvar____2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c88 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ca0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cd0 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ReturnStmt ( 9708cd0 -> p 9708ce0 )
+ReturnStmt 0x9708cd0
+`-IntegerLiteral 0x9708cb8 'int' 0
+return 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cb8 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( 9708cb8 -> p 9708cd0 )
+IntegerLiteral 0x9708cb8 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cb8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cd0 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ce0 (CompoundStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cf8 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709550 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ReturnStmt ( 9709550 -> p 9709560 )
+ReturnStmt 0x9709550
+`-IntegerLiteral 0x9709538 'int' 2
+return 2;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709538 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( 9709538 -> p 9709550 )
+IntegerLiteral 0x9709538 'int' 2
+2[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709538 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709550 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709560 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 109] root stmt type CompoundStmt 9709560 | children size 5
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97087b0 (Function)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 27] END LocalDeclMover
+FunctionDecl 0x97087b0 <_cond.cpp:3:1, line:11:1> ifif 'int (void)'
+`-CompoundStmt 0x9709560 <line:3:12, line:11:1>
+  |-DeclStmt 0x97097b8 <<invalid sloc>>
+  | `-VarDecl 0x9708820 <line:4:2, col:6> ____localvar____0 'int'
+  |-DeclStmt 0x97097c8 <<invalid sloc>>
+  | `-VarDecl 0x9708860 <col:2, col:9> ____localvar____1 'int'
+  |-DeclStmt 0x97097d8 <<invalid sloc>>
+  | `-VarDecl 0x97088a0 <col:2, col:12> ____localvar____2 'int'
+  |-DeclStmt 0x97097e8 <<invalid sloc>>
+  | `-VarDecl 0x97088e0 <col:2, col:15> ____localvar____3 'int'
+  |-DeclStmt 0x97097f8 <<invalid sloc>>
+  | `-VarDecl 0x9708920 <col:2, col:18> ____localvar____4 'int'
+  |-IfStmt 0x9708cf8 <line:6:2, line:9:2>
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x9708be8 <line:6:6, col:40> '_Bool' ','
+  | | |-BinaryOperator 0x97089a8 <col:6, col:8> 'int' lvalue ','
+  | | | |-DeclRefExpr 0x9708978 <col:6> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | | | `-DeclRefExpr 0x9708990 <col:8> 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  | | `-BinaryOperator 0x9708bd0 <col:10, col:40> '_Bool' '||'
+  | |   |-BinaryOperator 0x9708b50 <col:10, col:32> '_Bool' '||'
+  | |   | |-BinaryOperator 0x9708a98 <col:10, col:20> '_Bool' '||'
+  | |   | | |-ImplicitCastExpr 0x9708a88 <col:10> '_Bool' <IntegralToBoolean>
+  | |   | | | `-ImplicitCastExpr 0x9708a78 <col:10> 'int' <LValueToRValue>
+  | |   | | |   `-DeclRefExpr 0x97089c0 <col:10> 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | |   | | `-ParenExpr 0x9708a60 <col:15, col:20> '_Bool'
+  | |   | |   `-BinaryOperator 0x9708a48 <col:16, col:19> '_Bool' '||'
+  | |   | |     |-ImplicitCastExpr 0x9708a18 <col:16> '_Bool' <IntegralToBoolean>
+  | |   | |     | `-ImplicitCastExpr 0x9708a08 <col:16> 'int' <LValueToRValue>
+  | |   | |     |   `-DeclRefExpr 0x97089d8 <col:16> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |   | |     `-ImplicitCastExpr 0x9708a38 <col:19> '_Bool' <IntegralToBoolean>
+  | |   | |       `-ImplicitCastExpr 0x9708a28 <col:19> 'int' <LValueToRValue>
+  | |   | |         `-DeclRefExpr 0x97089f0 <col:19> 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | |   | `-ParenExpr 0x9708b38 <col:25, col:32> '_Bool'
+  | |   |   `-BinaryOperator 0x9708b20 <col:26, col:31> '_Bool' '&&'
+  | |   |     |-ImplicitCastExpr 0x9708af0 <col:26> '_Bool' <IntegralToBoolean>
+  | |   |     | `-ImplicitCastExpr 0x9708ae0 <col:26> 'int' <LValueToRValue>
+  | |   |     |   `-DeclRefExpr 0x9708ab0 <col:26> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | |   |     `-ImplicitCastExpr 0x9708b10 <col:31> '_Bool' <IntegralToBoolean>
+  | |   |       `-ImplicitCastExpr 0x9708b00 <col:31> 'int' <LValueToRValue>
+  | |   |         `-DeclRefExpr 0x9708ac8 <col:31> 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  | |   `-ImplicitCastExpr 0x9708bc0 <col:37, col:40> '_Bool' <IntegralToBoolean>
+  | |     `-ParenExpr 0x9708ba8 <col:37, col:40> 'int'
+  | |       `-UnaryOperator 0x9708b90 <col:38, col:39> 'int' prefix '~'
+  | |         `-ImplicitCastExpr 0x9708b80 <col:39> 'int' <LValueToRValue>
+  | |           `-DeclRefExpr 0x9708b68 <col:39> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |-CompoundStmt 0x9708ce0 <col:43, line:9:2>
+  | | |-BinaryOperator 0x9708ca0 <line:7:3, col:13> 'int' lvalue ','
+  | | | |-BinaryOperator 0x9708c70 <col:3, col:10> 'int' lvalue ','
+  | | | | |-BinaryOperator 0x9708c40 <col:3, col:7> 'int' lvalue '='
+  | | | | | |-DeclRefExpr 0x9708c00 <col:3> 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | | | | | `-ImplicitCastExpr 0x9708c30 <col:7> 'int' <LValueToRValue>
+  | | | | |   `-DeclRefExpr 0x9708c18 <col:7> 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | | | | `-DeclRefExpr 0x9708c58 <col:10> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | | | `-DeclRefExpr 0x9708c88 <col:13> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | | `-ReturnStmt 0x9708cd0 <line:8:3, col:10>
+  | |   `-IntegerLiteral 0x9708cb8 <col:10> 'int' 0
+  | `-<<<NULL>>>
+  `-ReturnStmt 0x9709550 <line:10:2, col:9>
+    `-IntegerLiteral 0x9709538 <col:9> 'int' 2
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 20] decl before flatten
+FunctionDecl 0x97087b0 <_cond.cpp:3:1, line:11:1> ifif 'int (void)'
+`-CompoundStmt 0x9709560 <line:3:12, line:11:1>
+  |-DeclStmt 0x97097b8 <<invalid sloc>>
+  | `-VarDecl 0x9708820 <line:4:2, col:6> ____localvar____0 'int'
+  |-DeclStmt 0x97097c8 <<invalid sloc>>
+  | `-VarDecl 0x9708860 <col:2, col:9> ____localvar____1 'int'
+  |-DeclStmt 0x97097d8 <<invalid sloc>>
+  | `-VarDecl 0x97088a0 <col:2, col:12> ____localvar____2 'int'
+  |-DeclStmt 0x97097e8 <<invalid sloc>>
+  | `-VarDecl 0x97088e0 <col:2, col:15> ____localvar____3 'int'
+  |-DeclStmt 0x97097f8 <<invalid sloc>>
+  | `-VarDecl 0x9708920 <col:2, col:18> ____localvar____4 'int'
+  |-IfStmt 0x9708cf8 <line:6:2, line:9:2>
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x9708be8 <line:6:6, col:40> '_Bool' ','
+  | | |-BinaryOperator 0x97089a8 <col:6, col:8> 'int' lvalue ','
+  | | | |-DeclRefExpr 0x9708978 <col:6> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | | | `-DeclRefExpr 0x9708990 <col:8> 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  | | `-BinaryOperator 0x9708bd0 <col:10, col:40> '_Bool' '||'
+  | |   |-BinaryOperator 0x9708b50 <col:10, col:32> '_Bool' '||'
+  | |   | |-BinaryOperator 0x9708a98 <col:10, col:20> '_Bool' '||'
+  | |   | | |-ImplicitCastExpr 0x9708a88 <col:10> '_Bool' <IntegralToBoolean>
+  | |   | | | `-ImplicitCastExpr 0x9708a78 <col:10> 'int' <LValueToRValue>
+  | |   | | |   `-DeclRefExpr 0x97089c0 <col:10> 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | |   | | `-ParenExpr 0x9708a60 <col:15, col:20> '_Bool'
+  | |   | |   `-BinaryOperator 0x9708a48 <col:16, col:19> '_Bool' '||'
+  | |   | |     |-ImplicitCastExpr 0x9708a18 <col:16> '_Bool' <IntegralToBoolean>
+  | |   | |     | `-ImplicitCastExpr 0x9708a08 <col:16> 'int' <LValueToRValue>
+  | |   | |     |   `-DeclRefExpr 0x97089d8 <col:16> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |   | |     `-ImplicitCastExpr 0x9708a38 <col:19> '_Bool' <IntegralToBoolean>
+  | |   | |       `-ImplicitCastExpr 0x9708a28 <col:19> 'int' <LValueToRValue>
+  | |   | |         `-DeclRefExpr 0x97089f0 <col:19> 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | |   | `-ParenExpr 0x9708b38 <col:25, col:32> '_Bool'
+  | |   |   `-BinaryOperator 0x9708b20 <col:26, col:31> '_Bool' '&&'
+  | |   |     |-ImplicitCastExpr 0x9708af0 <col:26> '_Bool' <IntegralToBoolean>
+  | |   |     | `-ImplicitCastExpr 0x9708ae0 <col:26> 'int' <LValueToRValue>
+  | |   |     |   `-DeclRefExpr 0x9708ab0 <col:26> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | |   |     `-ImplicitCastExpr 0x9708b10 <col:31> '_Bool' <IntegralToBoolean>
+  | |   |       `-ImplicitCastExpr 0x9708b00 <col:31> 'int' <LValueToRValue>
+  | |   |         `-DeclRefExpr 0x9708ac8 <col:31> 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  | |   `-ImplicitCastExpr 0x9708bc0 <col:37, col:40> '_Bool' <IntegralToBoolean>
+  | |     `-ParenExpr 0x9708ba8 <col:37, col:40> 'int'
+  | |       `-UnaryOperator 0x9708b90 <col:38, col:39> 'int' prefix '~'
+  | |         `-ImplicitCastExpr 0x9708b80 <col:39> 'int' <LValueToRValue>
+  | |           `-DeclRefExpr 0x9708b68 <col:39> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |-CompoundStmt 0x9708ce0 <col:43, line:9:2>
+  | | |-BinaryOperator 0x9708ca0 <line:7:3, col:13> 'int' lvalue ','
+  | | | |-BinaryOperator 0x9708c70 <col:3, col:10> 'int' lvalue ','
+  | | | | |-BinaryOperator 0x9708c40 <col:3, col:7> 'int' lvalue '='
+  | | | | | |-DeclRefExpr 0x9708c00 <col:3> 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | | | | | `-ImplicitCastExpr 0x9708c30 <col:7> 'int' <LValueToRValue>
+  | | | | |   `-DeclRefExpr 0x9708c18 <col:7> 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | | | | `-DeclRefExpr 0x9708c58 <col:10> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | | | `-DeclRefExpr 0x9708c88 <col:13> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | | `-ReturnStmt 0x9708cd0 <line:8:3, col:10>
+  | |   `-IntegerLiteral 0x9708cb8 <col:10> 'int' 0
+  | `-<<<NULL>>>
+  `-ReturnStmt 0x9709550 <line:10:2, col:9>
+    `-IntegerLiteral 0x9709538 <col:9> 'int' 2
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 26] cfg before flattening
+
+ [B10 (ENTRY)]
+   Succs (1): B9
+
+ [B1]
+   1: return 2;
+   Preds (1): B3
+   Succs (1): B0
+
+ [B2]
+   1: ____localvar____4 = ____localvar____0
+   2: ____localvar____1
+   3: ... , [B2.2]
+   4: ____localvar____2
+   5: ... , [B2.4]
+   6: return 0;
+   Preds (1): B3
+   Succs (1): B0
+
+ [B3]
+   1: [B9.9] || ([B8.1] || [B7.1]) || ([B6.1] && [B5.1]) || [B4.1]
+   2: ... , [B3.1]
+   T: if [B3.2]
+   Preds (5): B4 B5 B7 B8 B9
+   Succs (2): B2 B1
+
+ [B4]
+   1: (~____localvar____1) (ImplicitCastExpr, IntegralToBoolean, _Bool)
+   Preds (2): B5 B6
+   Succs (1): B3
+
+ [B5]
+   1: ____localvar____3 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+   T: [B9.9] || ([B8.1] || [B7.1]) || ([B6.1] && [B5.1]) || ...
+   Preds (1): B6
+   Succs (2): B3 B4
+
+ [B6]
+   1: ____localvar____2 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+   T: [B6.1] && ...
+   Preds (1): B7
+   Succs (2): B5 B4
+
+ [B7]
+   1: ____localvar____4 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+   T: [B9.9] || ([B8.1] || [B7.1]) || ...
+   Preds (1): B8
+   Succs (2): B3 B6
+
+ [B8]
+   1: ____localvar____1 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+   T: [B8.1] || ...
+   Preds (1): B9
+   Succs (2): B3 B7
+
+ [B9]
+   1: int ____localvar____0;
+   2: int ____localvar____1;
+   3: int ____localvar____2;
+   4: int ____localvar____3;
+   5: int ____localvar____4;
+   6: ____localvar____2
+   7: ____localvar____3
+   8: ... , [B9.7]
+   9: ____localvar____0 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+   T: [B9.9] || ...
+   Preds (1): B10
+   Succs (2): B3 B8
+
+ [B0 (EXIT)]
+   Preds (2): B1 B2
+
+Writing '/tmp/llvm_fEY7yG/CFG.dot'...  done. 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709560 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97097b8 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708820 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708820 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97097b8 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97097c8 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708860 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708860 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97097c8 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97097d8 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97088a0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97088a0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97097d8 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97097e8 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97088e0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97088e0 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97097e8 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97097f8 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9708920 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9708920 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97097f8 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cf8 (IfStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708be8 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708978 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708978 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708990 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708990 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a88 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a78 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089c0 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089c0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a78 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a88 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a60 (ParenExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a48 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a18 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a08 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089d8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089d8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a08 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a18 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a38 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708a28 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97089f0 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97089f0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a28 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a38 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a48 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708a60 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b38 (ParenExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b20 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708af0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ae0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ab0 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ab0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ae0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708af0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b10 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b00 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ac8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ac8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b00 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b10 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b20 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b38 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708bc0 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ba8 (ParenExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b90 (UnaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b80 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708b68 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b68 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b80 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708b90 (UnaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ba8 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708bc0 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708be8 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ce0 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708ca0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c00 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c00 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c30 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c18 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c18 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c30 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c58 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c58 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708c88 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708c88 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ca0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cd0 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9708cb8 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cb8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cd0 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708ce0 (CompoundStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9708cf8 (IfStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709550 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709538 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709538 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709550 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709560 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 1 -> 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B2.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B2.2]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B2.3]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B2.4]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 2 -> 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B3.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 3 -> 2
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 3 -> 1
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B4.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 4 -> 3
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B5.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 5 -> 3
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 5 -> 4
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B6.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 6 -> 5
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 6 -> 4
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B7.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 7 -> 3
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 7 -> 6
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B8.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 8 -> 3
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 8 -> 7
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B9.6]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B9.7]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B9.8]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B9.9]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 9 -> 3
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 9 -> 8
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 10 -> 9
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 39] CompoundStmt before flatten
+{
+    int ____localvar____0;
+    int ____localvar____1;
+    int ____localvar____2;
+    int ____localvar____3;
+    int ____localvar____4;
+    if (____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)) {
+        ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+        return 0;
+    }
+    return 2;
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 48] DeclStmt at the beginning met.
+DeclStmt 0x97097b8
+`-VarDecl 0x9708820 ____localvar____0 'int'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 48] DeclStmt at the beginning met.
+DeclStmt 0x97097c8
+`-VarDecl 0x9708860 ____localvar____1 'int'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 48] DeclStmt at the beginning met.
+DeclStmt 0x97097d8
+`-VarDecl 0x97088a0 ____localvar____2 'int'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 48] DeclStmt at the beginning met.
+DeclStmt 0x97097e8
+`-VarDecl 0x97088e0 ____localvar____3 'int'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 48] DeclStmt at the beginning met.
+DeclStmt 0x97097f8
+`-VarDecl 0x9708920 ____localvar____4 'int'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 1 97102d4
+<NULL>[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #0
+return 2;
+CaseStmt 0x9709960
+|-IntegerLiteral 0x9709948 'int' 1
+|-<<<NULL>>>
+`-CompoundStmt 0x9709988
+  |-ReturnStmt 0x9709550
+  | `-IntegerLiteral 0x9709538 'int' 2
+  `-BreakStmt 0x9709980
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 2 9710338
+<NULL>[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #0
+____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #1
+return 0;
+CaseStmt 0x97099b8
+|-IntegerLiteral 0x97099a0 'int' 2
+|-<<<NULL>>>
+`-CompoundStmt 0x97099e0
+  |-BinaryOperator 0x9708ca0 'int' lvalue ','
+  | |-BinaryOperator 0x9708c70 'int' lvalue ','
+  | | |-BinaryOperator 0x9708c40 'int' lvalue '='
+  | | | |-DeclRefExpr 0x9708c00 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | | | `-ImplicitCastExpr 0x9708c30 'int' <LValueToRValue>
+  | | |   `-DeclRefExpr 0x9708c18 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | | `-DeclRefExpr 0x9708c58 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | `-DeclRefExpr 0x9708c88 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  |-ReturnStmt 0x9708cd0
+  | `-IntegerLiteral 0x9708cb8 'int' 0
+  `-BreakStmt 0x97099d8
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 3 97103e4
+____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #0
+____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 256] terminator cond stmt met.
+IfStmt 0x9709a38
+|-<<<NULL>>>
+|-BinaryOperator 0x9708be8 '_Bool' ','
+| |-BinaryOperator 0x97089a8 'int' lvalue ','
+| | |-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+| | `-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+| `-BinaryOperator 0x9708bd0 '_Bool' '||'
+|   |-BinaryOperator 0x9708b50 '_Bool' '||'
+|   | |-BinaryOperator 0x9708a98 '_Bool' '||'
+|   | | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+|   | | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+|   | | `-ParenExpr 0x9708a60 '_Bool'
+|   | |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+|   | |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+|   | |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+|   | |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+|   | |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+|   | `-ParenExpr 0x9708b38 '_Bool'
+|   |   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+|   |     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+|   |     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+|   |     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+|   |       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+|   `-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+|     `-ParenExpr 0x9708ba8 'int'
+|       `-UnaryOperator 0x9708b90 'int' prefix '~'
+|         `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+|-CompoundStmt 0x9709ae8
+| `-BinaryOperator 0x9709a88 'int' lvalue '='
+|   |-DeclRefExpr 0x9709a70 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+|   `-IntegerLiteral 0x9709a58 'int' 2
+`-CompoundStmt 0x9709b00
+  `-BinaryOperator 0x9709ad0 'int' lvalue '='
+    |-DeclRefExpr 0x9709ab8 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+    `-IntegerLiteral 0x9709aa0 'int' 1
+CaseStmt 0x9709a18
+|-IntegerLiteral 0x9709a00 'int' 3
+|-<<<NULL>>>
+`-CompoundStmt 0x9709b68
+  |-IfStmt 0x9709a38
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x9708be8 '_Bool' ','
+  | | |-BinaryOperator 0x97089a8 'int' lvalue ','
+  | | | |-DeclRefExpr 0x9708978 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | | | `-DeclRefExpr 0x9708990 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  | | `-BinaryOperator 0x9708bd0 '_Bool' '||'
+  | |   |-BinaryOperator 0x9708b50 '_Bool' '||'
+  | |   | |-BinaryOperator 0x9708a98 '_Bool' '||'
+  | |   | | |-ImplicitCastExpr 0x9708a88 '_Bool' <IntegralToBoolean>
+  | |   | | | `-ImplicitCastExpr 0x9708a78 'int' <LValueToRValue>
+  | |   | | |   `-DeclRefExpr 0x97089c0 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+  | |   | | `-ParenExpr 0x9708a60 '_Bool'
+  | |   | |   `-BinaryOperator 0x9708a48 '_Bool' '||'
+  | |   | |     |-ImplicitCastExpr 0x9708a18 '_Bool' <IntegralToBoolean>
+  | |   | |     | `-ImplicitCastExpr 0x9708a08 'int' <LValueToRValue>
+  | |   | |     |   `-DeclRefExpr 0x97089d8 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |   | |     `-ImplicitCastExpr 0x9708a38 '_Bool' <IntegralToBoolean>
+  | |   | |       `-ImplicitCastExpr 0x9708a28 'int' <LValueToRValue>
+  | |   | |         `-DeclRefExpr 0x97089f0 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+  | |   | `-ParenExpr 0x9708b38 '_Bool'
+  | |   |   `-BinaryOperator 0x9708b20 '_Bool' '&&'
+  | |   |     |-ImplicitCastExpr 0x9708af0 '_Bool' <IntegralToBoolean>
+  | |   |     | `-ImplicitCastExpr 0x9708ae0 'int' <LValueToRValue>
+  | |   |     |   `-DeclRefExpr 0x9708ab0 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+  | |   |     `-ImplicitCastExpr 0x9708b10 '_Bool' <IntegralToBoolean>
+  | |   |       `-ImplicitCastExpr 0x9708b00 'int' <LValueToRValue>
+  | |   |         `-DeclRefExpr 0x9708ac8 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+  | |   `-ImplicitCastExpr 0x9708bc0 '_Bool' <IntegralToBoolean>
+  | |     `-ParenExpr 0x9708ba8 'int'
+  | |       `-UnaryOperator 0x9708b90 'int' prefix '~'
+  | |         `-ImplicitCastExpr 0x9708b80 'int' <LValueToRValue>
+  | |           `-DeclRefExpr 0x9708b68 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+  | |-CompoundStmt 0x9709ae8
+  | | `-BinaryOperator 0x9709a88 'int' lvalue '='
+  | |   |-DeclRefExpr 0x9709a70 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+  | |   `-IntegerLiteral 0x9709a58 'int' 2
+  | `-CompoundStmt 0x9709b00
+  |   `-BinaryOperator 0x9709ad0 'int' lvalue '='
+  |     |-DeclRefExpr 0x9709ab8 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+  |     `-IntegerLiteral 0x9709aa0 'int' 1
+  |-BinaryOperator 0x9709b48 'int' lvalue '='
+  | |-DeclRefExpr 0x9709b30 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+  | `-IntegerLiteral 0x9709b18 'int' 2
+  `-BreakStmt 0x9709b60
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 4 9710450
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 212] Transparent Node skipped
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 5 97104b4
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 212] Transparent Node skipped
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 6 9710528
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 212] Transparent Node skipped
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 7 971059c
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 212] Transparent Node skipped
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 8 9710618
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 212] Transparent Node skipped
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 9 9710684
+____localvar____0[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #1
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #2
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #3
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #4
+CaseStmt 0x9709ba0
+|-IntegerLiteral 0x9709b88 'int' 9
+|-<<<NULL>>>
+`-CompoundStmt 0x9709c10
+  |-BinaryOperator 0x9709bf0 'int' lvalue '='
+  | |-DeclRefExpr 0x9709bd8 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+  | `-IntegerLiteral 0x9709bc0 'int' 3
+  `-BreakStmt 0x9709c08
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 85] New switch body create
+switch (int ____localvar____5 = 9) {
+  case 1:
+    {
+        return 2;
+        break;
+    }
+  case 2:
+    {
+        ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+        return 0;
+        break;
+    }
+  case 3:
+    {
+        if (____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)) {
+            ____localvar____5 = 2;
+        } else {
+            ____localvar____5 = 1;
+        }
+        ____localvar____5 = 2;
+        break;
+    }
+  case 9:
+    {
+        ____localvar____5 = 3;
+        break;
+    }
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 89] New function body created.
+{
+    int ____localvar____0;
+    int ____localvar____1;
+    int ____localvar____2;
+    int ____localvar____3;
+    int ____localvar____4;
+    int ____localvar____5 = 9;
+    while (____localvar____5 != 0)
+        switch (int ____localvar____5 = 9) {
+          case 1:
+            {
+                return 2;
+                break;
+            }
+          case 2:
+            {
+                ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+                return 0;
+                break;
+            }
+          case 3:
+            {
+                if (____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)) {
+                    ____localvar____5 = 2;
+                } else {
+                    ____localvar____5 = 1;
+                }
+                ____localvar____5 = 2;
+                break;
+            }
+          case 9:
+            {
+                ____localvar____5 = 3;
+                break;
+            }
+        }
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 92] decl after flatten
+FunctionDecl 0x97087b0 <_cond.cpp:3:1, line:11:1> ifif 'int (void)'
+`-CompoundStmt 0x9709560 <line:3:12, line:11:1>
+  |-DeclStmt 0x97097b8 <<invalid sloc>>
+  | `-VarDecl 0x9708820 <line:4:2, col:6> ____localvar____0 'int'
+  |-DeclStmt 0x97097c8 <<invalid sloc>>
+  | `-VarDecl 0x9708860 <col:2, col:9> ____localvar____1 'int'
+  |-DeclStmt 0x97097d8 <<invalid sloc>>
+  | `-VarDecl 0x97088a0 <col:2, col:12> ____localvar____2 'int'
+  |-DeclStmt 0x97097e8 <<invalid sloc>>
+  | `-VarDecl 0x97088e0 <col:2, col:15> ____localvar____3 'int'
+  |-DeclStmt 0x97097f8 <<invalid sloc>>
+  | `-VarDecl 0x9708920 <col:2, col:18> ____localvar____4 'int'
+  |-DeclStmt 0x9709880 <<invalid sloc>>
+  | `-VarDecl 0x9709850 <<invalid sloc>> ____localvar____5 'int'
+  |   `-IntegerLiteral 0x9709838 <<invalid sloc>> 'int' 9
+  `-WhileStmt 0x97098e8 <<invalid sloc>>
+    |-<<<NULL>>>
+    |-BinaryOperator 0x97098d0 <<invalid sloc>> '_Bool' '!='
+    | |-ImplicitCastExpr 0x97098c0 <<invalid sloc>> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x97098a8 <<invalid sloc>> 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+    | `-IntegerLiteral 0x9709890 <<invalid sloc>> 'int' 0
+    `-SwitchStmt 0x9709918 <<invalid sloc>>
+      |-DeclStmt 0x9709938 <<invalid sloc>>
+      | `-VarDecl 0x9709850 <<invalid sloc>> ____localvar____5 'int'
+      |   `-IntegerLiteral 0x9709838 <<invalid sloc>> 'int' 9
+      |-DeclRefExpr 0x97098fc <<invalid sloc>> 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+      `-CompoundStmt 0x9709c28 <<invalid sloc>>
+        |-CaseStmt 0x9709960 <<invalid sloc>>
+        | |-IntegerLiteral 0x9709948 <<invalid sloc>> 'int' 1
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0x9709988 <<invalid sloc>>
+        |   |-ReturnStmt 0x9709550 <line:10:2, col:9>
+        |   | `-IntegerLiteral 0x9709538 <col:9> 'int' 2
+        |   `-BreakStmt 0x9709980 <<invalid sloc>>
+        |-CaseStmt 0x97099b8 <<invalid sloc>>
+        | |-IntegerLiteral 0x97099a0 <<invalid sloc>> 'int' 2
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0x97099e0 <<invalid sloc>>
+        |   |-BinaryOperator 0x9708ca0 <line:7:3, col:13> 'int' lvalue ','
+        |   | |-BinaryOperator 0x9708c70 <col:3, col:10> 'int' lvalue ','
+        |   | | |-BinaryOperator 0x9708c40 <col:3, col:7> 'int' lvalue '='
+        |   | | | |-DeclRefExpr 0x9708c00 <col:3> 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+        |   | | | `-ImplicitCastExpr 0x9708c30 <col:7> 'int' <LValueToRValue>
+        |   | | |   `-DeclRefExpr 0x9708c18 <col:7> 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+        |   | | `-DeclRefExpr 0x9708c58 <col:10> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+        |   | `-DeclRefExpr 0x9708c88 <col:13> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+        |   |-ReturnStmt 0x9708cd0 <line:8:3, col:10>
+        |   | `-IntegerLiteral 0x9708cb8 <col:10> 'int' 0
+        |   `-BreakStmt 0x97099d8 <<invalid sloc>>
+        |-CaseStmt 0x9709a18 <<invalid sloc>>
+        | |-IntegerLiteral 0x9709a00 <<invalid sloc>> 'int' 3
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0x9709b68 <<invalid sloc>>
+        |   |-IfStmt 0x9709a38 <<invalid sloc>>
+        |   | |-<<<NULL>>>
+        |   | |-BinaryOperator 0x9708be8 <line:6:6, col:40> '_Bool' ','
+        |   | | |-BinaryOperator 0x97089a8 <col:6, col:8> 'int' lvalue ','
+        |   | | | |-DeclRefExpr 0x9708978 <col:6> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+        |   | | | `-DeclRefExpr 0x9708990 <col:8> 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+        |   | | `-BinaryOperator 0x9708bd0 <col:10, col:40> '_Bool' '||'
+        |   | |   |-BinaryOperator 0x9708b50 <col:10, col:32> '_Bool' '||'
+        |   | |   | |-BinaryOperator 0x9708a98 <col:10, col:20> '_Bool' '||'
+        |   | |   | | |-ImplicitCastExpr 0x9708a88 <col:10> '_Bool' <IntegralToBoolean>
+        |   | |   | | | `-ImplicitCastExpr 0x9708a78 <col:10> 'int' <LValueToRValue>
+        |   | |   | | |   `-DeclRefExpr 0x97089c0 <col:10> 'int' lvalue Var 0x9708820 '____localvar____0' 'int'
+        |   | |   | | `-ParenExpr 0x9708a60 <col:15, col:20> '_Bool'
+        |   | |   | |   `-BinaryOperator 0x9708a48 <col:16, col:19> '_Bool' '||'
+        |   | |   | |     |-ImplicitCastExpr 0x9708a18 <col:16> '_Bool' <IntegralToBoolean>
+        |   | |   | |     | `-ImplicitCastExpr 0x9708a08 <col:16> 'int' <LValueToRValue>
+        |   | |   | |     |   `-DeclRefExpr 0x97089d8 <col:16> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+        |   | |   | |     `-ImplicitCastExpr 0x9708a38 <col:19> '_Bool' <IntegralToBoolean>
+        |   | |   | |       `-ImplicitCastExpr 0x9708a28 <col:19> 'int' <LValueToRValue>
+        |   | |   | |         `-DeclRefExpr 0x97089f0 <col:19> 'int' lvalue Var 0x9708920 '____localvar____4' 'int'
+        |   | |   | `-ParenExpr 0x9708b38 <col:25, col:32> '_Bool'
+        |   | |   |   `-BinaryOperator 0x9708b20 <col:26, col:31> '_Bool' '&&'
+        |   | |   |     |-ImplicitCastExpr 0x9708af0 <col:26> '_Bool' <IntegralToBoolean>
+        |   | |   |     | `-ImplicitCastExpr 0x9708ae0 <col:26> 'int' <LValueToRValue>
+        |   | |   |     |   `-DeclRefExpr 0x9708ab0 <col:26> 'int' lvalue Var 0x97088a0 '____localvar____2' 'int'
+        |   | |   |     `-ImplicitCastExpr 0x9708b10 <col:31> '_Bool' <IntegralToBoolean>
+        |   | |   |       `-ImplicitCastExpr 0x9708b00 <col:31> 'int' <LValueToRValue>
+        |   | |   |         `-DeclRefExpr 0x9708ac8 <col:31> 'int' lvalue Var 0x97088e0 '____localvar____3' 'int'
+        |   | |   `-ImplicitCastExpr 0x9708bc0 <col:37, col:40> '_Bool' <IntegralToBoolean>
+        |   | |     `-ParenExpr 0x9708ba8 <col:37, col:40> 'int'
+        |   | |       `-UnaryOperator 0x9708b90 <col:38, col:39> 'int' prefix '~'
+        |   | |         `-ImplicitCastExpr 0x9708b80 <col:39> 'int' <LValueToRValue>
+        |   | |           `-DeclRefExpr 0x9708b68 <col:39> 'int' lvalue Var 0x9708860 '____localvar____1' 'int'
+        |   | |-CompoundStmt 0x9709ae8 <<invalid sloc>>
+        |   | | `-BinaryOperator 0x9709a88 <<invalid sloc>> 'int' lvalue '='
+        |   | |   |-DeclRefExpr 0x9709a70 <<invalid sloc>> 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+        |   | |   `-IntegerLiteral 0x9709a58 <<invalid sloc>> 'int' 2
+        |   | `-CompoundStmt 0x9709b00 <<invalid sloc>>
+        |   |   `-BinaryOperator 0x9709ad0 <<invalid sloc>> 'int' lvalue '='
+        |   |     |-DeclRefExpr 0x9709ab8 <<invalid sloc>> 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+        |   |     `-IntegerLiteral 0x9709aa0 <<invalid sloc>> 'int' 1
+        |   |-BinaryOperator 0x9709b48 <<invalid sloc>> 'int' lvalue '='
+        |   | |-DeclRefExpr 0x9709b30 <<invalid sloc>> 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+        |   | `-IntegerLiteral 0x9709b18 <<invalid sloc>> 'int' 2
+        |   `-BreakStmt 0x9709b60 <<invalid sloc>>
+        `-CaseStmt 0x9709ba0 <<invalid sloc>>
+          |-IntegerLiteral 0x9709b88 <<invalid sloc>> 'int' 9
+          |-<<<NULL>>>
+          `-CompoundStmt 0x9709c10 <<invalid sloc>>
+            |-BinaryOperator 0x9709bf0 <<invalid sloc>> 'int' lvalue '='
+            | |-DeclRefExpr 0x9709bd8 <<invalid sloc>> 'int' lvalue Var 0x9709850 '____localvar____5' 'int'
+            | `-IntegerLiteral 0x9709bc0 <<invalid sloc>> 'int' 3
+            `-BreakStmt 0x9709c08 <<invalid sloc>>
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 23] TUDecl Function 97095a0 | Ctx 96ab6f4 -> p 96ab6e0
+[DEBUG][alg/FlattenCFG/FlattenCFGTransformer.cpp - line 48] enter FuncDecl
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 9] START VarRenamer
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97095a0 (Function)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Function
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709788 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709658 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9709610 (Var)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = a | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709640 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709640 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9709610 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709658 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709750 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9709680 (Var)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 20] decl: Var
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 30]  ---- name = b | type = int | desugared type = int | const = 0 | extern = 0 | POD = 1
+(____localvar____6) ? 1 : 0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709730 (ConditionalOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709720 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709710 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096c8 (ParenExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096b0 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096b0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096c8 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709710 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709720 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096e0 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096e0 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096f8 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096f8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709730 (ConditionalOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9709680 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709750 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709778 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709760 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709760 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709778 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709788 (CompoundStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97095a0 (Function)
+[DEBUG][alg/FlattenCFG/VarRenamer.cpp - line 11] END VarRenamer
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 6] START StmtPretransformer
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97095a0 (Function)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 97095a0(Function) Ctx 96ab6f4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709788 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt CompoundStmt 9709788 96dd4b0 96dd4b0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709658 (DeclStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclStmt 9709658 968d610 968d610
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9709610 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 9709610(Var) Ctx 97095c4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709640 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral 9709640 96a7670 96a7670
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709640 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0x9709640 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9709610 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709658 (DeclStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclStmt, start transform
+DeclStmt 0x9709658
+`-VarDecl 0x9709610 ____localvar____6 'int'
+  `-IntegerLiteral 0x9709640 'int' 0
+int ____localvar____6 = 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709750 (DeclStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclStmt 9709750 96e6310 96e6310
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9709680 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 37] visitDecl 9709680(Var) Ctx 97095c4
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709730 (ConditionalOperator) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ConditionalOperator 9709730 968d078 968d078
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709720 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9709720 968d088 968d088
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709710 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ImplicitCastExpr 9709710 968d0a8 968d0a8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096c8 (ParenExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ParenExpr 97096c8 968d0b8 968d0b8
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096b0 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt DeclRefExpr 97096b0 96d5380 96d5380
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096b0 (DeclRefExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclRefExpr, start transform
+DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+____localvar____6[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096c8 (ParenExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ParenExpr, start transform
+ParenExpr 0x97096c8 'int' lvalue
+`-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+(____localvar____6)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709710 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+`-ParenExpr 0x97096c8 'int' lvalue
+  `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+(____localvar____6)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709720 (ImplicitCastExpr)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ImplicitCastExpr, start transform
+ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+  `-ParenExpr 0x97096c8 'int' lvalue
+    `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+(____localvar____6)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096e0 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral 97096e0 96d5390 96d5390
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096e0 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0x97096e0 'int' 1
+1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096f8 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral 97096f8 96d8218 96d8218
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096f8 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0x97096f8 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709730 (ConditionalOperator)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ConditionalOperator, start transform
+ConditionalOperator 0x9709730 'int'
+|-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+| `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+|   `-ParenExpr 0x97096c8 'int' lvalue
+|     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+|-IntegerLiteral 0x97096e0 'int' 1
+`-IntegerLiteral 0x97096f8 'int' 0
+(____localvar____6) ? 1 : 0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9709680 (Var)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709750 (DeclStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt DeclStmt, start transform
+DeclStmt 0x9709750
+`-VarDecl 0x9709680 ____localvar____7 'int'
+  `-ConditionalOperator 0x9709730 'int'
+    |-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+    | `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+    |   `-ParenExpr 0x97096c8 'int' lvalue
+    |     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+    |-IntegerLiteral 0x97096e0 'int' 1
+    `-IntegerLiteral 0x97096f8 'int' 0
+int ____localvar____7 = (____localvar____6) ? 1 : 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709778 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt ReturnStmt 9709778 96d8228 96d8228
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709760 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 62] push stmt IntegerLiteral 9709760 96dd2c0 96dd2c0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709760 (IntegerLiteral)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt IntegerLiteral, start transform
+IntegerLiteral 0x9709760 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709778 (ReturnStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt ReturnStmt, start transform
+ReturnStmt 0x9709778
+`-IntegerLiteral 0x9709760 'int' 0
+return 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709788 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 70] leaving Stmt CompoundStmt, start transform
+CompoundStmt 0x9709788
+|-DeclStmt 0x9709658
+| `-VarDecl 0x9709610 ____localvar____6 'int'
+|   `-IntegerLiteral 0x9709640 'int' 0
+|-DeclStmt 0x9709750
+| `-VarDecl 0x9709680 ____localvar____7 'int'
+|   `-ConditionalOperator 0x9709730 'int'
+|     |-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+|     | `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+|     |   `-ParenExpr 0x97096c8 'int' lvalue
+|     |     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+|     |-IntegerLiteral 0x97096e0 'int' 1
+|     `-IntegerLiteral 0x97096f8 'int' 0
+`-ReturnStmt 0x9709778
+  `-IntegerLiteral 0x9709760 'int' 0
+{
+    int ____localvar____6 = 0;
+    int ____localvar____7 = (____localvar____6) ? 1 : 0;
+    return 0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97095a0 (Function)
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 45] exitDecl
+[DEBUG][alg/FlattenCFG/StmtPretransformer.cpp - line 30] END StmtPretransformer
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 5] START LocalDeclMover
+FunctionDecl 0x97095a0 <_cond.cpp:13:1, line:18:1> main 'int (void)'
+`-CompoundStmt 0x9709788 <line:13:12, line:18:1>
+  |-DeclStmt 0x9709658 <line:15:2, col:11>
+  | `-VarDecl 0x9709610 <col:2, col:10> ____localvar____6 'int'
+  |   `-IntegerLiteral 0x9709640 <col:10> 'int' 0
+  |-DeclStmt 0x9709750 <line:16:2, col:21>
+  | `-VarDecl 0x9709680 <col:2, col:20> ____localvar____7 'int'
+  |   `-ConditionalOperator 0x9709730 <col:10, col:20> 'int'
+  |     |-ImplicitCastExpr 0x9709720 <col:10, col:12> '_Bool' <IntegralToBoolean>
+  |     | `-ImplicitCastExpr 0x9709710 <col:10, col:12> 'int' <LValueToRValue>
+  |     |   `-ParenExpr 0x97096c8 <col:10, col:12> 'int' lvalue
+  |     |     `-DeclRefExpr 0x97096b0 <col:11> 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+  |     |-IntegerLiteral 0x97096e0 <col:16> 'int' 1
+  |     `-IntegerLiteral 0x97096f8 <col:20> 'int' 0
+  `-ReturnStmt 0x9709778 <line:17:2, col:9>
+    `-IntegerLiteral 0x9709760 <col:9> 'int' 0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 97095a0 (Function)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709788 (CompoundStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt CompoundStmt ( 9709788 -> p 0 )
+CompoundStmt 0x9709788
+|-DeclStmt 0x9709658
+| `-VarDecl 0x9709610 ____localvar____6 'int'
+|   `-IntegerLiteral 0x9709640 'int' 0
+|-DeclStmt 0x9709750
+| `-VarDecl 0x9709680 ____localvar____7 'int'
+|   `-ConditionalOperator 0x9709730 'int'
+|     |-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+|     | `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+|     |   `-ParenExpr 0x97096c8 'int' lvalue
+|     |     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+|     |-IntegerLiteral 0x97096e0 'int' 1
+|     `-IntegerLiteral 0x97096f8 'int' 0
+`-ReturnStmt 0x9709778
+  `-IntegerLiteral 0x9709760 'int' 0
+{
+    int ____localvar____6 = 0;
+    int ____localvar____7 = (____localvar____6) ? 1 : 0;
+    return 0;
+}
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709658 (DeclStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclStmt ( 9709658 -> p 9709788 )
+DeclStmt 0x9709658
+`-VarDecl 0x9709610 ____localvar____6 'int'
+  `-IntegerLiteral 0x9709640 'int' 0
+int ____localvar____6 = 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9709610 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709640 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( 9709640 -> p 9709658 )
+IntegerLiteral 0x9709640 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709640 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9709610 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709658 (DeclStmt)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 177] WorkOnDeclStmt
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 229] Handle VarDecl ____localvar____6 9709610 | Ctx 97095c4(Function) -> p 96ab6f4
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 254] QualType 
+int identifier
+IntegerLiteral 0x9709640 'int' 0
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 306] Expr type: lhs 96ab760, rhs 96ab760
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 309] retAssign
+BinaryOperator 0x9709c90 'int' lvalue '='
+|-DeclRefExpr 0x9709c74 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+`-IntegerLiteral 0x9709640 'int' 0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709750 (DeclStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclStmt ( 9709750 -> p 9709788 )
+DeclStmt 0x9709750
+`-VarDecl 0x9709680 ____localvar____7 'int'
+  `-ConditionalOperator 0x9709730 'int'
+    |-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+    | `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+    |   `-ParenExpr 0x97096c8 'int' lvalue
+    |     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+    |-IntegerLiteral 0x97096e0 'int' 1
+    `-IntegerLiteral 0x97096f8 'int' 0
+int ____localvar____7 = (____localvar____6) ? 1 : 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9709680 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709730 (ConditionalOperator) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ConditionalOperator ( 9709730 -> p 9709750 )
+ConditionalOperator 0x9709730 'int'
+|-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+| `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+|   `-ParenExpr 0x97096c8 'int' lvalue
+|     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+|-IntegerLiteral 0x97096e0 'int' 1
+`-IntegerLiteral 0x97096f8 'int' 0
+(____localvar____6) ? 1 : 0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709720 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9709720 -> p 9709730 )
+ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+`-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+  `-ParenExpr 0x97096c8 'int' lvalue
+    `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+(____localvar____6)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709710 (ImplicitCastExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ImplicitCastExpr ( 9709710 -> p 9709720 )
+ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+`-ParenExpr 0x97096c8 'int' lvalue
+  `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+(____localvar____6)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096c8 (ParenExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ParenExpr ( 97096c8 -> p 9709710 )
+ParenExpr 0x97096c8 'int' lvalue
+`-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+(____localvar____6)[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096b0 (DeclRefExpr) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt DeclRefExpr ( 97096b0 -> p 97096c8 )
+DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+____localvar____6[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096b0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096c8 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709710 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709720 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096e0 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( 97096e0 -> p 9709730 )
+IntegerLiteral 0x97096e0 'int' 1
+1[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096e0 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096f8 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( 97096f8 -> p 9709730 )
+IntegerLiteral 0x97096f8 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096f8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709730 (ConditionalOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9709680 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709750 (DeclStmt)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 177] WorkOnDeclStmt
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 229] Handle VarDecl ____localvar____7 9709680 | Ctx 97095c4(Function) -> p 96ab6f4
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 254] QualType 
+int identifier
+ConditionalOperator 0x9709730 'int'
+|-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+| `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+|   `-ParenExpr 0x97096c8 'int' lvalue
+|     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+|-IntegerLiteral 0x97096e0 'int' 1
+`-IntegerLiteral 0x97096f8 'int' 0
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 306] Expr type: lhs 96ab760, rhs 96ab760
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 309] retAssign
+BinaryOperator 0x9709cd0 'int' lvalue '='
+|-DeclRefExpr 0x9709cb8 'int' lvalue Var 0x9709680 '____localvar____7' 'int'
+`-ConditionalOperator 0x9709730 'int'
+  |-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+  | `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+  |   `-ParenExpr 0x97096c8 'int' lvalue
+  |     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+  |-IntegerLiteral 0x97096e0 'int' 1
+  `-IntegerLiteral 0x97096f8 'int' 0
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709778 (ReturnStmt) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt ReturnStmt ( 9709778 -> p 9709788 )
+ReturnStmt 0x9709778
+`-IntegerLiteral 0x9709760 'int' 0
+return 0;
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709760 (IntegerLiteral) | range 
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 48] Stmt IntegerLiteral ( 9709760 -> p 9709778 )
+IntegerLiteral 0x9709760 'int' 0
+0[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709760 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709778 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709788 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 109] root stmt type CompoundStmt 9709788 | children size 2
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 97095a0 (Function)
+[DEBUG][alg/FlattenCFG/LocalDeclMover.cpp - line 27] END LocalDeclMover
+FunctionDecl 0x97095a0 <_cond.cpp:13:1, line:18:1> main 'int (void)'
+`-CompoundStmt 0x9709788 <line:13:12, line:18:1>
+  |-DeclStmt 0x9709ca8 <<invalid sloc>>
+  | `-VarDecl 0x9709610 <line:15:2, col:6> ____localvar____6 'int'
+  |-DeclStmt 0x9709ce8 <<invalid sloc>>
+  | `-VarDecl 0x9709680 <line:16:2, col:6> ____localvar____7 'int'
+  |-BinaryOperator 0x9709c90 <<invalid sloc>, line:15:10> 'int' lvalue '='
+  | |-DeclRefExpr 0x9709c74 <<invalid sloc>> 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+  | `-IntegerLiteral 0x9709640 <col:10> 'int' 0
+  |-BinaryOperator 0x9709cd0 <<invalid sloc>, line:16:20> 'int' lvalue '='
+  | |-DeclRefExpr 0x9709cb8 <<invalid sloc>> 'int' lvalue Var 0x9709680 '____localvar____7' 'int'
+  | `-ConditionalOperator 0x9709730 <col:10, col:20> 'int'
+  |   |-ImplicitCastExpr 0x9709720 <col:10, col:12> '_Bool' <IntegralToBoolean>
+  |   | `-ImplicitCastExpr 0x9709710 <col:10, col:12> 'int' <LValueToRValue>
+  |   |   `-ParenExpr 0x97096c8 <col:10, col:12> 'int' lvalue
+  |   |     `-DeclRefExpr 0x97096b0 <col:11> 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+  |   |-IntegerLiteral 0x97096e0 <col:16> 'int' 1
+  |   `-IntegerLiteral 0x97096f8 <col:20> 'int' 0
+  `-ReturnStmt 0x9709778 <line:17:2, col:9>
+    `-IntegerLiteral 0x9709760 <col:9> 'int' 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 20] decl before flatten
+FunctionDecl 0x97095a0 <_cond.cpp:13:1, line:18:1> main 'int (void)'
+`-CompoundStmt 0x9709788 <line:13:12, line:18:1>
+  |-DeclStmt 0x9709ca8 <<invalid sloc>>
+  | `-VarDecl 0x9709610 <line:15:2, col:6> ____localvar____6 'int'
+  |-DeclStmt 0x9709ce8 <<invalid sloc>>
+  | `-VarDecl 0x9709680 <line:16:2, col:6> ____localvar____7 'int'
+  |-BinaryOperator 0x9709c90 <<invalid sloc>, line:15:10> 'int' lvalue '='
+  | |-DeclRefExpr 0x9709c74 <<invalid sloc>> 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+  | `-IntegerLiteral 0x9709640 <col:10> 'int' 0
+  |-BinaryOperator 0x9709cd0 <<invalid sloc>, line:16:20> 'int' lvalue '='
+  | |-DeclRefExpr 0x9709cb8 <<invalid sloc>> 'int' lvalue Var 0x9709680 '____localvar____7' 'int'
+  | `-ConditionalOperator 0x9709730 <col:10, col:20> 'int'
+  |   |-ImplicitCastExpr 0x9709720 <col:10, col:12> '_Bool' <IntegralToBoolean>
+  |   | `-ImplicitCastExpr 0x9709710 <col:10, col:12> 'int' <LValueToRValue>
+  |   |   `-ParenExpr 0x97096c8 <col:10, col:12> 'int' lvalue
+  |   |     `-DeclRefExpr 0x97096b0 <col:11> 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+  |   |-IntegerLiteral 0x97096e0 <col:16> 'int' 1
+  |   `-IntegerLiteral 0x97096f8 <col:20> 'int' 0
+  `-ReturnStmt 0x9709778 <line:17:2, col:9>
+    `-IntegerLiteral 0x9709760 <col:9> 'int' 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 26] cfg before flattening
+
+ [B5 (ENTRY)]
+   Succs (1): B4
+
+ [B1]
+   1: [B4.4] ? [B2.1] : [B3.1]
+   2: ____localvar____7 = [B1.1]
+   3: return 0;
+   Preds (2): B2 B3
+   Succs (1): B0
+
+ [B2]
+   1: 1
+   Preds (1): B4
+   Succs (1): B1
+
+ [B3]
+   1: 0
+   Preds (1): B4
+   Succs (1): B1
+
+ [B4]
+   1: int ____localvar____6;
+   2: int ____localvar____7;
+   3: ____localvar____6 = 0
+   4: (____localvar____6) (ImplicitCastExpr, IntegralToBoolean, _Bool)
+   T: [B4.4] ? ... : ...
+   Preds (1): B5
+   Succs (2): B2 B3
+
+ [B0 (EXIT)]
+   Preds (1): B1
+
+Writing '/tmp/llvm_YmJ2AH/CFG.dot'...  done. 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709788 (CompoundStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709ca8 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9709610 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9709610 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709ca8 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709ce8 (DeclStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 50] enter decl 9709680 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 52] exit decl 9709680 (Var)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709ce8 (DeclStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709c90 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709c74 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709c74 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709640 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709640 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709c90 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709cd0 (BinaryOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709cb8 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709cb8 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709730 (ConditionalOperator) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709720 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709710 (ImplicitCastExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096c8 (ParenExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096b0 (DeclRefExpr) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096b0 (DeclRefExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096c8 (ParenExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709710 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709720 (ImplicitCastExpr)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096e0 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096e0 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 97096f8 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 97096f8 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709730 (ConditionalOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709cd0 (BinaryOperator)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709778 (ReturnStmt) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 38] enter stmt 9709760 (IntegerLiteral) | range 
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709760 (IntegerLiteral)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709778 (ReturnStmt)
+[DEBUG][./alg/FlattenCFG/ASTTraverserPlus.h - line 40] exit stmt 9709788 (CompoundStmt)
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B1.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 1 -> 0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B2.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 2 -> 1
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B3.1]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 3 -> 1
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 368] pass handledStmt [B4.4]
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 4 -> 2
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 4 -> 3
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 377] edge 5 -> 4
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 39] CompoundStmt before flatten
+{
+    int ____localvar____6;
+    int ____localvar____7;
+    ____localvar____6 = 0;
+    ____localvar____7 = (____localvar____6) ? 1 : 0;
+    return 0;
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 48] DeclStmt at the beginning met.
+DeclStmt 0x9709ca8
+`-VarDecl 0x9709610 ____localvar____6 'int'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 48] DeclStmt at the beginning met.
+DeclStmt 0x9709ce8
+`-VarDecl 0x9709680 ____localvar____7 'int'
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 1 97112dc
+<NULL>[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #0
+____localvar____7 = (____localvar____6) ? 1 : 0[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #1
+return 0;
+CaseStmt 0x9709e40
+|-IntegerLiteral 0x9709e28 'int' 1
+|-<<<NULL>>>
+`-CompoundStmt 0x9709e68
+  |-BinaryOperator 0x9709cd0 'int' lvalue '='
+  | |-DeclRefExpr 0x9709cb8 'int' lvalue Var 0x9709680 '____localvar____7' 'int'
+  | `-ConditionalOperator 0x9709730 'int'
+  |   |-ImplicitCastExpr 0x9709720 '_Bool' <IntegralToBoolean>
+  |   | `-ImplicitCastExpr 0x9709710 'int' <LValueToRValue>
+  |   |   `-ParenExpr 0x97096c8 'int' lvalue
+  |   |     `-DeclRefExpr 0x97096b0 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+  |   |-IntegerLiteral 0x97096e0 'int' 1
+  |   `-IntegerLiteral 0x97096f8 'int' 0
+  |-ReturnStmt 0x9709778
+  | `-IntegerLiteral 0x9709760 'int' 0
+  `-BreakStmt 0x9709e60
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 2 9711340
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 212] Transparent Node skipped
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 3 97113a4
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 212] Transparent Node skipped
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 208] create case for node 4 9711410
+(____localvar____6)[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #0
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #1
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 243] add stmt #2
+____localvar____6 = 0CaseStmt 0x9709ea0
+|-IntegerLiteral 0x9709e88 'int' 4
+|-<<<NULL>>>
+`-CompoundStmt 0x9709f10
+  |-BinaryOperator 0x9709c90 'int' lvalue '='
+  | |-DeclRefExpr 0x9709c74 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+  | `-IntegerLiteral 0x9709640 'int' 0
+  |-BinaryOperator 0x9709ef0 'int' lvalue '='
+  | |-DeclRefExpr 0x9709ed8 'int' lvalue Var 0x9709d30 '____localvar____8' 'int'
+  | `-IntegerLiteral 0x9709ec0 'int' 1
+  `-BreakStmt 0x9709f08
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 85] New switch body create
+switch (int ____localvar____8 = 4) {
+  case 1:
+    {
+        ____localvar____7 = (____localvar____6) ? 1 : 0;
+        return 0;
+        break;
+    }
+  case 4:
+    {
+        ____localvar____6 = 0;
+        ____localvar____8 = 1;
+        break;
+    }
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 89] New function body created.
+{
+    int ____localvar____6;
+    int ____localvar____7;
+    int ____localvar____8 = 4;
+    while (____localvar____8 != 0)
+        switch (int ____localvar____8 = 4) {
+          case 1:
+            {
+                ____localvar____7 = (____localvar____6) ? 1 : 0;
+                return 0;
+                break;
+            }
+          case 4:
+            {
+                ____localvar____6 = 0;
+                ____localvar____8 = 1;
+                break;
+            }
+        }
+}
+[DEBUG][alg/FlattenCFG/CFGFlattener.cpp - line 92] decl after flatten
+FunctionDecl 0x97095a0 <_cond.cpp:13:1, line:18:1> main 'int (void)'
+`-CompoundStmt 0x9709788 <line:13:12, line:18:1>
+  |-DeclStmt 0x9709ca8 <<invalid sloc>>
+  | `-VarDecl 0x9709610 <line:15:2, col:6> ____localvar____6 'int'
+  |-DeclStmt 0x9709ce8 <<invalid sloc>>
+  | `-VarDecl 0x9709680 <line:16:2, col:6> ____localvar____7 'int'
+  |-DeclStmt 0x9709d60 <<invalid sloc>>
+  | `-VarDecl 0x9709d30 <<invalid sloc>> ____localvar____8 'int'
+  |   `-IntegerLiteral 0x9709d10 <<invalid sloc>> 'int' 4
+  `-WhileStmt 0x9709dc8 <<invalid sloc>>
+    |-<<<NULL>>>
+    |-BinaryOperator 0x9709db0 <<invalid sloc>> '_Bool' '!='
+    | |-ImplicitCastExpr 0x9709da0 <<invalid sloc>> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x9709d88 <<invalid sloc>> 'int' lvalue Var 0x9709d30 '____localvar____8' 'int'
+    | `-IntegerLiteral 0x9709d70 <<invalid sloc>> 'int' 0
+    `-SwitchStmt 0x9709df8 <<invalid sloc>>
+      |-DeclStmt 0x9709e18 <<invalid sloc>>
+      | `-VarDecl 0x9709d30 <<invalid sloc>> ____localvar____8 'int'
+      |   `-IntegerLiteral 0x9709d10 <<invalid sloc>> 'int' 4
+      |-DeclRefExpr 0x9709ddc <<invalid sloc>> 'int' lvalue Var 0x9709d30 '____localvar____8' 'int'
+      `-CompoundStmt 0x9709f30 <<invalid sloc>>
+        |-CaseStmt 0x9709e40 <<invalid sloc>>
+        | |-IntegerLiteral 0x9709e28 <<invalid sloc>> 'int' 1
+        | |-<<<NULL>>>
+        | `-CompoundStmt 0x9709e68 <<invalid sloc>>
+        |   |-BinaryOperator 0x9709cd0 <<invalid sloc>, col:20> 'int' lvalue '='
+        |   | |-DeclRefExpr 0x9709cb8 <<invalid sloc>> 'int' lvalue Var 0x9709680 '____localvar____7' 'int'
+        |   | `-ConditionalOperator 0x9709730 <col:10, col:20> 'int'
+        |   |   |-ImplicitCastExpr 0x9709720 <col:10, col:12> '_Bool' <IntegralToBoolean>
+        |   |   | `-ImplicitCastExpr 0x9709710 <col:10, col:12> 'int' <LValueToRValue>
+        |   |   |   `-ParenExpr 0x97096c8 <col:10, col:12> 'int' lvalue
+        |   |   |     `-DeclRefExpr 0x97096b0 <col:11> 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+        |   |   |-IntegerLiteral 0x97096e0 <col:16> 'int' 1
+        |   |   `-IntegerLiteral 0x97096f8 <col:20> 'int' 0
+        |   |-ReturnStmt 0x9709778 <line:17:2, col:9>
+        |   | `-IntegerLiteral 0x9709760 <col:9> 'int' 0
+        |   `-BreakStmt 0x9709e60 <<invalid sloc>>
+        `-CaseStmt 0x9709ea0 <<invalid sloc>>
+          |-IntegerLiteral 0x9709e88 <<invalid sloc>> 'int' 4
+          |-<<<NULL>>>
+          `-CompoundStmt 0x9709f10 <<invalid sloc>>
+            |-BinaryOperator 0x9709c90 <<invalid sloc>, line:15:10> 'int' lvalue '='
+            | |-DeclRefExpr 0x9709c74 <<invalid sloc>> 'int' lvalue Var 0x9709610 '____localvar____6' 'int'
+            | `-IntegerLiteral 0x9709640 <col:10> 'int' 0
+            |-BinaryOperator 0x9709ef0 <<invalid sloc>> 'int' lvalue '='
+            | |-DeclRefExpr 0x9709ed8 <<invalid sloc>> 'int' lvalue Var 0x9709d30 '____localvar____8' 'int'
+            | `-IntegerLiteral 0x9709ec0 <<invalid sloc>> 'int' 1
+            `-BreakStmt 0x9709f08 <<invalid sloc>>
+[DEBUG][alg/SimplePrinter.cpp - line 7] alg started.
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 47] PrintingPolicy: 0 0 0 0 0
+int ifif() {
+    int ____localvar____0;
+    int ____localvar____1;
+    int ____localvar____2;
+    int ____localvar____3;
+    int ____localvar____4;
+    int ____localvar____5 = 9;
+    while (____localvar____5 != 0)
+        switch (int ____localvar____5 = 9) {
+          case 1:
+            {
+                return 2;
+                break;
+            }
+          case 2:
+            {
+                ____localvar____4 = ____localvar____0 , ____localvar____1 , ____localvar____2;
+                return 0;
+                break;
+            }
+          case 3:
+            {
+                if (____localvar____2 , ____localvar____3 , ____localvar____0 || (____localvar____1 || ____localvar____4) || (____localvar____2 && ____localvar____3) || (~____localvar____1)) {
+                    ____localvar____5 = 2;
+                } else {
+                    ____localvar____5 = 1;
+                }
+                ____localvar____5 = 2;
+                break;
+            }
+          case 9:
+            {
+                ____localvar____5 = 3;
+                break;
+            }
+        }
+}
+
+;
+[0;1;33m
+ [B20 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B19[0m
+[0;1;33m
+ [B1]
+[0m[0;34m   Preds [0m(5):[0;34m B3 B4 B14 B16 B2[0m
+[0;35m   Succs [0m(1):[0;35m B18[0m
+[0;1;33m
+ [B2]
+[0m   1: 9
+   2: int ____localvar____5 = 9;
+   3: ____localvar____5
+[0;32m   T: switch [B2.3]
+[0m[0;34m   Preds [0m(1):[0;34m B18[0m
+[0;35m   Succs [0m(5):[0;35m B3 B13 B15 B17 B1[0m
+[0;1;33m
+ [B3]
+[0m  case 9:
+   1: ____localvar____5 = 3
+[0;32m   T: break;
+
+[0m[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B4]
+[0m   1: ____localvar____5 = 2
+[0;32m   T: break;
+
+[0m[0;34m   Preds [0m(2):[0;34m B5 B6[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B5]
+[0m   1: ____localvar____5 = 1
+[0;34m   Preds [0m(1):[0;34m B7[0m
+[0;35m   Succs [0m(1):[0;35m B4[0m
+[0;1;33m
+ [B6]
+[0m   1: ____localvar____5 = 2
+[0;34m   Preds [0m(1):[0;34m B7[0m
+[0;35m   Succs [0m(1):[0;35m B4[0m
+[0;1;33m
+ [B7]
+[0m   1: [B13.4] || ([B12.1] || [B11.1]) || ([B10.1] && [B9.1]) || [B8.1]
+   2: ... , [B7.1]
+[0;32m   T: if [B7.2]
+[0m[0;34m   Preds [0m(5):[0;34m B8 B9 B11 B12 B13[0m
+[0;35m   Succs [0m(2):[0;35m B6 B5[0m
+[0;1;33m
+ [B8]
+[0m   1: (~____localvar____1) (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;34m   Preds [0m(2):[0;34m B9 B10[0m
+[0;35m   Succs [0m(1):[0;35m B7[0m
+[0;1;33m
+ [B9]
+[0m   1: ____localvar____3 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: [B13.4] || ([B12.1] || [B11.1]) || ([B10.1] && [B9.1]) || ...
+[0m[0;34m   Preds [0m(1):[0;34m B10[0m
+[0;35m   Succs [0m(2):[0;35m B7 B8[0m
+[0;1;33m
+ [B10]
+[0m   1: ____localvar____2 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: [B10.1] && ...
+[0m[0;34m   Preds [0m(1):[0;34m B11[0m
+[0;35m   Succs [0m(2):[0;35m B9 B8[0m
+[0;1;33m
+ [B11]
+[0m   1: ____localvar____4 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: [B13.4] || ([B12.1] || [B11.1]) || ...
+[0m[0;34m   Preds [0m(1):[0;34m B12[0m
+[0;35m   Succs [0m(2):[0;35m B7 B10[0m
+[0;1;33m
+ [B12]
+[0m   1: ____localvar____1 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: [B12.1] || ...
+[0m[0;34m   Preds [0m(1):[0;34m B13[0m
+[0;35m   Succs [0m(2):[0;35m B7 B11[0m
+[0;1;33m
+ [B13]
+[0m  case 3:
+   1: ____localvar____2
+   2: ____localvar____3
+   3: ... , [B13.2]
+   4: ____localvar____0 (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: [B13.4] || ...
+[0m[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(2):[0;35m B7 B12[0m
+[0;1;33m
+ [B14]
+[0m[0;32m   T: break;
+
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B15]
+[0m  case 2:
+   1: ____localvar____4 = ____localvar____0
+   2: ____localvar____1
+   3: ... , [B15.2]
+   4: ____localvar____2
+   5: ... , [B15.4]
+   6: return 0;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B16]
+[0m[0;32m   T: break;
+
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B17]
+[0m  case 1:
+   1: return 2;
+[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B18]
+[0m   1: ____localvar____5 != 0
+[0;32m   T: while [B18.1]
+[0m[0;34m   Preds [0m(2):[0;34m B1 B19[0m
+[0;35m   Succs [0m(2):[0;35m B2 B0[0m
+[0;1;33m
+ [B19]
+[0m   1: int ____localvar____0;
+   2: int ____localvar____1;
+   3: int ____localvar____2;
+   4: int ____localvar____3;
+   5: int ____localvar____4;
+   6: int ____localvar____5 = 9;
+[0;34m   Preds [0m(1):[0;34m B20[0m
+[0;35m   Succs [0m(1):[0;35m B18[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(3):[0;34m B15 B17 B18[0m
+
+Writing '/tmp/llvm_jDxXFI/CFG.dot'...  done. 
+[DEBUG][alg/SimplePrinterConsumer.cpp - line 47] PrintingPolicy: 0 0 0 0 0
+int main() {
+    int ____localvar____6;
+    int ____localvar____7;
+    int ____localvar____8 = 4;
+    while (____localvar____8 != 0)
+        switch (int ____localvar____8 = 4) {
+          case 1:
+            {
+                ____localvar____7 = (____localvar____6) ? 1 : 0;
+                return 0;
+                break;
+            }
+          case 4:
+            {
+                ____localvar____6 = 0;
+                ____localvar____8 = 1;
+                break;
+            }
+        }
+}
+
+;
+[0;1;33m
+ [B11 (ENTRY)]
+[0m[0;35m   Succs [0m(1):[0;35m B10[0m
+[0;1;33m
+ [B1]
+[0m[0;34m   Preds [0m(3):[0;34m B3 B4 B2[0m
+[0;35m   Succs [0m(1):[0;35m B9[0m
+[0;1;33m
+ [B2]
+[0m   1: 4
+   2: int ____localvar____8 = 4;
+   3: ____localvar____8
+[0;32m   T: switch [B2.3]
+[0m[0;34m   Preds [0m(1):[0;34m B9[0m
+[0;35m   Succs [0m(3):[0;35m B3 B8 B1[0m
+[0;1;33m
+ [B3]
+[0m  case 4:
+   1: ____localvar____6 = 0
+   2: ____localvar____8 = 1
+[0;32m   T: break;
+
+[0m[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B4]
+[0m[0;32m   T: break;
+
+[0m[0;35m   Succs [0m(1):[0;35m B1[0m
+[0;1;33m
+ [B5]
+[0m   1: [B8.1] ? [B6.1] : [B7.1]
+   2: ____localvar____7 = [B5.1]
+   3: return 0;
+[0;34m   Preds [0m(2):[0;34m B6 B7[0m
+[0;35m   Succs [0m(1):[0;35m B0[0m
+[0;1;33m
+ [B6]
+[0m   1: 1
+[0;34m   Preds [0m(1):[0;34m B8[0m
+[0;35m   Succs [0m(1):[0;35m B5[0m
+[0;1;33m
+ [B7]
+[0m   1: 0
+[0;34m   Preds [0m(1):[0;34m B8[0m
+[0;35m   Succs [0m(1):[0;35m B5[0m
+[0;1;33m
+ [B8]
+[0m  case 1:
+   1: (____localvar____6) (ImplicitCastExpr, IntegralToBoolean, _Bool)
+[0;32m   T: [B8.1] ? ... : ...
+[0m[0;34m   Preds [0m(1):[0;34m B2[0m
+[0;35m   Succs [0m(2):[0;35m B6 B7[0m
+[0;1;33m
+ [B9]
+[0m   1: ____localvar____8 != 0
+[0;32m   T: while [B9.1]
+[0m[0;34m   Preds [0m(2):[0;34m B1 B10[0m
+[0;35m   Succs [0m(2):[0;35m B2 B0[0m
+[0;1;33m
+ [B10]
+[0m   1: int ____localvar____6;
+   2: int ____localvar____7;
+   3: int ____localvar____8 = 4;
+[0;34m   Preds [0m(1):[0;34m B11[0m
+[0;35m   Succs [0m(1):[0;35m B9[0m
+[0;1;33m
+ [B0 (EXIT)]
+[0m[0;34m   Preds [0m(2):[0;34m B5 B9[0m
+
+Writing '/tmp/llvm_Id9ILJ/CFG.dot'...  done. 
+[DEBUG][alg/SimplePrinter.cpp - line 26] alg finished.
+[DEBUG][ResourceManager.cpp - line 134] src _.__cond.cpp rewrited.
+done2

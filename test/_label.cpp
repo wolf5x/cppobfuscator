@@ -4,7 +4,8 @@ void lbl_body() {
 BODY0:
 	for(int x = 0;;) {
 BODY1:
-		if(true){
+		if(x == 
+                3 && x == 4){
 BODY2:
 			x = 1;
 			x = 2;
