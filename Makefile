@@ -66,7 +66,7 @@ $(OBJS): %.o:%.cpp %.d %.h
 
 %.d: %.cpp
 	@ echo ====== Generate $@
-	$(CXX) $< -MM $(CXXFLAGS) $(LLVMFLAGS) -MF $@
+	$(CXX) $< -MM -MT '$(<:.cpp=.o) $@' $(CXXFLAGS) $(LLVMFLAGS) -MF $@
 
 clean:
 	@ echo ====== Clean
